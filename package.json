@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx}\"",
-    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
+    "lint": "next lint",
     "lint:fix": "eslint \"**/*.{js,jsx}\" --fix"
   },
   "husky": {
@@ -40,7 +40,8 @@
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "autoprefixer": "^10.2.6",
-    "eslint": "^7.32.0",
+    "eslint": "<8.0.0",
+    "eslint-config-next": "12.0.1",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
