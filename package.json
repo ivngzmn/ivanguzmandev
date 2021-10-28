@@ -8,18 +8,6 @@
     "lint": "next lint",
     "lint:fix": "eslint \"**/*.{js,jsx}\" --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run lint"
-    }
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "npm run format",
-      "npm run lint:fix"
-    ]
-  },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
