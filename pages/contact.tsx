@@ -1,18 +1,18 @@
-import { Navbar, ContactMe, Footer } from '../components';
-import Head from 'next/head'
+import { Navbar, ContactMe, Footer } from "../components";
+import Head from "next/head";
 
 function Contact() {
-	return (
-		<>
-		<Head>
-		<title>Contact</title>
-		</Head>
+  return (
+    <>
+      <Head>
+        <title>Contact</title>
+      </Head>
 
-		<Navbar />
-		<ContactMe />	
-        <Footer />
-		</>
-	);
+      <Navbar />
+      <ContactMe />
+      <Footer />
+    </>
+  );
 }
 
 export default Contact;

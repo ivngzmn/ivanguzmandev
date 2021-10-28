@@ -1,15 +1,9 @@
-import React from 'react'
+import React from "react";
 
-interface Props {
-    
-}
+interface Props {}
 
 const Header = (props: Props) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return <div></div>;
+};
 
-export default Header
+export default Header;

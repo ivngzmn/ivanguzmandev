@@ -1,8 +1,8 @@
-export { default as Navbar } from './Navbar';
-export { default as Footer } from './Footer';
-export { default as Hero } from './Hero';
-export { default as AboutMe } from './AboutMe';
-export { default as MyProjects } from './MyProjects';
-export { default as ContactMe } from './ContactMe';
-export { default as Bio } from './Bio';
-export { default as RecentPosts } from './RecentPosts';
+export { default as Navbar } from "./Navbar";
+export { default as Footer } from "./Footer";
+export { default as Hero } from "./Hero";
+export { default as AboutMe } from "./AboutMe";
+export { default as MyProjects } from "./MyProjects";
+export { default as ContactMe } from "./ContactMe";
+export { default as Bio } from "./Bio";
+export { default as RecentPosts } from "./RecentPosts";

@@ -1,23 +1,26 @@
-
 export default function Hero() {
   return (
     <div className="relative bg-black overflow-hidden h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
-
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-20 sm:px-6 md:mt-28 lg:mt-52 lg:px-8 xl:mt-64 h-5/6">
             <div className="text-left sm:text-center lg:text-left">
               <h1 className="uppercase text-transparent bg-clip-text bg-text-animation bg-left lg:bg-center text-6xl tracking-tight font-extrabold sm:text-6xl md:text-8xl lg:text-9xl">
-                <span className="xl:inline">Hello World,</span><br />
+                <span className="xl:inline">Hello World,</span>
+                <br />
                 <span className="xl:inline">I'm Ivan Guzman.</span>
               </h1>
               <div className="mt-3">
-                <span className="text-3xl text-gray-200">Full-Stack Software Engineer</span>
+                <span className="text-3xl text-gray-200">
+                  Full-Stack Software Engineer
+                </span>
                 <p className="text-base text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  I'm a father, reef aquarium enthusiast and Developer who is dedicated to always be learning. Welcome to my slice of the internet.
+                  I'm a father, reef aquarium enthusiast and Developer who is
+                  dedicated to always be learning. Welcome to my slice of the
+                  internet.
                 </p>
                 <p className="text-base text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                📍 Orange County, CA
+                  📍 Orange County, CA
                 </p>
               </div>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -51,11 +54,9 @@ export default function Hero() {
           </div>
         </section>
         <section>
-          <div>
-
-          </div>
+          <div></div>
         </section>
       </div>
     </div>
-  )
+  );
 }

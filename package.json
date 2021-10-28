@@ -4,7 +4,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts"
+    "format": "prettier --write \"**/*.{js,jsx}\"",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
+    "lint:fix": "eslint \"**/*.{js,jsx}\" --fix"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -15,6 +17,7 @@
     "classnames": "^2.3.1",
     "cloudinary-build-url": "^0.2.1",
     "next": "^12.0.1",
+    "prettier": "2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1"
@@ -25,7 +28,9 @@
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "autoprefixer": "^10.2.6",
-    "eslint": "^8.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "lint-staged": "^11.2.6",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.4.4"

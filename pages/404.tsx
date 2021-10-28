@@ -9,15 +9,17 @@ export default function NotFound() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8 lg:py-48">
-          <p className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-white dark:text-white">404 error</p>
+          <p className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-white dark:text-white">
+            404 error
+          </p>
           <h1 className="mt-2 text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
             Uh oh! I think you’re lost.
           </h1>
           <p className="mt-2 text-lg font-medium text-black text-opacity-50">
-          Why show a generic 404 when I can make it sound mysterious? It seems
-          you've found something that used to exist, or you spelled something
-          wrong. I'm guessing you spelled something wrong. Can you double
-          check that URL?
+            Why show a generic 404 when I can make it sound mysterious? It seems
+            you've found something that used to exist, or you spelled something
+            wrong. I'm guessing you spelled something wrong. Can you double
+            check that URL?
           </p>
           <div className="mt-6">
             <a
@@ -30,5 +32,5 @@ export default function NotFound() {
         </div>
       </main>
     </>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-import Image from 'next/image';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import Image from "next/image";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
@@ -33,7 +33,10 @@ export default function Navbar() {
                 <div className="sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a href="/" className="hidden lg:inline-block bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <a
+                      href="/"
+                      className="hidden lg:inline-block bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
                       Home
                     </a>
                     <a
@@ -71,7 +74,10 @@ export default function Navbar() {
                       <Menu.Button className="hidden lg:inline-block bg-gray-800 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
                         <div className="space-x-8 rounded-full py-1 pr-1 pl-4 bg-gray-700">
-                          <span className="text-gray-300">Ivan G.<ChevronDownIcon className="hidden lg:inline-block h-5 w-5 ml-2 -mr-1" /></span>
+                          <span className="text-gray-300">
+                            Ivan G.
+                            <ChevronDownIcon className="hidden lg:inline-block h-5 w-5 ml-2 -mr-1" />
+                          </span>
                           <img
                             className="inline-block h-8 w-8 rounded-full"
                             src="/images/profile-photo.jpg"
@@ -95,10 +101,11 @@ export default function Navbar() {
                             <a
                               href="https://github.com/ivngzmn"
                               className={classNames(
-                                active ? 'bg-gray-700' : '',
-                                'block px-4 py-2 text-sm text-gray-300 space-x-4'
+                                active ? "bg-gray-700" : "",
+                                "block px-4 py-2 text-sm text-gray-300 space-x-4"
                               )}
-                            ><FaGithub className="inline-block h-4 w-4 mr-2" />
+                            >
+                              <FaGithub className="inline-block h-4 w-4 mr-2" />
                               Github
                             </a>
                           )}
@@ -108,10 +115,11 @@ export default function Navbar() {
                             <a
                               href="https://www.linkedin.com/in/ivan-julian-guzman/"
                               className={classNames(
-                                active ? 'bg-gray-700' : '',
-                                'block px-4 py-2 text-sm text-gray-300'
+                                active ? "bg-gray-700" : "",
+                                "block px-4 py-2 text-sm text-gray-300"
                               )}
-                            ><FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
+                            >
+                              <FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
                               LinkedIn
                             </a>
                           )}
@@ -121,10 +129,11 @@ export default function Navbar() {
                             <a
                               href="https://twitter.com/zaku_dev"
                               className={classNames(
-                                active ? 'bg-gray-700' : '',
-                                'block px-4 py-2 text-sm text-gray-300'
+                                active ? "bg-gray-700" : "",
+                                "block px-4 py-2 text-sm text-gray-300"
                               )}
-                            ><FaTwitter className="inline-block h-4 w-4 mr-2" />
+                            >
+                              <FaTwitter className="inline-block h-4 w-4 mr-2" />
                               Twitter
                             </a>
                           )}
@@ -151,7 +160,10 @@ export default function Navbar() {
           <Disclosure.Panel className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <a href="/" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">
+              <a
+                href="/"
+                className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
                 Home
               </a>
               <a
@@ -189,27 +201,34 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium text-white">Ivan Guzman</div>
-                  <div className="text-sm font-medium text-gray-400">ivanguzmandev@gmail.com</div>
+                  <div className="text-base font-medium text-white">
+                    Ivan Guzman
+                  </div>
+                  <div className="text-sm font-medium text-gray-400">
+                    ivanguzmandev@gmail.com
+                  </div>
                 </div>
               </div>
               <div className="mt-3 px-2 space-y-1">
                 <a
                   href="https://github.com/ivngzmn"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                ><FaGithub className="inline-block h-4 w-4 mr-2" />
+                >
+                  <FaGithub className="inline-block h-4 w-4 mr-2" />
                   GitHub
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ivan-julian-guzman/"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                ><FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
+                >
+                  <FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
                   LinkedIn
                 </a>
                 <a
                   href="https://twitter.com/zaku_dev"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                ><FaTwitter className="inline-block h-4 w-4 mr-2" />
+                >
+                  <FaTwitter className="inline-block h-4 w-4 mr-2" />
                   Twitter
                 </a>
               </div>
@@ -218,5 +237,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
