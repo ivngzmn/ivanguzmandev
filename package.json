@@ -8,6 +8,18 @@
     "lint": "eslint \"**/*.{js,jsx}\" --quiet",
     "lint:fix": "eslint \"**/*.{js,jsx}\" --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run format",
+      "npm run lint:fix"
+    ]
+  },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
@@ -30,6 +42,7 @@
     "autoprefixer": "^10.2.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.4",
