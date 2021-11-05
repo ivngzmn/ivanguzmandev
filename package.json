@@ -3,10 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "NODE_OPTIONS='--experimental-json-modules' node ./scripts/generate-rss.mjs && node ./scripts/generate-sitemap.mjs",
     "start": "next start",
-    "format": "prettier --write \"**/*.{js,jsx}\"",
-    "lint": "next lint",
-    "lint:fix": "eslint \"**/*.{js,jsx}\" --fix"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -36,5 +35,11 @@
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.4.4"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }
