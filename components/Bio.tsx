@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 const Divider = () => {
   return (
     <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
@@ -112,7 +112,7 @@ export default function Bio() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
+      <div className="bg-gradient-to-r from-purple-800 to-indigo-700 rounded-t-3xl max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
           <h3 className="text-3xl font-extrabold text-white tracking-tight">
             Bio
@@ -120,7 +120,7 @@ export default function Bio() {
           <Divider />
           <Year>1986</Year>
           <ul>
-            <Step title="Born 👶🏽🍼">Jalapa, Mexico 🇲🇽</Step>
+            <Step title="Born 👶🏽🍼">Xalapa, Veraruz, MX 🇲🇽</Step>
           </ul>
           <Year>1996</Year>
           <ul>

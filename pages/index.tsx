@@ -1,17 +1,16 @@
-import { useRouter } from "next/router";
-import { Navbar, Hero, RecentPosts, Footer } from "../components";
-import Head from "next/head";
+import { useRouter } from 'next/router';
+import { Navbar, Hero, RecentPosts, Footer } from '../components';
+import Head from 'next/head';
 
 function Home(props: any) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Ivan Guzman – Software Engineer.",
+    title: 'Ivan Guzman – Software Engineer',
     description: `Full Stack Software Engineer, JavaScript enthusiast, and father.`,
-    image: "/static/images/webBanner.png",
-    type: "website",
-    ...customMeta,
+    image: '/static/images/webBanner.png',
+    type: 'website',
+    ...customMeta
   };
   return (
     <>

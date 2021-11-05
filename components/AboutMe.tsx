@@ -1,5 +1,5 @@
-import { CameraIcon } from "@heroicons/react/solid";
-// @refresh reset
+import { CameraIcon } from '@heroicons/react/solid';
+import NextImage from 'next/image';
 
 export default function Aboutme() {
   return (
@@ -8,10 +8,10 @@ export default function Aboutme() {
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+            <h2 className="text-base lg:text-2xl text-indigo-600 font-semibold tracking-wide">
               About Me
-            </h2>{" "}
-            <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            </h2>{' '}
+            <h3 className="mt-2 text-3xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Meet Ivan Guzman
             </h3>
           </div>
@@ -53,22 +53,15 @@ export default function Aboutme() {
             </svg>
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                  <img
-                    className="rounded-lg shadow-lg object-cover object-center"
+                <div className="lg:aspect-none">
+                  <NextImage
+                    className="rounded-2xl lg:rounded-3xl shadow-lg object-contain object-center"
                     src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627191346/Personal-Website/GitHubPic_ic42zy.png"
-                    alt="Whitney leaning against a railing on a downtown street"
+                    alt="Ivan with a huge smile"
                     width={1184}
                     height={1376}
                   />
                 </div>
-                <figcaption className="mt-3 flex text-sm text-gray-500">
-                  <CameraIcon
-                    className="flex-none w-5 h-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  <span className="ml-2">Photograph by David Acosta</span>
-                </figcaption>
               </figure>
             </div>
           </div>
