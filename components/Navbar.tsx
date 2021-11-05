@@ -1,11 +1,13 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import Image from "next/image";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { Fragment } from 'react';
+import NextLink from 'next/link';
+import NextImage from 'next/image';
+import ProfilePic from '/public/images/profile-photo.jpg';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
@@ -20,49 +22,46 @@ export default function Navbar() {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <a href="/">
-                    <Image
-                      className="h-8 w-auto"
-                      src="/images/ig-logo.svg"
-                      alt="Logo"
-                      width="40"
-                      height="40"
-                    />
-                  </a>
+                  <NextLink href="/">
+                    <a>
+                      <NextImage
+                        className="h-8 w-auto"
+                        src="/images/ig-logo.svg"
+                        alt="Logo"
+                        width="40"
+                        height="40"
+                      />
+                    </a>
+                  </NextLink>
                 </div>
                 <div className="sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a
-                      href="/"
-                      className="hidden lg:inline-block bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Home
-                    </a>
-                    <a
-                      href="/about"
-                      className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      About
-                    </a>
-                    <a
-                      href="/projects"
-                      className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Projects
-                    </a>
-                    <a
-                      href="/contact"
-                      className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Contact
-                    </a>
-                    <a
-                      href="https://blog.ivanguzman.dev"
-                      className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Blog
-                    </a>
+                    <NextLink href="/">
+                      <a className="hidden lg:inline-block hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Home
+                      </a>
+                    </NextLink>
+                    <NextLink href="/about">
+                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        About
+                      </a>
+                    </NextLink>
+                    <NextLink href="/projects">
+                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Projects
+                      </a>
+                    </NextLink>
+                    <NextLink href="/contact">
+                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Contact
+                      </a>
+                    </NextLink>
+                    <NextLink href="https://blog.ivanguzman.dev">
+                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Blog
+                      </a>
+                    </NextLink>
                   </div>
                 </div>
               </div>
@@ -71,18 +70,25 @@ export default function Navbar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="ml-3 relative">
                     <div>
-                      <Menu.Button className="hidden lg:inline-block bg-gray-800 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <Menu.Button className="hidden lg:inline-block  bg-gray-800 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
-                        <div className="space-x-8 rounded-full py-1 pr-1 pl-4 bg-gray-700">
+
+                        <div className="space-x-8 flex items-center rounded-full pr-1 pl-4 pt-1 bg-gray-700">
                           <span className="text-gray-300">
-                            Ivan G.
+                            <span className="sr-only">Open main menu</span>
+                            <span>Ivan G.</span>
                             <ChevronDownIcon className="hidden lg:inline-block h-5 w-5 ml-2 -mr-1" />
                           </span>
-                          <img
-                            className="inline-block h-8 w-8 rounded-full"
-                            src="/images/profile-photo.jpg"
-                            alt="Ivan Guzman Profile Photo"
-                          />
+                          <span>
+                            <NextImage
+                              className="h-8 w-8 rounded-full mr-2"
+                              src={ProfilePic}
+                              alt="Ivan Guzman Profile Photo"
+                              quality="85"
+                              height={35}
+                              width={35}
+                            />
+                          </span>
                         </div>
                       </Menu.Button>
                     </div>
@@ -101,8 +107,8 @@ export default function Navbar() {
                             <a
                               href="https://github.com/ivngzmn"
                               className={classNames(
-                                active ? "bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-300 space-x-4"
+                                active ? 'bg-gray-700' : '',
+                                'block px-4 py-2 text-sm text-gray-300 space-x-4'
                               )}
                             >
                               <FaGithub className="inline-block h-4 w-4 mr-2" />
@@ -115,8 +121,8 @@ export default function Navbar() {
                             <a
                               href="https://www.linkedin.com/in/ivan-julian-guzman/"
                               className={classNames(
-                                active ? "bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-300"
+                                active ? 'bg-gray-700' : '',
+                                'block px-4 py-2 text-sm text-gray-300'
                               )}
                             >
                               <FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
@@ -129,8 +135,8 @@ export default function Navbar() {
                             <a
                               href="https://twitter.com/zaku_dev"
                               className={classNames(
-                                active ? "bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-300"
+                                active ? 'bg-gray-700' : '',
+                                'block px-4 py-2 text-sm text-gray-300'
                               )}
                             >
                               <FaTwitter className="inline-block h-4 w-4 mr-2" />
@@ -160,44 +166,46 @@ export default function Navbar() {
           <Disclosure.Panel className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <a
-                href="/"
-                className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Home
-              </a>
-              <a
-                href="/about"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                About
-              </a>
-              <a
-                href="/projects"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Projects
-              </a>
-              <a
-                href="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Contact
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Blog
-              </a>
+              <NextLink href="/">
+                <a className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Home
+                </a>
+              </NextLink>
+              <NextLink href="/about">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  About
+                </a>
+              </NextLink>
+              <NextLink href="/projects">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Projects
+                </a>
+              </NextLink>
+              <NextLink href="/contact">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Projects
+                </a>
+              </NextLink>
+
+              <NextLink href="https://blog.ivanguzman.dev">
+                <a
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Blog
+                </a>
+              </NextLink>
             </div>
             <div className="pt-4 pb-3 border-t border-gray-700">
               <div className="flex items-center px-5">
                 <div className="flex-shrink-0">
-                  <img
+                  <NextImage
                     className="h-10 w-10 rounded-full"
-                    src="/images/profile-photo.jpg"
+                    src={ProfilePic}
                     alt="Ivan Guzman's Profile Photo"
+                    quality="85"
+                    height={35}
+                    width={35}
                   />
                 </div>
                 <div className="ml-3">
