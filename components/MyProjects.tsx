@@ -1,34 +1,33 @@
+import NextImage from 'next/image';
+
 const categories = [
   {
-    name: "Handcrafted Collection",
-    href: "#",
+    name: 'Project One',
+    href: '#',
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg",
-    imageAlt:
-      "Brown leather key ring with brass metal loops and rivets on wood table.",
+      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1629097193/project-images/todo-app_i9b4ra.gif',
+    imageAlt: 'Name of Project One',
     description:
-      "Keep your phone, keys, and wallet together, so you can lose everything at once.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
   },
   {
-    name: "Organized Desk Collection",
-    href: "#",
+    name: 'Project 2',
+    href: '#',
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg",
-    imageAlt:
-      "Natural leather mouse pad on white desk next to porcelain mug and keyboard.",
+      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627466096/project-images/React-pomo-app_dncbqs.gif',
+    imageAlt: 'Name of Project Two.',
     description:
-      "The rest of the house will still be a mess, but your desk will look great.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
   },
   {
-    name: "Focus Collection",
-    href: "#",
+    name: 'Project 3',
+    href: '#',
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg",
-    imageAlt:
-      "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
+      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627949259/project-images/React_Markdown_editor_hkx3m3.png',
+    imageAlt: 'Name of Project Three.',
     description:
-      "Be more productive than enterprise project managers with a single piece of paper.",
-  },
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
+  }
 ];
 
 export default function Example() {
@@ -36,11 +35,17 @@ export default function Example() {
     <div className="bg-white">
       <div className="max-w-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-          Shop by Collection
+          Lorem Ipsum
         </h2>
         <p className="mt-4 text-base text-gray-500">
-          Each season, we collaborate with world-class designers to create a
-          collection inspired by the natural world.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem
+          nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus
+          massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex
+          est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu
+          rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt
+          purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus.
+          Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec
+          ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis.
         </p>
 
         <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
@@ -48,20 +53,20 @@ export default function Example() {
             <a key={category.name} href={category.href} className="group block">
               <div
                 aria-hidden="true"
-                className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
+                className=" rounded-lg overflow-hidden group-hover:opacity-75"
               >
-                <img
+                <NextImage
                   src={category.imageSrc}
                   alt={category.imageAlt}
                   className="w-full h-full object-center object-cover"
+                  width={600}
+                  height={900}
                 />
               </div>
               <h3 className="mt-4 text-base font-semibold text-gray-900">
                 {category.name}
               </h3>
-              <p className="mt-2 text-sm text-gray-500">
-                {category.description}
-              </p>
+              <p className="text-sm text-gray-500">{category.description}</p>
             </a>
           ))}
         </div>
