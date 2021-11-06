@@ -8,7 +8,7 @@ module.exports = {
         'text-animation':
           'url(https://i.giphy.com/media/HZwazRfmuiVSSBjoGw/source.gif)',
         'hero-image':
-          'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636079635/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash_nzxx06.jpg)'
+          'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/q_auto/v1636079635/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash_nzxx06.jpg)'
       }
     }
   },
