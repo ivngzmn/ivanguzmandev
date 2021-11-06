@@ -2,13 +2,7 @@ import NextLink from 'next/link';
 
 export default function Hero() {
   return (
-    <div
-      className="w-full h-screen bg-center bg-no-repeat bg-cover overflow-hidden"
-      style={{
-        backgroundImage:
-          'url("https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636079635/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash_nzxx06.jpg")'
-      }}
-    >
+    <div className="w-full h-screen bg-center bg-hero-image bg-no-repeat bg-cover overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-20 sm:px-6 md:mt-28 lg:mt-52 lg:px-8 xl:mt-64 h-5/6">
