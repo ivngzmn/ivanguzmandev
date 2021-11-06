@@ -8,10 +8,10 @@ export default function Aboutme() {
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
-            <h2 className="text-base lg:text-2xl text-indigo-600 font-semibold tracking-wide">
+            <h2 className="text-base lg:text-3xl text-indigo-600 font-light tracking-wide">
               About Me
             </h2>{' '}
-            <h3 className="mt-2 text-3xl lg:text-6xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h3 className="mt-2 text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
               Meet Ivan Guzman
             </h3>
           </div>
@@ -53,30 +53,30 @@ export default function Aboutme() {
             </svg>
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="lg:aspect-none">
+                <div className="">
                   <NextImage
-                    className="rounded-2xl lg:rounded-3xl shadow-lg object-contain object-center"
+                    className="rounded-3xl lg:rounded-3xl shadow-lg object-contain object-center"
                     src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627191346/Personal-Website/GitHubPic_ic42zy.png"
                     alt="Ivan with a huge smile"
                     width={1184}
                     height={1376}
+                    priority
+                    quality={70}
                   />
                 </div>
               </figure>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
-            <div className="text-base max-w-prose mx-auto lg:max-w-none">
-              <p className="text-lg text-gray-500">
-                Hey, I’m Ivan. I'm a Software Engineer and I first got into
-                programming when I working as a customer service supervisor at
-                an e-commerce website. I taught myself how to use their custom
-                content management system to update outdated product
-                descriptions in order to alleviate load on repeated calls.
-              </p>
-            </div>
-            <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+            <div className="max-w-prose mx-auto lg:max-w-none font-light text-xl text-gray-800">
               <p>
+                Hey, I’m Ivan. I first got into programming when I working as a
+                customer service supervisor at an e-commerce website. I taught
+                myself how to use their custom content management system to
+                update outdated product descriptions in order to alleviate load
+                on repeated calls.
+              </p>
+              <p className="mt-5">
                 Then in I went on to work at Uber Technologies where my passion
                 for programming grew further as I was persuaded by my team lead
                 to pursue my dream software engineering. Unfortunately, the
@@ -84,7 +84,7 @@ export default function Aboutme() {
                 gears to not ever wanting this to happen again. So, I began to
                 practice my Software Engineering skills over the past year.
               </p>
-              <p>
+              <p className="mt-5">
                 I grew up in small-town in California and went to school at
                 Fullerton College where I studied art and dabbled a bit with
                 Networking Security. When I am not deep in code I spend my free
