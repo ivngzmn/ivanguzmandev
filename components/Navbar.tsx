@@ -38,7 +38,7 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <NextLink href="/">
-                      <a className="hidden lg:inline-block hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Home
                       </a>
                     </NextLink>
