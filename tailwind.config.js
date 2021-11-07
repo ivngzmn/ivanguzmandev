@@ -5,10 +5,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'text-animation':
-          'url(https://i.giphy.com/media/HZwazRfmuiVSSBjoGw/source.gif)',
+        'text-animation': 'url(/images/hero-text-optimized.gif)',
         'hero-image':
-          'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/q_auto/v1636079635/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash_nzxx06.jpg)'
+          'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/q_auto:eco/v1636248359/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash-optimized_uxgmup.webp)'
       }
     }
   },
