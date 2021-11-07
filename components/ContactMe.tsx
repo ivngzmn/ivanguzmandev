@@ -8,7 +8,7 @@ export default function Contact() {
     <div>
       <div>
         {/* Header */}
-        <div className="py-24 bg-gray-700 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mb-6">
+        <div className="py-24 bg-gray-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mb-6">
           <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
             <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-100 text-center sm:text-5xl sm:leading-none lg:text-6xl">
               Get in touch
@@ -23,7 +23,7 @@ export default function Contact() {
         {/* Contact Section */}
         <div className="relative text-base mx-auto max-w-prose mt-6 lg:max-w-none">
           <figure>
-            <div className="aspect-none">
+            <div className="">
               <NextImage
                 className="rounded-xl shadow-lg object-cover object-center"
                 src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
@@ -41,7 +41,7 @@ export default function Contact() {
             </figcaption>
           </figure>
         </div>
-        <div className="relative bg-red-500 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:py-32 lg:rounded-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
+        <div className="relative bg-gray-100 py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:py-32 lg:rounded-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
