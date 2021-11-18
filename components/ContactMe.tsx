@@ -1,8 +1,82 @@
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import { FaTwitter } from 'react-icons/fa';
+import { Loading } from '../components';
+import React, { useState, FormEvent, useRef, ChangeEvent } from 'react';
+import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
-export default function Contact() {
+type FormState = {
+  email: string;
+  firstname: string;
+  lastname: string;
+  phone: string;
+  subject: string;
+  message: string;
+};
+
+type ServiceMessage = {
+  class: string;
+  text: string;
+};
+
+function ContactMe() {
+  const initialFormState = {
+    firstname: '',
+    lastname: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+
+  const [formState, setFormeState] = useState<FormState>(initialFormState);
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [message, setMessage] = useState<ServiceMessage>();
+
+  const submitForm = async (e: FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    await postSubmit();
+    setSubmitting(false);
+  };
+
+  const postSubmit = async () => {
+    const payload = {
+      ...formState
+    };
+    console.log(payload);
+
+    try {
+      const result = await fetch('/api/sendgrid', {
+        body: JSON.stringify(payload),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      });
+      console.log(result);
+      setMessage({
+        class: 'bg-green-500',
+        text: 'Thanks, I will be in touch with you shortly.'
+      });
+    } catch (error) {
+      console.log(error);
+      setMessage({
+        class: 'bg-red-500',
+        text: 'Sorry, there was a problem with your form submission. Please try again'
+      });
+    }
+  };
+
+  const updateFormControl = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = event.target;
+    const key = id as keyof FormState;
+    const updatedFormState = { ...formState };
+    updatedFormState[key] = value;
+    setFormeState(updatedFormState);
+  };
+
   return (
     <div className="bg-gray-100 lg:py-12">
       <div className="lg:mt-6">
@@ -10,11 +84,12 @@ export default function Contact() {
         <div className="py-20 bg-gray-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
           <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
             <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-100 text-center sm:text-5xl sm:leading-none lg:text-6xl">
-              Get in touch
+              Say Hello 👋🏽.
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-300 text-center">
-              Feel free to use the form below to reach out or the link below the
-              form to reach out via Twitter.
+            <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-200 text-center">
+              Feel free to reach out for any freelance projects or job
+              inquiries. Or if you would like to have a coffee chat feel free to
+              reach out via the Twitter link below.
             </p>
           </div>
         </div>
@@ -26,8 +101,8 @@ export default function Contact() {
           <NextImage
             src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
             alt=""
-            width="100%"
-            height="100%"
+            // width="100%"
+            // height="100%"
             layout="fill"
             objectFit="cover"
             className="lg:rounded-t-2xl"
@@ -46,7 +121,7 @@ export default function Contact() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="relative bg-white">
                   <h2 id="contact-heading" className="sr-only">
-                    Contact us
+                    Contact me
                   </h2>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -164,70 +239,45 @@ export default function Contact() {
                           </defs>
                         </svg>
                       </div>
-                      <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-indigo-100">
-                        Contact information
+                      <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-indigo-50">
+                        Let's Work Together.
                       </h3>
-                      <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                        I would love to hear from you. Send me a message via the
-                        form, or if you like via direct message on Twitter with
-                        the link below.
-                      </p>
-
+                      <div className="mt-6 text-lg text-indigo-50 max-w-3xl">
+                        <p>
+                          I would love to hear from you. Email hello [at]
+                          ivanguzman.dev or use the form to reach out. Tell me
+                          how I can help you and I will get in touch shortly.
+                        </p>
+                        <p className="mt-3">
+                          Want to schedule a meeting? Click here.
+                        </p>
+                      </div>
                       <ul role="list" className="mt-8 flex space-x-12">
                         <li>
                           <a
                             className="text-indigo-200 hover:text-indigo-100"
-                            href="#"
+                            href="https://www.linkedin.com/in/ivan-julian-guzman/"
                           >
-                            <span className="sr-only">Facebook</span>
-                            <svg
-                              className="w-7 h-7"
-                              aria-hidden="true"
-                              fill="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
+                            <span className="sr-only">LinkedIn</span>
+                            <FaLinkedinIn className="w-6 h-6" />
                           </a>
                         </li>
                         <li>
                           <a
                             className="text-indigo-200 hover:text-indigo-100"
-                            href="#"
+                            href="https://github.com/ivngzmn"
                           >
                             <span className="sr-only">GitHub</span>
-                            <svg
-                              className="w-7 h-7"
-                              aria-hidden="true"
-                              fill="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
+                            <FaGithub className="w-6 h-6" />
                           </a>
                         </li>
                         <li>
                           <a
                             className="text-indigo-200 hover:text-indigo-100"
-                            href="#"
+                            href="https://twitter.com/zaku_dev"
                           >
                             <span className="sr-only">Twitter</span>
-                            <svg
-                              className="w-7 h-7"
-                              aria-hidden="true"
-                              fill="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                            </svg>
+                            <FaTwitter className="w-6 h-6" />
                           </a>
                         </li>
                       </ul>
@@ -236,16 +286,17 @@ export default function Contact() {
                     {/* Contact form */}
                     <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                       <h3 className="text-xl font-medium text-gray-900">
-                        Send a message
+                        Send me a message
                       </h3>
                       <form
                         action="#"
                         method="POST"
+                        onSubmit={submitForm}
                         className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                       >
                         <div>
                           <label
-                            htmlFor="first-name"
+                            htmlFor="firstname"
                             className="block text-sm font-medium text-gray-900"
                           >
                             First name
@@ -253,16 +304,20 @@ export default function Contact() {
                           <div className="mt-1">
                             <input
                               type="text"
-                              name="first-name"
-                              id="first-name"
+                              required={true}
+                              name="firstname"
+                              id="firstname"
                               autoComplete="given-name"
+                              placeholder="Jordan"
+                              value={formState?.firstname}
+                              onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                             />
                           </div>
                         </div>
                         <div>
                           <label
-                            htmlFor="last-name"
+                            htmlFor="lastname"
                             className="block text-sm font-medium text-gray-900"
                           >
                             Last name
@@ -270,9 +325,13 @@ export default function Contact() {
                           <div className="mt-1">
                             <input
                               type="text"
-                              name="last-name"
-                              id="last-name"
+                              required={true}
+                              name="lastname"
+                              id="lastname"
                               autoComplete="family-name"
+                              placeholder="Walke"
+                              value={formState?.lastname}
+                              onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                             />
                           </div>
@@ -289,7 +348,11 @@ export default function Contact() {
                               id="email"
                               name="email"
                               type="email"
+                              required={true}
                               autoComplete="email"
+                              placeholder="e.g. hello@jordanwalke.com"
+                              value={formState?.email}
+                              onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                             />
                           </div>
@@ -312,9 +375,13 @@ export default function Contact() {
                           <div className="mt-1">
                             <input
                               type="text"
+                              required={false}
                               name="phone"
                               id="phone"
                               autoComplete="tel"
+                              placeholder="555-857-5309"
+                              value={formState?.phone}
+                              onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                               aria-describedby="phone-optional"
                             />
@@ -330,8 +397,12 @@ export default function Contact() {
                           <div className="mt-1">
                             <input
                               type="text"
+                              required={true}
                               name="subject"
                               id="subject"
+                              placeholder="Looking forward to working with you."
+                              value={formState?.subject}
+                              onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                             />
                           </div>
@@ -354,20 +425,32 @@ export default function Contact() {
                           <div className="mt-1">
                             <textarea
                               id="message"
+                              required={true}
                               name="message"
+                              placeholder="Let's meet for a coffee and get working together!"
+                              value={formState?.message}
+                              onChange={updateFormControl}
                               rows={4}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                               aria-describedby="message-max"
-                              defaultValue={''}
                             />
                           </div>
                         </div>
+
                         <div className="sm:col-span-2 sm:flex sm:justify-end">
+                          {message && (
+                            <div
+                              className={`flex flex-col text-white w-full sm:w-auto sm: p-4 sm:mr-6 ${message.class}`}
+                            >
+                              {message.text}
+                            </div>
+                          )}
                           <button
+                            disabled={submitting}
                             type="submit"
                             className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
                           >
-                            Submit
+                            {submitting ? <Loading /> : 'Submit'}
                           </button>
                         </div>
                       </form>
@@ -380,7 +463,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="bg-indigo-500 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:my-16">
+      <div className="bg-indigo-500 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:my-12">
         <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             <span className="block text-indigo-50">Reach out via Twitter</span>
@@ -400,3 +483,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default ContactMe;
