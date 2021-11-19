@@ -2,6 +2,7 @@ import NextImage from 'next/image';
 import NextLink from 'next/link';
 import { Loading } from '../components';
 import React, { useState, FormEvent, useRef, ChangeEvent } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 type FormState = {
@@ -19,6 +20,8 @@ type ServiceMessage = {
 };
 
 function ContactMe() {
+  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const recaptchaRef = useRef<any>();
   const initialFormState = {
     firstname: '',
     lastname: '',
@@ -31,6 +34,7 @@ function ContactMe() {
   const [formState, setFormeState] = useState<FormState>(initialFormState);
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [message, setMessage] = useState<ServiceMessage>();
+  const [recaptchaToken, setReCaptchaToken] = useState<string>();
 
   const submitForm = async (e: FormEvent) => {
     e.preventDefault();
@@ -41,7 +45,8 @@ function ContactMe() {
 
   const postSubmit = async () => {
     const payload = {
-      ...formState
+      ...formState,
+      'g-recaptcha-response': recaptchaToken
     };
     console.log(payload);
 
@@ -56,8 +61,10 @@ function ContactMe() {
       console.log(result);
       setMessage({
         class: 'bg-green-500',
-        text: 'Thanks, I will be in touch with you shortly.'
+        text: 'Thanks for contacting me, I will be in touch with you shortly.'
       });
+      setFormeState(initialFormState);
+      recaptchaRef.current.reset();
     } catch (error) {
       console.log(error);
       setMessage({
@@ -76,7 +83,9 @@ function ContactMe() {
     updatedFormState[key] = value;
     setFormeState(updatedFormState);
   };
-
+  const updateRecaptchaToken = (token: string | null) => {
+    setReCaptchaToken(token as string);
+  };
   return (
     <div className="bg-gray-100 lg:py-12">
       <div className="lg:mt-6">
@@ -249,7 +258,11 @@ function ContactMe() {
                           how I can help you and I will get in touch shortly.
                         </p>
                         <p className="mt-3">
-                          Want to schedule a meeting? Click here.
+                          Want to schedule a meeting? Click{' '}
+                          <NextLink href="#">
+                            <a className="underline">here</a>
+                          </NextLink>
+                          .
                         </p>
                       </div>
                       <ul role="list" className="mt-8 flex space-x-12">
@@ -427,7 +440,7 @@ function ContactMe() {
                               id="message"
                               required={true}
                               name="message"
-                              placeholder="Let's meet for a coffee and get working together!"
+                              placeholder="Let's meet for a coffee and discuss my project!"
                               value={formState?.message}
                               onChange={updateFormControl}
                               rows={4}
@@ -445,6 +458,12 @@ function ContactMe() {
                               {message.text}
                             </div>
                           )}
+                          <ReCAPTCHA
+                            ref={recaptchaRef}
+                            size="invisible"
+                            sitekey={recaptchaKey}
+                            onChange={updateRecaptchaToken}
+                          />
                           <button
                             disabled={submitting}
                             type="submit"
