@@ -30,7 +30,7 @@ function Home(props: any) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ivan_codes" />
+        <meta name="twitter:site" content="@zaku_dev" />
       </Head>
 
       <Navbar />

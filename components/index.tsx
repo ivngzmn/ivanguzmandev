@@ -6,3 +6,4 @@ export { default as MyProjects } from './MyProjects';
 export { default as ContactMe } from './ContactMe';
 export { default as Bio } from './Bio';
 export { default as RecentPosts } from './RecentPosts';
+export { default as Loading } from './Loading';
