@@ -257,13 +257,7 @@ function ContactMe() {
                           ivanguzman.dev or use the form to reach out. Tell me
                           how I can help you and I will get in touch shortly.
                         </p>
-                        <p className="mt-3">
-                          Want to schedule a meeting? Click{' '}
-                          <NextLink href="#">
-                            <a className="underline">here</a>
-                          </NextLink>
-                          .
-                        </p>
+                        <div className="mt-3"></div>
                       </div>
                       <ul role="list" className="mt-8 flex space-x-12">
                         <li>
