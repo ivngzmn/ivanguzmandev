@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'text-animation': 'url(/images/hero-text-optimized.gif)',
+        'text-animation': 'url(/images/hero-text-motion.webp)',
         'hero-image':
           'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/q_auto:eco/v1636248359/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash-optimized_uxgmup.webp)'
       }
