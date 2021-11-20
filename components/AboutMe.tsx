@@ -1,12 +1,12 @@
 import { CameraIcon } from '@heroicons/react/solid';
 import NextImage from 'next/image';
 
-export default function Aboutme() {
+export default function aboutMe() {
   return (
     <div className="bg-white overflow-hidden">
-      <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
-        <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+      <div className="relative bg-white rounded-xl max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="hidden lg:block bg-gray-100 absolute top-0 bottom-0 left-3/4 w-screen" />
+        <div className="mx-auto text-base max-w-7xl lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
             <h2 className="text-base lg:text-3xl text-indigo-600 font-light tracking-wide">
               About Me
@@ -19,7 +19,7 @@ export default function Aboutme() {
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
           <div className="relative lg:row-start-1 lg:col-start-2">
             <svg
-              className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
+              className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-15"
               width={404}
               height={384}
               fill="none"
@@ -40,7 +40,7 @@ export default function Aboutme() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-300"
                     fill="currentColor"
                   />
                 </pattern>
@@ -51,24 +51,22 @@ export default function Aboutme() {
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
             </svg>
-            <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-              <figure>
-                <div className="">
-                  <NextImage
-                    className="rounded-3xl lg:rounded-3xl shadow-lg object-contain object-center"
-                    src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627191346/Personal-Website/GitHubPic_ic42zy.png"
-                    alt="Ivan with a huge smile"
-                    width={1184}
-                    height={1376}
-                    priority
-                    quality={70}
-                  />
-                </div>
-              </figure>
+            <div className="relative text-base mx-auto lg:max-w-none">
+              <div className="relative h-40 w-40 lg:w-96 lg:h-96 ">
+                <NextImage
+                  className="rounded-3xl lg:rounded-3xl shadow-lg overflow-hidden object-contain object-center w-full h-full"
+                  src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627191346/Personal-Website/GitHubPic_ic42zy.png"
+                  alt="Ivan with a huge smile"
+                  layout="fill"
+                  objectFit="cover"
+                  priority
+                  quality={70}
+                />
+              </div>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
-            <div className="max-w-prose mx-auto lg:max-w-none font-light text-xl text-gray-800">
+            <div className="max-w-7xl mx-auto lg:max-w-none font-light text-xl text-gray-800">
               <p>
                 Hey, I’m Ivan. I first got into programming when I working as a
                 customer service supervisor at an e-commerce website. I taught
