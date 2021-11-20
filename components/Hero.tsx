@@ -2,10 +2,10 @@ import NextLink from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="w-full h-screen bg-center bg-hero-image bg-no-repeat bg-cover overflow-hidden">
+    <div className="w-full min-h-screen 2xl:max-h-screen bg-cover bg-top sm:bg-top bg-hero-image bg-no-repeat overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
-          <main className="mt-28 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-44 lg:mt-52 lg:px-8 xl:mt-64 h-5/6">
+          <main className="mt-28 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-44 lg:mt-52 lg:px-8 xl:mt-64 ">
             <div className="text-left sm:text-center lg:text-left">
               <h1 className="uppercase text-transparent bg-clip-text bg-text-animation bg-center lg:bg-bottom lg:bg-no-repeat bg-cover text-6xl tracking-tight font-extrabold sm:text-6xl md:text-8xl lg:text-9xl">
                 <span className="xl:inline">Hello World,</span>
