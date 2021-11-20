@@ -45,7 +45,7 @@ const posts = [
     date: 'Feb 12, 2020',
     datetime: '2020-02-12',
     imageUrl:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636226036/Personal-Website/photo-1492724441997-5dc865305da7_nzxbie.jpg',
+      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636327714/photo-1517694712202-14dd9538aa97_bj4nsz.jpg',
     readingTime: '11 min',
     author: {
       name: 'Ivan G.',
