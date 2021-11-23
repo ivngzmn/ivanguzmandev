@@ -1,11 +1,11 @@
 import NextImage from 'next/image';
 
-const categories = [
+const projects = [
   {
-    name: 'Project One',
+    name: 'Project 1',
     href: '#',
     imageSrc:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1629097193/project-images/todo-app_i9b4ra.gif',
+      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1637439561/project-images/todo-app_zukdrz.gif',
     imageAlt: 'Name of Project One',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
@@ -30,9 +30,9 @@ const categories = [
   }
 ];
 
-export default function Example() {
+export default function myProjects() {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100">
       <div className="max-w-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
           Lorem Ipsum
@@ -49,7 +49,7 @@ export default function Example() {
         </p>
 
         <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          {categories.map((category) => (
+          {projects.map((category) => (
             <a key={category.name} href={category.href} className="group block">
               <div
                 aria-hidden="true"
@@ -59,8 +59,8 @@ export default function Example() {
                   src={category.imageSrc}
                   alt={category.imageAlt}
                   className="w-full h-full object-center object-cover"
-                  width={600}
-                  height={900}
+                  width={900}
+                  height={1200}
                 />
               </div>
               <h3 className="mt-4 text-base font-semibold text-gray-900">

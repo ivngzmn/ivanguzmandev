@@ -20,6 +20,7 @@
 *.pem
 *.codekit3
 package-lock.json
+.vscode
 
 # debug
 npm-debug.log*
@@ -34,3 +35,4 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vscode/settings.json
