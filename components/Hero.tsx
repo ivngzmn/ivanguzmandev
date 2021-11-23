@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
           <main className="mt-20 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-28 lg:mt-28 lg:px-8 xl:mt-28 ">
             <div className="text-left sm:text-left lg:text-left">
-              <h1 className="filter contrast-150 uppercase text-transparent bg-clip-text bg-text-animation bg-center md:bg-center lg:bg-center lg:bg-no-repeat bg-cover text-6xl tracking-tight font-extrabold sm:text-6xl md:text-8xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+              <h1 className="filter contrast-150 uppercase text-transparent bg-clip-text bg-text-animation bg-center md:bg-center lg:bg-center lg:bg-no-repeat bg-cover text-5xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
                 <span className="xl:inline">Hello World,</span>
                 <br />
                 <span className="xl:inline">I'm Ivan Guzman.</span>
@@ -27,14 +27,14 @@ export default function Hero() {
                 <span className="text-3xl text-gray-200">
                   Full-Stack Software Engineer
                 </span>
-                <p className="text-base text-gray-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:text-xl lg:mx-0">
+                <p className="text-base text-gray-100 sm:mt-5 sm:text-lg sm:max-w-xl text-left sm:text-left lg:text-left md:mt-5 md:text-xl lg:text-xl lg:mx-0">
                   I’m a reef nerd and Jamstack enthusiast. I love working with
                   Next.js and Tailwind CSS. Making the web faster and more
                   accessible for small businesses. Welcome to my corner of the
                   digital ocean.
                 </p>
               </div>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div className="mt-5 sm:mt-8 sm:flex sm:justify-left lg:justify-start">
                 <div className="rounded-md shadow">
                   <NextLink href="/projects">
                     <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
@@ -53,9 +53,6 @@ export default function Hero() {
             </div>
           </main>
         </div>
-        <section>
-          <div></div>
-        </section>
       </div>
     </div>
   );
