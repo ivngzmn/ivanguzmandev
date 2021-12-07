@@ -40,7 +40,7 @@ function Home(props: any) {
       <section className="hero">
         <Hero />
       </section>
-      <RecentPosts />
+      <RecentPosts categories={undefined} slug={undefined} />
       <Footer />
     </>
   );
