@@ -58,7 +58,7 @@ function ContactMe() {
         },
         method: 'POST'
       });
-      console.log(result);
+      // console.log(result);
       setMessage({
         class: 'bg-green-500',
         text: 'Thanks for contacting me, I will be in touch with you shortly.'
@@ -66,7 +66,7 @@ function ContactMe() {
       setFormeState(initialFormState);
       recaptchaRef.current.reset();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setMessage({
         class: 'bg-red-500',
         text: 'Sorry, there was a problem with your form submission. Please try again'
@@ -88,7 +88,7 @@ function ContactMe() {
   };
   return (
     <div className="bg-gray-100 lg:py-12">
-      <div className="lg:mt-6">
+      <div className="lg:mt-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="py-20 bg-gray-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
           <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
@@ -476,7 +476,7 @@ function ContactMe() {
         </div>
       </div>
 
-      <div className="bg-indigo-500 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:my-12">
+      <div className="bg-indigo-500 lg:max-w-7xl lg:mx-auto lg:rounded-2xl lg:my-12">
         <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             <span className="block text-indigo-50">Reach out via Twitter</span>

@@ -5,15 +5,17 @@ import {
   FaLinkedinIn,
   FaInstagram
 } from 'react-icons/fa';
+import Link from 'next/link';
+
 // import NowPlaying from '@/components/NowPlaying';
 const today = new Date();
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
-    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Projects', href: '/projects' },
     {
       name: 'Blog',
-      href: 'https://blog.ivanguzman.dev/',
+      href: '/blog',
       target: '_blank',
       rel: 'noopener noreferrer'
     },
@@ -61,27 +63,28 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base text-gray-300 hover:text-white dark:text-gray-50 dark:hover:text-gray-300"
-              >
-                {item.name}
-              </a>
+              <Link href={item.href}>
+                <a className="text-base text-gray-300 hover:text-white dark:text-gray-50 dark:hover:text-gray-300">
+                  {item.name}
+                </a>
+              </Link>
             </div>
           ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-200 dark:text-gray-50 dark:hover:text-gray-300"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon />
-            </a>
+            <Link key={item.name} href={item.href}>
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-200 dark:text-gray-50 dark:hover:text-gray-300"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon />
+              </a>
+            </Link>
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-300">

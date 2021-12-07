@@ -8,9 +8,9 @@ export default function aboutMe() {
         <div className="hidden lg:block bg-gray-100 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-7xl lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
-            <h2 className="text-lx lg:text-3xl text-indigo-600 font-light tracking-wide">
+            <h2 className="text-xl lg:text-3xl text-indigo-600 font-light tracking-wide">
               About Me
-            </h2>{' '}
+            </h2>
             <h3 className="mt-2 text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
               Meet Ivan Guzman
             </h3>
