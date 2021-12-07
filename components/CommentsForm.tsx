@@ -17,14 +17,17 @@ const CommentsForm = ({ slug }) => {
     const InitalFormData = {
       name: window.localStorage.getItem('name'),
       email: window.localStorage.getItem('email'),
+      comment: null,
       storeData:
         window.localStorage.getItem('name') ||
         window.localStorage.getItem('email')
+          ? true
+          : false
     };
     setFormData(InitalFormData);
   }, []);
 
-  const onInputChange = (e) => {
+  function onInputChange(e) {
     const { target } = e;
     if (target.type === 'checkbox') {
       setFormData((prevState) => ({
@@ -37,7 +40,7 @@ const CommentsForm = ({ slug }) => {
         [target.name]: target.value
       }));
     }
-  };
+  }
 
   const handlePostSubmission = () => {
     setError(false);
