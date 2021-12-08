@@ -17,7 +17,7 @@ export default function aboutMe() {
         <div className="hidden lg:block bg-gray-100 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-7xl lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
-            <h3 className="mt-2 text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
+            <h3 className="mt-2 text-3xl lg:text-4xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
               Meet Ivan Guzman
             </h3>
           </div>
