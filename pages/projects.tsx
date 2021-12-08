@@ -1,5 +1,5 @@
-import { Navbar, MyProjects, Footer } from "../components";
-import Head from "next/head";
+import { Navbar, MyProjects, Footer } from '../components';
+import Head from 'next/head';
 
 function Projects() {
   return (
