@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
-import { Navbar, Hero, RecentPosts, Footer } from '../components';
+import { Navbar, Hero, Footer } from '../components';
+import FeaturedPosts from '../sections/FeaturedPosts';
+import RecentPosts from 'components/RecentPosts';
 import Head from 'next/head';
 
 function Home(props: any) {
@@ -38,7 +40,7 @@ function Home(props: any) {
       <section className="hero">
         <Hero />
       </section>
-      <RecentPosts />
+      <RecentPosts categories={undefined} slug={undefined} />
       <Footer />
     </>
   );

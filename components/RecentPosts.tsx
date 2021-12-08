@@ -1,138 +1,103 @@
-import NextImage from 'next/image';
-import ProfilePic from '../public/images/profile-photo.jpg';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import moment from 'moment';
+import Link from 'next/link';
 
-const posts = [
-  {
-    title: 'Boost your conversion rate',
-    href: '#',
-    category: { name: 'Article', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    imageUrl:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636227055/Personal-Website/photo-1509395731449-4f6efe781cf0_ikdmyv.jpg',
-    readingTime: '6 min',
-    author: {
-      name: 'Ivan G.',
-      href: '#',
-      imageUrl: ProfilePic
-    }
-  },
-  {
-    title: 'How to use search engine optimization to drive sales',
-    href: '#',
-    category: { name: 'Article', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
-    date: 'Mar 10, 2020',
-    datetime: '2020-03-10',
-    imageUrl:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636225731/Personal-Website/photo-1496128858413-b36217c2ce36_t0exlq.jpg',
-    readingTime: '4 min',
-    author: {
-      name: 'Ivan G.',
-      href: '#',
-      imageUrl: ProfilePic
-    }
-  },
-  {
-    title: 'Improve your customer experience',
-    href: '#',
-    category: { name: 'Article', href: '#' },
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
-    date: 'Feb 12, 2020',
-    datetime: '2020-02-12',
-    imageUrl:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1636327714/photo-1517694712202-14dd9538aa97_bj4nsz.jpg',
-    readingTime: '11 min',
-    author: {
-      name: 'Ivan G.',
-      href: '#',
-      imageUrl: ProfilePic
-    }
-  }
-];
+import { grpahCMSImageLoader } from '../util';
+import { getRecentPosts } from '../services';
 
-export default function Example() {
+const PostWidget = ({ categories, slug }) => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getRecentPosts().then((result) => {
+      setPosts(result);
+    });
+  }, []);
+
   return (
-    <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-      <div className="absolute inset-0">
-        <div className="bg-white h-1/3 sm:h-2/3" />
-      </div>
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            From the blog
-          </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-            libero labore natus atque, ducimus sed.
-          </p>
+    <div className="relative bg-gray-50">
+      <div className="relative max-w-7xl mx-auto bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+              Recent Posts from the Blog
+            </h2>
+            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+              Thoughts on what I'm learning, what I'm thinking, and what I'm
+              doing.
+            </p>
+          </div>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {posts.map((post) => (
-            <div
-              key={post.title}
-              className="flex flex-col rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="flex-shrink-0">
-                <NextImage
-                  className="h-48 w-full object-cover"
-                  src={post.imageUrl}
-                  alt=""
-                  width="600"
-                  height="400"
-                />
-              </div>
-              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-indigo-600">
-                    <a href={post.category.href} className="hover:underline">
-                      {post.category.name}
-                    </a>
-                  </p>
-                  <a href={post.href} className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-                    <p className="mt-3 text-base text-gray-500">
-                      {post.description}
-                    </p>
-                  </a>
-                </div>
-                <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <a href={post.author.href}>
-                      <span className="sr-only">{post.author.name}</span>
-                      <NextImage
-                        className="h-10 w-10 rounded-full"
-                        src={post.author.imageUrl}
-                        alt=""
-                        width="50"
-                        height="50"
-                      />
-                    </a>
+        <div className="max-w-lg mt-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+          {posts.map((post, index) => (
+            <Link href="/blog/[slug]" as={`/blog/${post.slug}`} key={index}>
+              <a>
+                <div
+                  key={index}
+                  className="flex flex-col rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                >
+                  <div className="flex-shrink-0 relative object-cover overflow-hidden h-96 w-full">
+                    <Image
+                      loader={grpahCMSImageLoader}
+                      alt={post.title}
+                      layout="fill"
+                      objectFit="cover"
+                      unoptimized
+                      className="h-48 w-full object-cover"
+                      src={post.featuredImage.url}
+                    />
                   </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
-                      <a href={post.author.href} className="hover:underline">
+
+                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div className="flex-grow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 inline mr-2 text-indigo-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="text-gray-500 font-xs align-middle">
+                        {moment(post.createdAt).format('MMM DD, YYYY')}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <p className="mt-2 text-xl font-semibold text-gray-900 hover:text-indigo-700">
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                      </p>
+                      <p className="mt-2 text-base text-gray-500">
+                        {post.description}
+                      </p>
+                    </div>
+                    <div className="mt-4 hidden md:flex items-center justify-left lg:mb-0 lg:w-auto mr-8">
+                      <Image
+                        alt={post.author.name}
+                        height="40px"
+                        width="40px"
+                        className="align-left rounded-full"
+                        src={post.author.photo.url}
+                      />
+                      <p className="inline align-left text-gray-700 ml-2 font-light text-lg">
                         {post.author.name}
-                      </a>
-                    </p>
-                    <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={post.datetime}>{post.date}</time>
-                      <span aria-hidden="true">&middot;</span>
-                      <span>{post.readingTime} read</span>
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default PostWidget;

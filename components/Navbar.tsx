@@ -57,7 +57,7 @@ export default function Navbar() {
                         Contact
                       </a>
                     </NextLink>
-                    <NextLink href="https://blog.ivanguzman.dev">
+                    <NextLink href="/blog">
                       <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Blog
                       </a>
@@ -187,11 +187,8 @@ export default function Navbar() {
                 </a>
               </NextLink>
 
-              <NextLink href="https://blog.ivanguzman.dev">
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
+              <NextLink href="/blog">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   Blog
                 </a>
               </NextLink>

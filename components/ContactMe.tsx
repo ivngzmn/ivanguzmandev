@@ -58,7 +58,7 @@ function ContactMe() {
         },
         method: 'POST'
       });
-      console.log(result);
+      // console.log(result);
       setMessage({
         class: 'bg-green-500',
         text: 'Thanks for contacting me, I will be in touch with you shortly.'
@@ -66,7 +66,7 @@ function ContactMe() {
       setFormeState(initialFormState);
       recaptchaRef.current.reset();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setMessage({
         class: 'bg-red-500',
         text: 'Sorry, there was a problem with your form submission. Please try again'
@@ -87,48 +87,57 @@ function ContactMe() {
     setReCaptchaToken(token as string);
   };
   return (
-    <div className="bg-gray-100 lg:py-12">
-      <div className="lg:mt-6">
+    <div className="bg-gray-100 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="py-20 bg-gray-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
-          <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
-            <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-100 text-center sm:text-5xl sm:leading-none lg:text-6xl">
-              Say Hello 👋🏽.
-            </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-200 text-center">
-              Feel free to reach out for any freelance projects or job
-              inquiries. Or if you would like to have a coffee chat feel free to
-              reach out via the Twitter link below.
-            </p>
+
+        <div className="lg:px-0">
+          <div className="container mx-auto mb-8">
+            <div className="border-b w-full inline-block border-indigo-600 py-8">
+              <div className="md:float-left block">
+                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                  Contact Me
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
+            <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
+              <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-100 text-center sm:text-5xl sm:leading-none lg:text-6xl">
+                Say Hello 👋🏽.
+              </h1>
+              <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-200 text-center">
+                Feel free to reach out for any freelance projects or job
+                inquiries. Or if you would like to have a coffee chat feel free
+                to reach out via the Twitter link below.
+              </p>
+            </div>
           </div>
         </div>
-        {/* Container with form and picture */}
-        <div
-          aria-hidden="true"
-          className="relative w-full h-96 overflow-hidden max-w-screen-2xl mx-auto z-20"
-        >
-          <NextImage
-            src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
-            alt=""
-            // width="100%"
-            // height="100%"
-            layout="fill"
-            objectFit="cover"
-            className="lg:rounded-t-2xl"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white" />
-        </div>
 
-        <div className="container max-w-screen-2xl mx-auto 2xl:px-0">
-          <div className=" relative bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
-            <section
-              className="relative bg-white"
-              aria-labelledby="contact-heading"
-            >
+        {/* Container with form and picture */}
+        <div className="container my-8 max-w-screen-2xl mx-auto 2xl:px-0">
+          <div
+            aria-hidden="true"
+            className="relative rounded-t-xl w-full h-96 overflow-hidden max-w-screen-2xl mx-auto z-20"
+          >
+            <NextImage
+              src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
+              alt=""
+              // width="100%"
+              // height="100%"
+              layout="fill"
+              objectFit="cover"
+              className="lg:rounded-t-2xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white" />
+          </div>
+          <div className=" relative rounded-b-xl bg-white py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
+            <section className="relative" aria-labelledby="contact-heading">
               <div className="absolute w-full h-1/2" aria-hidden="true" />
 
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="relative bg-white">
+                <div className="relative">
                   <h2 id="contact-heading" className="sr-only">
                     Contact me
                   </h2>
@@ -291,7 +300,7 @@ function ContactMe() {
                     </div>
 
                     {/* Contact form */}
-                    <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                    <div className="py-10 sm:px-10 lg:col-span-2 xl:p-12">
                       <h3 className="text-xl font-medium text-gray-900">
                         Send me a message
                       </h3>
@@ -474,23 +483,27 @@ function ContactMe() {
             </section>
           </div>
         </div>
-      </div>
-
-      <div className="bg-indigo-500 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:my-12">
-        <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
-            <span className="block text-indigo-50">Reach out via Twitter</span>
-            <span className="block text-indigo-800">DM's are open.</span>
-          </h2>
-          <NextLink href="https://twitter.com/zaku_dev">
-            <a className="mt-8 w-full inline-flex items-center justify-center py-3 px-6 bg-indigo-50 border border-transparent rounded-md shadow-md text-base font-medium text-indigo-500 hover:bg-indigo-700 hover:text-white sm:w-auto">
-              <span>Come say hi.</span>
-              <FaTwitter
-                className="ml-3 h-5 w-5 flex-shrink-0"
-                aria-hidden="true"
-              />
-            </a>
-          </NextLink>
+        {/* call to action for twitter */}
+        <div className="container mx-auto">
+          <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 lg:max-w-7xl lg:mx-auto lg:my-12 px-10 my-8 rounded-xl">
+            <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
+              <h2 className="text-3xl font-extrabold sm:text-4xl">
+                <span className="block text-indigo-50">
+                  Reach out via Twitter
+                </span>
+                <span className="block text-indigo-800">DM's are open.</span>
+              </h2>
+              <NextLink href="https://twitter.com/zaku_dev">
+                <a className="mt-8 w-full inline-flex items-center justify-center py-3 px-6 bg-indigo-50 border border-transparent rounded-md shadow-md text-base font-medium text-indigo-500 hover:bg-indigo-700 hover:text-white sm:w-auto">
+                  <span>Come say hi.</span>
+                  <FaTwitter
+                    className="ml-3 h-5 w-5 flex-shrink-0"
+                    aria-hidden="true"
+                  />
+                </a>
+              </NextLink>
+            </div>
+          </div>
         </div>
       </div>
     </div>
