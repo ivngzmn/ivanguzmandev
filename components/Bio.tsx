@@ -134,7 +134,7 @@ export default function Bio() {
             <Step title="First Computer 💾">
               Since we did not have much money my mom purchased an old computer
               from a garage sale. It was so arcane that it had a green screen
-              and not printer for scholl work but it sparked my love for
+              and not printer for school work but it sparked my love for
               computers.
             </Step>
           </ul>

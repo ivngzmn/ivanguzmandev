@@ -63,19 +63,19 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-        <div className="relative shadow-md inline-block w-full h-60 lg:h-96 mb-6">
+      <div className="bg-white shadow-lg rounded-lg pb-12 mb-8">
+        <div className="relative shadow-md inline-block w-full h-60 md:h-96 lg:h-96 mb-6">
           <Image
             unoptimized
             loader={grpahCMSImageLoader}
             alt={post.title}
-            className="shadow-lg rounded-t-lg lg:rounded-lg"
+            className="shadow-lg rounded-t-lg"
             layout="fill"
             objectFit="cover"
             src={post.featuredImage.url}
           />
         </div>
-        <div className="px-4 lg:px-0">
+        <div className="px-4">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8">
               <Image

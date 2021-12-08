@@ -74,7 +74,7 @@ const FeaturedPosts = () => {
   );
 
   return (
-    <div className="mb-8">
+    <div className="mt-10">
       <Carousel
         infinite
         customLeftArrow={customLeftArrow}
