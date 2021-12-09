@@ -69,6 +69,18 @@ const code = [
 
     icon: AiFillCode,
     iconBackground: 'bg-green-500'
+  },
+  {
+    id: 4,
+    content: 'Theme: Dracula Pro for LunarVim and VS Code',
+    icon: AiFillCode,
+    iconBackground: 'bg-green-500'
+  },
+  {
+    id: 5,
+    content: 'Font: Fira Code Nerd Font for the ligatures',
+    icon: AiFillCode,
+    iconBackground: 'bg-green-500'
   }
 ];
 
