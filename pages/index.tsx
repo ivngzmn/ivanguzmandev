@@ -34,12 +34,12 @@ function Home(props: any) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@zaku_dev" />
       </Head>
-
-      <Navbar />
-
-      <section className="hero">
-        <Hero />
-      </section>
+      <div className="min-h-fit h-fit">
+        <Navbar />
+        <section className="hero">
+          <Hero />
+        </section>
+      </div>
       <RecentPosts categories={undefined} slug={undefined} />
       <section className="my-projects"></section>
       <Footer />

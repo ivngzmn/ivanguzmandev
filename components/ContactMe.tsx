@@ -101,7 +101,7 @@ function ContactMe() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
+          <div className="p-8 rounded-xl bg-gradient-to-br from-cyan-600 to-purple-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
             <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
               <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-100 text-center sm:text-5xl sm:leading-none lg:text-6xl">
                 Say Hello 👋🏽.
@@ -485,16 +485,16 @@ function ContactMe() {
         </div>
         {/* call to action for twitter */}
         <div className="container mx-auto">
-          <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 lg:max-w-7xl lg:mx-auto lg:my-12 px-10 my-8 rounded-xl">
+          <div className="bg-gradient-to-br from-cyan-600 to-purple-600 lg:max-w-7xl lg:mx-auto lg:my-12 px-10 my-8 rounded-xl">
             <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
               <h2 className="text-3xl font-extrabold sm:text-4xl">
                 <span className="block text-indigo-50">
                   Reach out via Twitter
                 </span>
-                <span className="block text-indigo-800">DM's are open.</span>
+                <span className="block text-indigo-50">DM's are open.</span>
               </h2>
               <NextLink href="https://twitter.com/zaku_dev">
-                <a className="mt-8 w-full inline-flex items-center justify-center py-3 px-6 bg-indigo-50 border border-transparent rounded-md shadow-md text-base font-medium text-indigo-500 hover:bg-indigo-700 hover:text-white sm:w-auto">
+                <a className="mt-8 w-full inline-flex items-center justify-center py-3 px-6 bg-indigo-50 border border-transparent rounded-md shadow-md text-base font-medium text-indigo-600 hover:bg-indigo-700 hover:text-white sm:w-auto">
                   <span>Come say hi.</span>
                   <FaTwitter
                     className="ml-3 h-5 w-5 flex-shrink-0"

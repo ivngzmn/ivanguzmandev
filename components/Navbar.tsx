@@ -5,6 +5,7 @@ import ProfilePic from '/public/images/profile-photo.jpg';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import Link from 'next/link';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -12,25 +13,23 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className=" bg-black">
       {({ open }) => (
         <>
-          <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
-            Available for Hire
-          </p>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <NextLink href="/">
-                    <a>
-                      <NextImage
+                    <a className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600  ">
+                      Ivan Guzman
+                      {/* <NextImage
                         className="h-8 w-auto"
                         src="/images/ig-logo.svg"
                         alt="Logo"
                         width="40"
                         height="40"
-                      />
+                      /> */}
                     </a>
                   </NextLink>
                 </div>
@@ -38,27 +37,27 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <NextLink href="/">
-                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-100 hover:bg-slate-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Home
                       </a>
                     </NextLink>
                     <NextLink href="/about">
-                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-100 hover:bg-slate-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         About
                       </a>
                     </NextLink>
                     <NextLink href="/projects">
-                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-100 hover:bg-slate-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Projects
                       </a>
                     </NextLink>
                     <NextLink href="/contact">
-                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-100 hover:bg-slate-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Contact
                       </a>
                     </NextLink>
                     <NextLink href="/blog">
-                      <a className="hidden lg:inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <a className="hidden lg:inline-block text-gray-100 hover:bg-slate-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         Blog
                       </a>
                     </NextLink>
@@ -70,10 +69,10 @@ export default function Navbar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="ml-3 relative">
                     <div>
-                      <Menu.Button className="hidden lg:inline-block  bg-gray-800 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <Menu.Button className="hidden lg:inline-block  bg-black text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
 
-                        <div className="space-x-8 flex items-center rounded-full pr-1 pl-4 pt-1 bg-gray-700">
+                        <div className="space-x-8 flex items-center rounded-full pr-1 pl-4 pt-1 bg-slate-900">
                           <span className="text-gray-300">
                             <span className="sr-only">Open main menu</span>
                             <span>Ivan G.</span>
@@ -101,7 +100,7 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-40">
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-slate-900 ring-1 ring-black ring-opacity-5 focus:outline-none z-40">
                         <Menu.Item>
                           {({ active }) => (
                             <a
@@ -209,8 +208,8 @@ export default function Navbar() {
                   <div className="text-base font-medium text-white">
                     Ivan Guzman
                   </div>
-                  <div className="text-sm font-medium text-gray-400">
-                    ivanguzmandev@gmail.com
+                  <div className="text-sm font-medium text-gray-400 cursor-pointer">
+                    <Link href="/contact">hello@ivanguzman.dev</Link>
                   </div>
                 </div>
               </div>

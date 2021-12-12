@@ -7,7 +7,7 @@
       "uuidString" : "2EEA4B57-FD2E-404D-9B09-813F8B8DC3B4"
     }
   ],
-  "creatorBuild" : "34214",
+  "creatorBuild" : "34264",
   "files" : {
     "\/.env.local" : {
       "cB" : 0,
@@ -156,13 +156,24 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/server\/pages\/blog\/category\/[slug].js" : {
+    "\/.next\/server\/pages\/contact.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/server\/pages\/blog\/category\/[slug]-min.js",
+      "oAP" : "\/.next\/server\/pages\/contact-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/server\/pages\/index-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/server\/pages\/index-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -174,6 +185,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/.next\/server\/pages\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/server\/pages\/projects.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/server\/pages\/projects-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -255,6 +277,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/.next\/static\/chunks\/pages\/blog\/[slug]-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/chunks\/pages\/blog\/[slug]-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/.next\/static\/chunks\/pages\/blog\/[slug].js" : {
       "bF" : 0,
       "ft" : 64,
@@ -266,13 +299,24 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/chunks\/pages\/blog\/category\/[slug].js" : {
+    "\/.next\/static\/chunks\/pages\/contact.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/chunks\/pages\/blog\/category\/[slug]-min.js",
+      "oAP" : "\/.next\/static\/chunks\/pages\/contact-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/chunks\/pages\/index-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/chunks\/pages\/index-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -284,6 +328,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/.next\/static\/chunks\/pages\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/chunks\/pages\/projects.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/chunks\/pages\/projects-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -306,6 +361,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/.next\/static\/chunks\/react-refresh-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/chunks\/webpack-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/chunks\/webpack-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -404,1603 +470,1776 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/.next\/static\/webpack\/0f61c5d0d20d980b.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/0fb71af6d3b0888e.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/0f61c5d0d20d980b.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/0fb71af6d3b0888e.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/2bf8cb5cb234c625.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/001b9c31ce6e21e0.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/2bf8cb5cb234c625.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/001b9c31ce6e21e0.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/3a78b45cc42f158b.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/1f2bb27705a6bbd4.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/3a78b45cc42f158b.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/1f2bb27705a6bbd4.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/4a29ebcbd809d8b4.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/2a069dcd474e2989.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/4a29ebcbd809d8b4.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/2a069dcd474e2989.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/4f8b98c7d5e17230.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/2db7e1536a0d93d5.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/4f8b98c7d5e17230.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/2db7e1536a0d93d5.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/5f630c8ad6407fbc.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/3a0b3dd7bf7bf171.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/5f630c8ad6407fbc.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/3a0b3dd7bf7bf171.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/6aba32d96592e5f2.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/4bb3169e6e1d5b86.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/6aba32d96592e5f2.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/4bb3169e6e1d5b86.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/8f1e2ec32b4d2e2a.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/5ae2074bf6941651.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/8f1e2ec32b4d2e2a.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/5ae2074bf6941651.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/42ed9a13ada33b8e.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/05cf5d833c7a31cb.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/42ed9a13ada33b8e.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/05cf5d833c7a31cb.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/62c8d91aec65b73d.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/5f738d9595a94110.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/62c8d91aec65b73d.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/5f738d9595a94110.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/66c836e058655d92.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/6bed8fee0f973e72.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/66c836e058655d92.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/6bed8fee0f973e72.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/91d05218d0ac299b.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/6c35c315cdd50c21.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/91d05218d0ac299b.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/6c35c315cdd50c21.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/282b6e72f42abc64.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/7a7cc21ef7b3cfc7.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/282b6e72f42abc64.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/7a7cc21ef7b3cfc7.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/475f6bc50b054450.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/7c2fe545e92fbbb1.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/475f6bc50b054450.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/7c2fe545e92fbbb1.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/812a2ec59c0b4357.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/7caeeac506efc8e2.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/812a2ec59c0b4357.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/7caeeac506efc8e2.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/1757d1cf0b58e214.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/9c0ae7ca59f34e22.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/1757d1cf0b58e214.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/9c0ae7ca59f34e22.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/1986c855b8034013.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/38d238d373347295.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/1986c855b8034013.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/38d238d373347295.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/6308a2e781a1dbae.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/72bfc51c09171884.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/6308a2e781a1dbae.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/72bfc51c09171884.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/1113319ca5e77bfb.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/76f446445e8ab14b.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/1113319ca5e77bfb.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/76f446445e8ab14b.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/a1f41f78b180556d.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/88ad784b9130f891.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/a1f41f78b180556d.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/88ad784b9130f891.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/a4d1ba85ccc20a8b.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/091b6681520d4195.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/a4d1ba85ccc20a8b.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/091b6681520d4195.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/a309d3d183c486dd.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/99e58eb49da4d791.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/a309d3d183c486dd.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/99e58eb49da4d791.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ad8666ad263f1289.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/207fed58ef737f4f.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ad8666ad263f1289.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/207fed58ef737f4f.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/b37e57560ffa3beb.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/738d60d26435bd3b.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/b37e57560ffa3beb.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/738d60d26435bd3b.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/b90dfbb88ba5a000.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/758b5f1be49bb71c.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/b90dfbb88ba5a000.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/758b5f1be49bb71c.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/b5375a81c2cf864d.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/880da701e82427f8.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/b5375a81c2cf864d.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/880da701e82427f8.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/c80f24a26a46a9cf.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/5669e682a525025a.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/c80f24a26a46a9cf.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/5669e682a525025a.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ce2ad07d421d89de.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/7208bad55a62e82f.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ce2ad07d421d89de.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/7208bad55a62e82f.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ce8d794b9597a12f.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/7451b3a725292dbe.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ce8d794b9597a12f.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/7451b3a725292dbe.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d3b0ff44522cb0b8.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/9927b2aff48cb434.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d3b0ff44522cb0b8.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/9927b2aff48cb434.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d19f4248943bbcce.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/535471abee4e6bd0.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d19f4248943bbcce.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/535471abee4e6bd0.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d39e9543f2f4708e.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/784340be45f6aa9c.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d39e9543f2f4708e.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/784340be45f6aa9c.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d82e18bd86858e8c.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/a4c83556847a8973.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d82e18bd86858e8c.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/a4c83556847a8973.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d0114f9ef7a67bcc.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/a82f99c4fe6e60e1.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d0114f9ef7a67bcc.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/a82f99c4fe6e60e1.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d6433f454837c63a.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/a25526298c176434.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d6433f454837c63a.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/a25526298c176434.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/e6fcaa821ff8e4c5.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b6dda8b0a45e9026.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/e6fcaa821ff8e4c5.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b6dda8b0a45e9026.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/e96bba70325389a0.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b42a7f2ba072aace.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/e96bba70325389a0.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b42a7f2ba072aace.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/e9793692a67c3a43.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b76d87fed48a387d.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/e9793692a67c3a43.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b76d87fed48a387d.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ee8fa32322c1b327.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b247f4e4fed2552b.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ee8fa32322c1b327.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b247f4e4fed2552b.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ef873939dc14f8aa.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b482d23513e80d1e.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ef873939dc14f8aa.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b482d23513e80d1e.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/fc33d030069dbe81.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/b81352bce952b028.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/fc33d030069dbe81.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/b81352bce952b028.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/ff74420213b4d098.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/bb60b905ee7f54e9.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/ff74420213b4d098.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/bb60b905ee7f54e9.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/pages\/_app.ee8fa32322c1b327.hot-update.js" : {
+    "\/.next\/static\/webpack\/bbc182e16ab72515.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/bbc182e16ab72515.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/c530aa9abd710afc.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/c530aa9abd710afc.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/cba6477a9a5c3a40.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/cba6477a9a5c3a40.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/d6e4d60dc34de9c9.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/d6e4d60dc34de9c9.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/d6831d4c859947b6.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/d6831d4c859947b6.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/da1c6bbabafc2644.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/da1c6bbabafc2644.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/dc8f3bb03608eb78.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/dc8f3bb03608eb78.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/e731ba5a17f0fa8c.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/e731ba5a17f0fa8c.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/e8680d1813f66d93.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/e8680d1813f66d93.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/f6d069cb7db69de2.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/f6d069cb7db69de2.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/f17f3420acb8617d.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/f17f3420acb8617d.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/f22a192df48245a2.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/f22a192df48245a2.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/pages\/_app.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/pages\/_app.ee8fa32322c1b327.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.2bf8cb5cb234c625.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/_app.05cf5d833c7a31cb.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.2bf8cb5cb234c625.hot-update-min.js",
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.05cf5d833c7a31cb.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.4f8b98c7d5e17230.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/_app.6bed8fee0f973e72.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.4f8b98c7d5e17230.hot-update-min.js",
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.6bed8fee0f973e72.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.7a7cc21ef7b3cfc7.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.7a7cc21ef7b3cfc7.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.9c0ae7ca59f34e22.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.9c0ae7ca59f34e22.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.535471abee4e6bd0.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.535471abee4e6bd0.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.b76d87fed48a387d.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.b76d87fed48a387d.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.dc8f3bb03608eb78.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.dc8f3bb03608eb78.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.e731ba5a17f0fa8c.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.e731ba5a17f0fa8c.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.f17f3420acb8617d.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.f17f3420acb8617d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.5f630c8ad6407fbc.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.0fb71af6d3b0888e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.5f630c8ad6407fbc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.0fb71af6d3b0888e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.6aba32d96592e5f2.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.6aba32d96592e5f2.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.42ed9a13ada33b8e.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.7caeeac506efc8e2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.42ed9a13ada33b8e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.7caeeac506efc8e2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.62c8d91aec65b73d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.72bfc51c09171884.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.62c8d91aec65b73d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.72bfc51c09171884.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.66c836e058655d92.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.207fed58ef737f4f.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.66c836e058655d92.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.207fed58ef737f4f.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.91d05218d0ac299b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.738d60d26435bd3b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.91d05218d0ac299b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.738d60d26435bd3b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.812a2ec59c0b4357.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog.b42a7f2ba072aace.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.812a2ec59c0b4357.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog.b42a7f2ba072aace.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.1113319ca5e77bfb.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].1f2bb27705a6bbd4.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.1113319ca5e77bfb.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].1f2bb27705a6bbd4.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.b5375a81c2cf864d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].99e58eb49da4d791.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.b5375a81c2cf864d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].99e58eb49da4d791.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.ce8d794b9597a12f.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].a4c83556847a8973.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.ce8d794b9597a12f.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].a4c83556847a8973.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.d39e9543f2f4708e.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].b76d87fed48a387d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.d39e9543f2f4708e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].b76d87fed48a387d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.d82e18bd86858e8c.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].d6831d4c859947b6.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.d82e18bd86858e8c.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].d6831d4c859947b6.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.d6433f454837c63a.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/blog\/[slug].e731ba5a17f0fa8c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.d6433f454837c63a.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].e731ba5a17f0fa8c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.ee8fa32322c1b327.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/contact.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.ee8fa32322c1b327.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/contact.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog.ff74420213b4d098.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.0fb71af6d3b0888e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog.ff74420213b4d098.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.0fb71af6d3b0888e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].0f61c5d0d20d980b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.1f2bb27705a6bbd4.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].0f61c5d0d20d980b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.1f2bb27705a6bbd4.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].4a29ebcbd809d8b4.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.2a069dcd474e2989.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].4a29ebcbd809d8b4.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.2a069dcd474e2989.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].282b6e72f42abc64.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].282b6e72f42abc64.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].a1f41f78b180556d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.5ae2074bf6941651.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].a1f41f78b180556d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.5ae2074bf6941651.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].a4d1ba85ccc20a8b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.05cf5d833c7a31cb.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].a4d1ba85ccc20a8b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.05cf5d833c7a31cb.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].a309d3d183c486dd.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.5f738d9595a94110.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].a309d3d183c486dd.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.5f738d9595a94110.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].b5375a81c2cf864d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.6bed8fee0f973e72.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].b5375a81c2cf864d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.6bed8fee0f973e72.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].ce2ad07d421d89de.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.6c35c315cdd50c21.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].ce2ad07d421d89de.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.6c35c315cdd50c21.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].ce8d794b9597a12f.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.7a7cc21ef7b3cfc7.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].ce8d794b9597a12f.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.7a7cc21ef7b3cfc7.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].e96bba70325389a0.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.7c2fe545e92fbbb1.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].e96bba70325389a0.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.7c2fe545e92fbbb1.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].ef873939dc14f8aa.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.7caeeac506efc8e2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].ef873939dc14f8aa.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.7caeeac506efc8e2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/[slug].fc33d030069dbe81.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.9c0ae7ca59f34e22.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/[slug].fc33d030069dbe81.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.9c0ae7ca59f34e22.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].3a78b45cc42f158b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.38d238d373347295.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].3a78b45cc42f158b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.38d238d373347295.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].282b6e72f42abc64.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.72bfc51c09171884.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].282b6e72f42abc64.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.72bfc51c09171884.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].475f6bc50b054450.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.76f446445e8ab14b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].475f6bc50b054450.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.76f446445e8ab14b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].1986c855b8034013.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.88ad784b9130f891.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].1986c855b8034013.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.88ad784b9130f891.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].a4d1ba85ccc20a8b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.99e58eb49da4d791.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].a4d1ba85ccc20a8b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.99e58eb49da4d791.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].ad8666ad263f1289.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.207fed58ef737f4f.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].ad8666ad263f1289.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.207fed58ef737f4f.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].b90dfbb88ba5a000.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.738d60d26435bd3b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].b90dfbb88ba5a000.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.738d60d26435bd3b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].b5375a81c2cf864d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.758b5f1be49bb71c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].b5375a81c2cf864d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.758b5f1be49bb71c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].d0114f9ef7a67bcc.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.5669e682a525025a.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].d0114f9ef7a67bcc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.5669e682a525025a.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].e6fcaa821ff8e4c5.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.7451b3a725292dbe.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/blog\/category\/[slug].e6fcaa821ff8e4c5.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.7451b3a725292dbe.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.0f61c5d0d20d980b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.9927b2aff48cb434.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.0f61c5d0d20d980b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.9927b2aff48cb434.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.2bf8cb5cb234c625.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.535471abee4e6bd0.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.2bf8cb5cb234c625.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.535471abee4e6bd0.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.3a78b45cc42f158b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.a4c83556847a8973.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.3a78b45cc42f158b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.a4c83556847a8973.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.4a29ebcbd809d8b4.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.a82f99c4fe6e60e1.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.4a29ebcbd809d8b4.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.a82f99c4fe6e60e1.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.4f8b98c7d5e17230.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.a25526298c176434.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.4f8b98c7d5e17230.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.a25526298c176434.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.5f630c8ad6407fbc.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b6dda8b0a45e9026.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.5f630c8ad6407fbc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b6dda8b0a45e9026.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.6aba32d96592e5f2.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b42a7f2ba072aace.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.6aba32d96592e5f2.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b42a7f2ba072aace.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.42ed9a13ada33b8e.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b76d87fed48a387d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.42ed9a13ada33b8e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b76d87fed48a387d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.62c8d91aec65b73d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b247f4e4fed2552b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.62c8d91aec65b73d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b247f4e4fed2552b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.66c836e058655d92.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b482d23513e80d1e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.66c836e058655d92.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b482d23513e80d1e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.91d05218d0ac299b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.b81352bce952b028.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.91d05218d0ac299b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.b81352bce952b028.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.282b6e72f42abc64.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.bbc182e16ab72515.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.282b6e72f42abc64.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.bbc182e16ab72515.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.475f6bc50b054450.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.c530aa9abd710afc.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.475f6bc50b054450.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.c530aa9abd710afc.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.812a2ec59c0b4357.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.d6e4d60dc34de9c9.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.812a2ec59c0b4357.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.d6e4d60dc34de9c9.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.1986c855b8034013.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.d6831d4c859947b6.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.1986c855b8034013.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.d6831d4c859947b6.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.1113319ca5e77bfb.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.da1c6bbabafc2644.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.1113319ca5e77bfb.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.da1c6bbabafc2644.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.a1f41f78b180556d.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.dc8f3bb03608eb78.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.a1f41f78b180556d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.dc8f3bb03608eb78.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.a4d1ba85ccc20a8b.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.e731ba5a17f0fa8c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.a4d1ba85ccc20a8b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.e731ba5a17f0fa8c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.a309d3d183c486dd.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.f6d069cb7db69de2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.a309d3d183c486dd.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.f6d069cb7db69de2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ad8666ad263f1289.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.f17f3420acb8617d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ad8666ad263f1289.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.f17f3420acb8617d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.b90dfbb88ba5a000.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/projects.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.b90dfbb88ba5a000.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/projects.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ce2ad07d421d89de.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.0fb71af6d3b0888e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ce2ad07d421d89de.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.0fb71af6d3b0888e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ce8d794b9597a12f.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.001b9c31ce6e21e0.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ce8d794b9597a12f.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.001b9c31ce6e21e0.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.d39e9543f2f4708e.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.1f2bb27705a6bbd4.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.d39e9543f2f4708e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.1f2bb27705a6bbd4.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.d82e18bd86858e8c.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.2a069dcd474e2989.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.d82e18bd86858e8c.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.2a069dcd474e2989.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.d0114f9ef7a67bcc.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.2db7e1536a0d93d5.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.d0114f9ef7a67bcc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.2db7e1536a0d93d5.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.d6433f454837c63a.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.3a0b3dd7bf7bf171.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.d6433f454837c63a.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.3a0b3dd7bf7bf171.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.e6fcaa821ff8e4c5.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.4bb3169e6e1d5b86.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.e6fcaa821ff8e4c5.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.4bb3169e6e1d5b86.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.e96bba70325389a0.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.5ae2074bf6941651.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.e96bba70325389a0.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.5ae2074bf6941651.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ee8fa32322c1b327.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.05cf5d833c7a31cb.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ee8fa32322c1b327.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.05cf5d833c7a31cb.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ef873939dc14f8aa.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.5f738d9595a94110.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ef873939dc14f8aa.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.5f738d9595a94110.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.fc33d030069dbe81.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.6bed8fee0f973e72.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.fc33d030069dbe81.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.6bed8fee0f973e72.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.ff74420213b4d098.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.6c35c315cdd50c21.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.ff74420213b4d098.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.6c35c315cdd50c21.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.0f61c5d0d20d980b.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.7a7cc21ef7b3cfc7.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.0f61c5d0d20d980b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.7a7cc21ef7b3cfc7.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.2bf8cb5cb234c625.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.7c2fe545e92fbbb1.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.2bf8cb5cb234c625.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.7c2fe545e92fbbb1.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.3a78b45cc42f158b.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.7caeeac506efc8e2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.3a78b45cc42f158b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.7caeeac506efc8e2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.4a29ebcbd809d8b4.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.9c0ae7ca59f34e22.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.4a29ebcbd809d8b4.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.9c0ae7ca59f34e22.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.4f8b98c7d5e17230.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.38d238d373347295.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.4f8b98c7d5e17230.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.38d238d373347295.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.5f630c8ad6407fbc.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.72bfc51c09171884.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.5f630c8ad6407fbc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.72bfc51c09171884.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.6aba32d96592e5f2.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.76f446445e8ab14b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.6aba32d96592e5f2.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.76f446445e8ab14b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.8f1e2ec32b4d2e2a.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.88ad784b9130f891.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.8f1e2ec32b4d2e2a.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.88ad784b9130f891.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.42ed9a13ada33b8e.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.091b6681520d4195.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.42ed9a13ada33b8e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.091b6681520d4195.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.62c8d91aec65b73d.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.99e58eb49da4d791.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.62c8d91aec65b73d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.99e58eb49da4d791.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.66c836e058655d92.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.207fed58ef737f4f.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.66c836e058655d92.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.207fed58ef737f4f.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.91d05218d0ac299b.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.738d60d26435bd3b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.91d05218d0ac299b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.738d60d26435bd3b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.282b6e72f42abc64.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.758b5f1be49bb71c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.282b6e72f42abc64.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.758b5f1be49bb71c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.475f6bc50b054450.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.880da701e82427f8.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.475f6bc50b054450.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.880da701e82427f8.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.812a2ec59c0b4357.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.5669e682a525025a.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.812a2ec59c0b4357.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.5669e682a525025a.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.1757d1cf0b58e214.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.7208bad55a62e82f.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.1757d1cf0b58e214.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.7208bad55a62e82f.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.1986c855b8034013.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.7451b3a725292dbe.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.1986c855b8034013.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.7451b3a725292dbe.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.6308a2e781a1dbae.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.9927b2aff48cb434.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.6308a2e781a1dbae.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.9927b2aff48cb434.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.1113319ca5e77bfb.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.535471abee4e6bd0.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.1113319ca5e77bfb.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.535471abee4e6bd0.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.a1f41f78b180556d.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.784340be45f6aa9c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.a1f41f78b180556d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.784340be45f6aa9c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.a4d1ba85ccc20a8b.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.a4c83556847a8973.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.a4d1ba85ccc20a8b.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.a4c83556847a8973.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.a309d3d183c486dd.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.a82f99c4fe6e60e1.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.a309d3d183c486dd.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.a82f99c4fe6e60e1.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ad8666ad263f1289.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.a25526298c176434.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ad8666ad263f1289.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.a25526298c176434.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.b37e57560ffa3beb.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b6dda8b0a45e9026.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.b37e57560ffa3beb.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b6dda8b0a45e9026.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.b90dfbb88ba5a000.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b42a7f2ba072aace.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.b90dfbb88ba5a000.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b42a7f2ba072aace.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.b5375a81c2cf864d.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b76d87fed48a387d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.b5375a81c2cf864d.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b76d87fed48a387d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.c80f24a26a46a9cf.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b247f4e4fed2552b.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.c80f24a26a46a9cf.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b247f4e4fed2552b.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ce2ad07d421d89de.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b482d23513e80d1e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ce2ad07d421d89de.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b482d23513e80d1e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ce8d794b9597a12f.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.b81352bce952b028.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ce8d794b9597a12f.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.b81352bce952b028.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d3b0ff44522cb0b8.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.bb60b905ee7f54e9.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d3b0ff44522cb0b8.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.bb60b905ee7f54e9.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d19f4248943bbcce.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.bbc182e16ab72515.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d19f4248943bbcce.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.bbc182e16ab72515.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d39e9543f2f4708e.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.c530aa9abd710afc.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d39e9543f2f4708e.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.c530aa9abd710afc.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d82e18bd86858e8c.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.cba6477a9a5c3a40.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d82e18bd86858e8c.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.cba6477a9a5c3a40.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d0114f9ef7a67bcc.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.d6e4d60dc34de9c9.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d0114f9ef7a67bcc.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.d6e4d60dc34de9c9.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d6433f454837c63a.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.d6831d4c859947b6.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d6433f454837c63a.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.d6831d4c859947b6.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.e6fcaa821ff8e4c5.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.da1c6bbabafc2644.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.e6fcaa821ff8e4c5.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.da1c6bbabafc2644.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.e96bba70325389a0.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.dc8f3bb03608eb78.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.e96bba70325389a0.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.dc8f3bb03608eb78.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.e9793692a67c3a43.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.e731ba5a17f0fa8c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.e9793692a67c3a43.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.e731ba5a17f0fa8c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ee8fa32322c1b327.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.e8680d1813f66d93.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ee8fa32322c1b327.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.e8680d1813f66d93.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ef873939dc14f8aa.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.f6d069cb7db69de2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ef873939dc14f8aa.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.f6d069cb7db69de2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.fc33d030069dbe81.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.f17f3420acb8617d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.fc33d030069dbe81.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.f17f3420acb8617d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.ff74420213b4d098.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.f22a192df48245a2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.ff74420213b4d098.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.f22a192df48245a2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2020,14 +2259,6 @@
       "oA" : 0,
       "oAP" : "\/.prettierignore",
       "oF" : 0
-    },
-    "\/.vscode\/settings.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/.vscode\/settings-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
     },
     "\/components\/AboutMe.tsx" : {
       "cDF" : 0,
@@ -2183,6 +2414,17 @@
       "rC" : 0,
       "tEC" : 0
     },
+    "\/components\/Hero.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/components\/Hero-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/components\/Hero.tsx" : {
       "cDF" : 0,
       "ft" : 128,
@@ -2337,6 +2579,20 @@
       "rC" : 0,
       "tEC" : 0
     },
+    "\/components\/Setup.tsx" : {
+      "cDF" : 0,
+      "ft" : 128,
+      "jxM" : 0,
+      "ma" : 0,
+      "mi" : 0,
+      "moR" : 0,
+      "moT" : 2,
+      "oA" : 0,
+      "oAP" : "\/components\/Setup.js",
+      "oF" : 0,
+      "rC" : 0,
+      "tEC" : 0
+    },
     "\/lib\/spotify.tsx" : {
       "cDF" : 0,
       "ft" : 128,
@@ -2392,6 +2648,14 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/package-lock.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package-lock-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
     },
     "\/package.json" : {
       "ft" : 524288,
@@ -2495,34 +2759,6 @@
       "moT" : 2,
       "oA" : 0,
       "oAP" : "\/pages\/api\/sendgrid.js",
-      "oF" : 0,
-      "rC" : 0,
-      "tEC" : 0
-    },
-    "\/pages\/api\/sociallinks.tsx" : {
-      "cDF" : 0,
-      "ft" : 128,
-      "jxM" : 0,
-      "ma" : 0,
-      "mi" : 0,
-      "moR" : 0,
-      "moT" : 2,
-      "oA" : 0,
-      "oAP" : "\/pages\/api\/sociallinks.js",
-      "oF" : 0,
-      "rC" : 0,
-      "tEC" : 0
-    },
-    "\/pages\/api\/userconfig.tsx" : {
-      "cDF" : 0,
-      "ft" : 128,
-      "jxM" : 0,
-      "ma" : 0,
-      "mi" : 0,
-      "moR" : 0,
-      "moT" : 2,
-      "oA" : 0,
-      "oAP" : "\/pages\/api\/userconfig.js",
       "oF" : 0,
       "rC" : 0,
       "tEC" : 0
@@ -2941,7 +3177,7 @@
       "mi" : 0,
       "moR" : 0,
       "moT" : 2,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/sections\/FeaturedPosts.js",
       "oF" : 0,
       "rC" : 0,
@@ -3466,9 +3702,9 @@
     "environmentVariableEntries" : [
       "NODE_ENV:::development"
     ],
-    "esLintConfigFileHandlingType" : 0,
-    "esLintECMAVersion" : 7,
-    "esLintEnvironmentsMask" : 1,
+    "esLintConfigFileHandlingType" : 2,
+    "esLintECMAVersion" : 5,
+    "esLintEnvironmentsMask" : 3,
     "esLintRules" : {
       "accessor-pairs" : {
         "active" : 0,
@@ -4172,6 +4408,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,

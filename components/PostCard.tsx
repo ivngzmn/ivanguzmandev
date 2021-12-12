@@ -64,7 +64,7 @@ const PostCard = ({ post }) => (
       <div className="px-4 flex justify-end">
         <Link href={`/blog/${post.slug}`} passHref>
           <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-lg font-medium rounded-2xl text-white px-8 py-3 cursor-pointer">
-            Read More
+            Read More {'>'}
           </span>
         </Link>
       </div>
