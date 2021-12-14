@@ -1,7 +1,6 @@
 import NextLink from 'next/link';
 import NextImage from 'next/image';
 import BackgroundImage from 'public/images/sf-sunset.jpg';
-import { Loader } from 'components';
 
 export default function Hero() {
   return (
@@ -30,9 +29,8 @@ export default function Hero() {
                 </span>
                 <p className="text-xl leading-relaxed text-gray-50 sm:mt-5 sm:text-lg max-w-prose text-left sm:text-left lg:text-left md:mt-5 md:text-xl lg:text-2xl lg:mx-0 lg:leading-loose">
                   I’m a reef aquarium nerd and Jamstack enthusiast. Developing
-                  blazing fast web applications is my passion. Love working with
-                  Tailwind CSS and Next.js. Welcome to my corner of the digital
-                  ocean.
+                  blazing fast web applications with Next.js and Tailwind CSS is
+                  my passion. Welcome to my corner of the digital ocean.
                 </p>
               </div>
               <div className="mt-5 lg:space-x-5 sm:mt-8 sm:flex sm:justify-left lg:justify-start">
