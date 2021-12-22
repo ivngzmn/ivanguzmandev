@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-// import '../styles/global.scss';
+import '/styles/global.css';
 import React from 'react';
 
 function MyApp({ Component, pageProps }) {

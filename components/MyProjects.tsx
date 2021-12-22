@@ -33,29 +33,20 @@ const projects = [
 export default function myProjects() {
   return (
     <div className="bg-gray-100">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto mb-8">
-          <div className="border-b w-full inline-block border-indigo-600 py-8">
+          <div className="w-full inline-block py-8">
             <div className="md:float-left block">
               <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                My Projects
+                / Projects
               </span>
             </div>
           </div>
         </div>
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-          Lorem Ipsum
+          Selected works, clients projects.
         </h2>
-        <p className="mt-4 text-base text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem
-          nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus
-          massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex
-          est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu
-          rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt
-          purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus.
-          Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec
-          ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis.
-        </p>
+        <p className="mt-4 text-base text-gray-500"></p>
 
         <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           {projects.map((category) => (

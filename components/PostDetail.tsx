@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 import moment from 'moment';
 import { grpahCMSImageLoader } from '../util';
 
@@ -63,8 +65,16 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg pb-12 mb-8">
-        <div className="relative shadow-md inline-block w-full h-60 md:h-96 lg:h-96 mb-6">
+      <div className="absolute -mt-10">
+        <Link href={`/blog/`} passHref>
+          <a className="text-lg text-gray-500 hover:text-gray-800 flex items-center space-x-1 transition duration-300 ease-in-out">
+            <HiArrowNarrowLeft className="w-5 h-5" />
+            <span>Back to all posts</span>
+          </a>
+        </Link>
+      </div>
+      <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8">
+        <div className="relative shadow-md inline-block w-full h-60 md:h-96 lg:h-[700px] mb-6">
           <Image
             unoptimized
             loader={grpahCMSImageLoader}
@@ -85,7 +95,7 @@ const PostDetail = ({ post }) => {
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 mx-2 font-medium text-lg">
+              <p className="inline align-middle text-gray-700 mx-2 font-base text-lg">
                 {post.author.name}
               </p>
             </div>
@@ -109,7 +119,9 @@ const PostDetail = ({ post }) => {
               </span>
             </div>
           </div>
-          <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+          <h1 className="mb-8 text-3xl text-center font-semibold">
+            {post.title}
+          </h1>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) =>
               getContentFragment(itemindex, item.text, item, typeObj)

@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram
 } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si';
 import Link from 'next/link';
 
 // import NowPlaying from '@/components/NowPlaying';
@@ -54,7 +55,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800">
+    <footer className="bg-slate-900">
       {/* <NowPlaying /> */}
       <div className="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <nav
@@ -87,9 +88,11 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-300">
-          &copy;{today.getUTCFullYear()} Ivan Guzman. Made with Next.js and
-          Tailwind CSS. Hosted on Vercel.
+        <p className="mt-8 text-center text-base text-gray-300 flex items-center justify-center">
+          &copy;{today.getUTCFullYear()} Ivan Guzman. All rights reserved.
+        </p>
+        <p className="mt-2 text-center text-base text-gray-300 flex items-center justify-center">
+          Made with Next.js and Tailwind CSS. Hosted on Vercel.
         </p>
       </div>
     </footer>

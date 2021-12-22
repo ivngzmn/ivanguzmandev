@@ -27,6 +27,7 @@ const PostDetails = ({ post }) => {
     <>
       <Navbar />
       <Header />
+
       <div className="container max-w-7xl mx-auto px-4 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">
           <div className="col-span-1 lg:col-span-9 mt-10">

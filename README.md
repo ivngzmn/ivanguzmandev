@@ -1,6 +1,6 @@
 # Next.js 12 + Tailwind CSS Portfolio
 
-My portfolio is made with [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) and Next.js. It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS. Still a work in progress so not guarantee that it will work on your machine 🤷🏽‍♂️.
+My portfolio is made with [Tailwind CSS](https://tailwindcss.com/) [(v3)](https://tailwindcss.com/blog/tailwindcss-v3) and Next.js. It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS. Still a work in progress so not guarantee that it will work on your machine 🤷🏽‍♂️.
 
 ## Deploy your own
 
