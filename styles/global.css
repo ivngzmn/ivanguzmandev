@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Graphik';
+    font-weight: 700;
+    src: url('/fonts/Graphik/Graphik-Regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Tuesday';
+    font-weight: 700;
+    src: url('/fonts/Tuesday/TuesdayNight-Regular.woff') format('woff');
+  }
+}
+
+::selection {
+  background-color: #420080;
+  color: #fefefe;
+}
