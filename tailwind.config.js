@@ -8,6 +8,10 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        graphik: "'Graphik', sans-serif",
+        tuesday: "'Tuesday', serif"
+      },
       backgroundImage: {
         'text-animation': 'url(/images/hero-text-motion.webp)',
         'hero-image':
