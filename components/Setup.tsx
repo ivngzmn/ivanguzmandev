@@ -182,10 +182,10 @@ function DevSetup() {
       <section className="mb-28">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto mb-8">
-            <div className="border-b w-full inline-block border-indigo-600 py-8">
+            <div className="w-full inline-block py-8">
               <div className="md:float-left block">
                 <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                  Uses
+                  / Uses
                 </span>
               </div>
             </div>
@@ -197,17 +197,17 @@ function DevSetup() {
             </span>
           </div>
           <figure>
-            <div className="relative shadow-md inline-block w-96 h-96 lg:w-full lg:h-screen">
+            <div className="relative mx-auto shadow-md inline-block w-96 h-96 lg:w-full lg:h-screen">
               <Image
                 alt={`Black Flat Screen Computer Monitor on White Wooden Desk`}
                 src={`https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627045601/Personal-Website/desk_qnmcyd.jpg`}
                 layout="fill"
                 objectFit="cover"
                 priority
-                className="shadow-lg rounded-xl"
+                className="shadow-xl rounded-xl"
               />
             </div>
-            <figcaption className="text-gray-500 flex mt-2">
+            <figcaption className="text-gray-500 flex mt-2 lg:justify-end">
               <CameraIcon
                 className="flex-none w-5 h-5 text-gray-400"
                 aria-hidden="true"

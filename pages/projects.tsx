@@ -5,7 +5,7 @@ function Projects() {
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Projects | Ivan Guzman</title>
       </Head>
 
       <Navbar />

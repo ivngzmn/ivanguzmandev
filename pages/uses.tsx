@@ -6,7 +6,7 @@ function Uses() {
   return (
     <>
       <Head>
-        <title>Uses</title>
+        <title>Uses | Ivan Guzman</title>
       </Head>
 
       <Navbar />

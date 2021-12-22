@@ -18,7 +18,7 @@ export default function BlogPosts({ posts }) {
   return (
     <>
       <Head>
-        <title>Blog</title>
+        <title>Blog | Ivan Guzman</title>
       </Head>
 
       <Navbar />

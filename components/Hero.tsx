@@ -22,7 +22,10 @@ export default function Hero() {
       />
       <div className="max-w-7xl mx-auto flex justify-center flex-col min-h-screen">
         <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
-          <main className="mt-20 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 ">
+          <main
+            id="skip"
+            className="mt-20 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 "
+          >
             <div className="text-left sm:text-left lg:text-left">
               <h1 className="filter contrast-150 text-transparent bg-clip-text bg-text-animation bg-center md:bg-center lg:bg-center lg:bg-no-repeat bg-cover text-6xl tracking-tight leading-tight font-extrabold lg:text-7xl xl:text-8xl 2xl:text-[118px]">
                 <span className="xl:inline">Building</span>

@@ -11,20 +11,20 @@ export default function NotFound() {
         <div className="min-h-screen bg-cover bg-top sm:bg-top relative">
           <Image
             className="filter brightness-50 contrast-150"
-            alt={`Decorative background`}
+            alt={`Alley with fixie bicycle in the foreground`}
             src={BackgroundImage}
             layout="fill"
             objectFit="cover"
             priority
             quality={75}
           />
-          <section className="bg-black bg-opacity-50 h-screen relative">
+          <section className="bg-black bg-opacity-5 h-screen relative">
             <div className="max-w-7xl mx-auto text-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-48 flex justify-center flex-col min-h-screen">
               <p className="font-bold text-5xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl tracking-tight mb-6 text-white dark:text-white">
                 404 error 😩
               </p>
               <h1 className="mt-2 text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
-                Uh oh! I think you’re lost.
+                ${`Uh oh! I think you're lost.`}
               </h1>
               <p className="mt-2 text-lg font-medium text-white max-w-screen-lg mx-auto text-opacity-100">
                 Why show a generic 404 when I can make it sound mysterious? It

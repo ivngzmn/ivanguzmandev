@@ -6,7 +6,7 @@
     "build": "next build"
   },
   "devDependencies": {
-    "@types/node": "^16.11.10",
+    "@types/node": "^16.11.12",
     "@types/react": "^17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
@@ -18,7 +18,7 @@
     "lint-staged": "^11.2.6",
     "postcss": "^8.4.4",
     "prettier": "2.4.1",
-    "tailwindcss": "^3.0.0",
+    "tailwindcss": "^3.0.7",
     "typescript": "^4.5.3"
   },
   "dependencies": {
@@ -41,10 +41,11 @@
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.3.1",
     "react-multi-carousel": "^2.6.5",
-    "react-server-dom-webpack": "0.0.1",
     "swr": "^1.1.1"
   },
   "private": true,
+  "name": "ivanguzman.dev",
+  "version": "1.0.0",
   "prettier": {
     "trailingComma": "none",
     "arrowParens": "always",

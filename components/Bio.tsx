@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 const Divider = () => {
   return (
     <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
@@ -30,7 +31,7 @@ const Step = ({ title, children }) => {
             <path d="M22 4L12 14.01l-3-3" />
           </g>
         </svg>
-        <p className="font-medium text-gray-300">{title}</p>
+        <p className="font-medium text-gray-50">{title}</p>
       </div>
       <p className="text-gray-100 ml-6">{children}</p>
     </li>
@@ -112,64 +113,66 @@ export default function Bio() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-800 to-indigo-700 rounded-t-3xl max-w-7xl mx-auto">
-        <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-          <h3 className="text-3xl font-extrabold text-white tracking-tight">
-            Bio
-          </h3>
-          <Divider />
-          <Year>1986</Year>
-          <ul>
-            <Step title="Born 👶🏽🍼">Xalapa, Veraruz, MX 🇲🇽</Step>
-          </ul>
-          <Year>1996</Year>
-          <ul>
-            <Step title="Became a video game addict 🕹">
-              Every time we'd go to Toys R Us, I would beg my mom for a Nintendo
-              64, until I finally convinced her. Sorry, mom.
-            </Step>
-          </ul>
-          <Year>1997</Year>
-          <ul>
-            <Step title="First Computer 💾">
-              Since we did not have much money my mom purchased an old computer
-              from a garage sale. It was so arcane that it had a green screen
-              and not printer for school work but it sparked my love for
-              computers.
-            </Step>
-          </ul>
-          <Year>2002</Year>
-          <ul>
-            <Step title="Purchased my first desktop PC ⌨️">
-              I remember it like it was yesterday. The pure power of the Athelon
-              XP still brings a tear to my eye.
-            </Step>
-          </ul>
-          {isShowingFullBio ? (
-            <FullBio />
-          ) : (
-            <button
-              type="button"
-              className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-white"
-              onClick={() => showFullBio(true)}
-            >
-              Show More
-              <svg
-                className="h-4 w-4 ml-1"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div className="max-w-7xl px-4 mx-auto">
+        <div className="bg-gradient-to-r from-purple-800 to-indigo-700 rounded-2xl shadow-2xl mb-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+            <h3 className="text-3xl font-extrabold text-white tracking-tight">
+              Timeline
+            </h3>
+            <Divider />
+            <Year>1986</Year>
+            <ul>
+              <Step title="Born 👶🏽🍼">Xalapa, Veraruz, MX 🇲🇽</Step>
+            </ul>
+            <Year>1996</Year>
+            <ul>
+              <Step title="Became a video game addict 🕹">
+                Every time we'd go to Toys R Us, I would beg my mom for a
+                Nintendo 64, until I finally convinced her. Sorry, mom.
+              </Step>
+            </ul>
+            <Year>1997</Year>
+            <ul>
+              <Step title="First Computer 💾">
+                Since we did not have much money my mom purchased an old
+                computer from a garage sale. It was so arcane that it had a
+                green screen and not printer for school work but it sparked my
+                love for computers.
+              </Step>
+            </ul>
+            <Year>2002</Year>
+            <ul>
+              <Step title="Purchased my first desktop PC ⌨️">
+                I remember it like it was yesterday. The pure power of the
+                Athelon XP still brings a tear to my eye.
+              </Step>
+            </ul>
+            {isShowingFullBio ? (
+              <FullBio />
+            ) : (
+              <button
+                type="button"
+                className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-white"
+                onClick={() => showFullBio(true)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          )}
+                Show More
+                <svg
+                  className="h-4 w-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </>

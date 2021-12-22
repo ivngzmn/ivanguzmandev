@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram
 } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si';
 import Link from 'next/link';
 
 // import NowPlaying from '@/components/NowPlaying';
@@ -87,9 +88,11 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-300">
-          &copy;{today.getUTCFullYear()} Ivan Guzman. Made with Next.js and
-          Tailwind CSS. Hosted on Vercel.
+        <p className="mt-8 text-center text-base text-gray-300 flex items-center justify-center">
+          &copy;{today.getUTCFullYear()} Ivan Guzman. All rights reserved.
+        </p>
+        <p className="mt-2 text-center text-base text-gray-300 flex items-center justify-center">
+          Made with Next.js and Tailwind CSS. Hosted on Vercel.
         </p>
       </div>
     </footer>
