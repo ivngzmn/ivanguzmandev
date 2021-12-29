@@ -119,7 +119,7 @@ function ContactMe() {
         <div className="container my-8 max-w-screen-2xl mx-auto 2xl:px-0">
           <div
             aria-hidden="true"
-            className="relative rounded-t-2xl w-full h-[300px] lg:h-[600px] overflow-hidden max-w-screen-2xl mx-auto z-20"
+            className="relative w-full h-[300px] lg:h-[600px]  mx-auto mb-8 lg:mb-10"
           >
             <NextImage
               src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
@@ -128,11 +128,11 @@ function ContactMe() {
               // height="100%"
               layout="fill"
               objectFit="cover"
-              className="lg:rounded-t-2xl"
+              className="rounded-2xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white" />
+            <div className="absolute inset-0 " />
           </div>
-          <div className=" relative rounded-b-2xl shadow-2xl bg-white py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
+          <div className=" relative rounded-2xl shadow-2xl bg-white py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
             <section className="relative" aria-labelledby="contact-heading">
               <div className="absolute w-full h-1/2" aria-hidden="true" />
 
