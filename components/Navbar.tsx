@@ -3,13 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
-import ProfilePic from '/public/images/profile-photo.jpg';
+import ProfilePic from '../public/images/profile-photo.jpg';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { VscTriangleDown } from 'react-icons/vsc';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import Logo from '/public/images/ig-logo.svg';
+import Logo from '../public/images/guzman-logo.svg';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -72,8 +72,8 @@ export default function Navbar() {
                         <Image
                           src={Logo}
                           alt="Ivan Guzman Logo"
-                          width={40}
-                          height={40}
+                          width={70}
+                          height={70}
                           className="h-8 w-auto"
                         />
                       </a>

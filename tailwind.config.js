@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -9,8 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        graphik: "'Graphik', sans-serif",
-        tuesday: "'Tuesday', serif"
+        sans: ['Graphik', ...fontFamily.sans]
       },
       backgroundImage: {
         'text-animation': 'url(/images/hero-text-motion.webp)',

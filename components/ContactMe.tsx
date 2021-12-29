@@ -87,7 +87,7 @@ function ContactMe() {
     setReCaptchaToken(token as string);
   };
   return (
-    <div className="bg-gray-100 overflow-hidden">
+    <div className="bg-slate-900 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
@@ -95,7 +95,7 @@ function ContactMe() {
           <div className="container mx-auto mb-8">
             <div className="w-full inline-block py-8">
               <div className="md:float-left block">
-                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 sm:text-4xl">
                   / Contact
                 </span>
               </div>

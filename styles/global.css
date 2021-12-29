@@ -2,17 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'Graphik';
-    font-weight: 700;
-    src: url('/fonts/Graphik/Graphik-Regular.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'Tuesday';
-    font-weight: 700;
-    src: url('/fonts/Tuesday/TuesdayNight-Regular.woff') format('woff');
-  }
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Graphik/regular/Graphik-Regular.woff2') format('woff2'),
+    url('/fonts/Graphik/regular/Graphik-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 300;
+  font-style: light;
+  src: url('/fonts/Graphik/light/Graphik-Light.woff2') format('woff2'),
+    url('/fonts/Graphik/light/Graphik-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  font-style: semibold;
+  src: url('/fonts/Graphik/semibold/Graphik-Semibold.woff2') format('woff2'),
+    url('/fonts/Graphik/semibold/Graphik-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 800;
+  font-style: extrabold;
+  src: url('/fonts/Graphik/extrabold/Graphik-Black.woff2') format('woff2'),
+    url('/fonts/Graphik/extrabold/Graphik-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 900;
+  font-style: black;
+  src: url('/fonts/Graphik/super/Graphik-Super.woff2') format('woff2'),
+    url('/fonts/Graphik/super/Graphik-Super.woff') format('woff');
 }
 
 ::selection {
