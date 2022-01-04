@@ -28,10 +28,15 @@ export default function Hero() {
             className="mt-20 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 "
           >
             <div className="text-left sm:text-left lg:text-left">
-              <h1 className="filter contrast-150 text-transparent bg-clip-text bg-text-animation bg-center md:bg-center lg:bg-center lg:bg-no-repeat bg-cover tracking-wide leading-tight font-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[118px]">
-                <span className="xl:inline">Building</span>
+              <h1 className="lg:tracking-wide font-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[118px]">
+                <span className="xl:inline text-white">Building</span>
                 <br />
-                <span className="xl:inline">beautiful web experiences.</span>
+                <span className="xl:inline filter brightness-100 saturate-150 contrast-125 text-transparent bg-clip-text bg-text-animation bg-center lg:bg-no-repeat bg-cover">
+                  beautiful
+                </span>
+                <span className="xl:inline text-white"> web</span>
+                <br />
+                <span className="xl:inline text-white">experiences.</span>
               </h1>
               <div className="mt-3 lg:mt-5">
                 <span className="text-2xl md:text-3xl lg:text-4xl text-gray-50 leading-relaxed lg:leading-normal">
