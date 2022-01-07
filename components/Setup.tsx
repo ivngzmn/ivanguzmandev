@@ -21,27 +21,33 @@ const computer = [
   },
   {
     id: 3,
+    content: 'BenQ ScreenBar Halo Monitor Light',
+    icon: AiOutlineLaptop,
+    iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
+  },
+  {
+    id: 4,
     content: 'Logitech MX Master 3 Mouse',
 
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
   {
-    id: 4,
-    content: 'Apple laptop keyboard / Ergo split keyboard build underway',
-
-    icon: AiOutlineLaptop,
-    iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
-  },
-  {
     id: 5,
-    content: 'CalDigit TS3+ Thunderbolt 3 (USB-C) Dock',
+    content: 'Apple laptop keyboard / Breeze Split Keyboard',
 
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
   {
     id: 6,
+    content: 'CalDigit TS3+ Thunderbolt 3 (USB-C) Dock',
+
+    icon: AiOutlineLaptop,
+    iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
+  },
+  {
+    id: 7,
     content: 'G-Drive 6TB (USB-C) External Hard Drive',
 
     icon: AiOutlineLaptop,
@@ -117,7 +123,7 @@ const software = [
   },
   {
     id: 5,
-    content: 'Affinity Designer for designing and prototyping',
+    content: 'Affinity Designer and Pixelmator Pro for prototyping and mockups',
 
     icon: SiBmcsoftware,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-indigo-500'
@@ -128,14 +134,13 @@ const audio = [
   {
     id: 1,
     content:
-      'CAD Audio E100s Super Cardioid Microphone for those nice low notes',
+      'CAD Audio E100s Super Cardioid Microphone for those nice low notes.',
     icon: AiFillAudio,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-red-500'
   },
   {
     id: 2,
-    content:
-      'H5 Zoom handheld audio recorder for use in voice over and meetings',
+    content: 'Wave XLR for use in voice over and meetings.',
 
     icon: AiFillAudio,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-red-500'
@@ -165,7 +170,7 @@ const other = [
   },
   {
     id: 3,
-    content: 'USB Fan for when I need my Macbook to cool down.',
+    content: 'USB Fan for when I need my Macbook to cool down',
 
     icon: MdOutlineDevicesOther,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-blue-500'
@@ -180,24 +185,22 @@ function DevSetup() {
   return (
     <div>
       <section className="mb-28">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto mb-8">
-            <div className="w-full inline-block py-8">
+        <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="mb-2 lg:mb-8">
+            <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                  / Uses
+                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">
+                  Uses
                 </span>
+                <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-900 mt-5">
+                  Here is the Hardware and Software that I use to build my apps,
+                  do some voice over or make digital art.
+                </h2>
               </div>
             </div>
           </div>
-          <div className="mb-16">
-            <span className="font-light text-xl text-gray-800">
-              Here is the Hardware Technologies and Software that I use to build
-              my apps, do some voice over or make digital art.
-            </span>
-          </div>
           <figure>
-            <div className="relative mx-auto shadow-md inline-block w-96 h-96 lg:w-full lg:h-screen">
+            <div className="relative mx-auto shadow-2xl inline-block w-full h-72 lg:w-full lg:h-[500px]">
               <Image
                 alt={`Black Flat Screen Computer Monitor on White Wooden Desk`}
                 src={`https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627045601/Personal-Website/desk_qnmcyd.jpg`}
@@ -217,233 +220,241 @@ function DevSetup() {
           </figure>
 
           {/* computer/ office */}
-          <div className="relative text-gray-900 mt-28">
-            <div className="mb-4">
-              <h2 className="text-2xl font-semibold text-gray-900">Computer</h2>
-            </div>
-            <div className="flow-root">
-              <ul role="list" className="-mb-8">
-                {computer.map((event, eventIdx) => (
-                  <li key={event.id}>
-                    <div className="relative pb-8">
-                      {eventIdx !== computer.length - 1 ? (
-                        <span
-                          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        />
-                      ) : null}
-                      <div className="relative flex space-x-3">
-                        <div>
-                          <span
-                            className={classNames(
-                              event.iconBackground,
-                              'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                            )}
-                          >
-                            <event.icon
-                              className="h-5 w-5 text-white"
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                          <div>
-                            <p className="text-sm text-gray-500">
-                              {event.content}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Coding */}
-          <div className="relative text-gray-900 mt-28">
-            <div className="flow-root">
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-900">Coding</h2>
-              </div>
-              <ul role="list" className="-mb-8">
-                {code.map((event, eventIdx) => (
-                  <li key={event.id}>
-                    <div className="relative pb-8">
-                      {eventIdx !== code.length - 1 ? (
-                        <span
-                          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        />
-                      ) : null}
-                      <div className="relative flex space-x-3">
-                        <div>
-                          <span
-                            className={classNames(
-                              event.iconBackground,
-                              'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                            )}
-                          >
-                            <event.icon
-                              className="h-5 w-5 text-white"
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                          <div>
-                            <p className="text-sm text-gray-500">
-                              {event.content}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Software */}
-          <div className="relative text-gray-900 mt-28">
-            <div className="flow-root">
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-900">
-                  Software
+          <section className="rounded-xl shadow-2xl p-8 lg:p-14 mt-10 lg:mt-28">
+            <div className="relative text-gray-900">
+              <div className="mb-4">
+                <h2 className="text-3xl font-semibold text-gray-900">
+                  Computer
                 </h2>
               </div>
-              <ul role="list" className="-mb-8">
-                {software.map((event, eventIdx) => (
-                  <li key={event.id}>
-                    <div className="relative pb-8">
-                      {eventIdx !== software.length - 1 ? (
-                        <span
-                          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        />
-                      ) : null}
-                      <div className="relative flex space-x-3">
-                        <div>
+              <div className="flow-root">
+                <ul role="list" className="-mb-8">
+                  {computer.map((event, eventIdx) => (
+                    <li key={event.id}>
+                      <div className="relative pb-8">
+                        {eventIdx !== computer.length - 1 ? (
                           <span
-                            className={classNames(
-                              event.iconBackground,
-                              'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                            )}
-                          >
-                            <event.icon
-                              className="h-5 w-5 text-white"
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
                           <div>
-                            <p className="text-sm text-gray-500">
-                              {event.content}
-                            </p>
+                            <span
+                              className={classNames(
+                                event.iconBackground,
+                                'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                              )}
+                            >
+                              <event.icon
+                                className="h-5 w-5 text-white"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          </div>
+                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div>
+                              <p className="text-lg text-gray-500">
+                                {event.content}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* audio */}
-          <div className="relative text-gray-900 mt-28">
-            <div className="flow-root">
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-900">Audio</h2>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul role="list" className="-mb-8">
-                {audio.map((event, eventIdx) => (
-                  <li key={event.id}>
-                    <div className="relative pb-8">
-                      {eventIdx !== audio.length - 1 ? (
-                        <span
-                          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        />
-                      ) : null}
-                      <div className="relative flex space-x-3">
-                        <div>
-                          <span
-                            className={classNames(
-                              event.iconBackground,
-                              'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                            )}
-                          >
-                            <event.icon
-                              className="h-5 w-5 text-white"
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                          <div>
-                            <p className="text-sm text-gray-500">
-                              {event.content}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </div>
-          </div>
 
-          {/* Other Technologies */}
-          <div className="relative text-gray-900 mt-28">
-            <div className="flow-root">
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-900">
-                  Other Tech
-                </h2>
-              </div>
-              <ul role="list" className="-mb-8">
-                {other.map((event, eventIdx) => (
-                  <li key={event.id}>
-                    <div className="relative pb-8">
-                      {eventIdx !== other.length - 1 ? (
-                        <span
-                          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        />
-                      ) : null}
-                      <div className="relative flex space-x-3">
-                        <div>
+            {/* Coding */}
+            <div className="relative text-gray-900 mt-28">
+              <div className="flow-root">
+                <div className="mb-6">
+                  <h2 className="text-3xl font-semibold text-gray-900">
+                    Coding
+                  </h2>
+                </div>
+                <ul role="list" className="-mb-8">
+                  {code.map((event, eventIdx) => (
+                    <li key={event.id}>
+                      <div className="relative pb-8">
+                        {eventIdx !== code.length - 1 ? (
                           <span
-                            className={classNames(
-                              event.iconBackground,
-                              'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                            )}
-                          >
-                            <event.icon
-                              className="h-5 w-5 text-white"
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </div>
-                        <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
                           <div>
-                            <p className="text-sm text-gray-500">
-                              {event.content}
-                            </p>
+                            <span
+                              className={classNames(
+                                event.iconBackground,
+                                'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                              )}
+                            >
+                              <event.icon
+                                className="h-5 w-5 text-white"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          </div>
+                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div>
+                              <p className="text-lg text-gray-500">
+                                {event.content}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+
+            {/* Software */}
+            <div className="relative text-gray-900 mt-28">
+              <div className="flow-root">
+                <div className="mb-6">
+                  <h2 className="text-3xl font-semibold text-gray-900">
+                    Software
+                  </h2>
+                </div>
+                <ul role="list" className="-mb-8">
+                  {software.map((event, eventIdx) => (
+                    <li key={event.id}>
+                      <div className="relative pb-8">
+                        {eventIdx !== software.length - 1 ? (
+                          <span
+                            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
+                          <div>
+                            <span
+                              className={classNames(
+                                event.iconBackground,
+                                'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                              )}
+                            >
+                              <event.icon
+                                className="h-5 w-5 text-white"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          </div>
+                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div>
+                              <p className="text-lg text-gray-500">
+                                {event.content}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* audio */}
+            <div className="relative text-gray-900 mt-28">
+              <div className="flow-root">
+                <div className="mb-6">
+                  <h2 className="text-3xl font-semibold text-gray-900">
+                    Audio
+                  </h2>
+                </div>
+                <ul role="list" className="-mb-8">
+                  {audio.map((event, eventIdx) => (
+                    <li key={event.id}>
+                      <div className="relative pb-8">
+                        {eventIdx !== audio.length - 1 ? (
+                          <span
+                            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
+                          <div>
+                            <span
+                              className={classNames(
+                                event.iconBackground,
+                                'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                              )}
+                            >
+                              <event.icon
+                                className="h-5 w-5 text-white"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          </div>
+                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div>
+                              <p className="text-lg text-gray-500">
+                                {event.content}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Other Technologies */}
+            <div className="relative text-gray-900 mt-28">
+              <div className="flow-root">
+                <div className="mb-6">
+                  <h2 className="text-3xl font-semibold text-gray-900">
+                    Other Tech
+                  </h2>
+                </div>
+                <ul role="list" className="-mb-8">
+                  {other.map((event, eventIdx) => (
+                    <li key={event.id}>
+                      <div className="relative pb-8">
+                        {eventIdx !== other.length - 1 ? (
+                          <span
+                            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                            aria-hidden="true"
+                          />
+                        ) : null}
+                        <div className="relative flex space-x-3">
+                          <div>
+                            <span
+                              className={classNames(
+                                event.iconBackground,
+                                'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                              )}
+                            >
+                              <event.icon
+                                className="h-5 w-5 text-white"
+                                aria-hidden="true"
+                              />
+                            </span>
+                          </div>
+                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div>
+                              <p className="text-lg text-gray-500">
+                                {event.content}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </div>
