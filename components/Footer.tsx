@@ -5,7 +5,6 @@ import {
   FaLinkedinIn,
   FaInstagram
 } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si';
 import Link from 'next/link';
 
 // import NowPlaying from '@/components/NowPlaying';
@@ -21,8 +20,8 @@ const navigation = {
       rel: 'noopener noreferrer'
     },
     { name: 'Uses', href: '/uses' },
-    { name: 'Links', href: '/links' },
-    { name: 'Resume', href: '#' }
+    { name: 'Links', href: '/links' }
+    // { name: 'Resume', href: '#' }
   ],
   social: [
     {
