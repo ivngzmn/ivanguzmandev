@@ -1,4 +1,4 @@
-import { Navbar, MyProjects, Footer } from '../components';
+import { Navbar, MyLinks, Footer } from '../components';
 import Head from 'next/head';
 
 function Links() {
@@ -8,10 +8,7 @@ function Links() {
         <title>Links | Ivan Guzman</title>
       </Head>
 
-      <Navbar />
-      <MyProjects />
-
-      <Footer />
+      <MyLinks />
     </>
   );
 }
