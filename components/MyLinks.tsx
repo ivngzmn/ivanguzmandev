@@ -3,13 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Background from '../public/images/links-bg.jpg';
 import ProfileImage from '../public/images/profile-photo.jpg';
-import { FaMapMarkerAlt } from 'react-icons/fa';
 import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
   FaTwitch,
-  FaInstagram
+  FaInstagram,
+  FaQuoteLeft,
+  FaMapMarkerAlt
 } from 'react-icons/fa';
 
 const social = [
@@ -42,8 +43,10 @@ const social = [
 
 function MyLinks() {
   return (
-    <div className="relative mx-auto min-h-screen">
-      <Image src={Background} alt="" layout="fill" objectFit="cover" />
+    <div className="relative mx-auto min-h-screen px-4">
+      <div className="bg-slate-900">
+        <Image src={Background} alt="" layout="fill" objectFit="cover" />
+      </div>
       <section className="flex flex-col justify-center py-12">
         <div className="relative mx-auto">
           <Image
@@ -55,7 +58,11 @@ function MyLinks() {
           />
         </div>
         <div className="relative mx-auto flex flex-col justify-center text-center">
-          <span className="text-white text-lg font-thin">@zaku_dev</span>
+          <span className="text-white text-lg font-semibold">@zaku_dev</span>
+          <br />
+          <h1 className="text-white text-sm font-thin">
+            Software Engineer | Father | Coffee Lover
+          </h1>
           <br />
           <span className="flex justify-center text-white text-sm font-thin mt-2">
             <i className="mr-1">
@@ -64,7 +71,7 @@ function MyLinks() {
             Orange County, CA
           </span>
         </div>
-        <div className="relative mt-8 flex justify-center space-x-6">
+        <div className="relative mt-8 flex justify-center space-x-4">
           {social.map((item) => (
             <Link key={item.name} href={item.href}>
               <a
@@ -81,7 +88,25 @@ function MyLinks() {
           ))}
         </div>
       </section>
-      <section></section>
+      <section className="relative mx-auto flex flex-col justify-center bg-slate-700 mix-blend-lighten max-w-xl p-10 py-12 rounded-2xl">
+        <FaQuoteLeft className="absolute top-4 left-6 text-white opacity-20 w-12 h-12" />
+        <span className="text-white text-lg font-thin text-left">
+          If you are working on something that you really care about, you don’t
+          have to be pushed. The vision pulls you.
+        </span>
+        <br />
+        <span className="text-white text-lg font-thin text-left mt-2">
+          – Steve Jobs
+        </span>
+      </section>
+      <section className="relative mx-auto flex flex-col justify-center text-center m-5 space-y-4 max-w-xl ">
+        <div className="bg-slate-900 mix-blend-lighten h-15 py-5 rounded-2xl">
+          <span className="text-white font-thin">Website</span>
+        </div>
+        <div className="bg-slate-900 mix-blend-lighten h-15 py-5 rounded-2xl">
+          <span className="text-white font-thin">Blog</span>
+        </div>
+      </section>
     </div>
   );
 }
