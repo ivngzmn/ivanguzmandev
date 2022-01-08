@@ -12,6 +12,7 @@ import {
   FaQuoteLeft,
   FaMapMarkerAlt
 } from 'react-icons/fa';
+import { BiBookAlt, BiWorld } from 'react-icons/bi';
 
 const social = [
   {
@@ -59,13 +60,9 @@ function MyLinks() {
         </div>
         <div className="relative mx-auto flex flex-col justify-center text-center">
           <span className="text-white text-lg font-semibold">@zaku_dev</span>
-          <br />
-          <h1 className="text-white text-sm font-thin">
-            Software Engineer | Father | Coffee Lover
-          </h1>
-          <br />
-          <span className="flex justify-center text-white text-sm font-thin mt-2">
-            <i className="mr-1">
+
+          <span className="flex justify-center items-center text-white text-sm mt-2">
+            <i className="mr-1 text-red-500">
               <FaMapMarkerAlt />
             </i>
             Orange County, CA
@@ -100,12 +97,18 @@ function MyLinks() {
         </span>
       </section>
       <section className="relative mx-auto flex flex-col justify-center text-center m-5 space-y-4 max-w-xl ">
-        <div className="bg-slate-900 mix-blend-lighten h-15 py-5 rounded-2xl">
-          <span className="text-white font-thin">Website</span>
-        </div>
-        <div className="bg-slate-900 mix-blend-lighten h-15 py-5 rounded-2xl">
-          <span className="text-white font-thin">Blog</span>
-        </div>
+        <Link href="/">
+          <a className="text-white hover:text-slate-300 bg-slate-900 hover:bg-gray-800 h-15 py-5 rounded-2xl">
+            <BiWorld className="inline-block h-5 w-5 mr-2" />
+            <span>Website</span>
+          </a>
+        </Link>
+        <Link href="/blog">
+          <a className="text-white hover:text-slate-300 bg-slate-900 hover:bg-gray-800 h-15 py-5 rounded-2xl">
+            <BiBookAlt className="inline-block h-5 w-5 mr-2" />
+            <span>Blog</span>
+          </a>
+        </Link>
       </section>
     </div>
   );
