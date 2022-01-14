@@ -1,75 +1,126 @@
-import NextImage from 'next/image';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
+import CoinForge from '/public/images/projects/MacBook-Pro-Crypto.webp';
+import TodoMVP from '/public/images/projects/MacBook-Todo-MVP.webp';
+import { AiOutlineAntDesign } from 'react-icons/ai';
 
 const projects = [
   {
-    name: 'Project 1',
-    href: '#',
-    imageSrc:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1637439561/project-images/todo-app_zukdrz.gif',
-    imageAlt: 'Name of Project One',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
+    name: 'Coin Forge',
+    liveLink: 'https://coinforge.netlify.app/',
+    githubLink: 'https://github.com/ivngzmn/coin-forge',
+    imageSrc: CoinForge,
+    imageAlt: 'Coin Forge',
+    description: `Used React-Redux for state management of the API calls. For the API's I went to Rapid API where I used the Coin Ranking API and the Bing News Search API. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 7 Day, 30 Day, 1 Year, and 5 Year charts. `
   },
   {
-    name: 'Project 2',
-    href: '#',
-    imageSrc:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627466096/project-images/React-pomo-app_dncbqs.gif',
-    imageAlt: 'Name of Project Two.',
+    name: 'Todo App',
+    liveLink: 'https://todo-auth-mvc.herokuapp.com/',
+    githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
+    imageSrc: TodoMVP,
+    imageAlt: 'Todo App',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
-  },
-  {
-    name: 'Project 3',
-    href: '#',
-    imageSrc:
-      'https://res.cloudinary.com/dbr8xxx2m/image/upload/v1627949259/project-images/React_Markdown_editor_hkx3m3.png',
-    imageAlt: 'Name of Project Three.',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisi, tincidunt a neque maximus, congue porta nibh. Etiam faucibus massa dignissim, semper nisi vitae, placerat risus. Donec imperdiet ex est. Vivamus semper molestie commodo. Curabitur et lacus eu arcu rhoncus luctus. Morbi nec nisi euismod, egestas neque vel, tincidunt purus. Duis ex nibh, sollicitudin in egestas at, dignissim nec lacus. Donec vestibulum ac lacus vel gravida. Aliquam auctor sed massa nec ornare. Duis dui lorem, ultrices id elit quis, congue tincidunt felis. '
+      'It was my first time building a web app that included a database and authentication. With MongoDB Atlas it was nice and straightforward to set up and get things communicating with my developer build. Once I got to authentication with Microsoft Azure Active Directory it got really hard as there are quite a few steps required to get the web app working such as registering your application.'
   }
 ];
 
 export default function myProjects() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-slate-900">
       <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto mb-8">
-          <div className="w-full inline-block py-8">
+        <div className="mb-2 lg:mb-8">
+          <div className="w-full inline-block py-10 lg:py-20">
             <div className="md:float-left block">
-              <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                / Projects
+              <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-600">
+                Projects
               </span>
+              <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
+                Selected works and client projects.
+              </h2>
             </div>
           </div>
         </div>
-        <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-          Selected works, clients projects.
-        </h2>
-        <p className="mt-4 text-base text-gray-500"></p>
 
-        <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          {projects.map((category) => (
-            <a key={category.name} href={category.href} className="group block">
+        {/* projects section */}
+
+        <div className="pt-2 space-y-6 lg:space-y-40 relative">
+          {projects.map((project) => (
+            <div
+              key={project.name}
+              className=" pb-10 bg-transparent lg:pb-0 lg:z-10 lg:relative rounded-xl"
+            >
+              <div className="lg:mx-auto lg:max-w-full lg:grid lg:grid-cols-12">
+                <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-8 lg:py-0">
+                  <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
+                    <div className="w-full h-96 sm:w-full lg:h-[800px]">
+                      <Image
+                        className="w-full h-full object-center rounded-xl"
+                        src={project.imageSrc}
+                        alt={project.imageAlt}
+                        objectFit="cover"
+                        layout="fill"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-12 lg:m-0 lg:px-4 lg:col-span-4 lg:pl-8">
+                  <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
+                    <div>
+                      <span className="text-white text-4xl lg:text-5xl font-regular">
+                        {project.name}
+                      </span>
+                      <p className="mt-6 text-lg lg:text-xl font-regular text-white">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div className="mt-8 lg:w-2/3">
+                      <Link href={project.liveLink}>
+                        <a className="w-full space-x-3 flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-indigo-700 bg-white hover:bg-indigo-100 md:py-4 md:text-lg md:px-10">
+                          <FaRegPaperPlane className="w-6 h-6" />
+                          <span>Live</span>
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="mt-8 lg:w-2/3">
+                      <Link href={project.githubLink}>
+                        <a className="w-full space-x-3 flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-indigo-700 bg-white hover:bg-indigo-100 md:py-4 md:text-lg md:px-10">
+                          <FaGithub className="w-6 h-6" /> <span>Source</span>
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="h-12 w-12"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* end */}
+
+        {/* <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+          {projects.map((project) => (
+            <a key={project.name} href={project.href} className="group block">
               <div
                 aria-hidden="true"
                 className=" rounded-lg overflow-hidden group-hover:opacity-75"
               >
-                <NextImage
-                  src={category.imageSrc}
-                  alt={category.imageAlt}
+                <Image
+                  src={project.imageSrc}
+                  alt={project.imageAlt}
                   className="w-full h-full object-center object-cover"
                   width={900}
                   height={1200}
                 />
               </div>
               <h3 className="mt-4 text-base font-semibold text-gray-900">
-                {category.name}
+                {project.name}
               </h3>
-              <p className="text-sm text-gray-500">{category.description}</p>
+              <p className="text-sm text-gray-500">{project.description}</p>
             </a>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
