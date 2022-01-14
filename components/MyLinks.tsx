@@ -13,6 +13,7 @@ import {
   FaMapMarkerAlt
 } from 'react-icons/fa';
 import { BiBookAlt, BiWorld } from 'react-icons/bi';
+import Logo from '../public/images/guzman-logo.svg';
 
 const social = [
   {
@@ -108,6 +109,12 @@ function MyLinks() {
             <BiBookAlt className="inline-block h-5 w-5 mr-2" />
             <span>Blog</span>
           </a>
+        </Link>
+      </section>
+      <section className="relative bottom-0 mx-auto flex items-center justify-center text-center m-5 space-y-4 max-w-xl">
+        <span className="text-white mr-2">Made with ❤️ by </span>
+        <Link href="/" passHref>
+          <Image src={Logo} alt="Ivan Guzman Logo" width={40} height={40} />
         </Link>
       </section>
     </div>

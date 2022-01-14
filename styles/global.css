@@ -42,6 +42,16 @@
     url('/fonts/Graphik/super/Graphik-Super.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Basement';
+  font-weight: 900;
+  font-style: black;
+  src: url('/fonts/Basement-Grotesque/BasementGrotesque-Black_v1.202.woff')
+      format('woff2'),
+    url('/fonts/Basement-Grotesque/BasementGrotesque-Black_v1.202.woff')
+      format('woff');
+}
+
 ::selection {
   background-color: #420080;
   color: #fefefe;

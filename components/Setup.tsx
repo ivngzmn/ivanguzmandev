@@ -15,7 +15,6 @@ const computer = [
   {
     id: 2,
     content: '34" Dell Ultrasharp (USB-C) Monitor U3419W',
-
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
@@ -28,28 +27,24 @@ const computer = [
   {
     id: 4,
     content: 'Logitech MX Master 3 Mouse',
-
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
   {
     id: 5,
     content: 'Apple laptop keyboard / Breeze Split Keyboard',
-
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
   {
     id: 6,
     content: 'CalDigit TS3+ Thunderbolt 3 (USB-C) Dock',
-
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   },
   {
     id: 7,
     content: 'G-Drive 6TB (USB-C) External Hard Drive',
-
     icon: AiOutlineLaptop,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-pink-500'
   }
@@ -65,14 +60,12 @@ const code = [
   {
     id: 2,
     content: 'Terminal: LunarVim as my NeoVim IDE',
-
     icon: AiFillCode,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-cyan-500'
   },
   {
     id: 3,
     content: 'IDE: Visual Studio Code with vim plugin for consistent editing',
-
     icon: AiFillCode,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-cyan-500'
   },
@@ -102,7 +95,6 @@ const software = [
     id: 2,
     content:
       'Dash offline docsets for macOS accessible from Alfred and Raycast',
-
     icon: SiBmcsoftware,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-indigo-500'
   },
@@ -110,21 +102,18 @@ const software = [
     id: 3,
     content:
       'Grammarly for writing and spell checking since I can sometimes suck at grammar',
-
     icon: SiBmcsoftware,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-indigo-500'
   },
   {
     id: 4,
     content: 'Spoitify for the sweet tunes',
-
     icon: SiBmcsoftware,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-indigo-500'
   },
   {
     id: 5,
     content: 'Affinity Designer and Pixelmator Pro for prototyping and mockups',
-
     icon: SiBmcsoftware,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-indigo-500'
   }
@@ -141,14 +130,12 @@ const audio = [
   {
     id: 2,
     content: 'Wave XLR for use in voice over and meetings.',
-
     icon: AiFillAudio,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-red-500'
   },
   {
     id: 3,
     content: 'Sennheiser HD300 PROtect headphones',
-
     icon: AiFillAudio,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-red-500'
   }
@@ -164,14 +151,12 @@ const other = [
   {
     id: 2,
     content: 'Apple iPhone for checking mobile web apps during development',
-
     icon: MdOutlineDevicesOther,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-blue-500'
   },
   {
     id: 3,
     content: 'USB Fan for when I need my Macbook to cool down',
-
     icon: MdOutlineDevicesOther,
     iconBackground: 'bg-gradient-to-tr from-purple-500 to-blue-500'
   }

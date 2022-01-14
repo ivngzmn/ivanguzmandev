@@ -93,10 +93,10 @@ function ContactMe() {
 
         <div className="max-w-7xl mx-auto">
           <div className="container mx-auto mb-8">
-            <div className="w-full inline-block py-8">
+            <div className="w-full inline-block py-0 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 sm:text-4xl">
-                  / Contact
+                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-500 ">
+                  Contact
                 </span>
               </div>
             </div>

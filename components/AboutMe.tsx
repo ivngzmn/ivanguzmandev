@@ -18,20 +18,20 @@ export default function Profile() {
           />
           <div
             id="blackOverlay"
-            className="w-full h-full absolute opacity-50 bg-black"
+            className="w-full h-full absolute opacity-70 bg-black"
           ></div>
         </section>
         <div className="max-w-7xl mx-auto">
-          <div className="relative mx-auto mb-8 px-6">
-            <div className="w-full inline-block py-8">
+          <div className="relative mx-auto px-6">
+            <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-white sm:text-4xl">
-                  / About
+                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 ">
+                  About
                 </span>
               </div>
             </div>
           </div>
-          <section className="relative pt-44 ">
+          <section className="relative pt-20 ">
             <div className="max-w-7xl mx-auto px-4">
               <div className="relative flex flex-col min-w-0 break-words bg-white mx-auto mb-16 -mt-10 lg:-mt-15 shadow-2xl rounded-2xl ">
                 <div className="px-6">

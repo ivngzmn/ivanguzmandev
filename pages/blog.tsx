@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import NextImage from 'next/image';
-import ProfilePic from '../public/images/profile-photo.jpg';
 import { FeaturedPosts } from '../sections/index';
 import {
   Navbar,

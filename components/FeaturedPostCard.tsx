@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const FeaturedPostCard = ({ post }) => (
-  <div className="relative h-[300px] w-[320px]">
+  <div className="relative h-[300px] w-full lg:w-[350px]">
     <div
-      className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-full"
+      className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-lg inline-block w-full h-full"
       style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
     />
     <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-full" />

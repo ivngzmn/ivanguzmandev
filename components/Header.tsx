@@ -14,11 +14,11 @@ const Header = () => {
 
   return (
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="w-full inline-block py-8">
+      <div className="w-full inline-block py-10 lg:py-20">
         <div className="md:float-left block">
           <Link href="/blog" passHref>
-            <span className="cursor-pointer text-3xl lg:text-7xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
-              / Blog
+            <span className="cursor-pointer text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-slate-900 ">
+              Blog
             </span>
           </Link>
         </div>
