@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Graphik', ...fontFamily.sans]
+        sans: ['Graphik', ...fontFamily.sans],
+        title: ['Basement', ...fontFamily.sans]
       },
       backgroundImage: {
         'text-animation': 'url(/images/hero-text-motion.webp)',
