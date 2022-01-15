@@ -27,25 +27,26 @@ const PostDetails = ({ post }) => {
     <>
       <Navbar />
       <Header />
-
-      <div className="max-w-7xl mx-auto px-4 mb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">
-          <div className="col-span-1 lg:col-span-9 mt-10">
-            <PostDetail post={post} />
-            <Author author={post.author} />
-            <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
-            <CommentsForm slug={post.slug} />
-            <Comments slug={post.slug} />
-          </div>
-          <div className="col-span-1 lg:col-span-3">
-            <div className="relative lg:sticky top-8">
-              <PostWidget
-                slug={post.slug}
-                categories={post.categories.map(
-                  (category: any) => category.slug
-                )}
-              />
-              <Categories />
+      <div className="bg-slate-900 h-full">
+        <div className="max-w-7xl mx-auto px-4 pb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">
+            <div className="col-span-1 lg:col-span-9 mt-10">
+              <PostDetail post={post} />
+              <Author author={post.author} />
+              <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
+              <CommentsForm slug={post.slug} />
+              <Comments slug={post.slug} />
+            </div>
+            <div className="col-span-1 lg:col-span-3">
+              <div className="relative lg:sticky top-8">
+                <PostWidget
+                  slug={post.slug}
+                  categories={post.categories.map(
+                    (category: any) => category.slug
+                  )}
+                />
+                <Categories />
+              </div>
             </div>
           </div>
         </div>

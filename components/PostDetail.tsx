@@ -6,47 +6,141 @@ import moment from 'moment';
 import { grpahCMSImageLoader } from '../util';
 
 const PostDetail = ({ post }) => {
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
+  const getModifiedElement = (obj: any, index: any, modifiedText: any) => {
+    if (obj.type) {
+      return (
+        <React.Fragment key={index}>
+          {obj.children.map((item, i) => (
+            <React.Fragment key={i}>
+              {getContentFragment(item, i)}
+            </React.Fragment>
+          ))}
+        </React.Fragment>
+      );
+    } else {
+      return (
+        <React.Fragment key={index}>
+          {modifiedText.map((item, i) => (
+            <React.Fragment key={i}>{item}</React.Fragment>
+          ))}
+        </React.Fragment>
+      );
+    }
+  };
 
+  const getContentFragment = (obj, index) => {
+    let modifiedText = obj.text;
     if (obj) {
       if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>;
+        modifiedText = <b key={index}>{obj.text}</b>;
       }
 
       if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>;
+        modifiedText = <em key={index}>{obj.text}</em>;
       }
 
       if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>;
+        modifiedText = <u key={index}>{obj.text}</u>;
+      }
+
+      if (obj.code) {
+        modifiedText = (
+          <code
+            key={index}
+            className="text-gray-800 bg-slate-200 mx-1 px-1.5 py-0.5
+        rounded font-mono"
+          >
+            {obj.text}
+          </code>
+        );
       }
     }
 
-    switch (type) {
+    switch (obj.type) {
+      case 'heading-one':
+        return (
+          <h1 key={index} className="text-4xl font-semibold mb-4">
+            {getModifiedElement(obj, index, modifiedText)}
+          </h1>
+        );
+      case 'heading-two':
+        return (
+          <h2 key={index} className="text-3xl font-semibold mb-4">
+            {getModifiedElement(obj, index, modifiedText)}
+          </h2>
+        );
       case 'heading-three':
         return (
           <h3 key={index} className="text-xl font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
+            {getModifiedElement(obj, index, modifiedText)}
           </h3>
-        );
-      case 'paragraph':
-        return (
-          <p key={index} className="mb-8">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
         );
       case 'heading-four':
         return (
           <h4 key={index} className="text-md font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
+            {getModifiedElement(obj, index, modifiedText)}
           </h4>
+        );
+      case 'paragraph':
+        return (
+          <p key={index} className="mb-8 text-base lg:text-lg">
+            {getModifiedElement(obj, index, modifiedText)}
+          </p>
+        );
+      case 'link':
+        return (
+          <Link href={obj.href} passHref>
+            <a
+              key={index}
+              target={obj.openInNewTab ? '_blank' : '_self'}
+              rel="noopener noreferrer"
+              title={obj.title}
+              className="text-indigo-500 hover:text-indigo-800 hover:underline"
+            >
+              {getModifiedElement(obj, index, modifiedText)}
+            </a>
+          </Link>
+        );
+      case 'bulleted-list':
+        return (
+          <ul
+            className="block list-disc my-4 mx-0 pl-10 text-sm sm:text-base"
+            key={index}
+          >
+            {getModifiedElement(obj, index, modifiedText)}
+          </ul>
+        );
+      case 'list-item':
+        return (
+          <li className="list-item" key={index}>
+            {getModifiedElement(obj, index, modifiedText)}
+          </li>
+        );
+      case 'list-item-child':
+        return getModifiedElement(obj, index, modifiedText);
+      case 'code-block':
+        return (
+          <pre
+            key={index}
+            className="my-8 px-2 py-4 block overflow-x-auto
+         bg-slate-200 text-sm sm:text-base font-mono w-auto"
+          >
+            <code key={index}>
+              {getModifiedElement(obj, index, modifiedText)}
+            </code>
+          </pre>
+        );
+      case 'class':
+        return (
+          <pre
+            key={index}
+            className="my-8 block overflow-x-auto
+         bg-slate-200 text-sm sm:text-base font-mono"
+          >
+            <code key={index} className={obj.className}>
+              {getModifiedElement(obj, index, modifiedText)}
+            </code>
+          </pre>
         );
       case 'image':
         return (
@@ -59,7 +153,7 @@ const PostDetail = ({ post }) => {
           />
         );
       default:
-        return modifiedText;
+        return <React.Fragment key={index}>{modifiedText}</React.Fragment>;
     }
   };
 
@@ -67,7 +161,7 @@ const PostDetail = ({ post }) => {
     <>
       <div className="absolute -mt-10">
         <Link href={`/blog/`} passHref>
-          <a className="text-lg text-gray-500 hover:text-gray-800 flex items-center space-x-1 transition duration-300 ease-in-out">
+          <a className="text-lg text-gray-100 hover:text-gray-500 flex items-center space-x-1 transition duration-300 ease-in-out">
             <HiArrowNarrowLeft className="w-5 h-5" />
             <span>Back to all posts</span>
           </a>
@@ -119,16 +213,14 @@ const PostDetail = ({ post }) => {
               </span>
             </div>
           </div>
-          <h1 className="mb-8 text-3xl text-center font-semibold">
+          <h1 className="mb-8 text-4xl text-center font-semibold">
             {post.title}
           </h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children.map((item, itemindex) =>
-              getContentFragment(itemindex, item.text, item, typeObj)
-            );
-
-            return getContentFragment(index, children, typeObj, typeObj.type);
-          })}
+          <div className="max-w-prose lg:max-w-screen-2xl">
+            {post.content.raw.children.map((typeObj, index) => {
+              return getContentFragment(typeObj, index);
+            })}
+          </div>
         </div>
       </div>
     </>
