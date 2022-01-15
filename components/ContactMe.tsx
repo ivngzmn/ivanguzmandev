@@ -92,7 +92,7 @@ function ContactMe() {
         {/* Header */}
 
         <div className="max-w-7xl mx-auto">
-          <div className="container mx-auto mb-8">
+          <div className="mb-2 lg:mb-8">
             <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
                 <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-500 ">
