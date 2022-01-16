@@ -16,14 +16,14 @@ const PostWidget = ({ categories, slug }) => {
   }, []);
 
   return (
-    <div className="relative bg-slate-900">
+    <div className="relative bg-zinc-900">
       <div className="relative max-w-7xl mx-auto pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl tracking-normal font-extrabold text-white sm:text-4xl">
+            <h2 className="text-4xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-5xl">
               Recent Posts from the Blog
             </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-100 sm:mt-4">
+            <p className="mt-3 max-w-prose mx-auto text-xl lg:text-2xl text-gray-100 sm:mt-4">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>

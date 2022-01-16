@@ -174,7 +174,10 @@ function DevSetup() {
           <div className="mb-2 lg:mb-8">
             <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">
+                <span
+                  className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                  id="blog"
+                >
                   Uses
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-900 mt-5">

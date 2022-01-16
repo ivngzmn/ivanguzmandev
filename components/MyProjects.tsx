@@ -33,7 +33,7 @@ export default function myProjects() {
           <div className="w-full inline-block py-10 lg:py-20">
             <div className="md:float-left block">
               <span
-                className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
                 id="projects"
               >
                 Projects
