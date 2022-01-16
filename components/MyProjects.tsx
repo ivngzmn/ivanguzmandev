@@ -27,12 +27,15 @@ const projects = [
 
 export default function myProjects() {
   return (
-    <div className="bg-slate-900">
+    <div className="bg-zinc-900">
       <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="w-full inline-block py-10 lg:py-20">
             <div className="md:float-left block">
-              <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-600">
+              <span
+                className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                id="projects"
+              >
                 Projects
               </span>
               <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">

@@ -13,14 +13,14 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-zinc-900">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full inline-block py-10 lg:py-20">
           <div className="md:float-left block">
             <Link href="/blog" passHref>
               <span
-                className="cursor-pointer text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-slate-900 "
-                id="hh"
+                className="cursor-pointer text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                id="blog"
               >
                 Blog
               </span>

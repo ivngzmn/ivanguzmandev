@@ -32,20 +32,21 @@ const PostWidget = ({ categories, slug }) => {
             <Image
               loader={grpahCMSImageLoader}
               alt={post.title}
-              height="60px"
-              width="60px"
+              height="65px"
+              width="65px"
               unoptimized
-              className="align-middle rounded-full"
+              className="align-middle rounded-lg"
               src={post.featuredImage.url}
             />
           </div>
           <div className="flex-grow ml-4">
-            <p className="text-gray-500 font-xs">
-              {moment(post.createdAt).format('MMM DD, YYYY')}
-            </p>
-
             <Link href={`/blog/${post.slug}`} key={index}>
-              <a className="text-md hover:text-indigo-700">{post.title}</a>
+              <a className="text-md hover:text-indigo-700">
+                <p className="text-gray-500 font-xs font-semibold">
+                  {moment(post.createdAt).format('MMM DD, YYYY')}
+                </p>
+                {post.title}
+              </a>
             </Link>
           </div>
         </div>

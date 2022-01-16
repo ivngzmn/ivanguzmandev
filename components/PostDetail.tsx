@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import moment from 'moment';
+import highlightjs from 'highlight.js';
 import { grpahCMSImageLoader } from '../util';
 
 const PostDetail = ({ post }) => {
@@ -47,8 +48,8 @@ const PostDetail = ({ post }) => {
         modifiedText = (
           <code
             key={index}
-            className="text-gray-800 bg-slate-200 mx-1 px-1.5 py-0.5
-        rounded font-mono"
+            className="text-[#50fa7b] bg-[#282A36] px-1.5 py-0.5
+        rounded font-mono text-sm"
           >
             {obj.text}
           </code>
@@ -104,7 +105,7 @@ const PostDetail = ({ post }) => {
       case 'bulleted-list':
         return (
           <ul
-            className="block list-disc my-4 mx-0 pl-10 text-sm sm:text-base"
+            className="block list-disc my-4 mx-0 pl-10 text-base lg:text-lg sm:text-base"
             key={index}
           >
             {getModifiedElement(obj, index, modifiedText)}
@@ -122,8 +123,8 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="my-8 px-2 py-4 block overflow-x-auto
-         bg-slate-200 text-sm sm:text-base font-mono w-auto"
+            className="my-8 px-2 py-4 block overflow-x-auto rounded
+         bg-[#282A36] text-sm sm:text-base text-gray-200 font-mono w-auto whitespace-pre"
           >
             <code key={index}>
               {getModifiedElement(obj, index, modifiedText)}
@@ -134,8 +135,8 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="my-8 block overflow-x-auto
-         bg-slate-200 text-sm sm:text-base font-mono"
+            className="my-8 block overflow-x-auto rounded
+         bg-slate-800 text-sm sm:text-base font-mono text-gray-200 whitespace-normal"
           >
             <code key={index} className={obj.className}>
               {getModifiedElement(obj, index, modifiedText)}
@@ -144,18 +145,24 @@ const PostDetail = ({ post }) => {
         );
       case 'image':
         return (
-          <Image
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
+          <div className="mb-8" key={index}>
+            <Image
+              key={index}
+              alt={obj.title}
+              height={obj.height}
+              width={obj.width}
+              src={obj.src}
+              className="rounded-lg"
+            />
+          </div>
         );
       default:
         return <React.Fragment key={index}>{modifiedText}</React.Fragment>;
     }
   };
+  useEffect(() => {
+    highlightjs.highlightAll();
+  }, [post.slug]);
 
   return (
     <>
@@ -216,7 +223,7 @@ const PostDetail = ({ post }) => {
           <h1 className="mb-8 text-4xl text-center font-semibold">
             {post.title}
           </h1>
-          <div className="max-w-prose lg:max-w-screen-2xl">
+          <div key={post.slug} className="max-w-prose lg:max-w-screen-2xl">
             {post.content.raw.children.map((typeObj, index) => {
               return getContentFragment(typeObj, index);
             })}

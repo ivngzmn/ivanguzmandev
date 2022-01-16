@@ -22,7 +22,7 @@ export default function BlogPosts({ posts }) {
 
       <Navbar />
       <Header />
-      <div className="bg-slate-900 h-full">
+      <div className="bg-zinc-900 h-full">
         <div className="relative max-w-7xl mx-auto px-4 pb-8">
           <FeaturedPosts />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">

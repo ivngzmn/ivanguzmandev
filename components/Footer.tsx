@@ -54,7 +54,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900">
+    <footer className="bg-black">
       {/* <NowPlaying /> */}
       <div className="mx-auto max-w-md py-16 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <nav

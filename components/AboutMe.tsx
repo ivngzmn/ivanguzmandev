@@ -25,7 +25,10 @@ export default function Profile() {
           <div className="relative mx-auto px-6">
             <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 ">
+                <span
+                  className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                  id="about"
+                >
                   About
                 </span>
               </div>

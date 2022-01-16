@@ -100,7 +100,7 @@ export default function Navbar() {
                         <Menu.Button className="hidden lg:inline-block  bg-black text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                           <span className="sr-only">Open user menu</span>
 
-                          <div className="space-x-3 flex items-center rounded-full pr-1 pl-1 pt-1 bg-slate-900">
+                          <div className="space-x-3 flex items-center rounded-full pr-1 pl-1 pt-1 bg-zinc-900">
                             <span className="">
                               <Image
                                 className="h-6 w-6 rounded-full -mr-2"
@@ -129,7 +129,7 @@ export default function Navbar() {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-slate-900 ring-1 ring-black ring-opacity-5 focus:outline-none z-40">
+                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-black ring-1 ring-black ring-opacity-5 focus:outline-none z-40">
                           <Menu.Item>
                             {({ active }) => (
                               <a

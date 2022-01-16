@@ -27,7 +27,7 @@ const CategoryPost = ({ posts }) => {
       </Head>
       <Navbar />
       <Header />
-      <div className="bg-slate-900 h-full">
+      <div className="bg-zinc-900 h-full">
         '
         <div className="container max-w-7xl mx-auto px-4 pb-8">
           <div className="absolute lg:px-4">

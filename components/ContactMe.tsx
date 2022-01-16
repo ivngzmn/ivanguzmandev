@@ -87,7 +87,7 @@ function ContactMe() {
     setReCaptchaToken(token as string);
   };
   return (
-    <div className="bg-slate-900 overflow-hidden">
+    <div className="bg-zinc-900 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
@@ -95,7 +95,10 @@ function ContactMe() {
           <div className="mb-2 lg:mb-8">
             <div className="w-full inline-block py-10 lg:py-20">
               <div className="md:float-left block">
-                <span className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-500 ">
+                <span
+                  className="text-5xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                  id="contact"
+                >
                   Contact
                 </span>
               </div>
@@ -132,7 +135,7 @@ function ContactMe() {
             />
             <div className="absolute inset-0 " />
           </div>
-          <div className=" relative rounded-2xl shadow-2xl bg-white py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
+          <div className=" relative rounded-2xl shadow-2xl bg-zinc-100 py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
             <section className="relative" aria-labelledby="contact-heading">
               <div className="absolute w-full h-1/2" aria-hidden="true" />
 
@@ -301,7 +304,7 @@ function ContactMe() {
 
                     {/* Contact form */}
                     <div className="py-10 sm:px-10 lg:col-span-2 xl:p-12">
-                      <h3 className="text-xl font-medium text-gray-900">
+                      <h3 className="text-2xl font-medium text-gray-900">
                         Send me a message
                       </h3>
                       <form
@@ -313,7 +316,7 @@ function ContactMe() {
                         <div>
                           <label
                             htmlFor="firstname"
-                            className="block text-sm font-medium text-gray-900"
+                            className="block text-lg font-medium text-gray-900"
                           >
                             First name
                           </label>
@@ -334,7 +337,7 @@ function ContactMe() {
                         <div>
                           <label
                             htmlFor="lastname"
-                            className="block text-sm font-medium text-gray-900"
+                            className="block text-lg font-medium text-gray-900"
                           >
                             Last name
                           </label>
@@ -355,7 +358,7 @@ function ContactMe() {
                         <div>
                           <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-gray-900"
+                            className="block text-lg font-medium text-gray-900"
                           >
                             Email
                           </label>
@@ -366,7 +369,7 @@ function ContactMe() {
                               type="email"
                               required={true}
                               autoComplete="email"
-                              placeholder="e.g. hello@jordanwalke.com"
+                              placeholder="hello@jordanwalke.com"
                               value={formState?.email}
                               onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -377,13 +380,13 @@ function ContactMe() {
                           <div className="flex justify-between">
                             <label
                               htmlFor="phone"
-                              className="block text-sm font-medium text-gray-900"
+                              className="block text-lg font-medium text-gray-900"
                             >
                               Phone
                             </label>
                             <span
                               id="phone-optional"
-                              className="text-sm text-gray-500"
+                              className="text-lg text-gray-500"
                             >
                               Optional
                             </span>
@@ -406,7 +409,7 @@ function ContactMe() {
                         <div className="sm:col-span-2">
                           <label
                             htmlFor="subject"
-                            className="block text-sm font-medium text-gray-900"
+                            className="block text-lg font-medium text-gray-900"
                           >
                             Subject
                           </label>
@@ -416,7 +419,7 @@ function ContactMe() {
                               required={true}
                               name="subject"
                               id="subject"
-                              placeholder="Looking forward to working with you."
+                              placeholder="I need to grow my business"
                               value={formState?.subject}
                               onChange={updateFormControl}
                               className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -427,13 +430,13 @@ function ContactMe() {
                           <div className="flex justify-between">
                             <label
                               htmlFor="message"
-                              className="block text-sm font-medium text-gray-900"
+                              className="block text-lg font-medium text-gray-900"
                             >
                               Message
                             </label>
                             <span
                               id="message-max"
-                              className="text-sm text-gray-500"
+                              className="text-lg text-gray-500"
                             >
                               Max. 500 characters
                             </span>
@@ -443,7 +446,7 @@ function ContactMe() {
                               id="message"
                               required={true}
                               name="message"
-                              placeholder="Let's meet for a coffee and discuss my project!"
+                              placeholder="Let's meet over a coffee and discuss my project!"
                               value={formState?.message}
                               onChange={updateFormControl}
                               rows={4}
