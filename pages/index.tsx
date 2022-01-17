@@ -9,7 +9,7 @@ function Home(props: any) {
   const router = useRouter();
   const meta = {
     title: 'Ivan Guzman – Software Engineer',
-    description: `Full Stack Software Engineer, JavaScript enthusiast, and father.`,
+    description: `Full Stack Software Engineer, Jamstack enthusiast, and inquisitive mind.`,
     image: '/static/images/webBanner.png',
     type: 'website',
     ...customMeta

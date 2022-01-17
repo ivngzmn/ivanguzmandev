@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import ProfileImage from '../public/images/profile-photo.jpg';
-import BackgroundImage from '../public/images/cottoncandy.jpg';
+import ProfileImage from '../public/static/images/profile-photo.jpg';
+import BackgroundImage from '../public/static/images/cottoncandy.jpg';
 import { FaMapMarkerAlt, FaCheckCircle, FaBriefcase } from 'react-icons/fa';
 
 export default function Profile() {
   return (
     <>
-      <main className="profile-page">
+      <main className="profile-page bg-zinc-900">
         <section className="absolute block w-full h-[550px] lg:h-[700px]">
           <Image
             alt="..."
@@ -36,7 +36,7 @@ export default function Profile() {
           </div>
           <section className="relative pt-20 ">
             <div className="max-w-7xl mx-auto px-4">
-              <div className="relative flex flex-col min-w-0 break-words bg-white mx-auto mb-16 -mt-10 lg:-mt-15 shadow-2xl rounded-2xl ">
+              <div className="relative flex flex-col min-w-0 break-words bg-white mx-auto pb-16 -mt-10 lg:-mt-15 shadow-2xl rounded-2xl ">
                 <div className="px-6">
                   <div className="flex flex-wrap justify-center pb-6">
                     <div className="w-full lg:w-full px-4  flex justify-center">

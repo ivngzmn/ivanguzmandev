@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import Image from 'next/image';
-import BackgroundImage from '/public/images/lost.jpg';
+import BackgroundImage from '/public/static/images/lost.jpg';
 import { Navbar, Footer } from 'components';
 
 export default function NotFound() {

@@ -10,9 +10,9 @@ function Uses() {
       </Head>
 
       <Navbar />
-      <div className="relative max-w-7xl mx-auto px-4 mb-8">
+      <section>
         <Setup />
-      </div>
+      </section>
 
       <Footer />
     </>

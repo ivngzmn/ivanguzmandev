@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
-import CoinForge from '/public/images/projects/MacBook-Pro-Crypto.webp';
-import TodoMVP from '/public/images/projects/MacBook-Todo-MVP.webp';
+import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
+import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
 import { AiOutlineAntDesign } from 'react-icons/ai';
 
 const projects = [

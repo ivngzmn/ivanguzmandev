@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Background from '../public/images/links-bg.jpg';
-import ProfileImage from '../public/images/profile-photo.jpg';
+import Background from '../public/static/images/links-bg.jpg';
+import ProfileImage from '../public/static/images/profile-photo.jpg';
 import {
   FaGithub,
   FaLinkedin,
@@ -13,7 +13,7 @@ import {
   FaMapMarkerAlt
 } from 'react-icons/fa';
 import { BiBookAlt, BiWorld } from 'react-icons/bi';
-import Logo from '../public/images/guzman-logo.svg';
+import Logo from '../public/static/images/guzman-logo.svg';
 
 const social = [
   {

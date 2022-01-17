@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CameraIcon } from '@heroicons/react/solid';
 import { IoIosRocket, IoIosEye } from 'react-icons/io';
-import BackgroundImage from 'public/images/sf-sunset.jpg';
+import BackgroundImage from 'public/static/images/sf-sunset.jpg';
 
 const photographer = {
   name: 'Van Mendoza',
@@ -39,13 +39,13 @@ export default function Hero() {
                 <span className="xl:inline text-white">experiences.</span>
               </h1>
               <div className="mt-3 lg:mt-5">
-                <span className="text-2xl md:text-3xl lg:text-4xl text-gray-50 leading-relaxed lg:leading-normal">
+                <span className="text-2xl md:text-3xl lg:text-5xl text-gray-50 leading-relaxed lg:leading-normal">
                   Full-Stack Software Engineer
                 </span>
                 <p className="font-light leading-relaxed text-gray-50 sm:mt-5 text-lg sm:text-lg md:text-xl lg:text-2xl max-w-prose text-left sm:text-left lg:text-left md:mt-5 lg:mx-0 lg:leading-loose">
                   I’m a reef aquarium nerd and Jamstack enthusiast. Developing
-                  blazing fast web applications with Next.js and Tailwind CSS is
-                  my passion. Welcome to my corner of the digital ocean.
+                  blazing fast web applications with Next.js and Tailwind CSS.
+                  Welcome to my corner of the digital ocean.
                 </p>
               </div>
               <div className="mt-5 lg:space-x-5 sm:mt-8 sm:flex sm:justify-left lg:justify-start">
