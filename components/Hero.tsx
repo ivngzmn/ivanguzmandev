@@ -29,9 +29,9 @@ export default function Hero() {
           >
             <div className="text-left sm:text-left lg:text-left">
               <h1 className="lg:tracking-wide font-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[118px]">
-                <span className="xl:inline text-white">Building</span>
+                <span className="xl:inline text-white">Developing</span>
                 <br />
-                <span className="xl:inline filter brightness-100 saturate-150 contrast-125 text-transparent bg-clip-text bg-text-animation bg-center lg:bg-no-repeat bg-cover">
+                <span className="xl:inline text-white" id="hero">
                   beautiful
                 </span>
                 <span className="xl:inline text-white"> web</span>
@@ -42,7 +42,7 @@ export default function Hero() {
                 <span className="text-2xl md:text-3xl lg:text-5xl text-gray-50 leading-relaxed lg:leading-normal">
                   Full-Stack Software Engineer
                 </span>
-                <p className="font-light leading-relaxed text-gray-50 sm:mt-5 text-lg sm:text-lg md:text-xl lg:text-2xl max-w-prose text-left sm:text-left lg:text-left md:mt-5 lg:mx-0 lg:leading-loose">
+                <p className="font-light leading-relaxed text-gray-50 sm:mt-2 md:mt-3 lg:mt-4 text-lg sm:text-lg md:text-xl lg:text-2xl max-w-prose text-left sm:text-left lg:text-left lg:mx-0 lg:leading-loose">
                   I’m a reef aquarium nerd and Jamstack enthusiast. Developing
                   blazing fast web applications with Next.js and Tailwind CSS.
                   Welcome to my corner of the digital ocean.

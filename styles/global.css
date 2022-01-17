@@ -129,6 +129,25 @@ a {
   -webkit-animation: gradient 10s ease both infinite;
   animation: gradient 10s ease both infinite;
 }
+#hero {
+  text-shadow: 0 0 80px rgba(141, 141, 141, 0.5);
+  /* Activate hardware acceleration for smoother animations */
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-color: #fe5a59;
+  background-image: linear-gradient(
+    -45deg,
+    #bd93f9 40%,
+    #ff79c6 60%,
+    #bd93f9 75%,
+    #ff79c6 100%
+  );
+  -webkit-animation: gradient 10s ease both infinite;
+  animation: gradient 10s ease both infinite;
+}
 #about {
   text-shadow: 0 0 80px rgba(141, 141, 141, 0.5);
   /* Activate hardware acceleration for smoother animations */

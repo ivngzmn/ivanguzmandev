@@ -13,11 +13,6 @@ module.exports = {
       fontFamily: {
         sans: ['Graphik', ...fontFamily.sans],
         title: ['Basement', ...fontFamily.sans]
-      },
-      backgroundImage: {
-        'text-animation': 'url(/static/images/hero-text-motion.webp)',
-        'hero-image':
-          'url(https://res.cloudinary.com/dbr8xxx2m/image/upload/q_auto:eco/v1636248359/Personal-Website/john-towner-JgOeRuGD_Y4-unsplash-optimized_uxgmup.webp)'
       }
     }
   },

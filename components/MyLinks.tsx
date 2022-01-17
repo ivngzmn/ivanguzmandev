@@ -47,9 +47,15 @@ function MyLinks() {
   return (
     <div className="relative mx-auto min-h-screen px-4">
       <div className="bg-slate-900">
-        <Image src={Background} alt="" layout="fill" objectFit="cover" />
+        <Image
+          src={Background}
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          className="min-h-screen w-full"
+        />
       </div>
-      <section className="flex flex-col justify-center py-12">
+      <section className="flex flex-col justify-center py-12 px-4">
         <div className="relative mx-auto">
           <Image
             alt="..."
@@ -111,7 +117,7 @@ function MyLinks() {
           </a>
         </Link>
       </section>
-      <section className="relative bottom-0 mx-auto flex items-center justify-center text-center m-5 space-y-4 max-w-xl">
+      <section className="relative bottom-0 mx-auto flex items-center justify-center text-center p-5 space-y-4 max-w-xl">
         <span className="text-white mr-2">Made with ❤️ by </span>
         <Link href="/" passHref>
           <Image src={Logo} alt="Ivan Guzman Logo" width={40} height={40} />
