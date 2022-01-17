@@ -24,7 +24,7 @@ export default function NotFound() {
                 404 error 😩
               </p>
               <h1 className="mt-2 text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
-                ${`Uh oh! I think you're lost.`}
+                {`Uh oh! I think you're lost.`}
               </h1>
               <p className="mt-2 text-lg font-medium text-white max-w-screen-lg mx-auto text-opacity-100">
                 Why show a generic 404 when I can make it sound mysterious? It
