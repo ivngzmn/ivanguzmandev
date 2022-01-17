@@ -10,7 +10,7 @@ function Home(props: any) {
   const meta = {
     title: 'Ivan Guzman – Software Engineer',
     description: `Full Stack Software Engineer, Jamstack enthusiast, and inquisitive mind.`,
-    image: '/static/images/webBanner.png',
+    image: 'https://www.ivanguzman.dev/static/images/banner.png',
     type: 'website',
     ...customMeta
   };
