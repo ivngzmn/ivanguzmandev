@@ -56,7 +56,7 @@ export default function myProjects() {
               <div className="lg:mx-auto lg:max-w-full lg:grid lg:grid-cols-12">
                 <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-8 lg:py-0">
                   <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
-                    <div className="w-full h-96 sm:w-full lg:h-[800px]">
+                    <div className="w-full h-96 sm:w-full lg:h-[800px] hover:h-[60rem] duration-500 ease-in-out">
                       <Image
                         className="w-full h-full object-center rounded-xl"
                         src={project.imageSrc}

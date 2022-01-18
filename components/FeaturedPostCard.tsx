@@ -2,12 +2,18 @@ import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
+import { grpahCMSImageLoader } from '../util';
 
 const FeaturedPostCard = ({ post }) => (
-  <div className="relative h-[300px] w-full lg:w-[350px]">
-    <div
+  <div className="relative h-[20rem] w-full lg:h-[25rem] lg:w-[25rem]">
+    <Image
+      unoptimized
+      loader={grpahCMSImageLoader}
+      src={post.featuredImage.url}
+      alt={post.title}
+      layout="fill"
+      objectFit="cover"
       className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-lg inline-block w-full h-full"
-      style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
     />
     <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-full" />
     <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">

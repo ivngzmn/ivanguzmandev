@@ -17,13 +17,13 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="relative bg-zinc-900">
-      <div className="relative max-w-7xl mx-auto pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+      <div className="relative max-w-7xl mx-auto py-28 px-4 sm:px-6 lg:py-52 lg:px-8">
         <div className="relative max-w-7xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-4xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-5xl">
+          <div className="text-center py-10">
+            <h2 className="text-5xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-7xl">
               Recent Posts from the Blog
             </h2>
-            <p className="mt-3 max-w-prose mx-auto text-xl lg:text-2xl text-gray-100 sm:mt-4">
+            <p className="mt-3 max-w-prose mx-auto text-xl lg:text-3xl text-gray-100 sm:mt-4">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>
@@ -35,9 +35,9 @@ const PostWidget = ({ categories, slug }) => {
               <a>
                 <div
                   key={index}
-                  className="flex flex-col rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                  className="flex flex-col rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 ease-in-out"
                 >
-                  <div className="flex-shrink-0 relative object-cover overflow-hidden h-96 w-full">
+                  <div className="flex-shrink-0 relative object-cover overflow-hidden h-[25rem] w-full hover:h-[26rem] duration-500 ease-in-out">
                     <Image
                       loader={grpahCMSImageLoader}
                       alt={post.title}
