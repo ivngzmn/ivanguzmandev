@@ -9,7 +9,7 @@ const PostCard = ({ post }) => (
   <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8 mt-10">
     <Link href={`/blog/${post.slug}`} passHref>
       <a>
-        <div className="relative shadow-md inline-block w-full h-60 md:h-96 lg:h-[36rem] mb-6 hover:h-[37rem] transition-all duration-500 ease-in-out">
+        <div className="relative shadow-md inline-block w-full h-[25rem] hover:h-[26rem] md:h-96 lg:h-[36rem] mb-6 hover:lg:h-[37rem] transition-all duration-500 ease-in-out">
           <Image
             unoptimized
             loader={grpahCMSImageLoader}
