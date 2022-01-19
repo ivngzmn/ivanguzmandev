@@ -170,7 +170,7 @@ const PostDetail = ({ post }) => {
       <HeadContainer
         title={`${post.title} | ${post.author.name}`}
         description={post.description}
-        image={post.image}
+        image={post.featuredImage.url}
         date={moment(post.date).format('MMMM DD, YYYY')}
         type="article"
       />
