@@ -7,7 +7,8 @@ import {
   Header,
   Categories,
   PostWidget,
-  Footer
+  Footer,
+  HeadContainer
 } from '../components';
 
 import { getPosts } from '../services';
@@ -15,10 +16,10 @@ import { getPosts } from '../services';
 export default function BlogPosts({ posts }) {
   return (
     <>
-      <Head>
-        <title>Blog | Ivan Guzman</title>
-      </Head>
-
+      <HeadContainer
+        title={`Blog | Ivan Guzman`}
+        description={`Thoughts on what I'm learning, what I'm thinking, and what I'm doing.`}
+      />
       <Navbar />
       <Header />
       <div className="bg-zinc-900 h-full">

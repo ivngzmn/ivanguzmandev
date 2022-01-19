@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import moment from 'moment';
 import highlightjs from 'highlight.js';
+import { HeadContainer } from 'components';
 import { grpahCMSImageLoader } from '../util';
 
 const PostDetail = ({ post }) => {
@@ -123,7 +124,7 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="my-8 px-2 py-4 block overflow-x-auto rounded
+            className="my-8 px-4 py-4 block overflow-x-auto rounded-lg
          bg-[#282A36] text-sm sm:text-base text-gray-200 font-mono w-auto whitespace-pre"
           >
             <code key={index}>
@@ -166,6 +167,13 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
+      <HeadContainer
+        title={`${post.title} | ${post.author.name}`}
+        description={post.description}
+        image={post.image}
+        date={moment(post.date).format('MMMM DD, YYYY')}
+        type="article"
+      />
       <div className="absolute -mt-10">
         <Link href={`/blog/`} passHref>
           <a className="text-lg text-gray-100 hover:text-gray-500 flex items-center space-x-1 transition duration-300 ease-in-out">
@@ -174,62 +182,64 @@ const PostDetail = ({ post }) => {
           </a>
         </Link>
       </div>
-      <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8">
-        <div className="relative shadow-md inline-block w-full h-60 md:h-96 lg:h-[700px] mb-6">
-          <Image
-            unoptimized
-            loader={grpahCMSImageLoader}
-            alt={post.title}
-            className="shadow-lg rounded-t-lg"
-            layout="fill"
-            objectFit="cover"
-            src={post.featuredImage.url}
-          />
-        </div>
-        <div className="px-4 lg:px-8">
-          <div className="flex items-center mb-8 w-full">
-            <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto">
-              <Image
-                alt={post.author.name}
-                height="30px"
-                width="30px"
-                className="align-middle rounded-full"
-                src={post.author.photo.url}
-              />
-              <p className="inline align-middle text-gray-700 mx-2 font-base text-lg">
-                {post.author.name}
-              </p>
-            </div>
-            <div className="font-medium text-gray-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 inline mr-2 text-indigo-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+      <article>
+        <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8">
+          <div className="relative shadow-md inline-block w-full h-96 md:h-[35rem] lg:h-[45rem] mb-6">
+            <Image
+              unoptimized
+              loader={grpahCMSImageLoader}
+              alt={post.title}
+              className="shadow-lg rounded-t-lg"
+              layout="fill"
+              objectFit="cover"
+              src={post.featuredImage.url}
+            />
+          </div>
+          <div className="px-4 lg:px-8">
+            <div className="flex items-center mb-8 w-full">
+              <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto">
+                <Image
+                  alt={post.author.name}
+                  height="30px"
+                  width="30px"
+                  className="align-middle rounded-full"
+                  src={post.author.photo.url}
                 />
-              </svg>
-              <span className="align-middle">
-                {moment(post.createdAt).format('MMM DD, YYYY')}
-              </span>
+                <p className="inline align-middle text-gray-700 mx-2 font-base text-lg">
+                  {post.author.name}
+                </p>
+              </div>
+              <div className="font-medium text-gray-700">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 inline mr-2 text-indigo-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                <span className="align-middle">
+                  {moment(post.createdAt).format('MMM DD, YYYY')}
+                </span>
+              </div>
+            </div>
+            <h1 className="mb-8 text-5xl lg:text-6xl text-left tracking-tight font-semibold">
+              {post.title}
+            </h1>
+            <div key={post.slug} className="max-w-prose lg:max-w-screen-2xl">
+              {post.content.raw.children.map((typeObj, index) => {
+                return getContentFragment(typeObj, index);
+              })}
             </div>
           </div>
-          <h1 className="mb-8 text-4xl text-center font-semibold">
-            {post.title}
-          </h1>
-          <div key={post.slug} className="max-w-prose lg:max-w-screen-2xl">
-            {post.content.raw.children.map((typeObj, index) => {
-              return getContentFragment(typeObj, index);
-            })}
-          </div>
         </div>
-      </div>
+      </article>
     </>
   );
 };

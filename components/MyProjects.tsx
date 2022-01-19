@@ -32,12 +32,12 @@ export default function myProjects() {
         <div className="mb-2 lg:mb-8">
           <div className="w-full inline-block py-10 lg:py-20">
             <div className="md:float-left block">
-              <span
+              <h1
                 className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
                 id="projects"
               >
                 Projects
-              </span>
+              </h1>
               <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
                 Selected works and client projects.
               </h2>

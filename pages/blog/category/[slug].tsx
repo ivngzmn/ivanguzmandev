@@ -23,7 +23,7 @@ const CategoryPost = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Blog | Categories</title>
+        <title>Blog Catagories | Ivan Guzman</title>
       </Head>
       <Navbar />
       <Header />
