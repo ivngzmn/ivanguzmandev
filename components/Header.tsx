@@ -18,12 +18,12 @@ const Header = () => {
         <div className="w-full inline-block py-10 lg:py-20">
           <div className="md:float-left block">
             <Link href="/blog" passHref>
-              <h1
+              <span
                 className="cursor-pointer text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
                 id="blog"
               >
                 Blog
-              </h1>
+              </span>
             </Link>
             <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
               Thoughts. Blurbs. Tech.
