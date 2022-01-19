@@ -170,8 +170,10 @@ const PostDetail = ({ post }) => {
       <HeadContainer
         title={`${post.title} | ${post.author.name}`}
         description={post.description}
+        ogImage={post.featuredImage.url}
         image={post.featuredImage.url}
-        date={moment(post.date).format('MMMM DD, YYYY')}
+        author={post.author.name}
+        date={new Date(post.date).toString()}
         type="article"
       />
       <div className="absolute -mt-10">
