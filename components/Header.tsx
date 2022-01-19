@@ -25,6 +25,9 @@ const Header = () => {
                 Blog
               </span>
             </Link>
+            <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
+              Thoughts. Blurbs. Tech.
+            </h2>
           </div>
           <div className="hidden md:float-left md:contents">
             {categories.map((category, index) => (
@@ -33,7 +36,7 @@ const Header = () => {
                 href={`/blog/category/${category.slug}`}
                 passHref
               >
-                <span className="md:float-right mt-2 align-middle text-gray-100 hover:text-gray-500 ml-4 font-semibold cursor-pointer transition duration-300 ease-in-out">
+                <span className="md:float-right mt-2 align-middle text-gray-100 hover:text-gray-500 ml-4 text-lg cursor-pointer transition duration-300 ease-in-out">
                   {category.name}
                 </span>
               </Link>
