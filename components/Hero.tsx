@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CameraIcon } from '@heroicons/react/solid';
 import { IoIosRocket, IoIosEye } from 'react-icons/io';
+import { MdLocationOn } from 'react-icons/md';
 import BackgroundImage from 'public/static/images/sf-sunset.jpg';
 
 const photographer = {
@@ -38,14 +39,19 @@ export default function Hero() {
                 <br />
                 <span className="xl:inline text-white">experiences.</span>
               </h1>
-              <div className="mt-3 lg:mt-5">
+              <div className="mt-3 lg:mt-5 max-w-prose">
                 <span className="text-2xl md:text-3xl lg:text-5xl text-gray-50 leading-relaxed lg:leading-normal">
                   Full-Stack Software Engineer
                 </span>
-                <p className="font-light leading-relaxed text-gray-50 sm:mt-2 md:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-prose text-left sm:text-left lg:text-left lg:mx-0 lg:leading-loose">
-                  Based in California. I specialize in designing and building
-                  blazing fast web applications with React and Tailwind CSS.
+                <p className="font-light leading-relaxed text-gray-50 sm:mt-2 md:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-left sm:text-left lg:text-left lg:mx-0 lg:leading-normal">
+                  I specialize on building (and occasionally designing) blazing
+                  fast web applications with React and Tailwind CSS. Currently,
+                  I'm focused on building accessible, human-centered products.
                 </p>
+                <span className="flex items-center font-light text-gray-50 sm:mt-2 md:mt-3 lg:mt-2 text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-prose text-left sm:text-left lg:text-left lg:mx-0 lg:leading-loose">
+                  <MdLocationOn className=" text-3xl text-red-600 mr-1" /> Based
+                  in Orange County, CA.
+                </span>
               </div>
               <div className="mt-5 lg:space-x-5 sm:mt-8 sm:flex sm:justify-left lg:justify-start">
                 <div className="rounded-md shadow">
