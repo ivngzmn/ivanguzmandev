@@ -15,6 +15,8 @@ export default function Profile() {
             src={BackgroundImage}
             layout="fill"
             objectFit="cover"
+            priority
+            quality={50}
           />
           <div
             id="blackOverlay"
@@ -47,6 +49,7 @@ export default function Profile() {
                           className="rounded-full h-auto align-middle border-none "
                           width={160}
                           height={160}
+                          quality={70}
                         />
                       </div>
                     </div>
