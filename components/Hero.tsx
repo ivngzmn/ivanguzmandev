@@ -23,7 +23,7 @@ export default function Hero() {
         quality={75}
       />
       <div className="max-w-7xl mx-auto flex justify-center flex-col min-h-screen">
-        <div className="relative z-10 pb-10 sm:pb-20 md:pb-28 lg:max-w-4xl lg:w-full lg:pb-52 xl:pb-64">
+        <div className="relative z-10 lg:pb-10 lg:max-w-4xl lg:w-full">
           <main
             id="skip"
             className="mt-20 mx-auto max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 "
@@ -40,15 +40,15 @@ export default function Hero() {
                 <span className="xl:inline text-white">experiences.</span>
               </h1>
               <div className="mt-3 lg:mt-5 max-w-prose">
-                <span className="text-2xl md:text-3xl lg:text-5xl text-gray-50 leading-relaxed lg:leading-normal">
+                <span className="text-xl md:text-2xl lg:text-3xl text-gray-50 leading-relaxed lg:leading-normal">
                   Full-Stack Software Engineer
                 </span>
-                <p className="font-light leading-relaxed text-gray-50 sm:mt-2 md:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-left sm:text-left lg:text-left lg:mx-0 lg:leading-normal">
+                <p className="font-light leading-relaxed text-gray-50 sm:mt-1 md:mt-2 lg:mt-3 text-base sm:text-base md:text-lg lg:text-xl text-left sm:text-left lg:text-left lg:mx-0 lg:leading-normal">
                   I specialize on building (and occasionally designing) blazing
                   fast web applications with React and Tailwind CSS. Currently,
                   I'm focused on building accessible, human-centered products.
                 </p>
-                <span className="flex items-center font-light text-gray-50 sm:mt-2 md:mt-3 lg:mt-2 text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-prose text-left sm:text-left lg:text-left lg:mx-0 lg:leading-loose">
+                <span className="flex items-center font-light text-gray-50 sm:mt-2 md:mt-3 lg:mt-2 text-base sm:text-base md:text-lg lg:text-xl max-w-prose text-left sm:text-left lg:text-left lg:mx-0 lg:leading-loose">
                   <MdLocationOn className=" text-3xl text-red-600 mr-1" /> Based
                   in Orange County, CA.
                 </span>

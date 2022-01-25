@@ -97,7 +97,7 @@ const PostDetail = ({ post }) => {
               target={obj.openInNewTab ? '_blank' : '_self'}
               rel="noopener noreferrer"
               title={obj.title}
-              className="text-indigo-500 hover:text-indigo-800 hover:underline"
+              className="text-zinc-900 bg-indigo-100 hover:bg-indigo-200 underline hover:decoration-2"
             >
               {getModifiedElement(obj, index, modifiedText)}
             </a>
@@ -125,7 +125,7 @@ const PostDetail = ({ post }) => {
           <pre
             key={index}
             className="my-8 px-4 py-4 block overflow-x-auto rounded-lg
-         bg-[#282A36] text-sm sm:text-base text-gray-200 font-mono w-auto whitespace-pre"
+         bg-[#282A36] text-sm sm:text-base text-gray-200 font-mono w-auto whitespace-normal"
           >
             <code key={index}>
               {getModifiedElement(obj, index, modifiedText)}

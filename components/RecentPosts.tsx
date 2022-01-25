@@ -17,19 +17,19 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="relative bg-zinc-900">
-      <div className="relative max-w-7xl mx-auto py-28 px-4 sm:px-6 lg:py-52 lg:px-8">
+      <div className="relative max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center py-10">
-            <h2 className="text-5xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-7xl">
+            <h2 className="text-3xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-6xl">
               Recent Posts from the Blog
             </h2>
-            <p className="mt-3 max-w-prose mx-auto text-xl lg:text-3xl text-gray-100 sm:mt-4">
+            <p className="mt-3 max-w-prose mx-auto text-xl md:text-2xl lg:text-3xl text-gray-100 sm:mt-4">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>
           </div>
         </div>
-        <div className="max-w-lg mt-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+        <div className="max-w-lg my-10 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {posts.map((post, index) => (
             <Link href="/blog/[slug]" as={`/blog/${post.slug}`} key={index}>
               <a>
