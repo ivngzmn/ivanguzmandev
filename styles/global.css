@@ -579,3 +579,22 @@ a {
     margin-left: 0.25rem;
   }
 }
+.product-front {
+  transform: translateZ(25px);
+}
+.project-top {
+  background: linear-gradient(#8e7cc4, #d9d3ea);
+}
+.toggle {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  padding-top: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: -5px 0 8px rgba(156, 216, 244, 0.5);
+}
+.image {
+  width: 80%;
+  padding-top: 10%;
+}
