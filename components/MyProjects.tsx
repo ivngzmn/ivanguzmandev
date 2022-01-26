@@ -81,7 +81,7 @@ export default function myProjects() {
                     </div>
                     <div className="mt-8 lg:w-2/3">
                       <Link href={project.liveLink}>
-                        <a className="w-full space-x-3 flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-indigo-700 bg-white hover:bg-indigo-100 md:py-4 md:text-lg md:px-10">
+                        <a className="transition duration-500 ease-in-out transform hover:-translate-y-1 w-full space-x-3 flex items-center justify-center px-8 py-3 border-transparent text-base font-regular lg:font-semibold rounded-md text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:text-xl md:px-10">
                           <FaRegPaperPlane className="w-6 h-6" />
                           <span>Live</span>
                         </a>
@@ -89,7 +89,7 @@ export default function myProjects() {
                     </div>
                     <div className="mt-8 lg:w-2/3">
                       <Link href={project.githubLink}>
-                        <a className="w-full space-x-3 flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-indigo-700 bg-white hover:bg-indigo-100 md:py-4 md:text-lg md:px-10">
+                        <a className="transition duration-500 ease-in-out transform hover:-translate-y-1 w-full space-x-3 flex items-center justify-center px-8 py-3 border border-transparent text-base font-regular lg:font-semibold rounded-md text-indigo-700 bg-white hover:bg-indigo-100 md:py-4 md:text-xl md:px-10">
                           <FaGithub className="w-6 h-6" /> <span>Source</span>
                         </a>
                       </Link>
