@@ -4,6 +4,7 @@ import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
 import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
 import { AiOutlineAntDesign } from 'react-icons/ai';
+import { ProjectCard } from 'components';
 
 const projects = [
   {
@@ -48,6 +49,7 @@ export default function myProjects() {
         {/* projects section */}
 
         <div className="pt-2 space-y-6 lg:space-y-40 relative">
+          {/* <ProjectCard /> */}
           {projects.map((project) => (
             <div
               key={project.name}
@@ -56,7 +58,7 @@ export default function myProjects() {
               <div className="lg:mx-auto lg:max-w-full lg:grid lg:grid-cols-12">
                 <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-8 lg:py-0">
                   <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
-                    <div className="w-full h-[30rem] hover:h-[32rem] sm:w-full lg:h-[800px] hover:lg:h-[60rem] duration-500 ease-in-out">
+                    <div className="w-full h-[30rem] sm:w-full lg:h-[800px] duration-500 ease-in-out">
                       <Image
                         className="w-full h-full object-center rounded-xl"
                         src={project.imageSrc}

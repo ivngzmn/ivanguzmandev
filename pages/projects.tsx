@@ -1,4 +1,4 @@
-import { Navbar, MyProjects, Footer } from '../components';
+import { Navbar, MyProjects, Skills, Footer } from '../components';
 import Head from 'next/head';
 
 function Projects() {
@@ -10,7 +10,7 @@ function Projects() {
 
       <Navbar />
       <MyProjects />
-
+      <Skills />
       <Footer />
     </>
   );

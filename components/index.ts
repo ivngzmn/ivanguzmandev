@@ -21,3 +21,5 @@ export { default as Loader } from './Loader';
 export { default as Setup } from './Setup';
 export { default as MyLinks } from './MyLinks';
 export { default as HeadContainer } from './HeadContainer';
+export { default as ProjectCard } from './ProjectCard';
+export { default as Skills } from './Skills';
