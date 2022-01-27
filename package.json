@@ -3,6 +3,7 @@
     "start": "next start",
     "dev": "next dev",
     "lint": "next lint",
+    "prebuild": "scripts/generate-robots-txt",
     "build": "next build"
   },
   "devDependencies": {

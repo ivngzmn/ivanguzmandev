@@ -18,9 +18,10 @@
 # misc
 .DS_Store
 *.pem
-*.codekit3
+config.codekit3
 package-lock.json
 .vscode
+public/robots.txt
 
 # debug
 npm-debug.log*
