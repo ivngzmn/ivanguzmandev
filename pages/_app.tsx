@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css';
 import '/styles/global.css';
 import '/styles/code.css';
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 
@@ -18,7 +19,14 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Component {...pageProps} />;
+    </>
+  );
 }
 
 export default MyApp;

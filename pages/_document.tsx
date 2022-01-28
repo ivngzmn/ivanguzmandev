@@ -76,7 +76,7 @@ class MyDocument extends Document {
             content="/static/favicons/browserconfig.xml"
             name="msapplication-config"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
