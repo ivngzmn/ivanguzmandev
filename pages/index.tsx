@@ -5,14 +5,15 @@ function Home() {
   return (
     <>
       <HeadContainer />
-      <header className="w-full absolute z-20">
+      <header className="absolute z-20 w-full">
         <Navbar />
       </header>
       <section className="hero">
         <Hero />
       </section>
-
-      <RecentPosts categories={undefined} slug={undefined} />
+      <section>
+        <RecentPosts categories={undefined} slug={undefined} />
+      </section>
       <section className="my-projects"></section>
       <Footer />
     </>

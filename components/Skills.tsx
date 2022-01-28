@@ -92,7 +92,7 @@ const tech = [
 
     icon: SiGithub,
     iconForeground: 'text-white',
-    iconBackground: 'bg-zinc-800'
+    iconBackground: 'bg-zinc-900'
   },
   {
     title: 'Git',
@@ -124,23 +124,23 @@ function classNames(...classes) {
 function Skills() {
   return (
     <div className="bg-zinc-900">
-      <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
-          <div className="w-full inline-block py-10 lg:py-20">
-            <div className="md:float-left block">
+          <div className="inline-block w-full py-10 lg:py-20">
+            <div className="block md:float-left">
               <span
-                className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
                 id="projects"
               >
                 Skills
               </span>
-              <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
+              <h2 className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
                 Technologies I am using. Always learning.
               </h2>
             </div>
           </div>
         </div>
-        <section className="rounded-lg bg-zinc-700 overflow-hidden shadow divide-y divide-zinc-700 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
+        <section className="divide-y divide-zinc-700 overflow-hidden rounded-lg bg-zinc-700 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
           {tech.map((item, itemIdx) => (
             <div
               key={item.title}
@@ -153,17 +153,17 @@ function Skills() {
                 itemIdx === tech.length - 1
                   ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
                   : '',
-                'relative group bg-zinc-800 p-6'
+                'group relative bg-zinc-800 p-6'
               )}
             >
               <section>
-                <div className="flex items-center justify-center flex-col">
+                <div className="flex flex-col items-center justify-center">
                   <div className="">
                     <span
                       className={classNames(
                         item.iconBackground,
                         item.iconForeground,
-                        'rounded-lg inline-flex p-3'
+                        'inline-flex rounded-lg p-3'
                       )}
                     >
                       <item.icon className="h-10 w-10" aria-hidden="true" />
