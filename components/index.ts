@@ -23,3 +23,4 @@ export { default as MyLinks } from './MyLinks';
 export { default as HeadContainer } from './HeadContainer';
 export { default as ProjectCard } from './ProjectCard';
 export { default as Skills } from './Skills';
+export { default as NowPlaying } from './NowPlaying';

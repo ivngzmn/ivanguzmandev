@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 const Divider = () => {
   return (
-    <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
+    <div className="my-8 w-full border border-gray-200 dark:border-gray-600" />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-100">
+    <h3 className="mb-4 text-lg font-bold tracking-tight text-gray-100 md:text-xl">
       {children}
     </h3>
   );
@@ -17,9 +17,9 @@ const Year = ({ children }) => {
 const Step = ({ title, children }) => {
   return (
     <li className="mb-4 ml-2">
-      <div className="flex items-center mb-2 text-yellow-200 dark:text-green-300">
+      <div className="mb-2 flex items-center text-yellow-200 dark:text-green-300">
         <span className="sr-only">Check</span>
-        <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24">
+        <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
           <g
             fill="none"
             stroke="currentColor"
@@ -33,7 +33,7 @@ const Step = ({ title, children }) => {
         </svg>
         <p className="font-medium text-gray-50">{title}</p>
       </div>
-      <p className="text-gray-100 ml-6">{children}</p>
+      <p className="ml-6 text-gray-100">{children}</p>
     </li>
   );
 };
@@ -114,16 +114,16 @@ export default function Bio() {
   return (
     <>
       <section className="bg-zinc-900">
-        <div className="max-w-7xl px-4 mx-auto p-16">
-          <div className="bg-gradient-to-r from-purple-800 to-indigo-700 rounded-2xl shadow-2xl max-w-7xl mx-auto">
-            <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-              <h3 className="text-3xl font-extrabold text-white tracking-tight">
+        <div className="mx-auto max-w-7xl p-16 px-4">
+          <div className="mx-auto max-w-7xl rounded-2xl bg-gradient-to-r from-purple-800 to-indigo-700 shadow-2xl">
+            <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
+              <h3 className="text-3xl font-extrabold tracking-tight text-white">
                 Timeline
               </h3>
               <Divider />
               <Year>1986</Year>
               <ul>
-                <Step title="Born 👶🏽🍼">Xalapa, Veraruz, MX 🇲🇽</Step>
+                <Step title="Born 👶🏽🍼">Xalapa, Veracruz, MX 🇲🇽</Step>
               </ul>
               <Year>1996</Year>
               <ul>
@@ -153,12 +153,12 @@ export default function Bio() {
               ) : (
                 <button
                   type="button"
-                  className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-white"
+                  className="my-4 mx-auto flex items-center rounded-md px-4 py-2 text-sm font-medium text-white"
                   onClick={() => showFullBio(true)}
                 >
                   Show More
                   <svg
-                    className="h-4 w-4 ml-1"
+                    className="ml-1 h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"

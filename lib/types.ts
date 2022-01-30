@@ -7,7 +7,15 @@ export type NowPlayingSong = {
   album: string;
   albumImageUrl: string;
   artist: string;
+  artistUrl: string;
   isPlaying: boolean;
+  songUrl: string;
+  title: string;
+};
+export type RecentlyPlayedSong = {
+  album: string;
+  albumImageUrl: string;
+  artist: string;
   songUrl: string;
   title: string;
 };

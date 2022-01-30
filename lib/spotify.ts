@@ -7,6 +7,7 @@ const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
+const LAST_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
@@ -39,6 +40,16 @@ export const getTopTracks = async () => {
   const { access_token } = await getAccessToken();
 
   return fetch(TOP_TRACKS_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`
+    }
+  });
+};
+
+export const getRecentlyPlayed = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(LAST_PLAYED_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`
     }

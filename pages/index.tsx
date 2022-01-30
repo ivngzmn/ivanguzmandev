@@ -15,7 +15,9 @@ function Home() {
         <RecentPosts categories={undefined} slug={undefined} />
       </section>
       <section className="my-projects"></section>
-      <Footer />
+      <section>
+        <Footer />
+      </section>
     </>
   );
 }
