@@ -13,7 +13,7 @@ const projects = [
     githubLink: 'https://github.com/ivngzmn/coin-forge',
     imageSrc: CoinForge,
     imageAlt: 'Coin Forge',
-    description: `Used React-Redux for state management of the API calls. For the API's I went to Rapid API where I used the Coin Ranking API and the Bing News Search API. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 7 Day, 30 Day, 1 Year, and 5 Year charts. `
+    description: `I have been getting deeper into React and wanted to see how I could push myself to use a different UI library such as Material UI. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API's I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. `
   },
   {
     name: 'Todo App',
