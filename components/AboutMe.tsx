@@ -15,6 +15,7 @@ export default function Profile() {
             src={BackgroundImage}
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
             priority
             quality={50}
           />
@@ -49,7 +50,8 @@ export default function Profile() {
                           className="h-auto rounded-full border-none align-middle "
                           width={160}
                           height={160}
-                          quality={70}
+                          quality={60}
+                          placeholder="blur"
                         />
                       </div>
                     </div>

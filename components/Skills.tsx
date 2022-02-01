@@ -19,7 +19,6 @@ import {
 const tech = [
   {
     title: 'HTML5',
-
     icon: SiHtml5,
     iconForeground: 'text-white',
     iconBackground: 'bg-orange-500'

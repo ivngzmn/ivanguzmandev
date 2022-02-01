@@ -3,7 +3,26 @@ import Link from 'next/link';
 import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
 import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
-import { AiOutlineAntDesign } from 'react-icons/ai';
+import Portfolio from '/public/static/images/projects/MacBook-Pro-Portfolio.webp';
+import {
+  SiHtml5,
+  SiMaterialui,
+  SiCss3,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiGraphql,
+  SiMongodb,
+  SiMicrosoftazure,
+  SiGithub,
+  SiGit,
+  SiIterm2,
+  SiVisualstudiocode
+} from 'react-icons/si';
 import { ProjectCard } from 'components';
 
 const projects = [
@@ -12,19 +31,125 @@ const projects = [
     liveLink: 'https://coinforge.vercel.app/',
     githubLink: 'https://github.com/ivngzmn/coin-forge',
     imageSrc: CoinForge,
+    cardAlign: 'lg:col-start-1',
     imageAlt: 'Coin Forge',
-    description: `I have been getting deeper into React and wanted to see how I could push myself to use a different UI library such as Material UI. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API's I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. `
+    icons: [
+      {
+        id: '1',
+        name: 'React',
+        logo: SiReact,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-cyan-400'
+      },
+      {
+        id: '2',
+        name: 'Material UI',
+        logo: SiMaterialui,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
+      }
+    ],
+    description: `I have been getting deeper into React and wanted to see how I could push myself to use a different UI library such as Material UI. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API's I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Looking to add Google auth and Firebase for the backend.`
+  },
+  {
+    name: 'Portfolio',
+    liveLink: '#',
+    githubLink: 'https://github.com/ivngzmn/ivanguzmandev',
+    imageSrc: Portfolio,
+    cardAlign: 'lg:col-start-5',
+    imageAlt: 'Portfolio',
+    icons: [
+      {
+        id: '1',
+        name: 'Next.js',
+        logo: SiNextdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-700'
+      },
+      {
+        id: '2',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500'
+      },
+      {
+        id: '3',
+        name: 'GraphQL',
+        logo: SiGraphql,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-pink-500'
+      },
+      {
+        id: '4',
+        name: 'TypeScript',
+        logo: SiTypescript,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-600'
+      }
+    ],
+    description:
+      'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery.'
   },
   {
     name: 'Todo App',
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,
+    cardAlign: 'lg:col-start-1',
     imageAlt: 'Todo App',
+    icons: [
+      {
+        id: '1',
+        name: 'Html5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-red-500'
+      },
+      {
+        id: '2',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500'
+      },
+      {
+        id: '3',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '4',
+        name: 'MongoDB',
+        logo: SiMongodb,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-700'
+      },
+      {
+        id: '5',
+        name: 'Express',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
+      },
+      {
+        id: '6',
+        name: 'Microsoft Azure',
+        logo: SiMicrosoftazure,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
+      }
+    ],
     description:
       'It was my first time building a web app that included a database and authentication. With MongoDB Atlas it was nice and straightforward to set up and get things communicating with my developer build. Once I got to authentication with Microsoft Azure Active Directory it got really hard as there are quite a few steps required to get the web app working such as registering your application.'
   }
 ];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export default function myProjects() {
   return (
@@ -48,15 +173,20 @@ export default function myProjects() {
 
         {/* projects section */}
 
-        <div className="relative space-y-6 pt-2 lg:space-y-40">
+        <div className="relative space-y-6 pt-2 lg:space-y-48">
           {/* <ProjectCard /> */}
           {projects.map((project) => (
             <div
               key={project.name}
-              className=" rounded-xl bg-transparent pb-10 lg:relative lg:z-10 lg:pb-0"
+              className="rounded-xl bg-transparent pb-10 lg:relative lg:z-10 lg:pb-0"
             >
               <div className="lg:mx-auto lg:grid lg:max-w-full lg:grid-cols-12">
-                <div className="relative z-10 lg:col-span-8 lg:col-start-1 lg:row-start-1 lg:py-0">
+                <div
+                  className={classNames(
+                    project.cardAlign,
+                    'relative z-10 lg:col-span-8 lg:row-start-1 lg:py-0'
+                  )}
+                >
                   <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
                     <div className="h-[30rem] w-full duration-500 ease-in-out sm:w-full lg:h-[800px]">
                       <Image
@@ -65,14 +195,16 @@ export default function myProjects() {
                         alt={project.imageAlt}
                         objectFit="cover"
                         layout="fill"
+                        placeholder="blur"
+                        quality={70}
                       />
                     </div>
                   </div>
                 </div>
                 <div className="mt-12 lg:col-span-4 lg:m-0 lg:px-4 lg:pl-8">
-                  <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+                  <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-0">
                     <div>
-                      <span className="font-regular text-4xl text-white lg:text-5xl">
+                      <span className="text-4xl font-semibold text-white lg:text-5xl">
                         {project.name}
                       </span>
                       <p className="font-regular mt-6 text-lg text-white lg:text-xl">
@@ -87,14 +219,30 @@ export default function myProjects() {
                         </a>
                       </Link>
                     </div>
-                    <div className="mt-8 lg:w-2/3">
+                    <div className="my-8 lg:w-2/3">
                       <Link href={project.githubLink}>
                         <a className="font-regular flex w-full transform items-center justify-center space-x-3 rounded-md border border-transparent bg-white px-8 py-3 text-base text-indigo-700 transition duration-500 ease-in-out hover:-translate-y-1 hover:bg-indigo-100 md:py-4 md:px-10 md:text-xl lg:font-semibold">
                           <FaGithub className="h-6 w-6" /> <span>Source</span>
                         </a>
                       </Link>
                     </div>
-                    <div className="h-12 w-12"></div>
+                    <span className="text-2xl font-semibold text-white lg:text-3xl">
+                      Tech Stack:
+                    </span>
+                    <div className="text-white">
+                      {project.icons.map((icon) => (
+                        <div
+                          key={icon.id}
+                          className={classNames(
+                            icon.iconBackground,
+                            icon.iconForeground,
+                            'mt-8 mr-4 inline-flex rounded-lg p-3'
+                          )}
+                        >
+                          <icon.logo className="h-10 w-10" aria-hidden="true" />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,29 +251,6 @@ export default function myProjects() {
         </div>
 
         {/* end */}
-
-        {/* <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          {projects.map((project) => (
-            <a key={project.name} href={project.href} className="group block">
-              <div
-                aria-hidden="true"
-                className=" rounded-lg overflow-hidden group-hover:opacity-75"
-              >
-                <Image
-                  src={project.imageSrc}
-                  alt={project.imageAlt}
-                  className="w-full h-full object-center object-cover"
-                  width={900}
-                  height={1200}
-                />
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-gray-900">
-                {project.name}
-              </h3>
-              <p className="text-sm text-gray-500">{project.description}</p>
-            </a>
-          ))}
-        </div> */}
       </div>
     </div>
   );

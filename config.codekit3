@@ -123,24 +123,24 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/server\/pages\/blog.js" : {
+    "\/.next\/server\/pages\/404.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/server\/pages\/blog-min.js",
+      "oAP" : "\/.next\/server\/pages\/404-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/server\/pages\/blog\/[slug].js" : {
+    "\/.next\/server\/pages\/about.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/server\/pages\/blog\/[slug]-min.js",
+      "oAP" : "\/.next\/server\/pages\/about-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -211,24 +211,24 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/chunks\/pages\/blog.js" : {
+    "\/.next\/static\/chunks\/pages\/404.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/chunks\/pages\/blog-min.js",
+      "oAP" : "\/.next\/static\/chunks\/pages\/404-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/chunks\/pages\/blog\/[slug].js" : {
+    "\/.next\/static\/chunks\/pages\/about.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/chunks\/pages\/blog\/[slug]-min.js",
+      "oAP" : "\/.next\/static\/chunks\/pages\/about-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -240,17 +240,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/.next\/static\/chunks\/pages\/index-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/.next\/static\/chunks\/pages\/projects.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/chunks\/pages\/projects-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -370,6 +359,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/.next\/static\/media\/lost.ad3388f0.jpg" : {
+      "ft" : 16384,
+      "iS" : 763802,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/media\/lost.ad3388f0.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/.next\/static\/media\/MacBook-Pro-Crypto.71d0500a.webp" : {
       "ft" : 8388608,
       "iS" : 1427310,
@@ -405,30 +407,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/.next\/static\/media\/revicons.652e7269.eot" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/media\/revicons.652e7269.eot",
-      "oF" : 0
-    },
-    "\/.next\/static\/media\/revicons.b96bdb22.ttf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/media\/revicons.b96bdb22.ttf",
-      "oF" : 0
-    },
-    "\/.next\/static\/media\/revicons.ff59b316.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/.next\/static\/media\/revicons.ff59b316.woff",
-      "oF" : 0
-    },
     "\/.next\/static\/media\/sf-sunset.65a2d651.jpg" : {
       "ft" : 16384,
       "iS" : 704517,
@@ -442,209 +420,501 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/.next\/static\/webpack\/2e5fe52c305b2cb8.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/1b8dcf9697df26f8.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/2e5fe52c305b2cb8.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/1b8dcf9697df26f8.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/3e7a3e9776b8bcec.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/4acbd35081d2f68e.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/3e7a3e9776b8bcec.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/4acbd35081d2f68e.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/5f0aee03a563d111.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/6bf313928fa4fc86.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/5f0aee03a563d111.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/6bf313928fa4fc86.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/32e975eb6b3255a3.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/8c43599954a4fbb2.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/32e975eb6b3255a3.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/8c43599954a4fbb2.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/160b6868e8551c80.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/18e96b7593726a14.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/160b6868e8551c80.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/18e96b7593726a14.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/98762e6bbfd8abe0.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/57b80afdb530dd38.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/98762e6bbfd8abe0.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/57b80afdb530dd38.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/d5a4405641c93877.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/96a8987458586b7c.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/d5a4405641c93877.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/96a8987458586b7c.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/f84807507c9a9cfb.webpack.hot-update.json" : {
+    "\/.next\/static\/webpack\/146b76f960ea969a.webpack.hot-update.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/f84807507c9a9cfb.webpack.hot-update-min.json",
+      "oAP" : "\/.next\/static\/webpack\/146b76f960ea969a.webpack.hot-update-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/.next\/static\/webpack\/pages\/_app.32e975eb6b3255a3.hot-update.js" : {
+    "\/.next\/static\/webpack\/5882f3cdee9893bf.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/5882f3cdee9893bf.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/646068fe916d574c.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/646068fe916d574c.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/722289c1b7bb506e.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/722289c1b7bb506e.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/4871292c687973ae.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/4871292c687973ae.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/928406981b6a4f9d.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/928406981b6a4f9d.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/76800780558eaf87.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/76800780558eaf87.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/d015de8c76e4da97.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/d015de8c76e4da97.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/ec858f1ce5dda0ed.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/ec858f1ce5dda0ed.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/ee4175a79e0ea610.webpack.hot-update.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/ee4175a79e0ea610.webpack.hot-update-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.next\/static\/webpack\/pages\/_app.8c43599954a4fbb2.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/.next\/static\/webpack\/pages\/_app.32e975eb6b3255a3.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.8c43599954a4fbb2.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.32e975eb6b3255a3.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/_app.146b76f960ea969a.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.146b76f960ea969a.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.722289c1b7bb506e.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.722289c1b7bb506e.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.d015de8c76e4da97.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.d015de8c76e4da97.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/_app.ec858f1ce5dda0ed.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/.next\/static\/webpack\/pages\/_app.ec858f1ce5dda0ed.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/pages\/about.4acbd35081d2f68e.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.32e975eb6b3255a3.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.4acbd35081d2f68e.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/index.160b6868e8551c80.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.6bf313928fa4fc86.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/index.160b6868e8551c80.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.6bf313928fa4fc86.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/projects.32e975eb6b3255a3.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.18e96b7593726a14.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/projects.32e975eb6b3255a3.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.18e96b7593726a14.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/pages\/projects.160b6868e8551c80.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.57b80afdb530dd38.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/pages\/projects.160b6868e8551c80.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.57b80afdb530dd38.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.2e5fe52c305b2cb8.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.96a8987458586b7c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.2e5fe52c305b2cb8.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.96a8987458586b7c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.3e7a3e9776b8bcec.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.928406981b6a4f9d.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.3e7a3e9776b8bcec.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.928406981b6a4f9d.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.5f0aee03a563d111.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/about.ee4175a79e0ea610.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.5f0aee03a563d111.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/about.ee4175a79e0ea610.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.32e975eb6b3255a3.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.1b8dcf9697df26f8.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.32e975eb6b3255a3.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.1b8dcf9697df26f8.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.160b6868e8551c80.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.57b80afdb530dd38.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.160b6868e8551c80.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.57b80afdb530dd38.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.98762e6bbfd8abe0.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.96a8987458586b7c.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.98762e6bbfd8abe0.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.96a8987458586b7c.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.d5a4405641c93877.hot-update.js" : {
+    "\/.next\/static\/webpack\/pages\/index.ee4175a79e0ea610.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.d5a4405641c93877.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/pages\/index.ee4175a79e0ea610.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/.next\/static\/webpack\/webpack.f84807507c9a9cfb.hot-update.js" : {
+    "\/.next\/static\/webpack\/webpack.1b8dcf9697df26f8.hot-update.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/.next\/static\/webpack\/webpack.f84807507c9a9cfb.hot-update-min.js",
+      "oAP" : "\/.next\/static\/webpack\/webpack.1b8dcf9697df26f8.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.4acbd35081d2f68e.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.4acbd35081d2f68e.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.6bf313928fa4fc86.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.6bf313928fa4fc86.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.8c43599954a4fbb2.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.8c43599954a4fbb2.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.18e96b7593726a14.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.18e96b7593726a14.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.57b80afdb530dd38.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.57b80afdb530dd38.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.96a8987458586b7c.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.96a8987458586b7c.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.146b76f960ea969a.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.146b76f960ea969a.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.5882f3cdee9893bf.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.5882f3cdee9893bf.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.646068fe916d574c.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.646068fe916d574c.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.722289c1b7bb506e.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.722289c1b7bb506e.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.4871292c687973ae.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.4871292c687973ae.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.928406981b6a4f9d.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.928406981b6a4f9d.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.76800780558eaf87.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.76800780558eaf87.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.d015de8c76e4da97.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.d015de8c76e4da97.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.ec858f1ce5dda0ed.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.ec858f1ce5dda0ed.hot-update-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.next\/static\/webpack\/webpack.ee4175a79e0ea610.hot-update.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/.next\/static\/webpack\/webpack.ee4175a79e0ea610.hot-update-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -799,6 +1069,20 @@
       "rC" : 0,
       "tEC" : 0
     },
+    "\/components\/FeaturedProjects.tsx" : {
+      "cDF" : 0,
+      "ft" : 128,
+      "jxM" : 0,
+      "ma" : 0,
+      "mi" : 0,
+      "moR" : 0,
+      "moT" : 2,
+      "oA" : 0,
+      "oAP" : "\/components\/FeaturedProjects.js",
+      "oF" : 0,
+      "rC" : 0,
+      "tEC" : 0
+    },
     "\/components\/Footer.tsx" : {
       "cDF" : 0,
       "ft" : 128,
@@ -855,7 +1139,7 @@
       "rC" : 0,
       "tEC" : 0
     },
-    "\/components\/index.tsx" : {
+    "\/components\/index.ts" : {
       "cDF" : 0,
       "ft" : 128,
       "jxM" : 0,
@@ -949,6 +1233,20 @@
       "moT" : 2,
       "oA" : 0,
       "oAP" : "\/components\/Navbar.js",
+      "oF" : 0,
+      "rC" : 0,
+      "tEC" : 0
+    },
+    "\/components\/NowPlaying.tsx" : {
+      "cDF" : 0,
+      "ft" : 128,
+      "jxM" : 0,
+      "ma" : 0,
+      "mi" : 0,
+      "moR" : 0,
+      "moT" : 2,
+      "oA" : 0,
+      "oAP" : "\/components\/NowPlaying.js",
       "oF" : 0,
       "rC" : 0,
       "tEC" : 0
@@ -1051,6 +1349,20 @@
       "rC" : 0,
       "tEC" : 0
     },
+    "\/components\/Skills.tsx" : {
+      "cDF" : 0,
+      "ft" : 128,
+      "jxM" : 0,
+      "ma" : 0,
+      "mi" : 0,
+      "moR" : 0,
+      "moT" : 2,
+      "oA" : 0,
+      "oAP" : "\/components\/Skills.js",
+      "oF" : 0,
+      "rC" : 0,
+      "tEC" : 0
+    },
     "\/lib\/constants.ts" : {
       "cDF" : 0,
       "ft" : 128,
@@ -1064,6 +1376,20 @@
       "oF" : 0,
       "rC" : 0,
       "tEC" : 2
+    },
+    "\/lib\/fetcher.ts" : {
+      "cDF" : 0,
+      "ft" : 128,
+      "jxM" : 0,
+      "ma" : 0,
+      "mi" : 0,
+      "moR" : 0,
+      "moT" : 2,
+      "oA" : 0,
+      "oAP" : "\/lib\/fetcher.js",
+      "oF" : 0,
+      "rC" : 0,
+      "tEC" : 0
     },
     "\/lib\/gtag.ts" : {
       "cDF" : 0,
@@ -1137,14 +1463,6 @@
       "oA" : 2,
       "oAP" : "\/node_modules",
       "oF" : 0
-    },
-    "\/package-lock.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/package-lock-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
     },
     "\/package.json" : {
       "ft" : 524288,
@@ -1375,79 +1693,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/public\/android-chrome-192x192.png" : {
-      "ft" : 32768,
-      "iS" : 8372,
-      "oA" : 0,
-      "oAP" : "\/public\/android-chrome-192x192.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/public\/android-chrome-512x512.png" : {
-      "ft" : 32768,
-      "iS" : 38280,
-      "oA" : 0,
-      "oAP" : "\/public\/android-chrome-512x512.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/public\/apple-touch-icon.png" : {
-      "ft" : 32768,
-      "iS" : 7740,
-      "oA" : 0,
-      "oAP" : "\/public\/apple-touch-icon.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/public\/favicon-16x16.png" : {
-      "ft" : 32768,
-      "iS" : 327,
-      "oA" : 0,
-      "oAP" : "\/public\/favicon-16x16.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/public\/favicon-32x32.png" : {
-      "ft" : 32768,
-      "iS" : 703,
-      "oA" : 0,
-      "oAP" : "\/public\/favicon-32x32.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/public\/favicon.ico" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/favicon.ico",
-      "oF" : 0
-    },
     "\/public\/fonts\/Basement-Grotesque\/BasementGrotesque-Black_v1.202.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1560,12 +1805,124 @@
       "oAP" : "\/public\/fonts\/Marvin\/MarvinVisionsBig-Bold.woff2",
       "oF" : 0
     },
-    "\/public\/site.webmanifest" : {
+    "\/public\/robots.txt" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/site.webmanifest",
+      "oAP" : "\/public\/robots.txt",
+      "oF" : 0
+    },
+    "\/public\/static\/favicons\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 8372,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/android-chrome-512x512.png" : {
+      "ft" : 32768,
+      "iS" : 38280,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/android-chrome-512x512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 7740,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/browserconfig.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/browserconfig.xml",
+      "oF" : 0
+    },
+    "\/public\/static\/favicons\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 327,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 703,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/favicon.ico",
+      "oF" : 0
+    },
+    "\/public\/static\/favicons\/mstile-150x150.png" : {
+      "ft" : 32768,
+      "iS" : 1429,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/mstile-150x150.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/static\/favicons\/safari-pinned-tab.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/public\/static\/favicons\/safari-pinned-tab.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/public\/static\/favicons\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/static\/favicons\/site.webmanifest",
       "oF" : 0
     },
     "\/public\/static\/images\/avatar.jpg" : {
@@ -1796,6 +2153,17 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/scripts\/generate-robots-txt.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/scripts\/generate-robots-txt-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/sections\/AdjacentPosts.tsx" : {
       "cDF" : 0,
       "ft" : 128,
@@ -1933,7 +2301,7 @@
     "creationDate" : 656327386.78110504,
     "displayValue" : "next-js-tailwind-css-portfolio",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/public\/apple-touch-icon.png",
+    "iconImageName" : "\/public\/static\/favicons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
