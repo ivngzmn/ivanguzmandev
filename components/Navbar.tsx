@@ -24,9 +24,9 @@ function NavItem({ href, text }) {
       <a
         className={cn(
           isActive
-            ? 'font-semibold text-gray-800 dark:text-gray-50 underline underline-offset-8 decoration-4 decoration-violet-600'
-            : 'font-normal text-gray-600 dark:text-gray-400',
-          'hidden lg:flex px-3 py-2 rounded-lg hover:text-gray-50 hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-500 ease-in-out'
+            ? 'font-semibold text-gray-50 underline decoration-violet-600 decoration-4 underline-offset-8'
+            : 'font-normal text-gray-400',
+          'hidden rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-gray-700 hover:text-gray-50 lg:flex'
         )}
       >
         <span>{text}</span>
@@ -44,12 +44,12 @@ function MobileNav({ href, text }) {
       <a
         className={cn(
           isActive
-            ? 'font-semibold text-gray-800 dark:text-gray-50 underline underline-offset-8 decoration-4 decoration-violet-600'
-            : 'font-normal text-gray-600 dark:text-gray-400',
-          'px-3 py-2 rounded-lg hover:text-gray-50 hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-500 ease-in-out'
+            ? 'font-semibold text-gray-800 underline decoration-violet-600 decoration-4 underline-offset-8'
+            : 'font-normal text-gray-600',
+          'rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-gray-200 hover:text-gray-50'
         )}
       >
-        <span className="block px-3 py-5 rounded-md text-5xl font-medium">
+        <span className="block rounded-md px-3 py-5 text-5xl font-medium">
           {text}
         </span>
       </a>
@@ -63,8 +63,8 @@ export default function Navbar() {
       <Disclosure as="nav" className="bg-black">
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-16">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center align-middle">
                   <div className="flex-shrink-0 pt-2">
                     <Link href="/">
@@ -79,7 +79,7 @@ export default function Navbar() {
                       </a>
                     </Link>
                   </div>
-                  <nav className="sm:block sm:ml-6 pb-5">
+                  <nav className="pb-5 sm:ml-6 sm:block">
                     <a href="#skip" className="skip-nav">
                       Skip to content
                     </a>
@@ -95,15 +95,15 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex items-center">
                     {/* Profile dropdown */}
-                    <Menu as="div" className="ml-3 relative">
+                    <Menu as="div" className="relative ml-3">
                       <div>
-                        <Menu.Button className="hidden lg:inline-block  bg-black text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <Menu.Button className="hidden rounded-full  bg-black text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 lg:inline-block">
                           <span className="sr-only">Open user menu</span>
 
-                          <div className="space-x-3 flex items-center rounded-full pr-1 pl-1 pt-1 bg-zinc-900">
+                          <div className="flex items-center space-x-3 rounded-full bg-zinc-900 pr-1 pl-1 pt-1">
                             <span className="">
                               <Image
-                                className="h-6 w-6 rounded-full -mr-2"
+                                className="-mr-2 h-6 w-6 rounded-full"
                                 src={ProfilePic}
                                 alt="Ivan Guzman Profile Photo"
                                 quality="85"
@@ -115,7 +115,7 @@ export default function Navbar() {
                             <span className="text-gray-300">
                               <span className="sr-only">Open main menu</span>
                               <span className="text-sm">Ivan G.</span>
-                              <VscTriangleDown className="hidden lg:inline-block h-4 w-4 ml-3 mr-1" />
+                              <VscTriangleDown className="ml-3 mr-1 hidden h-4 w-4 lg:inline-block" />
                             </span>
                           </div>
                         </Menu.Button>
@@ -129,7 +129,7 @@ export default function Navbar() {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-black ring-1 ring-black ring-opacity-5 focus:outline-none z-40">
+                        <Menu.Items className="absolute right-0 z-40 mt-2 w-48 origin-top-right rounded-md bg-black py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
                             {({ active }) => (
                               <a
@@ -139,9 +139,9 @@ export default function Navbar() {
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
                                 )}
                               >
-                                <FaGithub className="h-4 w-4 mr-2" />
+                                <FaGithub className="mr-2 h-4 w-4" />
                                 <span className="">GitHub</span>
-                                <RiExternalLinkLine className=" h-4 w-4 absolute right-2" />
+                                <RiExternalLinkLine className=" absolute right-2 h-4 w-4" />
                               </a>
                             )}
                           </Menu.Item>
@@ -154,9 +154,9 @@ export default function Navbar() {
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
                                 )}
                               >
-                                <FaLinkedinIn className="flex h-4 w-4 mr-2" />
+                                <FaLinkedinIn className="mr-2 flex h-4 w-4" />
                                 <span className="flex">LinkedIn</span>
-                                <RiExternalLinkLine className="flex h-4 w-4 absolute right-2" />
+                                <RiExternalLinkLine className="absolute right-2 flex h-4 w-4" />
                               </a>
                             )}
                           </Menu.Item>
@@ -169,9 +169,9 @@ export default function Navbar() {
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
                                 )}
                               >
-                                <FaTwitter className="flex h-4 w-4 mr-2" />
+                                <FaTwitter className="mr-2 flex h-4 w-4" />
                                 <span className="flex">Twitter</span>
-                                <RiExternalLinkLine className="flex h-4 w-4 absolute right-2" />
+                                <RiExternalLinkLine className="absolute right-2 flex h-4 w-4" />
                               </a>
                             )}
                           </Menu.Item>
@@ -182,7 +182,7 @@ export default function Navbar() {
                 </div>
                 <div className="-mr-2 flex lg:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition duration-700 ease-in-out">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-700 ease-in-out hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -203,14 +203,14 @@ export default function Navbar() {
               leaveTo="transform scale-95 opacity-0"
             >
               <Disclosure.Panel static className="lg:hidden">
-                <div className="flex flex-col col-span-1 px-2 pt-2 pb-3 space-y-1">
+                <div className="col-span-1 flex flex-col space-y-1 px-2 pt-2 pb-3">
                   <MobileNav href="/" text="Home" />
                   <MobileNav href="/about" text="About" />
                   <MobileNav href="/projects" text="Projects" />
                   <MobileNav href="/contact" text="Contact" />
                   <MobileNav href="/blog" text="Blog" />
                 </div>
-                <div className="pt-4 pb-3 border-t border-gray-700">
+                <div className="border-t border-gray-700 pt-4 pb-3">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
                       <Image
@@ -226,35 +226,35 @@ export default function Navbar() {
                       <div className="text-base font-medium text-white">
                         Ivan Guzman
                       </div>
-                      <div className="text-sm font-medium text-gray-400 cursor-pointer">
+                      <div className="cursor-pointer text-sm font-medium text-gray-400">
                         <Link href="/contact">hello@ivanguzman.dev</Link>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-3 px-2 space-y-1">
+                  <div className="mt-3 space-y-1 px-2">
                     <a
                       href="https://github.com/ivngzmn"
-                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                      className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
-                      <FaGithub className="inline-block h-4 w-4 mr-2" />
+                      <FaGithub className="mr-2 inline-block h-4 w-4" />
                       <span className="">GitHub</span>
-                      <RiExternalLinkLine className="h-4 w-4 absolute right-4" />
+                      <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
                     </a>
                     <a
                       href="https://www.linkedin.com/in/ivan-julian-guzman/"
-                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                      className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
-                      <FaLinkedinIn className="inline-block h-4 w-4 mr-2" />
+                      <FaLinkedinIn className="mr-2 inline-block h-4 w-4" />
                       <span className="">LinkedIn</span>
-                      <RiExternalLinkLine className="h-4 w-4 absolute right-4" />
+                      <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
                     </a>
                     <a
                       href="https://twitter.com/zaku_dev"
-                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                      className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
-                      <FaTwitter className="inline-block h-4 w-4 mr-2" />
+                      <FaTwitter className="mr-2 inline-block h-4 w-4" />
                       <span className="">Twitter</span>
-                      <RiExternalLinkLine className="h-4 w-4 absolute right-4" />
+                      <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
                     </a>
                   </div>
                 </div>
