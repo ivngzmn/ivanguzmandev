@@ -4,10 +4,11 @@ import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
 import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
 import Portfolio from '/public/static/images/projects/MacBook-Pro-Portfolio.webp';
+import Thuyen from '/public/static/images/projects/iPhone-Thuyen-Vien.webp';
 import {
   SiHtml5,
   SiMaterialui,
-  SiCss3,
+  SiBootstrap,
   SiTailwindcss,
   SiJavascript,
   SiTypescript,
@@ -18,10 +19,8 @@ import {
   SiGraphql,
   SiMongodb,
   SiMicrosoftazure,
-  SiGithub,
-  SiGit,
-  SiIterm2,
-  SiVisualstudiocode
+  SiFirebase,
+  SiGoogle
 } from 'react-icons/si';
 import { ProjectCard } from 'components';
 
@@ -47,9 +46,23 @@ const projects = [
         logo: SiMaterialui,
         iconForeground: 'text-white',
         iconBackground: 'bg-blue-500'
+      },
+      {
+        id: '3',
+        name: 'Firebase',
+        logo: SiFirebase,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-yellow-500'
+      },
+      {
+        id: '4',
+        name: 'Google Auth',
+        logo: SiGoogle,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
       }
     ],
-    description: `I have been getting deeper into React and wanted to see how I could push myself to use a different UI library such as Material UI. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API's I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.JS to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Looking to add Google auth and Firebase for the backend.`
+    description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend.`
   },
   {
     name: 'Portfolio',
@@ -92,7 +105,7 @@ const projects = [
       'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery.'
   },
   {
-    name: 'Todo App',
+    name: 'Pure Todo',
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,
@@ -104,7 +117,7 @@ const projects = [
         name: 'Html5',
         logo: SiHtml5,
         iconForeground: 'text-white',
-        iconBackground: 'bg-red-500'
+        iconBackground: 'bg-orange-500'
       },
       {
         id: '2',
@@ -143,7 +156,39 @@ const projects = [
       }
     ],
     description:
-      'It was my first time building a web app that included a database and authentication. With MongoDB Atlas it was nice and straightforward to set up and get things communicating with my developer build. Once I got to authentication with Microsoft Azure Active Directory it got really hard as there are quite a few steps required to get the web app working such as registering your application.'
+      'Users can login to their profile and find their list of notes. They can add new notes through an input, which they can then edit or delete all notes in their profile.'
+  },
+  {
+    name: 'Thuyen Vien',
+    liveLink: 'https://thuyenvienrestaurant.vercel.app/',
+    githubLink: '',
+    imageSrc: Thuyen,
+    cardAlign: 'lg:col-start-5',
+    imageAlt: 'Thuyen Vien Restaurant Website',
+    icons: [
+      {
+        id: '1',
+        name: 'Html5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'Bootstrap CSS',
+        logo: SiBootstrap,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
+      },
+      {
+        id: '3',
+        name: 'Javascript',
+        logo: SiJavascript,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-yellow-500'
+      }
+    ],
+    description: `This is a restaurant website that I built for a local vegan restaurant. I wanted to make a website that was simple and easy to use. I used Bootstrap for the styling and Javascript for the animations.`
   }
 ];
 
