@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { grpahCMSImageLoader } from '../util';
 
 const FeaturedPostCard = ({ post }) => (
-  <div className="relative h-[20rem] w-full lg:h-[25rem] lg:w-[25rem]">
+  <div className="relative h-[20rem] w-full lg:h-[25rem] lg:w-[15rem]">
     <Image
       unoptimized
       loader={grpahCMSImageLoader}
@@ -13,32 +13,32 @@ const FeaturedPostCard = ({ post }) => (
       alt={post.title}
       layout="fill"
       objectFit="cover"
-      className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-lg inline-block w-full h-full"
+      className="absolute inline-block h-full w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-lg"
     />
-    <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-full" />
-    <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
-      <p className="text-white mb-4 text-shadow font-semibold text-base">
+    <div className="absolute h-full w-full rounded-lg bg-gradient-to-b from-gray-400 via-gray-700 to-black bg-center opacity-50" />
+    <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-lg p-4">
+      <p className="text-shadow mb-4 text-base font-semibold text-white">
         {moment(post.createdAt).format('MMM DD, YYYY')}
       </p>
-      <p className="text-white w-72 sm:w-full mb-4 text-shadow font-semibold text-2xl text-center">
+      <p className="text-shadow mb-4 w-72 text-center text-2xl font-semibold text-white sm:w-full">
         {post.title}
       </p>
-      <div className="flex items-center absolute bottom-5 w-full justify-center">
+      <div className="absolute bottom-5 flex w-full items-center justify-center">
         <Image
           unoptimized
           alt={post.author.name}
           height="30px"
           width="30px"
-          className="align-middle drop-shadow-lg rounded-full"
+          className="rounded-full align-middle drop-shadow-lg"
           src={post.author.photo.url}
         />
-        <p className="inline align-middle text-white text-shadow ml-2 font-medium">
+        <p className="text-shadow ml-2 inline align-middle font-medium text-white">
           {post.author.name}
         </p>
       </div>
     </div>
     <Link href={`/blog/${post.slug}`} passHref>
-      <span className="cursor-pointer absolute w-full h-full" />
+      <span className="absolute h-full w-full cursor-pointer" />
     </Link>
   </div>
 );
