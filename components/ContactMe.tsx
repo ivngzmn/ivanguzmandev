@@ -87,16 +87,16 @@ function ContactMe() {
     setReCaptchaToken(token as string);
   };
   return (
-    <div className="bg-zinc-900 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="overflow-hidden bg-zinc-900">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-2 lg:mb-8">
-            <div className="w-full inline-block py-10 lg:py-20">
-              <div className="md:float-left block">
+            <div className="inline-block w-full py-10 lg:py-20">
+              <div className="block md:float-left">
                 <span
-                  className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                  className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
                   id="contact"
                 >
                   Contact
@@ -104,12 +104,12 @@ function ContactMe() {
               </div>
             </div>
           </div>
-          <div className="p-8 rounded-2xl shadow-2xl bg-gradient-to-br from-cyan-600 to-purple-600 sm:py-32 lg:max-w-screen-2xl lg:mx-auto lg:rounded-2xl lg:mt-6 lg:mb-12">
-            <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
-              <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-50 text-center sm:text-5xl sm:leading-none lg:text-6xl">
+          <div className="rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 p-8 shadow-2xl sm:py-32 lg:mx-auto lg:mt-6 lg:mb-12 lg:max-w-screen-2xl lg:rounded-2xl">
+            <div className="mx-auto max-w-md pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
+              <h1 className="text-center text-4xl font-extrabold leading-10 tracking-tight text-gray-50 sm:text-5xl sm:leading-none lg:text-6xl">
                 Say Hello 👋🏽
               </h1>
-              <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-50 text-center">
+              <p className="mx-auto mt-6 max-w-3xl text-center text-xl leading-normal text-gray-50">
                 Feel free to reach out for any freelance projects or job
                 inquiries. Or if you would like to have a coffee chat feel free
                 to reach out via the Twitter link below.
@@ -119,10 +119,10 @@ function ContactMe() {
         </div>
 
         {/* Container with form and picture */}
-        <div className="container my-8 max-w-screen-2xl mx-auto 2xl:px-0">
+        <div className="container my-8 mx-auto max-w-screen-2xl 2xl:px-0">
           <div
             aria-hidden="true"
-            className="relative w-full h-[300px] lg:h-[600px]  mx-auto mb-8 lg:mb-10"
+            className="relative mx-auto mb-8 h-[300px]  w-full lg:mb-10 lg:h-[600px]"
           >
             <NextImage
               src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
@@ -135,11 +135,11 @@ function ContactMe() {
             />
             <div className="absolute inset-0 " />
           </div>
-          <div className=" relative rounded-2xl shadow-2xl bg-zinc-100 py-16 sm:py-24 sm:px-6 lg:px-8 lg:py-32 lg:rounded-b-2xl lg:row-start-1 lg:col-start-1 lg:col-span-2">
+          <div className=" relative rounded-2xl bg-zinc-100 py-16 shadow-2xl sm:py-24 sm:px-6 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:rounded-b-2xl lg:px-8 lg:py-32">
             <section className="relative" aria-labelledby="contact-heading">
-              <div className="absolute w-full h-1/2" aria-hidden="true" />
+              <div className="absolute h-1/2 w-full" aria-hidden="true" />
 
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="relative">
                   <h2 id="contact-heading" className="sr-only">
                     Contact me
@@ -147,14 +147,14 @@ function ContactMe() {
 
                   <div className="grid grid-cols-1 lg:grid-cols-3">
                     {/* Contact information */}
-                    <div className="relative rounded-3xl overflow-hidden py-10 px-6 bg-gradient-to-b from-indigo-500 to-indigo-600 sm:px-10 xl:p-12">
+                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-indigo-500 to-indigo-600 py-10 px-6 sm:px-10 xl:p-12">
                       {/* Decorative angle backgrounds */}
                       <div
-                        className="absolute inset-0 pointer-events-none sm:hidden"
+                        className="pointer-events-none absolute inset-0 sm:hidden"
                         aria-hidden="true"
                       >
                         <svg
-                          className="absolute inset-0 w-full h-full"
+                          className="absolute inset-0 h-full w-full"
                           width={343}
                           height={388}
                           viewBox="0 0 343 388"
@@ -187,11 +187,11 @@ function ContactMe() {
                         </svg>
                       </div>
                       <div
-                        className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none sm:block lg:hidden"
+                        className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 sm:block lg:hidden"
                         aria-hidden="true"
                       >
                         <svg
-                          className="absolute inset-0 w-full h-full"
+                          className="absolute inset-0 h-full w-full"
                           width={359}
                           height={339}
                           viewBox="0 0 359 339"
@@ -224,11 +224,11 @@ function ContactMe() {
                         </svg>
                       </div>
                       <div
-                        className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block"
+                        className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 lg:block"
                         aria-hidden="true"
                       >
                         <svg
-                          className="absolute inset-0 w-full h-full"
+                          className="absolute inset-0 h-full w-full"
                           width={160}
                           height={678}
                           viewBox="0 0 160 678"
@@ -260,14 +260,19 @@ function ContactMe() {
                           </defs>
                         </svg>
                       </div>
-                      <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-indigo-50">
+                      <h3 className="text-3xl font-extrabold tracking-tight text-indigo-50 sm:text-4xl">
                         Let's Work Together.
                       </h3>
-                      <div className="mt-6 text-lg text-indigo-50 max-w-3xl">
+                      <div className="mt-6 max-w-3xl text-lg text-indigo-50">
                         <p>
-                          I would love to hear from you. Email hello [at]
-                          ivanguzman.dev or use the form to reach out. Tell me
-                          how I can help you and I will get in touch shortly.
+                          I would love to hear from you.{' '}
+                          <NextLink
+                            href={`mailto:hello@ivanguzman.dev?subject=Let's chat&body=Hello Ivan,%0D%0A%0D%0ALets chat!`}
+                          >
+                            <a className="underline">Email</a>
+                          </NextLink>{' '}
+                          or use the form to reach out. Tell me how I can help
+                          you and I will get in touch shortly.
                         </p>
                         <div className="mt-3"></div>
                       </div>
@@ -278,7 +283,7 @@ function ContactMe() {
                             href="https://www.linkedin.com/in/ivan-julian-guzman/"
                           >
                             <span className="sr-only">LinkedIn</span>
-                            <FaLinkedinIn className="w-6 h-6" />
+                            <FaLinkedinIn className="h-6 w-6" />
                           </a>
                         </li>
                         <li>
@@ -287,7 +292,7 @@ function ContactMe() {
                             href="https://github.com/ivngzmn"
                           >
                             <span className="sr-only">GitHub</span>
-                            <FaGithub className="w-6 h-6" />
+                            <FaGithub className="h-6 w-6" />
                           </a>
                         </li>
                         <li>
@@ -296,7 +301,7 @@ function ContactMe() {
                             href="https://twitter.com/zaku_dev"
                           >
                             <span className="sr-only">Twitter</span>
-                            <FaTwitter className="w-6 h-6" />
+                            <FaTwitter className="h-6 w-6" />
                           </a>
                         </li>
                       </ul>
@@ -330,7 +335,7 @@ function ContactMe() {
                               placeholder="Jordan"
                               value={formState?.firstname}
                               onChange={updateFormControl}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                             />
                           </div>
                         </div>
@@ -351,7 +356,7 @@ function ContactMe() {
                               placeholder="Walke"
                               value={formState?.lastname}
                               onChange={updateFormControl}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                             />
                           </div>
                         </div>
@@ -372,7 +377,7 @@ function ContactMe() {
                               placeholder="hello@jordanwalke.com"
                               value={formState?.email}
                               onChange={updateFormControl}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                             />
                           </div>
                         </div>
@@ -401,7 +406,7 @@ function ContactMe() {
                               placeholder="555-857-5309"
                               value={formState?.phone}
                               onChange={updateFormControl}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                               aria-describedby="phone-optional"
                             />
                           </div>
@@ -422,7 +427,7 @@ function ContactMe() {
                               placeholder="I need to grow my business"
                               value={formState?.subject}
                               onChange={updateFormControl}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                             />
                           </div>
                         </div>
@@ -450,7 +455,7 @@ function ContactMe() {
                               value={formState?.message}
                               onChange={updateFormControl}
                               rows={4}
-                              className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                              className="block w-full rounded-md border border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                               aria-describedby="message-max"
                             />
                           </div>
@@ -459,7 +464,7 @@ function ContactMe() {
                         <div className="sm:col-span-2 sm:flex sm:justify-end">
                           {message && (
                             <div
-                              className={`flex flex-col text-white w-full sm:w-auto sm: p-4 sm:mr-6 ${message.class}`}
+                              className={`sm: flex w-full flex-col p-4 text-white sm:mr-6 sm:w-auto ${message.class}`}
                             >
                               {message.text}
                             </div>
@@ -473,7 +478,7 @@ function ContactMe() {
                           <button
                             disabled={submitting}
                             type="submit"
-                            className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                            className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
                           >
                             {submitting ? <Loading /> : 'Submit'}
                           </button>
@@ -488,8 +493,8 @@ function ContactMe() {
         </div>
         {/* call to action for twitter */}
         <div className="container mx-auto">
-          <div className="bg-gradient-to-br from-cyan-600 to-purple-600 lg:max-w-7xl lg:mx-auto lg:my-12 px-10 my-8 rounded-2xl shadow-2xl">
-            <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
+          <div className="my-8 rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 px-10 shadow-2xl lg:mx-auto lg:my-12 lg:max-w-7xl">
+            <div className="mx-auto max-w-md py-16 px-4 text-center sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
               <h2 className="text-3xl font-extrabold sm:text-4xl">
                 <span className="block text-indigo-50">
                   Reach out via Twitter
@@ -497,7 +502,7 @@ function ContactMe() {
                 <span className="block text-indigo-50">DM's are open.</span>
               </h2>
               <NextLink href="https://twitter.com/zaku_dev">
-                <a className="mt-8 w-full inline-flex items-center justify-center py-3 px-6 bg-indigo-50 border border-transparent rounded-md shadow-md text-base font-medium text-indigo-600 hover:bg-indigo-700 hover:text-white sm:w-auto">
+                <a className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-50 py-3 px-6 text-base font-medium text-indigo-600 shadow-md hover:bg-indigo-700 hover:text-white sm:w-auto">
                   <span>Come say hi.</span>
                   <FaTwitter
                     className="ml-3 h-5 w-5 flex-shrink-0"

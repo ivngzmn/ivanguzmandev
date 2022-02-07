@@ -24,9 +24,9 @@ function NavItem({ href, text }) {
       <a
         className={cn(
           isActive
-            ? 'font-semibold text-gray-50 underline decoration-violet-600 decoration-4 underline-offset-8'
-            : 'font-normal text-gray-400',
-          'hidden rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-gray-700 hover:text-gray-50 lg:flex'
+            ? 'font-semibold text-slate-50 underline decoration-violet-600 decoration-4 underline-offset-8'
+            : 'font-normal text-slate-400',
+          'hidden rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-slate-800 hover:text-slate-50 lg:flex'
         )}
       >
         <span>{text}</span>
@@ -44,9 +44,9 @@ function MobileNav({ href, text }) {
       <a
         className={cn(
           isActive
-            ? 'font-semibold text-gray-800 underline decoration-violet-600 decoration-4 underline-offset-8'
-            : 'font-normal text-gray-600',
-          'rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-gray-200 hover:text-gray-50'
+            ? 'font-semibold text-slate-50 underline decoration-violet-600 decoration-4 underline-offset-8'
+            : 'font-normal text-slate-400',
+          'rounded-lg px-3 py-2 transition duration-500 ease-in-out hover:bg-slate-800 hover:text-slate-50'
         )}
       >
         <span className="block rounded-md px-3 py-5 text-5xl font-medium">
@@ -227,7 +227,11 @@ export default function Navbar() {
                         Ivan Guzman
                       </div>
                       <div className="cursor-pointer text-sm font-medium text-gray-400">
-                        <Link href="/contact">hello@ivanguzman.dev</Link>
+                        <Link
+                          href={`mailto:hello@ivanguzman.dev?subject=Let's chat&body=Hello Ivan,%0D%0A%0D%0ALets chat!`}
+                        >
+                          <a className="underline">hello@ivanguzman.dev</a>
+                        </Link>
                       </div>
                     </div>
                   </div>
