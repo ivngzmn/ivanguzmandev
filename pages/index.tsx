@@ -1,4 +1,10 @@
-import { Navbar, HeadContainer, Hero, Footer } from '../components';
+import {
+  Navbar,
+  HeadContainer,
+  Hero,
+  Footer,
+  RecentProjects
+} from '../components';
 import RecentPosts from 'components/RecentPosts';
 
 function Home() {
@@ -11,10 +17,13 @@ function Home() {
       <section className="hero">
         <Hero />
       </section>
-      <section>
+      <section className="my-projects">
+        <RecentProjects />
+      </section>
+      <section className="posts">
         <RecentPosts categories={undefined} slug={undefined} />
       </section>
-      <section className="my-projects"></section>
+
       <section>
         <Footer />
       </section>

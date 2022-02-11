@@ -1,11 +1,10 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
-import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
+import CoinForge from '../public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
-import Portfolio from '/public/static/images/projects/MacBook-Pro-Portfolio.webp';
-import Thuyen from '/public/static/images/projects/iPhone-Thuyen-Vien.webp';
 import Pronto from '/public/static/images/projects/iPad-Pronto.webp';
+import { SparklesIcon } from '@heroicons/react/outline';
 import {
   SiHtml5,
   SiMaterialui,
@@ -23,7 +22,8 @@ import {
   SiFirebase,
   SiGoogle
 } from 'react-icons/si';
-import { ProjectCard } from 'components';
+import { IoIosEye } from 'react-icons/io';
+import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
@@ -66,51 +66,11 @@ const projects = [
     description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`
   },
   {
-    name: 'Portfolio',
-    liveLink: '#',
-    githubLink: 'https://github.com/ivngzmn/ivanguzmandev',
-    imageSrc: Portfolio,
-    cardAlign: 'lg:col-start-5',
-    imageAlt: 'Portfolio',
-    icons: [
-      {
-        id: '1',
-        name: 'Next.js',
-        logo: SiNextdotjs,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-700'
-      },
-      {
-        id: '2',
-        name: 'Tailwind CSS',
-        logo: SiTailwindcss,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500'
-      },
-      {
-        id: '3',
-        name: 'GraphQL',
-        logo: SiGraphql,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-pink-500'
-      },
-      {
-        id: '4',
-        name: 'TypeScript',
-        logo: SiTypescript,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-blue-600'
-      }
-    ],
-    description:
-      'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery. Deployed on Vercel.'
-  },
-  {
     name: 'Pure Todo',
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,
-    cardAlign: 'lg:col-start-1',
+    cardAlign: 'lg:col-start-5',
     imageAlt: 'Todo App',
     icons: [
       {
@@ -164,7 +124,7 @@ const projects = [
     liveLink: 'https://prontocoffeeco.onrender.com/',
     githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
     imageSrc: Pronto,
-    cardAlign: 'lg:col-start-5',
+    cardAlign: 'lg:col-start-1',
     imageAlt: 'Todo App',
     icons: [
       {
@@ -205,38 +165,6 @@ const projects = [
     ],
     description:
       'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Bootstrap for the front end and Node, Express, MongoDB for the backend. Deployed on Render.'
-  },
-  {
-    name: 'Thuyen Vien',
-    liveLink: 'https://thuyenvienrestaurant.vercel.app/',
-    githubLink: '',
-    imageSrc: Thuyen,
-    cardAlign: 'lg:col-start-1',
-    imageAlt: 'Thuyen Vien Restaurant Website',
-    icons: [
-      {
-        id: '1',
-        name: 'Html5',
-        logo: SiHtml5,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-orange-500'
-      },
-      {
-        id: '2',
-        name: 'Bootstrap CSS',
-        logo: SiBootstrap,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-blue-500'
-      },
-      {
-        id: '3',
-        name: 'Javascript',
-        logo: SiJavascript,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-yellow-500'
-      }
-    ],
-    description: `This is a restaurant website that I built for a local vegan restaurant. I wanted to make a website that was simple and easy to use. I used Bootstrap for the styling and Javascript for the animations.`
   }
 ];
 
@@ -244,29 +172,36 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function myProjects() {
+function RecentProjects() {
   return (
-    <div className="bg-zinc-900">
+    <div className="relative overflow-hidden bg-zinc-900 pt-16 pb-32">
+      {/* title */}
       <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
-            <div className="block md:float-left">
-              <span
-                className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
+            <div className="block text-left">
+              <h2
+                className="text-6xl font-semibold tracking-tight lg:text-8xl"
                 id="projects"
               >
-                Projects
-              </span>
-              <h2 className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
-                Selected works and client projects.
+                Recent Projects
               </h2>
+              <p className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
+                Selected works and projects.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      {/* projects section */}
-
-      <div className="relative mt-10 space-y-20 pt-2 lg:mt-20 lg:space-y-60">
+      <div className="my-2 mr-4 flex justify-end">
+        <Link href="/projects">
+          <a className="font-regular flex w-[20rem] transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3  text-base text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:w-[22rem] lg:font-semibold">
+            <IoIosEye className="h-6 w-6" /> <span>View All Projects</span>
+          </a>
+        </Link>
+      </div>
+      {/* project section */}
+      <div className="relative mt-10 space-y-20 pt-2 lg:mt-20 lg:space-y-64">
         {/* <ProjectCard /> */}
         {projects.map((project) => (
           <div
@@ -298,6 +233,14 @@ export default function myProjects() {
                 <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-0">
                   <div>
                     <span className="text-4xl font-semibold text-white lg:text-5xl">
+                      <div>
+                        <span className="mb-2 flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+                          <SparklesIcon
+                            className="h-6 w-6 text-white"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </div>
                       {project.name}
                     </span>
                     <p className="font-regular mt-6 text-lg text-white lg:text-xl">
@@ -342,8 +285,8 @@ export default function myProjects() {
           </div>
         ))}
       </div>
-
-      {/* end */}
     </div>
   );
 }
+
+export default RecentProjects;

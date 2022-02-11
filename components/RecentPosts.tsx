@@ -19,11 +19,14 @@ const PostWidget = ({ categories, slug }) => {
     <div className="relative bg-zinc-900">
       <div className="relative mx-auto max-w-7xl py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
         <div className="relative mx-auto max-w-7xl">
-          <div className="py-20 text-center lg:py-44">
-            <h2 className="text-3xl font-extrabold tracking-normal text-white sm:text-4xl lg:text-6xl">
-              Recent Posts from the Blog
+          <div className="py-20 text-left lg:py-44">
+            <h2
+              className="text-6xl font-semibold tracking-normal text-white sm:text-4xl lg:text-8xl"
+              id="blog"
+            >
+              Latest Posts
             </h2>
-            <p className="mx-auto mt-3 max-w-prose text-xl text-gray-100 sm:mt-4 md:text-2xl lg:text-3xl">
+            <p className="mx-auto mt-3 max-w-prose text-xl text-gray-100 sm:mt-4 md:text-3xl lg:text-4xl">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>
