@@ -17,84 +17,86 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="relative bg-zinc-900">
-      <div className="relative max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center py-10">
-            <h2 className="text-3xl tracking-normal font-extrabold text-white sm:text-4xl lg:text-6xl">
+      <div className="relative mx-auto max-w-7xl py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="py-20 text-center lg:py-44">
+            <h2 className="text-3xl font-extrabold tracking-normal text-white sm:text-4xl lg:text-6xl">
               Recent Posts from the Blog
             </h2>
-            <p className="mt-3 max-w-prose mx-auto text-xl md:text-2xl lg:text-3xl text-gray-100 sm:mt-4">
+            <p className="mx-auto mt-3 max-w-prose text-xl text-gray-100 sm:mt-4 md:text-2xl lg:text-3xl">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>
           </div>
         </div>
-        <div className="max-w-lg my-10 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {posts.map((post, index) => (
-            <Link href="/blog/[slug]" as={`/blog/${post.slug}`} key={index}>
-              <a>
-                <div
-                  key={index}
-                  className="flex flex-col rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 ease-in-out"
-                >
-                  <div className="flex-shrink-0 relative object-cover overflow-hidden h-[25rem] w-full hover:h-[26rem] duration-500 ease-in-out">
-                    <Image
-                      loader={grpahCMSImageLoader}
-                      alt={post.title}
-                      layout="fill"
-                      objectFit="cover"
-                      unoptimized
-                      className="h-48 w-full object-cover"
-                      src={post.featuredImage.url}
-                    />
-                  </div>
-
-                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div className="flex-grow">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 inline mr-2 text-indigo-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <span className="text-gray-500 font-xs align-middle">
-                        {moment(post.createdAt).format('MMM DD, YYYY')}
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="mt-2 text-xl font-semibold text-gray-900 hover:text-indigo-700">
-                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                      </p>
-                      <p className="mt-2 text-base text-gray-500">
-                        {post.description}
-                      </p>
-                    </div>
-                    <div className="mt-4 hidden md:flex items-center justify-left lg:mb-0 lg:w-auto mr-8">
+        <section className="mb-20 pb-20">
+          <div className="mx-auto grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+            {posts.map((post, index) => (
+              <Link href="/blog/[slug]" as={`/blog/${post.slug}`} key={index}>
+                <a>
+                  <div
+                    key={index}
+                    className="group flex h-[45rem] flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl"
+                  >
+                    <div className="relative h-[25rem] w-full flex-shrink-0 overflow-hidden object-cover duration-500 ease-in-out hover:h-[26rem]">
                       <Image
-                        alt={post.author.name}
-                        height="40px"
-                        width="40px"
-                        className="align-left rounded-full"
-                        src={post.author.photo.url}
+                        loader={grpahCMSImageLoader}
+                        alt={post.title}
+                        layout="fill"
+                        objectFit="cover"
+                        unoptimized
+                        className="h-48 w-full object-cover"
+                        src={post.featuredImage.url}
                       />
-                      <p className="inline align-left text-gray-700 ml-2 font-light text-lg">
-                        {post.author.name}
-                      </p>
+                    </div>
+
+                    <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                      <div className="">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="mr-2 inline h-6 w-6 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span className="font-xs align-middle text-gray-500">
+                          {moment(post.createdAt).format('MMM DD, YYYY')}
+                        </span>
+                      </div>
+                      <div className="flex-1">
+                        <p className="mt-2 items-start text-xl font-semibold text-gray-900 hover:text-indigo-700">
+                          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                        </p>
+                        <p className="mt-2 text-base text-gray-500">
+                          {post.description}
+                        </p>
+                      </div>
+                      <div className="justify-left mt-4 mr-8 hidden items-center md:flex lg:mb-0 lg:w-auto">
+                        <Image
+                          alt={post.author.name}
+                          height="40px"
+                          width="40px"
+                          className="align-left rounded-full"
+                          src={post.author.photo.url}
+                        />
+                        <p className="align-left ml-2 inline text-lg font-light text-gray-700">
+                          {post.author.name}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </Link>
-          ))}
-        </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
