@@ -5,6 +5,7 @@ import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
 import Portfolio from '/public/static/images/projects/MacBook-Pro-Portfolio.webp';
 import Thuyen from '/public/static/images/projects/iPhone-Thuyen-Vien.webp';
+import Pronto from '/public/static/images/projects/iPad-Pronto.webp';
 import {
   SiHtml5,
   SiMaterialui,
@@ -62,7 +63,7 @@ const projects = [
         iconBackground: 'bg-blue-500'
       }
     ],
-    description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend.`
+    description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`
   },
   {
     name: 'Portfolio',
@@ -102,7 +103,7 @@ const projects = [
       }
     ],
     description:
-      'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery.'
+      'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery. Deployed on Vercel.'
   },
   {
     name: 'Pure Todo',
@@ -156,14 +157,61 @@ const projects = [
       }
     ],
     description:
-      'Users can login to their profile and find their list of notes. They can add new notes through an input, which they can then edit or delete all notes in their profile.'
+      'Users can login to their profile and find their list of notes. They can add new notes through an input, which they can then edit or delete all notes in their profile. Used EJS, Tailwind for the front end and MongoDB, Express, and Azure for the backend. Deployed on Heroku.'
+  },
+  {
+    name: 'Pronto Coffee Co.',
+    liveLink: 'https://prontocoffeeco.onrender.com/',
+    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
+    imageSrc: Pronto,
+    cardAlign: 'lg:col-start-5',
+    imageAlt: 'Todo App',
+    icons: [
+      {
+        id: '1',
+        name: 'Html5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'Bootstrap',
+        logo: SiBootstrap,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500'
+      },
+      {
+        id: '3',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '4',
+        name: 'MongoDB',
+        logo: SiMongodb,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-700'
+      },
+      {
+        id: '5',
+        name: 'Express',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
+      }
+    ],
+    description:
+      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Bootstrap for the front end and Node, Express, MongoDB for the backend. Deployed on Render.'
   },
   {
     name: 'Thuyen Vien',
     liveLink: 'https://thuyenvienrestaurant.vercel.app/',
     githubLink: '',
     imageSrc: Thuyen,
-    cardAlign: 'lg:col-start-5',
+    cardAlign: 'lg:col-start-1',
     imageAlt: 'Thuyen Vien Restaurant Website',
     icons: [
       {
@@ -218,7 +266,7 @@ export default function myProjects() {
 
         {/* projects section */}
 
-        <div className="relative space-y-6 pt-2 lg:space-y-48">
+        <div className="relative mt-10 space-y-20 pt-2 lg:mt-20 lg:space-y-60">
           {/* <ProjectCard /> */}
           {projects.map((project) => (
             <div
