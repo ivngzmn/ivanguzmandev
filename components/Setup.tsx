@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Desk from '../public/static/images/desk.jpg';
+import Desk from '../public/static/images/desk.png';
 import { CameraIcon } from '@heroicons/react/solid';
 import { AiFillAudio, AiOutlineLaptop, AiFillCode } from 'react-icons/ai';
 import { SiBmcsoftware } from 'react-icons/si';
@@ -172,17 +172,17 @@ function DevSetup() {
   return (
     <div className="bg-zinc-900">
       <section className="pb-28">
-        <div className="relative max-w-7xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="mb-2 lg:mb-8">
-            <div className="w-full inline-block py-10 lg:py-20">
-              <div className="md:float-left block">
+            <div className="inline-block w-full py-10 lg:py-20">
+              <div className="block md:float-left">
                 <h1
-                  className="text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                  className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
                   id="blog"
                 >
                   Uses
                 </h1>
-                <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-100 mt-5">
+                <h2 className="mt-5 text-3xl font-light tracking-normal text-slate-100 lg:text-4xl">
                   Here is the Hardware and Software that I use to build my apps,
                   do some voice over or make digital art.
                 </h2>
@@ -190,27 +190,27 @@ function DevSetup() {
             </div>
           </div>
           <figure>
-            <div className="relative mx-auto shadow-2xl inline-block w-full h-72 lg:w-full lg:h-[500px]">
+            <div className="relative mx-auto inline-block h-72 w-full shadow-2xl lg:h-[50rem] lg:w-full">
               <Image
                 alt={`Black Flat Screen Computer Monitor on White Wooden Desk`}
                 src={Desk}
                 layout="fill"
                 objectFit="cover"
                 priority
-                className="shadow-xl rounded-xl"
+                className="rounded-xl shadow-xl"
               />
             </div>
-            <figcaption className="text-zinc-200 flex mt-2 lg:justify-end">
+            {/* <figcaption className="mt-2 flex text-zinc-200 lg:justify-end">
               <CameraIcon
-                className="flex-none w-5 h-5 text-zinc-200"
+                className="h-5 w-5 flex-none text-zinc-200"
                 aria-hidden="true"
               />
               <span className="ml-2">Photo by Roberto Nickson</span>
-            </figcaption>
+            </figcaption> */}
           </figure>
 
           {/* computer/ office */}
-          <section className="rounded-xl shadow-2xl p-8 lg:p-14 mt-10 lg:mt-28">
+          <section className="mt-10 rounded-xl p-8 shadow-2xl lg:mt-28 lg:p-14">
             <div className="relative text-zinc-100">
               <div className="mb-4">
                 <h2 className="text-3xl font-semibold text-zinc-100">
@@ -233,7 +233,7 @@ function DevSetup() {
                             <span
                               className={classNames(
                                 event.iconBackground,
-                                'h-8 w-8 rounded-full flex items-center justify-center ring-4 ring-white'
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-4 ring-white'
                               )}
                             >
                               <event.icon
@@ -242,7 +242,7 @@ function DevSetup() {
                               />
                             </span>
                           </div>
-                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
                               <p className="text-lg text-zinc-200">
                                 {event.content}
@@ -258,7 +258,7 @@ function DevSetup() {
             </div>
 
             {/* Coding */}
-            <div className="relative text-zinc-100 mt-28">
+            <div className="relative mt-28 text-zinc-100">
               <div className="flow-root">
                 <div className="mb-6">
                   <h2 className="text-3xl font-semibold text-zinc-100">
@@ -280,7 +280,7 @@ function DevSetup() {
                             <span
                               className={classNames(
                                 event.iconBackground,
-                                'h-8 w-8 rounded-full flex items-center justify-center ring-4 ring-white'
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-4 ring-white'
                               )}
                             >
                               <event.icon
@@ -289,7 +289,7 @@ function DevSetup() {
                               />
                             </span>
                           </div>
-                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
                               <p className="text-lg text-zinc-200">
                                 {event.content}
@@ -305,7 +305,7 @@ function DevSetup() {
             </div>
 
             {/* Software */}
-            <div className="relative text-zinc-100 mt-28">
+            <div className="relative mt-28 text-zinc-100">
               <div className="flow-root">
                 <div className="mb-6">
                   <h2 className="text-3xl font-semibold text-zinc-100">
@@ -327,7 +327,7 @@ function DevSetup() {
                             <span
                               className={classNames(
                                 event.iconBackground,
-                                'h-8 w-8 rounded-full flex items-center justify-center ring-4 ring-white'
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-4 ring-white'
                               )}
                             >
                               <event.icon
@@ -336,7 +336,7 @@ function DevSetup() {
                               />
                             </span>
                           </div>
-                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
                               <p className="text-lg text-zinc-200">
                                 {event.content}
@@ -352,7 +352,7 @@ function DevSetup() {
             </div>
 
             {/* audio */}
-            <div className="relative text-zinc-100 mt-28">
+            <div className="relative mt-28 text-zinc-100">
               <div className="flow-root">
                 <div className="mb-6">
                   <h2 className="text-3xl font-semibold text-zinc-100">
@@ -374,7 +374,7 @@ function DevSetup() {
                             <span
                               className={classNames(
                                 event.iconBackground,
-                                'h-8 w-8 rounded-full flex items-center justify-center ring-4 ring-white'
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-4 ring-white'
                               )}
                             >
                               <event.icon
@@ -383,7 +383,7 @@ function DevSetup() {
                               />
                             </span>
                           </div>
-                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
                               <p className="text-lg text-zinc-200">
                                 {event.content}
@@ -399,7 +399,7 @@ function DevSetup() {
             </div>
 
             {/* Other Technologies */}
-            <div className="relative text-zinc-100 mt-28">
+            <div className="relative mt-28 text-zinc-100">
               <div className="flow-root">
                 <div className="mb-6">
                   <h2 className="text-3xl font-semibold text-zinc-100">
@@ -421,7 +421,7 @@ function DevSetup() {
                             <span
                               className={classNames(
                                 event.iconBackground,
-                                'h-8 w-8 rounded-full flex items-center justify-center ring-4 ring-white'
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-4 ring-white'
                               )}
                             >
                               <event.icon
@@ -430,7 +430,7 @@ function DevSetup() {
                               />
                             </span>
                           </div>
-                          <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                          <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
                               <p className="text-lg text-zinc-200">
                                 {event.content}
