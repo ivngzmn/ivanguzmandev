@@ -184,7 +184,7 @@ function RecentProjects() {
                 className="text-6xl font-semibold tracking-tight lg:text-8xl"
                 id="projects"
               >
-                Recent Projects
+                Latest Projects
               </h2>
               <p className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
                 Selected works and projects.
