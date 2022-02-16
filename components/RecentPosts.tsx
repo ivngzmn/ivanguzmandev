@@ -26,7 +26,7 @@ const PostWidget = ({ categories, slug }) => {
             >
               Latest Posts
             </h2>
-            <p className="mx-auto mt-3 max-w-prose text-xl text-gray-100 sm:mt-4 md:text-3xl lg:text-4xl">
+            <p className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
               Thoughts on what I'm learning, what I'm thinking, and what I'm
               doing.
             </p>
