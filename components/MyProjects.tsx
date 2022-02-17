@@ -106,7 +106,7 @@ const projects = [
       'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery. Deployed on Vercel.'
   },
   {
-    name: 'Pure Todo',
+    name: 'Pure Notes',
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,

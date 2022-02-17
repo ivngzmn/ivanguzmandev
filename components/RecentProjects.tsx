@@ -66,7 +66,7 @@ const projects = [
     description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`
   },
   {
-    name: 'Pure Todo',
+    name: 'Pure Notes',
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,
