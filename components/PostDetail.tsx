@@ -170,8 +170,7 @@ const PostDetail = ({ post }) => {
       <HeadContainer
         title={`${post.title} | ${post.author.name}`}
         description={post.description}
-        og:image={post.featuredImage.url}
-        image={post.featuredImage.url}
+        image={`https://www.ivanguzman.dev/blog/${post.featuredImage.url}`}
         author={post.author.name}
         date={new Date(post.createdAt).toString()}
         type="article"
