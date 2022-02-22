@@ -12,9 +12,10 @@ export default function Container(props) {
   const router = useRouter();
   const meta = {
     title: 'Ivan Guzman – Software Engineer',
-    description: `Full Stack Software Engineer, Jamstack enthusiast, and inquisitive mind.`,
+    description: `Full Stack Software Engineer who enjoys solving big problems using JavaScript, React, Tailwind CSS, Node.js, Express.js, and MongoDB. I am an all-around developer who has a passion for learning new technologies, writing clean code, and working on a variety of projects.`,
     image: 'https://www.ivanguzman.dev/static/images/banner.png',
     type: 'website',
+    name: 'Ivan Guzman',
     ...customMeta
   };
 
@@ -36,6 +37,7 @@ export default function Container(props) {
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:image" content={meta.image} />
+      <meta name="author" content={meta.name} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@zaku_dev" />
       <meta name="twitter:title" content={meta.title} />
