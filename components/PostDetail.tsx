@@ -49,8 +49,8 @@ const PostDetail = ({ post }) => {
         modifiedText = (
           <code
             key={index}
-            className="text-[#50fa7b] bg-[#282A36] px-1.5 py-0.5
-        rounded font-mono text-sm"
+            className="rounded bg-[#282A36] px-1.5 py-0.5
+        font-mono text-sm text-[#50fa7b]"
           >
             {obj.text}
           </code>
@@ -61,25 +61,25 @@ const PostDetail = ({ post }) => {
     switch (obj.type) {
       case 'heading-one':
         return (
-          <h1 key={index} className="text-4xl font-semibold mb-4">
+          <h1 key={index} className="mb-4 text-4xl font-semibold">
             {getModifiedElement(obj, index, modifiedText)}
           </h1>
         );
       case 'heading-two':
         return (
-          <h2 key={index} className="text-3xl font-semibold mb-4">
+          <h2 key={index} className="mb-4 text-3xl font-semibold">
             {getModifiedElement(obj, index, modifiedText)}
           </h2>
         );
       case 'heading-three':
         return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
+          <h3 key={index} className="mb-4 text-xl font-semibold">
             {getModifiedElement(obj, index, modifiedText)}
           </h3>
         );
       case 'heading-four':
         return (
-          <h4 key={index} className="text-md font-semibold mb-4">
+          <h4 key={index} className="text-md mb-4 font-semibold">
             {getModifiedElement(obj, index, modifiedText)}
           </h4>
         );
@@ -97,7 +97,7 @@ const PostDetail = ({ post }) => {
               target={obj.openInNewTab ? '_blank' : '_self'}
               rel="noopener noreferrer"
               title={obj.title}
-              className="text-zinc-900 bg-indigo-100 hover:bg-indigo-200 underline hover:decoration-2"
+              className="bg-indigo-100 text-zinc-900 underline hover:bg-indigo-200 hover:decoration-2"
             >
               {getModifiedElement(obj, index, modifiedText)}
             </a>
@@ -106,7 +106,7 @@ const PostDetail = ({ post }) => {
       case 'bulleted-list':
         return (
           <ul
-            className="block list-disc my-4 mx-0 pl-10 text-base lg:text-lg sm:text-base"
+            className="my-4 mx-0 block list-disc pl-10 text-base sm:text-base lg:text-lg"
             key={index}
           >
             {getModifiedElement(obj, index, modifiedText)}
@@ -124,8 +124,8 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="my-8 px-4 py-4 block overflow-x-auto rounded-lg
-         bg-[#282A36] text-sm sm:text-base text-gray-200 font-mono w-auto whitespace-normal"
+            className="my-8 block w-auto overflow-x-auto whitespace-normal rounded-lg
+         bg-[#282A36] px-4 py-4 font-mono text-sm text-gray-200 sm:text-base"
           >
             <code key={index}>
               {getModifiedElement(obj, index, modifiedText)}
@@ -136,8 +136,8 @@ const PostDetail = ({ post }) => {
         return (
           <pre
             key={index}
-            className="my-8 block overflow-x-auto rounded
-         bg-slate-800 text-sm sm:text-base font-mono text-gray-200 whitespace-normal"
+            className="my-8 block overflow-x-auto whitespace-normal
+         rounded bg-slate-800 font-mono text-sm text-gray-200 sm:text-base"
           >
             <code key={index} className={obj.className}>
               {getModifiedElement(obj, index, modifiedText)}
@@ -170,51 +170,51 @@ const PostDetail = ({ post }) => {
       <HeadContainer
         title={`${post.title} | ${post.author.name}`}
         description={post.description}
-        ogImage={post.featuredImage.url}
+        ogImage={`https://www.ivanguzman.dev/${post.featuredImage.url}`}
         image={post.featuredImage.url}
         author={post.author.name}
-        date={new Date(post.date).toString()}
+        date={new Date(post.createdAt).toString()}
         type="article"
       />
       <div className="absolute -mt-10">
         <Link href={`/blog/`} passHref>
-          <a className="text-lg text-gray-100 hover:text-gray-500 flex items-center space-x-1 transition duration-300 ease-in-out">
-            <HiArrowNarrowLeft className="w-5 h-5" />
+          <a className="flex items-center space-x-1 text-lg text-gray-100 transition duration-300 ease-in-out hover:text-gray-500">
+            <HiArrowNarrowLeft className="h-5 w-5" />
             <span>Back to all posts</span>
           </a>
         </Link>
       </div>
       <article>
-        <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8">
-          <div className="relative shadow-md inline-block w-full h-96 md:h-[35rem] lg:h-[45rem] mb-6">
+        <div className="mb-8 rounded-2xl bg-white pb-12 shadow-2xl">
+          <div className="relative mb-6 inline-block h-96 w-full shadow-md md:h-[35rem] lg:h-[45rem]">
             <Image
               unoptimized
               loader={grpahCMSImageLoader}
               alt={post.title}
-              className="shadow-lg rounded-t-lg"
+              className="rounded-t-lg shadow-lg"
               layout="fill"
               objectFit="cover"
               src={post.featuredImage.url}
             />
           </div>
           <div className="px-4 lg:px-8">
-            <div className="flex items-center mb-8 w-full">
-              <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto">
+            <div className="mb-8 flex w-full items-center">
+              <div className="hidden items-center justify-center md:flex lg:mb-0 lg:w-auto">
                 <Image
                   alt={post.author.name}
                   height="30px"
                   width="30px"
-                  className="align-middle rounded-full"
+                  className="rounded-full align-middle"
                   src={post.author.photo.url}
                 />
-                <p className="inline align-middle text-gray-700 mx-2 font-base text-lg">
+                <p className="font-base mx-2 inline align-middle text-lg text-gray-700">
                   {post.author.name}
                 </p>
               </div>
               <div className="font-medium text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 inline mr-2 text-indigo-600"
+                  className="mr-2 inline h-6 w-6 text-indigo-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -231,7 +231,7 @@ const PostDetail = ({ post }) => {
                 </span>
               </div>
             </div>
-            <h1 className="mb-8 text-5xl lg:text-6xl text-left tracking-tight font-semibold">
+            <h1 className="mb-8 text-left text-5xl font-semibold tracking-tight lg:text-6xl">
               {post.title}
             </h1>
             <div key={post.slug} className="max-w-prose lg:max-w-screen-2xl">
