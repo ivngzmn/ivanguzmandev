@@ -83,26 +83,28 @@ export default function Profile() {
                     <div className="flex justify-center">
                       <div className="prose prose-slate max-w-prose px-4 py-1 text-left text-base leading-normal lg:prose-xl lg:py-4 lg:text-xl">
                         <p>
-                          Hey, I’m Ivan. Before pursuing software engineering, I
-                          studied fine art with an emphasis in 3D graphics. I
-                          started my software engineering journey through
-                          working as a customer service supervisor at an
-                          e-commerce website. I taught myself how to use their
-                          custom content management system that used Bootstrap
-                          for styling to update outdated product descriptions in
-                          order to alleviate load on repeated calls. I got
-                          sucked in pretty quickly, and found myself wanting to
-                          learn more and more.
+                          Hey, I’m Ivan. I started my software engineering
+                          journey through working as a customer service
+                          supervisor at an e-commerce website. I taught myself
+                          how to use their bespoke content management system
+                          that used Bootstrap for styling to update outdated
+                          product descriptions in order to alleviate email load
+                          on the customer agent team. Having the power to make
+                          changes on the fly got me hooked, and I found myself
+                          wanting to learn more and more.
                         </p>
                         <p className="mt-5">
                           Then in I went on to work at Uber Technologies where
                           my passion for programming grew further as I was
-                          persuaded by my team lead to pursue my dream software
-                          engineering. Unfortunately, the pandemic hit and the
-                          Uber in person office closed, so I shifted gears to
-                          not ever wanting this to happen again. So, I began to
-                          practice my Software Engineering skills until landing
-                          a role at the 100devs web development agency.
+                          persuaded by my team manager to pursue my dream of
+                          software engineering. Unfortunately, during my time at
+                          Uber the pandemic had hit and the Uber in person
+                          office closed, so I shifted gears to not ever wanting
+                          this to happen again. So, I began to practice my
+                          Software Engineering skills until landing a role at
+                          the 100devs web development agency. Now with this new
+                          knowledge, I am looking to join a new role where I can
+                          continue to learn and grow further.
                         </p>
                         <p className="mt-5">
                           I grew up in small-town in California and went to
