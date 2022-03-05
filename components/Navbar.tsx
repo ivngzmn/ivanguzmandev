@@ -101,7 +101,7 @@ export default function Navbar() {
                           <span className="sr-only">Open user menu</span>
 
                           <div className="flex items-center space-x-3 rounded-full bg-zinc-900 pr-1 pl-1 pt-1">
-                            <span className="">
+                            <span>
                               <Image
                                 className="-mr-2 h-6 w-6 rounded-full"
                                 src={ProfilePic}
@@ -110,6 +110,7 @@ export default function Navbar() {
                                 height={30}
                                 width={30}
                               />
+                              <span className="absolute top-1 left-1 block h-2 w-2 animate-pulse rounded-full bg-green-400 ring-2 ring-white" />
                             </span>
 
                             <span className="text-gray-300">
@@ -131,12 +132,28 @@ export default function Navbar() {
                       >
                         <Menu.Items className="absolute right-0 z-40 mt-2 w-48 origin-top-right rounded-md bg-black py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
+                            <div className="ml-3">
+                              <div className="text-base font-medium text-white">
+                                Ivan Guzman
+                              </div>
+                              <div className="cursor-pointer text-sm font-medium text-gray-400">
+                                <Link
+                                  href={`mailto:hello@ivanguzman.dev?subject=Let's chat&body=Hello Ivan,%0D%0A%0D%0ALets chat!`}
+                                >
+                                  <a className="underline">
+                                    hello@ivanguzman.dev
+                                  </a>
+                                </Link>
+                              </div>
+                            </div>
+                          </Menu.Item>
+                          <Menu.Item>
                             {({ active }) => (
                               <a
                                 href="https://github.com/ivngzmn"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
-                                  'flex items-center px-4 py-2 text-sm text-gray-300'
+                                  'flex items-center px-4 py-2 pt-5 text-sm text-gray-300'
                                 )}
                               >
                                 <FaGithub className="mr-2 h-4 w-4" />
@@ -213,14 +230,17 @@ export default function Navbar() {
                 <div className="border-t border-gray-700 pt-4 pb-3">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <Image
-                        className="h-10 w-10 rounded-full"
-                        src={ProfilePic}
-                        alt="Ivan Guzman's Profile Photo"
-                        quality="85"
-                        height={35}
-                        width={35}
-                      />
+                      <span>
+                        <span className="relative top-2 left-0 z-10 block h-2 w-2 animate-pulse rounded-full bg-green-400 ring-2 ring-white" />
+                        <Image
+                          className="h-10 w-10 rounded-full"
+                          src={ProfilePic}
+                          alt="Ivan Guzman's Profile Photo"
+                          quality="85"
+                          height={35}
+                          width={35}
+                        />
+                      </span>
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium text-white">
