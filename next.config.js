@@ -20,6 +20,15 @@ module.exports = {
       'images.unsplash.com' // Unsplash Images
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/resume',
+        destination: '/resume.pdf',
+        permanent: true
+      }
+    ];
+  },
   async headers() {
     return [
       {
