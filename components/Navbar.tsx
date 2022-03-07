@@ -100,25 +100,30 @@ export default function Navbar() {
                         <Menu.Button className="hidden rounded-full  bg-black text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 lg:inline-block">
                           <span className="sr-only">Open user menu</span>
 
-                          <div className="flex items-center space-x-3 rounded-full bg-zinc-900 pr-1 pl-1 pt-1">
-                            <span>
-                              <Image
-                                className="-mr-2 h-6 w-6 rounded-full"
-                                src={ProfilePic}
-                                alt="Ivan Guzman Profile Photo"
-                                quality="85"
-                                height={30}
-                                width={30}
-                              />
-                              <span className="absolute top-1 left-1 block h-2 w-2 animate-pulse rounded-full bg-green-400 ring-2 ring-white" />
-                            </span>
-
-                            <span className="text-gray-300">
-                              <span className="sr-only">Open main menu</span>
-                              <span className="text-sm">Ivan G.</span>
-                              <VscTriangleDown className="ml-3 mr-1 hidden h-4 w-4 lg:inline-block" />
-                            </span>
-                          </div>
+                          <Disclosure.Button>
+                            <div className="flex items-center space-x-3 rounded-full bg-zinc-900 pr-1 pl-1 pt-1">
+                              <span>
+                                <Image
+                                  className="-mr-2 h-6 w-6 rounded-full"
+                                  src={ProfilePic}
+                                  alt="Ivan Guzman Profile Photo"
+                                  quality="85"
+                                  height={30}
+                                  width={30}
+                                />
+                                <span className="absolute top-1 left-1 block h-2 w-2 animate-pulse rounded-full bg-green-400 ring-2 ring-white" />
+                              </span>
+                              <span className="text-gray-300">
+                                <span className="sr-only">Open main menu</span>
+                                <span className="text-sm">Ivan G.</span>
+                                <VscTriangleDown
+                                  className={`${
+                                    open ? 'rotate-180 transform' : ''
+                                  } ml-3 mr-1 hidden h-4 w-4 lg:inline-block`}
+                                />
+                              </span>
+                            </div>
+                          </Disclosure.Button>
                         </Menu.Button>
                       </div>
                       <Transition
