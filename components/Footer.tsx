@@ -19,8 +19,8 @@ const navigation = {
       href: '/blog'
     },
     { name: 'Uses', href: '/uses' },
-    { name: 'Links', href: '/links' }
-    // { name: 'Resume', href: '#' }
+    { name: 'Links', href: '/links' },
+    { name: 'Resume', href: '/resume.pdf' }
   ],
   social: [
     {

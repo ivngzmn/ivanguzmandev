@@ -8,7 +8,12 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { VscTriangleDown } from 'react-icons/vsc';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import {
+  FaRegFilePdf,
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter
+} from 'react-icons/fa';
 import Logo from '../public/static/images/guzman-logo.svg';
 
 function classNames(...classes: string[]) {
@@ -155,10 +160,25 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
+                                href="https://www.linkedin.com/in/ivan-julian-guzman/"
+                                className={classNames(
+                                  active ? 'bg-gray-700' : '',
+                                  'mt-5 flex items-center px-4 py-2 text-sm text-gray-300'
+                                )}
+                              >
+                                <FaRegFilePdf className="mr-2 flex h-4 w-4" />
+                                <span className="flex">Resume</span>
+                                <RiExternalLinkLine className="absolute right-2 flex h-4 w-4" />
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
                                 href="https://github.com/ivngzmn"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
-                                  'flex items-center px-4 py-2 pt-5 text-sm text-gray-300'
+                                  'flex items-center px-4 py-2 text-sm text-gray-300'
                                 )}
                               >
                                 <FaGithub className="mr-2 h-4 w-4" />
@@ -261,6 +281,14 @@ export default function Navbar() {
                     </div>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
+                    <a
+                      href="/resume"
+                      className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                    >
+                      <FaRegFilePdf className="mr-2 inline-block h-4 w-4" />
+                      <span className="">Resume</span>
+                      <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
+                    </a>
                     <a
                       href="https://github.com/ivngzmn"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
