@@ -49,9 +49,10 @@ function MyLinks() {
       <div className="bg-slate-900">
         <Image
           src={Background}
-          alt=""
+          alt="rain on a window"
           layout="fill"
           objectFit="cover"
+          quality={60}
           className="min-h-screen w-full"
         />
       </div>
@@ -60,15 +61,15 @@ function MyLinks() {
           <Image
             alt="..."
             src={ProfileImage}
-            className="rounded-full h-auto align-middle border-none "
+            className="h-auto rounded-full border-none align-middle "
             width={100}
             height={100}
           />
         </div>
         <div className="relative mx-auto flex flex-col justify-center text-center">
-          <span className="text-white text-lg font-semibold">@zaku_dev</span>
+          <span className="text-lg font-semibold text-white">@zaku_dev</span>
 
-          <span className="flex justify-center items-center text-white text-sm mt-2">
+          <span className="mt-2 flex items-center justify-center text-sm text-white">
             <i className="mr-1 text-red-500">
               <FaMapMarkerAlt />
             </i>
@@ -92,33 +93,33 @@ function MyLinks() {
           ))}
         </div>
       </section>
-      <section className="relative mx-auto flex flex-col justify-center bg-slate-700 mix-blend-lighten max-w-xl p-10 py-12 rounded-2xl">
-        <FaQuoteLeft className="absolute top-4 left-6 text-white opacity-20 w-12 h-12" />
-        <span className="text-white text-lg font-thin text-left">
+      <section className="relative mx-auto flex max-w-xl flex-col justify-center rounded-2xl bg-slate-700 p-10 py-12 mix-blend-lighten">
+        <FaQuoteLeft className="absolute top-4 left-6 h-12 w-12 text-white opacity-20" />
+        <span className="text-left text-lg font-thin text-white">
           If you are working on something that you really care about, you don’t
           have to be pushed. The vision pulls you.
         </span>
         <br />
-        <span className="text-white text-lg font-thin text-left mt-2">
+        <span className="mt-2 text-left text-lg font-thin text-white">
           – Steve Jobs
         </span>
       </section>
-      <section className="relative mx-auto flex flex-col justify-center text-center m-5 space-y-4 max-w-xl ">
+      <section className="relative m-5 mx-auto flex max-w-xl flex-col justify-center space-y-4 text-center ">
         <Link href="/">
-          <a className="text-white hover:text-slate-300 bg-slate-900 hover:bg-gray-800 h-15 py-5 rounded-2xl">
-            <BiWorld className="inline-block h-5 w-5 mr-2" />
+          <a className="h-15 rounded-2xl bg-slate-900 py-5 text-white hover:bg-gray-800 hover:text-slate-300">
+            <BiWorld className="mr-2 inline-block h-5 w-5" />
             <span>Website</span>
           </a>
         </Link>
         <Link href="/blog">
-          <a className="text-white hover:text-slate-300 bg-slate-900 hover:bg-gray-800 h-15 py-5 rounded-2xl">
-            <BiBookAlt className="inline-block h-5 w-5 mr-2" />
+          <a className="h-15 rounded-2xl bg-slate-900 py-5 text-white hover:bg-gray-800 hover:text-slate-300">
+            <BiBookAlt className="mr-2 inline-block h-5 w-5" />
             <span>Blog</span>
           </a>
         </Link>
       </section>
-      <section className="relative bottom-0 mx-auto flex items-center justify-center text-center p-5 space-y-4 max-w-xl">
-        <span className="text-white mr-2">Made with ❤️ by </span>
+      <section className="relative bottom-0 mx-auto flex max-w-xl items-center justify-center space-y-4 p-5 text-center">
+        <span className="mr-2 text-white">Made with ❤️ by </span>
         <Link href="/" passHref>
           <Image src={Logo} alt="Ivan Guzman Logo" width={40} height={40} />
         </Link>
