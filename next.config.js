@@ -16,6 +16,7 @@ module.exports = {
       'i.scdn.co', // Spotify Album Art
       'pbs.twimg.com', // Twitter Profile Picture
       'res.cloudinary.com', //Cloudinary images
+      'media.graphassets.com', // GraphCMS Images
       'media.graphcms.com', // GraphCMS Images
       'images.unsplash.com' // Unsplash Images
     ]
