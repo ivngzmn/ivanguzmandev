@@ -41,7 +41,7 @@ export const getPosts = async () => {
 
 export const getCategories = async () => {
   const query = gql`
-    query GetGategories {
+    query GetCategories {
       categories {
         name
         slug
@@ -217,7 +217,7 @@ export const submitComment = async (obj) => {
     },
     body: JSON.stringify(obj)
   });
-
+  console.log(result);
   return result.json();
 };
 
