@@ -14,7 +14,7 @@ const CommentsForm = ({ slug }) => {
 
   useEffect(() => {
     setLocalStorage(window.localStorage);
-    const InitalFormData = {
+    const InitialFormData = {
       name: window.localStorage.getItem('name'),
       email: window.localStorage.getItem('email'),
       comment: null,
@@ -24,7 +24,7 @@ const CommentsForm = ({ slug }) => {
           ? true
           : false
     };
-    setFormData(InitalFormData);
+    setFormData(InitialFormData);
   }, []);
 
   function onInputChange(e) {
@@ -84,25 +84,25 @@ const CommentsForm = ({ slug }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">
+    <div className="mb-8 rounded-lg bg-white p-8 pb-12 shadow-lg">
+      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
         Leave a Reply
       </h3>
-      <div className="grid grid-cols-1 gap-4 mb-4">
+      <div className="mb-4 grid grid-cols-1 gap-4">
         <textarea
           value={formData.comment}
           onChange={onInputChange}
-          className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="h-40 w-full rounded-lg bg-gray-100 p-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
           name="comment"
           placeholder="Comment"
         />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <input
           type="text"
           value={formData.name}
           onChange={onInputChange}
-          className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="w-full rounded-lg bg-gray-100 py-2 px-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
           placeholder="Name"
           name="name"
         />
@@ -110,12 +110,12 @@ const CommentsForm = ({ slug }) => {
           type="email"
           value={formData.email}
           onChange={onInputChange}
-          className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+          className="w-full rounded-lg bg-gray-100 py-2 px-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
           placeholder="Email"
           name="email"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 mb-4">
+      <div className="mb-4 grid grid-cols-1 gap-4">
         <div>
           <input
             checked={formData.storeData}
@@ -125,7 +125,7 @@ const CommentsForm = ({ slug }) => {
             name="storeData"
             value="true"
           />
-          <label className="text-gray-500 cursor-pointer" htmlFor="storeData">
+          <label className="cursor-pointer text-gray-500" htmlFor="storeData">
             {' '}
             Save my name, email in this browser for the next time I comment.
           </label>
@@ -138,12 +138,12 @@ const CommentsForm = ({ slug }) => {
         <button
           type="button"
           onClick={handlePostSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-lg font-medium rounded-2xl text-white px-8 py-3 cursor-pointer"
+          className="ease inline-block cursor-pointer rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-lg font-medium text-white transition duration-500 hover:bg-indigo-900"
         >
           Post Comment
         </button>
         {showSuccessMessage && (
-          <span className="text-xl float-right font-semibold mt-3 text-green-500">
+          <span className="float-right mt-3 text-xl font-semibold text-green-500">
             Comment submitted for review
           </span>
         )}

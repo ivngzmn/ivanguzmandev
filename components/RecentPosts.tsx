@@ -41,14 +41,13 @@ const PostWidget = ({ categories, slug }) => {
                     key={index}
                     className="group flex h-[45rem] flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl"
                   >
-                    <div className="relative h-[25rem] w-full flex-shrink-0 overflow-hidden object-cover duration-500 ease-in-out hover:h-[26rem]">
+                    <div className="relative h-[25rem] duration-500 ease-in-out">
                       <Image
                         loader={grpahCMSImageLoader}
                         alt={post.title}
                         layout="fill"
                         objectFit="cover"
                         unoptimized
-                        className="h-48 w-full object-cover"
                         src={post.featuredImage.url}
                       />
                     </div>

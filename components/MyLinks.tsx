@@ -67,7 +67,7 @@ function MyLinks() {
           />
         </div>
         <div className="relative mx-auto flex flex-col justify-center text-center">
-          <span className="text-lg font-semibold text-white">@zaku_dev</span>
+          <span className="text-2xl font-semibold text-white">@zaku_dev</span>
 
           <span className="mt-2 flex items-center justify-center text-sm text-white">
             <i className="mr-1 text-red-500">

@@ -6,47 +6,47 @@ import Link from 'next/link';
 import { grpahCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
-  <div className="bg-white shadow-2xl rounded-2xl pb-12 mb-8 mt-10">
+  <div className="mb-8 mt-10 rounded-2xl bg-white pb-12 shadow-2xl">
     <Link href={`/blog/${post.slug}`} passHref>
       <a>
-        <div className="relative shadow-md inline-block w-full h-[25rem] hover:h-[26rem] md:h-96 lg:h-[36rem] mb-6 hover:lg:h-[37rem] transition-all duration-500 ease-in-out">
+        <div className="relative mb-6 inline-block h-[25rem] w-full shadow-md transition-all duration-500 ease-in-out md:h-96 lg:h-[36rem]">
           <Image
-            unoptimized
             loader={grpahCMSImageLoader}
             alt={post.title}
-            className="shadow-lg rounded-t-lg lg:rounded-t-lg"
+            className="rounded-t-lg shadow-lg lg:rounded-t-lg"
             layout="fill"
             objectFit="cover"
+            quality={65}
             src={post.featuredImage.url}
           />
         </div>
 
         <div className="px-2 lg:px-6">
-          <h2 className="transition duration-700 text-left mb-6 cursor-pointer hover:text-indigo-600 text-3xl font-semibold px-4">
+          <h2 className="mb-6 cursor-pointer px-4 text-left text-3xl font-semibold transition duration-700 hover:text-indigo-600">
             {post.title}
           </h2>
 
-          <p className="text-left text-lg text-gray-700 font-normal px-4 mb-8">
+          <p className="mb-8 px-4 text-left text-lg font-normal text-gray-700">
             {post.description}
           </p>
-          <div className="flex text-center items-center justify-start mb-8 w-full px-4">
-            <div className="flex items-center justify-start mb-4 lg:mb-0 w-full lg:w-auto mr-8">
+          <div className="mb-8 flex w-full items-center justify-start px-4 text-center">
+            <div className="mb-4 mr-8 flex w-full items-center justify-start lg:mb-0 lg:w-auto">
               <Image
-                unoptimized
                 loader={grpahCMSImageLoader}
                 alt={post.author.name}
                 height="30px"
                 width="30px"
-                className="align-middle rounded-full"
+                className="rounded-full align-middle"
+                quality={65}
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 mx-2 font-medium text-lg">
+              <p className="mx-2 inline align-middle text-lg font-medium text-gray-700">
                 {post.author.name}
               </p>
               <div className="font-medium text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 inline mr-2 text-indigo-500"
+                  className="mr-2 inline h-6 w-6 text-indigo-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -65,9 +65,9 @@ const PostCard = ({ post }) => (
             </div>
           </div>
 
-          <div className="px-4 flex justify-end">
+          <div className="flex justify-end px-4">
             <Link href={`/blog/${post.slug}`} passHref>
-              <span className="transition duration-500 ease-in-out transform hover:-translate-y-1 inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-lg font-semibold rounded-2xl text-white px-8 py-3 cursor-pointer">
+              <span className="inline-block transform cursor-pointer rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out hover:-translate-y-1">
                 Read More {'>'}
               </span>
             </Link>

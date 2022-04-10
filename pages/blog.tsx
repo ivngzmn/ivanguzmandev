@@ -22,16 +22,16 @@ export default function BlogPosts({ posts }) {
       />
       <Navbar />
       <Header />
-      <div className="bg-zinc-900 h-full">
-        <div className="relative max-w-7xl mx-auto px-4 pb-8">
+      <div className="h-full bg-zinc-900">
+        <div className="relative mx-auto max-w-7xl px-4 pb-8">
           <FeaturedPosts />
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:px-4">
             <div className="col-span-1 lg:col-span-9">
               {posts.map((post, index) => (
                 <PostCard key={index} post={post.node} />
               ))}
             </div>
-            <div className="col-span-1 lg:col-span-3 mb-8">
+            <div className="col-span-1 mb-8 lg:col-span-3">
               <div className="relative top-8 lg:sticky">
                 <PostWidget categories={undefined} slug={undefined} />
                 <Categories />
@@ -50,6 +50,7 @@ export default function BlogPosts({ posts }) {
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   return {
-    props: { posts }
+    props: { posts },
+    revalidate: 60
   };
 }
