@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection {
+      postsConnection(orderBy: createdAt_DESC) {
         edges {
           cursor
           node {
@@ -209,7 +209,12 @@ export const getFeaturedPosts = async () => {
   return result.posts;
 };
 
-export const submitComment = async (obj) => {
+export const submitComment = async (obj: {
+  name: StringConstructor;
+  email: StringConstructor;
+  comment: StringConstructor;
+  slug: StringConstructor;
+}) => {
   const result = await fetch('/api/comments', {
     method: 'POST',
     headers: {
