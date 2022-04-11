@@ -5,26 +5,26 @@ import Link from 'next/link';
 const AdjacentPostCard = ({ post, position }) => (
   <>
     <div
-      className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72"
+      className="absolute inline-block h-72 w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-md"
       style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
     />
-    <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-72" />
-    <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
-      <p className="text-white text-shadow font-semibold text-xs">
+    <div className="absolute h-72 w-full rounded-lg bg-gradient-to-b from-gray-400 via-gray-700 to-black bg-center opacity-50" />
+    <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-lg p-4">
+      <p className="text-shadow text-xs font-semibold text-white">
         {moment(post.createdAt).format('MMM DD, YYYY')}
       </p>
-      <p className="text-white text-shadow font-semibold text-2xl text-center">
+      <p className="text-shadow text-center text-2xl font-semibold text-white">
         {post.title}
       </p>
     </div>
     <Link href={`/blog/${post.slug}`} passHref>
-      <span className="z-10 cursor-pointer absolute w-full h-full" />
+      <span className="absolute z-10 h-full w-full cursor-pointer" />
     </Link>
     {position === 'LEFT' && (
-      <div className="absolute arrow-btn bottom-5 text-center py-3 cursor-pointer bg-indigo-600 left-4 rounded-full">
+      <div className="arrow-btn absolute bottom-5 left-4 cursor-pointer rounded-full bg-indigo-600 py-3 text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-white"
+          className="h-6 w-full text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -39,10 +39,10 @@ const AdjacentPostCard = ({ post, position }) => (
       </div>
     )}
     {position === 'RIGHT' && (
-      <div className="absolute arrow-btn bottom-5 text-center py-3 cursor-pointer bg-indigo-600 right-4 rounded-full">
+      <div className="arrow-btn absolute bottom-5 right-4 cursor-pointer rounded-full bg-indigo-600 py-3 text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-white"
+          className="h-6 w-full text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

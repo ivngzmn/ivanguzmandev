@@ -11,6 +11,7 @@ const PostCard = ({ post }) => (
       <a>
         <div className="relative mb-6 inline-block h-[25rem] w-full shadow-md transition-all duration-500 ease-in-out md:h-96 lg:h-[36rem]">
           <Image
+            unoptimized
             loader={grpahCMSImageLoader}
             alt={post.title}
             className="rounded-t-lg shadow-lg lg:rounded-t-lg"
@@ -32,6 +33,7 @@ const PostCard = ({ post }) => (
           <div className="mb-8 flex w-full items-center justify-start px-4 text-center">
             <div className="mb-4 mr-8 flex w-full items-center justify-start lg:mb-0 lg:w-auto">
               <Image
+                unoptimized
                 loader={grpahCMSImageLoader}
                 alt={post.author.name}
                 height="30px"
