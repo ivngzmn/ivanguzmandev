@@ -5,16 +5,17 @@ import { GraphQLClient, gql } from 'graphql-request';
  * will be treated as an API endpoint instead of a page.         *
  *************************************************************** */
 
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphcmsToken = process.env.GRAPHCMS_TOKEN;
+
 // export a default function for API route to work
 export default async function asynchandler(req: any, res: any): Promise<any> {
-  const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
-      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`
+      authorization: `Bearer ${graphcmsToken}`
     }
   });
-
-  const query = gql`
+  const createComment = gql`
     mutation CreateComment(
       $name: String!
       $email: String!
@@ -33,13 +34,16 @@ export default async function asynchandler(req: any, res: any): Promise<any> {
       }
     }
   `;
-
-  const result = await graphQLClient.request(query, {
-    name: req.body.name,
-    email: req.body.email,
-    comment: req.body.comment,
-    slug: req.body.slug
-  });
-
-  return res.status(200).send(result);
+  try {
+    const result = await graphQLClient.request(createComment, {
+      name: req.body.name,
+      email: req.body.email,
+      comment: req.body.comment,
+      slug: req.body.slug
+    });
+    return res.status(200).send(result);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send(error);
+  }
 }
