@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { FeaturedPostCard } from '../components';
-import { getFeaturedPosts } from '../services';
+import { RecentPostsCard } from '../components';
+import { getRecentPosts } from '../services';
 
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5
+    items: 2
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3
+    items: 2
   },
   tablet: {
     breakpoint: { max: 768, min: 640 },
-    items: 2
+    items: 1
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
@@ -25,12 +25,12 @@ const responsive = {
 };
 
 const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
+  const [recentPosts, setRecentPosts] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result);
+    getRecentPosts().then((result) => {
+      setRecentPosts(result);
       setDataLoaded(true);
     });
   }, []);
@@ -74,20 +74,44 @@ const FeaturedPosts = () => {
   );
 
   return (
-    <div className="py-10">
-      <Carousel
-        infinite
-        autoPlay={true}
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
-        responsive={responsive}
-        itemClass="px-4"
-      >
-        {dataLoaded &&
-          featuredPosts.map((post, index) => (
-            <FeaturedPostCard key={index} post={post} />
-          ))}
-      </Carousel>
+    <div className="bg-zinc-900">
+      <div className="relative mx-auto max-w-7xl py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="py-20 text-left lg:py-44">
+            <h2
+              className="text-6xl font-semibold tracking-tight lg:text-8xl"
+              id="blog"
+            >
+              Latest Posts
+            </h2>
+            <p className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
+              Thoughts on what I'm learning, what I'm thinking, and what I'm
+              doing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto max-w-[100rem] pb-20 lg:pb-60">
+        <Carousel
+          infinite
+          swipeable={true}
+          draggable={false}
+          autoPlay={true}
+          autoPlaySpeed={6000}
+          transitionDuration={800}
+          customLeftArrow={customLeftArrow}
+          customRightArrow={customRightArrow}
+          removeArrowOnDeviceType={['tablet', 'mobile']}
+          showDots={true}
+          responsive={responsive}
+          itemClass="px-8"
+        >
+          {dataLoaded &&
+            recentPosts.map((post, index) => (
+              <RecentPostsCard key={index} post={post} index={undefined} />
+            ))}
+        </Carousel>
+      </div>
     </div>
   );
 };
