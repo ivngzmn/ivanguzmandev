@@ -5,7 +5,7 @@ export { default as AboutMe } from './AboutMe';
 export { default as MyProjects } from './MyProjects';
 export { default as ContactMe } from './ContactMe';
 export { default as Bio } from './Bio';
-export { default as RecentPosts } from './RecentPosts';
+export { default as RecentPostsCard } from './RecentPostsCard';
 export { default as Loading } from './Loading';
 export { default as PostCard } from './PostCard';
 export { default as PostDetail } from './PostDetail';

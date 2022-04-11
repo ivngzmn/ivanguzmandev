@@ -5,7 +5,7 @@ import {
   Footer,
   RecentProjects
 } from '../components';
-import RecentPosts from 'components/RecentPosts';
+import RecentPosts from '../sections/RecentPosts';
 
 function Home() {
   return (
@@ -21,7 +21,7 @@ function Home() {
         <RecentProjects />
       </section>
       <section className="posts">
-        <RecentPosts categories={undefined} slug={undefined} />
+        <RecentPosts />
       </section>
 
       <section>

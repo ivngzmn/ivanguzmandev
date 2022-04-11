@@ -193,15 +193,16 @@ function RecentProjects() {
           </div>
         </div>
       </div>
-      <div className="my-2 mr-4 flex justify-end">
-        <Link href="/projects">
-          <a className="font-regular flex w-[20rem] transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3  text-base text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:w-[22rem] lg:font-semibold">
-            <IoIosEye className="h-6 w-6" /> <span>View All Projects</span>
-          </a>
-        </Link>
-      </div>
+
       {/* project section */}
-      <div className="relative mt-10 space-y-20 pt-2 lg:mt-20 lg:space-y-64">
+      <div className="relative mx-auto max-w-[100rem] space-y-20 pt-2 lg:space-y-64">
+        <div className="flex justify-end">
+          <Link href="/projects">
+            <a className="font-regular flex w-[20rem] transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3  text-base text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:w-[22rem] lg:font-semibold">
+              <IoIosEye className="h-6 w-6" /> <span>View All Projects</span>
+            </a>
+          </Link>
+        </div>
         {/* <ProjectCard /> */}
         {projects.map((project) => (
           <div
