@@ -177,7 +177,7 @@ function DevSetup() {
             <div className="inline-block w-full py-10 lg:py-20">
               <div className="block md:float-left">
                 <h1
-                  className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
+                  className="text-6xl font-semibold tracking-tight lg:text-8xl"
                   id="blog"
                 >
                   Uses
