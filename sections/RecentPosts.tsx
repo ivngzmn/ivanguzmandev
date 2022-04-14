@@ -75,8 +75,8 @@ const FeaturedPosts = () => {
 
   return (
     <div className="bg-zinc-900">
-      <div className="relative mx-auto max-w-7xl py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
-        <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-[90rem] py-8 px-4 sm:px-6 lg:py-10 lg:px-8">
+        <div className="relative">
           <div className="py-20 text-left lg:py-44">
             <h2
               className="text-6xl font-semibold tracking-tight lg:text-8xl"

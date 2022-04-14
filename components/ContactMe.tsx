@@ -88,10 +88,10 @@ function ContactMe() {
   };
   return (
     <div className="overflow-hidden bg-zinc-900">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-[90rem]">
           <div className="mb-2 lg:mb-8">
             <div className="inline-block w-full py-10 lg:py-20">
               <div className="block md:float-left">
@@ -104,8 +104,11 @@ function ContactMe() {
               </div>
             </div>
           </div>
+        </div>
+
+        <section className="mx-auto max-w-[90rem] py-4 lg:py-9">
           <div className="rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 p-8 shadow-2xl sm:py-32 lg:mx-auto lg:mt-6 lg:mb-12 lg:max-w-screen-2xl lg:rounded-2xl">
-            <div className="mx-auto max-w-md pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="mx-auto max-w-md pl-4 pr-8 sm:max-w-lg sm:px-6 lg:px-8">
               <h1 className="text-center text-4xl font-extrabold leading-10 tracking-tight text-gray-50 sm:text-5xl sm:leading-none lg:text-6xl">
                 Say Hello 👋🏽
               </h1>
@@ -116,25 +119,27 @@ function ContactMe() {
               </p>
             </div>
           </div>
-        </div>
+          {/* image */}
+          <section className="py-8">
+            <div
+              aria-hidden="true"
+              className="relative mx-auto h-[300px] w-full max-w-[90rem] lg:h-[800px]"
+            >
+              <NextImage
+                src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
+                alt=""
+                layout="fill"
+                objectFit="cover"
+                className="rounded-2xl"
+                loading="lazy"
+              />
+            </div>
+          </section>
+        </section>
 
         {/* Container with form and picture */}
-        <div className="container my-8 mx-auto max-w-screen-2xl 2xl:px-0">
-          <div
-            aria-hidden="true"
-            className="relative mx-auto mb-8 h-[300px]  w-full lg:mb-10 lg:h-[600px]"
-          >
-            <NextImage
-              src="https://res.cloudinary.com/dbr8xxx2m/image/upload/v1635409171/Personal-Website/alvin-engler-bIhpiQA009k-unsplash_q5ylhi.jpg"
-              alt=""
-              // width="100%"
-              // height="100%"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl"
-            />
-            <div className="absolute inset-0 " />
-          </div>
+
+        <div className="container mx-auto py-8 lg:max-w-[90rem]">
           <div className=" relative rounded-2xl bg-zinc-100 py-16 shadow-2xl sm:py-24 sm:px-6 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:rounded-b-2xl lg:px-8 lg:py-32">
             <section className="relative" aria-labelledby="contact-heading">
               <div className="absolute h-1/2 w-full" aria-hidden="true" />
@@ -491,9 +496,11 @@ function ContactMe() {
             </section>
           </div>
         </div>
-        {/* call to action for twitter */}
-        <div className="container mx-auto">
-          <div className="my-8 rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 px-10 shadow-2xl lg:mx-auto lg:my-12 lg:max-w-7xl">
+      </div>
+      {/* call to action for twitter */}
+      <section>
+        <div className="mx-auto max-w-[90rem] px-4 py-20 pb-6 pt-1 lg:px-0">
+          <div className="my-8 rounded-2xl bg-gradient-to-br from-cyan-600 to-purple-600 px-10 shadow-2xl lg:mx-auto lg:my-12">
             <div className="mx-auto max-w-md py-16 px-4 text-center sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
               <h2 className="text-3xl font-extrabold sm:text-4xl">
                 <span className="block text-indigo-50">
@@ -513,7 +520,7 @@ function ContactMe() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Hero() {
         priority
         quality={70}
       />
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center">
+      <div className="mx-auto flex min-h-screen max-w-[90rem] flex-col justify-center">
         <div className="relative z-10 lg:w-full lg:max-w-4xl lg:pb-10">
           <main
             id="skip"

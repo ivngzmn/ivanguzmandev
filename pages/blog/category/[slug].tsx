@@ -27,26 +27,26 @@ const CategoryPost = ({ posts }) => {
       </Head>
       <Navbar />
       <Header />
-      <div className="bg-zinc-900 h-full">
+      <div className="h-full bg-zinc-900">
         '
-        <div className="container max-w-7xl mx-auto px-4 pb-8">
+        <div className="container mx-auto max-w-[100rem] px-4 pb-8">
           <div className="absolute lg:px-4">
             <Link href={`/blog/`} passHref>
-              <a className="text-lg text-gray-100 hover:text-gray-500 flex items-center space-x-1 transition duration-300 ease-in-out">
-                <HiArrowNarrowLeft className="w-5 h-5" />
+              <a className="flex items-center space-x-1 text-lg text-gray-100 transition duration-300 ease-in-out hover:text-gray-500">
+                <HiArrowNarrowLeft className="h-5 w-5" />
                 <span>Back to all posts</span>
               </a>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-4">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:px-4">
             <div className="col-span-1 lg:col-span-8">
               {posts.map((post, index) => (
                 <PostCard key={index} post={post.node} />
               ))}
             </div>
-            <div className="col-span-1 lg:col-span-4 mt-10">
-              <div className="relative lg:sticky top-8">
+            <div className="col-span-1 mt-10 lg:col-span-4">
+              <div className="relative top-8 lg:sticky">
                 <Categories />
               </div>
             </div>

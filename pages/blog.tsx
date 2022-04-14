@@ -23,9 +23,9 @@ export default function BlogPosts({ posts }) {
       <Navbar />
       <Header />
       <div className="h-full bg-zinc-900">
-        <div className="relative mx-auto max-w-7xl px-4 pb-8">
+        <div className="relative mx-auto max-w-[100rem] px-4 pb-8">
           <FeaturedPosts />
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:px-4">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:px-4">
             <div className="col-span-1 lg:col-span-9">
               {posts.map((post, index) => (
                 <PostCard key={index} post={post.node} />

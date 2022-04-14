@@ -113,9 +113,9 @@ export default function Bio() {
 
   return (
     <>
-      <section className="bg-zinc-900">
-        <div className="mx-auto max-w-7xl p-16 px-4">
-          <div className="mx-auto max-w-7xl rounded-2xl bg-gradient-to-r from-purple-800 to-indigo-700 shadow-2xl">
+      <section className="bg-zinc-900 py-40">
+        <div className="mx-auto max-w-[90rem] p-16 px-4">
+          <div className="mx-auto max-w-[90rem] rounded-2xl bg-gradient-to-r from-purple-800 to-indigo-700 shadow-2xl">
             <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
               <h3 className="text-3xl font-extrabold tracking-tight text-white">
                 Timeline

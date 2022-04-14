@@ -8,11 +8,11 @@ import { getFeaturedPosts } from '../services';
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5
+    items: 2
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3
+    items: 2
   },
   tablet: {
     breakpoint: { max: 768, min: 640 },
@@ -77,9 +77,15 @@ const FeaturedPosts = () => {
     <div className="py-10">
       <Carousel
         infinite
+        swipeable={true}
+        draggable={false}
         autoPlay={true}
+        autoPlaySpeed={6000}
+        transitionDuration={800}
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
+        removeArrowOnDeviceType={['tablet', 'mobile']}
+        showDots={true}
         responsive={responsive}
         itemClass="px-4"
       >
