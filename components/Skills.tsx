@@ -122,8 +122,8 @@ function classNames(...classes) {
 
 function Skills() {
   return (
-    <div className="bg-zinc-900">
-      <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+    <div className="bg-zinc-900 py-40">
+      <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
             <div className="block md:float-left">
@@ -139,44 +139,44 @@ function Skills() {
             </div>
           </div>
         </div>
-        <section className="divide-y divide-zinc-700 overflow-hidden rounded-lg bg-zinc-700 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
-          {tech.map((item, itemIdx) => (
-            <div
-              key={item.title}
-              className={classNames(
-                itemIdx === 0
-                  ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none'
-                  : '',
-                itemIdx === 1 ? 'sm:rounded-tr-lg' : '',
-                itemIdx === tech.length - 2 ? 'sm:rounded-bl-lg' : '',
-                itemIdx === tech.length - 1
-                  ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
-                  : '',
-                'group relative bg-zinc-800 p-6'
-              )}
-            >
-              <section>
-                <div className="flex flex-col items-center justify-center">
-                  <div className="">
-                    <span
-                      className={classNames(
-                        item.iconBackground,
-                        item.iconForeground,
-                        'inline-flex rounded-lg p-3'
-                      )}
-                    >
-                      <item.icon className="h-10 w-10" aria-hidden="true" />
-                    </span>
-                  </div>
-                  <div className="mt-5">
-                    <h3 className="text-2xl text-white">{item.title}</h3>
-                  </div>
-                </div>
-              </section>
-            </div>
-          ))}
-        </section>
       </div>
+      <section className="mx-auto max-w-[100rem] divide-y divide-zinc-700 overflow-hidden rounded-lg bg-zinc-700 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+        {tech.map((item, itemIdx) => (
+          <div
+            key={item.title}
+            className={classNames(
+              itemIdx === 0
+                ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none'
+                : '',
+              itemIdx === 1 ? 'sm:rounded-tr-lg' : '',
+              itemIdx === tech.length - 2 ? 'sm:rounded-bl-lg' : '',
+              itemIdx === tech.length - 1
+                ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
+                : '',
+              'group relative bg-zinc-800 p-6'
+            )}
+          >
+            <section>
+              <div className="flex flex-col items-center justify-center">
+                <div className="">
+                  <span
+                    className={classNames(
+                      item.iconBackground,
+                      item.iconForeground,
+                      'inline-flex rounded-lg p-3'
+                    )}
+                  >
+                    <item.icon className="h-10 w-10" aria-hidden="true" />
+                  </span>
+                </div>
+                <div className="mt-5">
+                  <h3 className="text-2xl text-white">{item.title}</h3>
+                </div>
+              </div>
+            </section>
+          </div>
+        ))}
+      </section>
     </div>
   );
 }

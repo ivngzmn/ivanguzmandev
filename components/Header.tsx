@@ -14,18 +14,18 @@ const Header = () => {
 
   return (
     <div className="bg-zinc-900">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full inline-block py-10 lg:py-20">
-          <div className="md:float-left block">
+      <div className="relative mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+        <div className="inline-block w-full py-10 lg:py-20">
+          <div className="block md:float-left">
             <Link href="/blog" passHref>
               <span
-                className="cursor-pointer text-6xl lg:text-8xl font-semibold leading-8 tracking-tight"
+                className="cursor-pointer text-6xl font-semibold tracking-tight lg:text-8xl"
                 id="blog"
               >
                 Blog
               </span>
             </Link>
-            <h2 className="text-3xl lg:text-4xl font-light tracking-normal text-slate-50 mt-5">
+            <h2 className="pt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
               Thoughts. Blurbs. Tech.
             </h2>
           </div>
@@ -36,7 +36,7 @@ const Header = () => {
                 href={`/blog/category/${category.slug}`}
                 passHref
               >
-                <span className="md:float-right mt-2 align-middle text-gray-100 hover:text-gray-500 ml-4 text-lg cursor-pointer transition duration-300 ease-in-out">
+                <span className="mt-2 ml-4 cursor-pointer align-middle text-lg text-gray-100 transition duration-300 ease-in-out hover:text-gray-500 md:float-right">
                   {category.name}
                 </span>
               </Link>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { grpahCMSImageLoader } from '../util';
 
 const FeaturedPostCard = ({ post }) => (
-  <div className="relative h-[20rem] w-full lg:h-[25rem] lg:w-[15rem]">
+  <div className="relative h-[20rem] w-full lg:h-[25rem] ">
     <Image
       unoptimized
       loader={grpahCMSImageLoader}
@@ -17,10 +17,10 @@ const FeaturedPostCard = ({ post }) => (
     />
     <div className="absolute h-full w-full rounded-lg bg-gradient-to-b from-gray-400 via-gray-700 to-black bg-center opacity-50" />
     <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-lg p-4">
-      <p className="text-shadow mb-4 text-base font-semibold text-white">
+      <p className="text-shadow mb-4 text-xl font-semibold text-white">
         {moment(post.createdAt).format('MMM DD, YYYY')}
       </p>
-      <p className="text-shadow mb-4 w-72 text-center text-2xl font-semibold text-white sm:w-full">
+      <p className="text-shadow mb-4 w-72 text-center text-4xl font-semibold text-white sm:w-full">
         {post.title}
       </p>
       <div className="absolute bottom-5 flex w-full items-center justify-center">

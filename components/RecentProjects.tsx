@@ -10,13 +10,9 @@ import {
   SiMaterialui,
   SiBootstrap,
   SiTailwindcss,
-  SiJavascript,
-  SiTypescript,
   SiReact,
-  SiNextdotjs,
   SiNodedotjs,
   SiExpress,
-  SiGraphql,
   SiMongodb,
   SiMicrosoftazure,
   SiFirebase,
@@ -176,7 +172,7 @@ function RecentProjects() {
   return (
     <div className="relative overflow-hidden bg-zinc-900 pt-16 pb-32">
       {/* title */}
-      <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
             <div className="block text-left">

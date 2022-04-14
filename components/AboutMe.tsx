@@ -24,7 +24,7 @@ export default function Profile() {
             className="absolute h-full w-full bg-black opacity-70"
           ></div>
         </section>
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-[90rem]">
           <div className="relative mx-auto px-6">
             <div className="inline-block w-full py-10 lg:py-20">
               <div className="block md:float-left">
@@ -38,7 +38,7 @@ export default function Profile() {
             </div>
           </div>
           <section className="relative pt-20 ">
-            <div className="mx-auto max-w-7xl px-4">
+            <div className="mx-auto max-w-[90rem] px-4">
               <div className="lg:-mt-15 relative mx-auto -mt-10 flex min-w-0 flex-col break-words rounded-2xl bg-white pb-16 shadow-2xl ">
                 <div className="px-6">
                   <div className="flex flex-wrap justify-center pb-6">
@@ -81,7 +81,7 @@ export default function Profile() {
                   </div>
                   <div className="mt-10 border-t border-gray-200 py-10">
                     <div className="flex justify-center">
-                      <div className="prose prose-slate max-w-prose px-4 py-1 text-left text-base leading-normal lg:prose-xl lg:py-4 lg:text-xl">
+                      <div className="prose prose-slate max-w-prose px-4 py-1 text-left text-base leading-normal lg:prose-2xl lg:py-4 lg:text-2xl">
                         <p>
                           Hey, I’m Ivan. I started my software engineering
                           journey through working as a customer service

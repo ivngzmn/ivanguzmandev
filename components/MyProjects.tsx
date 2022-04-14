@@ -247,7 +247,7 @@ function classNames(...classes) {
 export default function myProjects() {
   return (
     <div className="bg-zinc-900">
-      <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
             <div className="block md:float-left">
@@ -273,7 +273,7 @@ export default function myProjects() {
             key={project.name}
             className="rounded-xl bg-transparent pb-10 lg:relative lg:z-10 lg:pb-0"
           >
-            <div className="lg:mx-auto lg:grid lg:max-w-full lg:grid-cols-12">
+            <div className="lg:mx-auto lg:grid lg:max-w-[100rem] lg:grid-cols-12">
               <div
                 className={classNames(
                   project.cardAlign,
