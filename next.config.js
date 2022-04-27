@@ -43,11 +43,11 @@ module.exports = {
 // https://securityheaders.com
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.youtube.com *.twitter.com;
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
-    media-src 'none';
+    media-src 'self' data:;
     connect-src *;
     font-src 'self';
   `;
@@ -61,7 +61,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
     key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
+    value: 'origin'
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
