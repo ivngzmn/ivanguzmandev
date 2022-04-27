@@ -23,11 +23,11 @@ const PostCard = ({ post }) => (
         </div>
 
         <div className="px-2 lg:px-6">
-          <h2 className="mb-6 cursor-pointer px-4 text-left text-3xl font-semibold transition duration-700 hover:text-indigo-600">
+          <h2 className="mb-6 cursor-pointer px-4 text-left text-3xl font-semibold transition duration-700 hover:text-indigo-600 lg:text-4xl">
             {post.title}
           </h2>
 
-          <p className="mb-8 px-4 text-left text-lg font-normal text-gray-700">
+          <p className="mb-8 px-4 text-left text-lg font-normal text-gray-700 lg:text-xl">
             {post.description}
           </p>
           <div className="mb-8 flex w-full items-center justify-start px-4 text-center">
