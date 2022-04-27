@@ -45,7 +45,7 @@ const navigation = {
     },
     {
       name: 'Twitch',
-      href: 'https://www.twitch.tv/zaku_dev',
+      href: 'https://www.twitch.tv/inadequatedev',
       icon: () => <FaTwitch className="h-6 w-6" />
     }
   ]
