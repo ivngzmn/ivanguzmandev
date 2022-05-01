@@ -190,7 +190,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="https://www.linkedin.com/in/ivan-julian-guzman/"
+                                href="https://www.linkedin.com/in/ivan-j-guzman/"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
@@ -205,7 +205,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="https://twitter.com/zaku_dev"
+                                href="https://twitter.com/inadequate_Dev"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
@@ -298,7 +298,7 @@ export default function Navbar() {
                       <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/ivan-julian-guzman/"
+                      href="https://www.linkedin.com/in/ivan-j-guzman/"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaLinkedinIn className="mr-2 inline-block h-4 w-4" />
@@ -306,7 +306,7 @@ export default function Navbar() {
                       <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
                     </a>
                     <a
-                      href="https://twitter.com/zaku_dev"
+                      href="https://twitter.com/inadequate_Dev"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaTwitter className="mr-2 inline-block h-4 w-4" />
