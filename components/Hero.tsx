@@ -3,18 +3,18 @@ import Image from 'next/image';
 import { CameraIcon } from '@heroicons/react/solid';
 import { IoIosRocket, IoIosEye } from 'react-icons/io';
 import { MdLocationOn } from 'react-icons/md';
-import BackgroundImage from 'public/static/images/sf-sunset.jpg';
+import BackgroundImage from 'public/static/images/san-fran.jpeg';
 
 const photographer = {
-  name: 'Van Mendoza',
-  website: 'https://www.instagram.com/vanmfilms/'
+  name: '@burgessdryan',
+  website: 'https://twitter.com/burgessdryan'
 };
 
 export default function Hero() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black">
       <Image
-        className="brightness-50 contrast-150 filter"
+        className="brightness-75"
         alt={`Photo by ${photographer.name}`}
         src={BackgroundImage}
         layout="fill"
@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="relative z-10 lg:w-full lg:max-w-4xl lg:pb-10">
           <main
             id="skip"
-            className="mx-auto mt-20 max-w-7xl px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 "
+            className="mx-auto mt-20 px-4 sm:mt-28 sm:px-6 md:mt-32 lg:mt-28 lg:px-8 xl:mt-32 2xl:mt-44 "
           >
             <div className="text-left sm:text-left lg:text-left">
               <h1 className="text-6xl font-black md:text-6xl lg:text-7xl lg:tracking-wide xl:text-8xl 2xl:text-[118px]">
@@ -50,7 +50,7 @@ export default function Hero() {
                 </p>
                 <span className="flex max-w-prose items-center text-left text-base font-light text-gray-50 sm:mt-2 sm:text-left sm:text-base md:mt-3 md:text-lg lg:mx-0 lg:mt-2 lg:text-left lg:text-xl lg:leading-loose">
                   <MdLocationOn className=" mr-1 text-3xl text-red-600" /> Based
-                  in Orange County, CA.
+                  in California.
                 </span>
               </div>
               <div className="sm:justify-left mt-5 sm:mt-8 sm:flex lg:justify-start lg:space-x-5">

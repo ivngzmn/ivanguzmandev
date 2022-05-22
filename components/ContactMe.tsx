@@ -91,7 +91,7 @@ function ContactMe() {
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 
-        <div className="mx-auto max-w-[90rem]">
+        <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
           <div className="mb-2 lg:mb-8">
             <div className="inline-block w-full py-10 lg:py-20">
               <div className="block md:float-left">

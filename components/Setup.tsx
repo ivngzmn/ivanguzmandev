@@ -198,6 +198,7 @@ function DevSetup() {
                 objectFit="cover"
                 priority
                 className="rounded-xl shadow-xl"
+                quality={60}
               />
             </div>
             {/* <figcaption className="mt-2 flex text-zinc-200 lg:justify-end">
