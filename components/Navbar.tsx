@@ -176,6 +176,8 @@ export default function Navbar() {
                             {({ active }) => (
                               <a
                                 href="https://github.com/ivngzmn"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
@@ -191,6 +193,8 @@ export default function Navbar() {
                             {({ active }) => (
                               <a
                                 href="https://www.linkedin.com/in/ivan-j-guzman/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
@@ -206,6 +210,8 @@ export default function Navbar() {
                             {({ active }) => (
                               <a
                                 href="https://twitter.com/inadequate_Dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={classNames(
                                   active ? 'bg-gray-700' : '',
                                   'flex items-center px-4 py-2 text-sm text-gray-300'
@@ -291,6 +297,8 @@ export default function Navbar() {
                     </a>
                     <a
                       href="https://github.com/ivngzmn"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaGithub className="mr-2 inline-block h-4 w-4" />
@@ -299,6 +307,8 @@ export default function Navbar() {
                     </a>
                     <a
                       href="https://www.linkedin.com/in/ivan-j-guzman/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaLinkedinIn className="mr-2 inline-block h-4 w-4" />
@@ -307,6 +317,8 @@ export default function Navbar() {
                     </a>
                     <a
                       href="https://twitter.com/inadequate_Dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaTwitter className="mr-2 inline-block h-4 w-4" />

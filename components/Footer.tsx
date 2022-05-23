@@ -25,13 +25,8 @@ const navigation = {
   social: [
     {
       name: 'LinkedIn',
-      href: 'www.linkedin.com/in/ivan-j-guzman',
+      href: 'http://www.linkedin.com/in/ivan-j-guzman',
       icon: () => <FaLinkedinIn className="h-6 w-6" />
-    },
-    {
-      name: 'Instagram',
-      href: 'https://www.instagram.com/inadequate_Dev/',
-      icon: () => <FaInstagram className="h-6 w-6" />
     },
     {
       name: 'Twitter',
