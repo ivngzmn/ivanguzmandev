@@ -250,7 +250,7 @@ export default function Navbar() {
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Disclosure.Panel static className="lg:hidden">
+              <Disclosure.Panel static className="min-h-screen lg:hidden">
                 <div className="col-span-1 flex flex-col space-y-1 px-2 pt-2 pb-3">
                   <MobileNav href="/" text="Home" />
                   <MobileNav href="/about" text="About" />
