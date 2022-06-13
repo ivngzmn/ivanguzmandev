@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CoinForge from '../public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
-import Pronto from '/public/static/images/projects/iPad-Pronto.webp';
+import Pronto from '/public/static/images/projects/pronto-coffee-co.webp';
 import { SparklesIcon } from '@heroicons/react/outline';
 import {
   SiHtml5,
@@ -117,7 +117,7 @@ const projects = [
   },
   {
     name: 'Pronto Coffee Co.',
-    liveLink: 'https://prontocoffeeco.onrender.com/',
+    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
     imageSrc: Pronto,
     cardAlign: 'lg:col-start-1',

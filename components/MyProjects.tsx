@@ -5,7 +5,7 @@ import CoinForge from '/public/static/images/projects/MacBook-Pro-Crypto.webp';
 import TodoMVP from '/public/static/images/projects/MacBook-Todo-MVP.webp';
 import Portfolio from '/public/static/images/projects/MacBook-Pro-Portfolio.webp';
 import Thuyen from '/public/static/images/projects/iPhone-Thuyen-Vien.webp';
-import Pronto from '/public/static/images/projects/iPad-Pronto.webp';
+import Pronto from '/public/static/images/projects/pronto-coffee-co.webp';
 import {
   SiHtml5,
   SiMaterialui,
@@ -161,7 +161,7 @@ const projects = [
   },
   {
     name: 'Pronto Coffee Co.',
-    liveLink: 'https://prontocoffeeco.onrender.com/',
+    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
     imageSrc: Pronto,
     cardAlign: 'lg:col-start-5',
