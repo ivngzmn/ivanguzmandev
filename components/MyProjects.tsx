@@ -27,6 +27,53 @@ import { ProjectCard } from 'components';
 
 const projects = [
   {
+    name: 'Pronto Coffee Co.',
+    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
+    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
+    imageSrc: Pronto,
+    cardAlign: 'lg:col-start-5',
+    imageAlt: 'Todo App',
+    icons: [
+      {
+        id: '1',
+        name: 'Html5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500'
+      },
+      {
+        id: '3',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '4',
+        name: 'MongoDB',
+        logo: SiMongodb,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-700'
+      },
+      {
+        id: '5',
+        name: 'Express',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
+      }
+    ],
+    description:
+      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.'
+  },
+  {
     name: 'Coin Forge',
     liveLink: 'https://coinforge.vercel.app/',
     githubLink: 'https://github.com/ivngzmn/coin-forge',
@@ -104,107 +151,6 @@ const projects = [
     ],
     description:
       'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery. Deployed on Vercel.'
-  },
-  {
-    name: 'Pure Notes',
-    liveLink: 'https://todo-auth-mvc.herokuapp.com/',
-    githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
-    imageSrc: TodoMVP,
-    cardAlign: 'lg:col-start-1',
-    imageAlt: 'Todo App',
-    icons: [
-      {
-        id: '1',
-        name: 'Html5',
-        logo: SiHtml5,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-orange-500'
-      },
-      {
-        id: '2',
-        name: 'Tailwind CSS',
-        logo: SiTailwindcss,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500'
-      },
-      {
-        id: '3',
-        name: 'Node.js',
-        logo: SiNodedotjs,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-500'
-      },
-      {
-        id: '4',
-        name: 'MongoDB',
-        logo: SiMongodb,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-700'
-      },
-      {
-        id: '5',
-        name: 'Express',
-        logo: SiExpress,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-600'
-      },
-      {
-        id: '6',
-        name: 'Microsoft Azure',
-        logo: SiMicrosoftazure,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-blue-500'
-      }
-    ],
-    description:
-      'Users can login to their profile and find their list of notes. They can add new notes through an input, which they can then edit or delete all notes in their profile. Used EJS, Tailwind for the front end and MongoDB, Express, and Azure for the backend. Deployed on Heroku.'
-  },
-  {
-    name: 'Pronto Coffee Co.',
-    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
-    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
-    imageSrc: Pronto,
-    cardAlign: 'lg:col-start-5',
-    imageAlt: 'Todo App',
-    icons: [
-      {
-        id: '1',
-        name: 'Html5',
-        logo: SiHtml5,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-orange-500'
-      },
-      {
-        id: '2',
-        name: 'Tailwind CSS',
-        logo: SiTailwindcss,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500'
-      },
-      {
-        id: '3',
-        name: 'Node.js',
-        logo: SiNodedotjs,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-500'
-      },
-      {
-        id: '4',
-        name: 'MongoDB',
-        logo: SiMongodb,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-700'
-      },
-      {
-        id: '5',
-        name: 'Express',
-        logo: SiExpress,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-600'
-      }
-    ],
-    description:
-      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.'
   },
   {
     name: 'Thuyen Vien',
