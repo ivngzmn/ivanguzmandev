@@ -23,11 +23,58 @@ import { FaRegPaperPlane, FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
+    name: 'Pronto Coffee Co.',
+    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
+    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
+    imageSrc: Pronto,
+    cardAlign: 'lg:col-start-1',
+    imageAlt: 'Todo App',
+    icons: [
+      {
+        id: '1',
+        name: 'Html5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500'
+      },
+      {
+        id: '3',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '4',
+        name: 'MongoDB',
+        logo: SiMongodb,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-700'
+      },
+      {
+        id: '5',
+        name: 'Express',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
+      }
+    ],
+    description:
+      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.'
+  },
+  {
     name: 'Coin Forge',
     liveLink: 'https://coinforge.vercel.app/',
     githubLink: 'https://github.com/ivngzmn/coin-forge',
     imageSrc: CoinForge,
-    cardAlign: 'lg:col-start-1',
+    cardAlign: 'lg:col-start-5',
     imageAlt: 'Coin Forge',
     icons: [
       {
@@ -66,7 +113,7 @@ const projects = [
     liveLink: 'https://todo-auth-mvc.herokuapp.com/',
     githubLink: 'https://github.com/ivngzmn/todo-microsoft-auth-mvc',
     imageSrc: TodoMVP,
-    cardAlign: 'lg:col-start-5',
+    cardAlign: 'lg:col-start-1',
     imageAlt: 'Todo App',
     icons: [
       {
@@ -114,53 +161,6 @@ const projects = [
     ],
     description:
       'Users can login to their profile and find their list of notes. They can add new notes through an input, which they can then edit or delete all notes in their profile. Used EJS, Tailwind for the front end and MongoDB, Express, and Azure for the backend. Deployed on Heroku.'
-  },
-  {
-    name: 'Pronto Coffee Co.',
-    liveLink: 'https://pronto-coffee-co.herokuapp.com/',
-    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
-    imageSrc: Pronto,
-    cardAlign: 'lg:col-start-1',
-    imageAlt: 'Todo App',
-    icons: [
-      {
-        id: '1',
-        name: 'Html5',
-        logo: SiHtml5,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-orange-500'
-      },
-      {
-        id: '2',
-        name: 'Bootstrap',
-        logo: SiBootstrap,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500'
-      },
-      {
-        id: '3',
-        name: 'Node.js',
-        logo: SiNodedotjs,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-500'
-      },
-      {
-        id: '4',
-        name: 'MongoDB',
-        logo: SiMongodb,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-700'
-      },
-      {
-        id: '5',
-        name: 'Express',
-        logo: SiExpress,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-600'
-      }
-    ],
-    description:
-      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Bootstrap for the front end and Node, Express, MongoDB for the backend. Deployed on Render.'
   }
 ];
 
@@ -170,7 +170,10 @@ function classNames(...classes) {
 
 function RecentProjects() {
   return (
-    <div className="relative overflow-hidden bg-zinc-900 pt-16 pb-32">
+    <div
+      id="my-work"
+      className="relative overflow-hidden bg-zinc-900 pt-16 pb-32"
+    >
       {/* title */}
       <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
@@ -191,19 +194,12 @@ function RecentProjects() {
       </div>
       {/* project section */}
       <div className="relative mx-auto max-w-[100rem] ">
-        <div className="flex justify-end pb-10">
-          <Link href="/projects">
-            <a className="font-regular mr-2 flex w-[20rem] transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-base  text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:mr-4 lg:w-[22rem] lg:font-semibold">
-              <IoIosEye className="h-6 w-6" /> <span>View All Projects</span>
-            </a>
-          </Link>
-        </div>
         {/* <ProjectCard /> */}
         <div className="space-y-20 lg:space-y-64">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="rounded-xl bg-transparent pb-10 lg:relative lg:z-10 lg:pb-0 "
+              className="rounded-xl bg-transparent px-4 pb-10 lg:relative lg:z-10 lg:pb-0 "
             >
               <div className="lg:mx-auto lg:grid lg:max-w-full lg:grid-cols-12">
                 <div
@@ -215,13 +211,13 @@ function RecentProjects() {
                   <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
                     <div className="h-[30rem] w-full duration-500 ease-in-out sm:w-full lg:h-[800px]">
                       <Image
-                        className="h-full w-full rounded-xl object-center"
+                        className="h-full w-full rounded-xl object-cover object-center"
                         src={project.imageSrc}
                         alt={project.imageAlt}
                         objectFit="cover"
                         layout="fill"
                         placeholder="blur"
-                        quality={70}
+                        quality={65}
                       />
                     </div>
                   </div>
@@ -281,6 +277,13 @@ function RecentProjects() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-end py-10">
+          <Link href="/projects">
+            <a className="font-regular mr-2 flex w-[20rem] transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-base  text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:mr-4 lg:w-[22rem] lg:font-semibold">
+              <IoIosEye className="h-6 w-6" /> <span>View All Projects</span>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

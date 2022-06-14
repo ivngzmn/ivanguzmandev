@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" className="scroll-smooth duration-1000">
         <Head>
           <link
             rel="preload"

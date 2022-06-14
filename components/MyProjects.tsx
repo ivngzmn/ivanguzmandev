@@ -176,8 +176,8 @@ const projects = [
       },
       {
         id: '2',
-        name: 'Bootstrap',
-        logo: SiBootstrap,
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
         iconForeground: 'text-white',
         iconBackground: 'bg-sky-500'
       },
@@ -204,7 +204,7 @@ const projects = [
       }
     ],
     description:
-      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Bootstrap for the front end and Node, Express, MongoDB for the backend. Deployed on Render.'
+      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.'
   },
   {
     name: 'Thuyen Vien',
@@ -269,9 +269,10 @@ export default function myProjects() {
       <div className="relative mt-10 space-y-20 pt-2 lg:mt-20 lg:space-y-60">
         {/* <ProjectCard /> */}
         {projects.map((project) => (
+          // adjust the image here
           <div
             key={project.name}
-            className="rounded-xl bg-transparent pb-10 lg:relative lg:z-10 lg:pb-0"
+            className="rounded-xl bg-transparent px-4 lg:relative lg:z-10 lg:pb-0"
           >
             <div className="lg:mx-auto lg:grid lg:max-w-[100rem] lg:grid-cols-12">
               <div
@@ -280,7 +281,7 @@ export default function myProjects() {
                   'relative z-10 lg:col-span-8 lg:row-start-1 lg:py-0'
                 )}
               >
-                <div className="mx-auto max-w-3xl px-4 pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
+                <div className="mx-auto max-w-3xl pt-4 sm:max-w-3xl sm:px-6 lg:p-0">
                   <div className="h-[30rem] w-full duration-500 ease-in-out sm:w-full lg:h-[800px]">
                     <Image
                       className="h-full w-full rounded-xl object-center"
@@ -289,7 +290,7 @@ export default function myProjects() {
                       objectFit="cover"
                       layout="fill"
                       placeholder="blur"
-                      quality={70}
+                      quality={65}
                     />
                   </div>
                 </div>

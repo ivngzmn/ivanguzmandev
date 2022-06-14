@@ -45,8 +45,9 @@ export default function Hero() {
                 </span>
                 <p className="text-left text-base font-light leading-relaxed text-gray-50 sm:mt-1 sm:text-left sm:text-base md:mt-2 md:text-lg lg:mx-0 lg:mt-3 lg:text-left lg:text-xl lg:leading-normal">
                   I specialize on building (and occasionally designing) blazing
-                  fast web applications with React and Tailwind CSS. Currently,
-                  I'm focused on building accessible, human-centered products.
+                  fast web applications with Next.js and Tailwind CSS.
+                  Currently, I'm focused on building accessible, human-centered
+                  products.
                 </p>
                 <span className="flex max-w-prose items-center text-left text-base font-light text-gray-50 sm:mt-2 sm:text-left sm:text-base md:mt-3 md:text-lg lg:mx-0 lg:mt-2 lg:text-left lg:text-xl lg:leading-loose">
                   <MdLocationOn className=" mr-1 text-3xl text-red-600" /> Based
@@ -55,7 +56,7 @@ export default function Hero() {
               </div>
               <div className="sm:justify-left mt-5 sm:mt-8 sm:flex lg:justify-start lg:space-x-5">
                 <div className="rounded-md shadow">
-                  <Link href="/projects">
+                  <Link href="/#my-work" replace>
                     <a className="font-regular flex w-full transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8  py-3 text-base text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:font-semibold">
                       <IoIosEye className="h-6 w-6" />
                       <span>View my work</span>
