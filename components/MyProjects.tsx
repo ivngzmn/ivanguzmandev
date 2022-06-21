@@ -32,7 +32,7 @@ export default function MyProjects() {
     setActive(index);
   };
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-zinc-900 pb-48">
       <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
@@ -52,7 +52,7 @@ export default function MyProjects() {
       </div>
       {/* project nav */}
       <nav className="mx-auto mb-12 max-w-xl">
-        <ul className="flex flex-col items-center justify-evenly text-xl text-white md:flex-row">
+        <ul className="flex flex-row items-center justify-evenly text-xl text-white">
           {projectsNav.map((item, index) => {
             return (
               <li
@@ -81,7 +81,7 @@ export default function MyProjects() {
           // adjust the image here
           <div
             key={project.name}
-            className="rounded-xl bg-transparent px-4 lg:relative lg:z-10 lg:pb-0"
+            className="rounded-xl bg-transparent px-4 lg:relative lg:z-10 lg:px-6 lg:pb-0"
           >
             <div className="lg:mx-auto lg:grid lg:max-w-[100rem] lg:grid-cols-12">
               <div
@@ -124,7 +124,7 @@ export default function MyProjects() {
                       </a>
                     </Link>
                   </div>
-                  {/* remove link if field empty */}
+                  {/* remove link button if field empty */}
                   <div
                     className={classNames(
                       project.githubLink === '' ? 'hidden' : 'my-8',

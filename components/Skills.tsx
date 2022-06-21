@@ -1,120 +1,6 @@
 import React from 'react';
-import {
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiJavascript,
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiExpress,
-  SiGraphql,
-  SiMongodb,
-  SiGithub,
-  SiGit,
-  SiIterm2,
-  SiVisualstudiocode
-} from 'react-icons/si';
-
-const tech = [
-  {
-    title: 'HTML5',
-    icon: SiHtml5,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-orange-500'
-  },
-  {
-    title: 'CSS3',
-
-    icon: SiCss3,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-blue-500'
-  },
-  {
-    title: 'Tailwind CSS',
-
-    icon: SiTailwindcss,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-sky-500'
-  },
-  {
-    title: 'JavaScript',
-
-    icon: SiJavascript,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-yellow-500'
-  },
-  {
-    title: 'React',
-
-    icon: SiReact,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-cyan-400'
-  },
-  {
-    title: 'Next.js',
-
-    icon: SiNextdotjs,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-zinc-900'
-  },
-  {
-    title: 'Node.js',
-
-    icon: SiNodedotjs,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-green-500'
-  },
-  {
-    title: 'Express.js',
-
-    icon: SiExpress,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-zinc-700'
-  },
-  {
-    title: 'GraphQL',
-
-    icon: SiGraphql,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-pink-500'
-  },
-  {
-    title: 'MongoDB',
-
-    icon: SiMongodb,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-green-700'
-  },
-  {
-    title: 'GitHub',
-
-    icon: SiGithub,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-zinc-900'
-  },
-  {
-    title: 'Git',
-
-    icon: SiGit,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-red-500'
-  },
-  {
-    title: 'iTerm2',
-
-    icon: SiIterm2,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-zinc-700'
-  },
-  {
-    title: 'Visual Studio Code',
-
-    icon: SiVisualstudiocode,
-    iconForeground: 'text-white',
-    iconBackground: 'bg-blue-500'
-  }
-];
+// import data
+import { skills } from '../data/skillsData';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -129,48 +15,34 @@ function Skills() {
             <div className="block md:float-left">
               <span
                 className="text-6xl font-semibold leading-8 tracking-tight lg:text-8xl"
-                id="projects"
+                id="skills"
               >
-                Skills
+                Tech Stack
               </span>
               <h2 className="mt-5 text-3xl font-light tracking-normal text-slate-50 lg:text-4xl">
-                Technologies I am using. Always learning.
+                Technologies I am currently using. Always learning.
               </h2>
             </div>
           </div>
         </div>
       </div>
-      <section className="mx-auto max-w-[100rem] divide-y divide-zinc-700 overflow-hidden rounded-lg bg-zinc-700 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
-        {tech.map((item, itemIdx) => (
-          <div
-            key={item.title}
-            className={classNames(
-              itemIdx === 0
-                ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none'
-                : '',
-              itemIdx === 1 ? 'sm:rounded-tr-lg' : '',
-              itemIdx === tech.length - 2 ? 'sm:rounded-bl-lg' : '',
-              itemIdx === tech.length - 1
-                ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
-                : '',
-              'group relative bg-zinc-800 p-6'
-            )}
-          >
+      <section className="mx-auto grid max-w-[90rem] grid-cols-2 gap-2 divide-y-0 overflow-hidden rounded-lg lg:grid-cols-8">
+        {skills.map((skill) => (
+          <div key={skill.title} className={classNames()}>
             <section>
               <div className="flex flex-col items-center justify-center">
                 <div className="">
                   <span
                     className={classNames(
-                      item.iconBackground,
-                      item.iconForeground,
+                      skill.iconForeground,
                       'inline-flex rounded-lg p-3'
                     )}
                   >
-                    <item.icon className="h-10 w-10" aria-hidden="true" />
+                    <skill.icon className="h-16 w-16" aria-hidden="true" />
                   </span>
                 </div>
                 <div className="mt-5">
-                  <h3 className="text-2xl text-white">{item.title}</h3>
+                  <h3 className="text-2xl text-white">{skill.title}</h3>
                 </div>
               </div>
             </section>
