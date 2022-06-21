@@ -3,7 +3,8 @@ import {
   HeadContainer,
   Hero,
   Footer,
-  RecentProjects
+  RecentProjects,
+  Skills
 } from '../components';
 import RecentPosts from '../sections/RecentPosts';
 
@@ -17,13 +18,15 @@ function Home() {
       <section className="hero">
         <Hero />
       </section>
-      <section className="my-projects">
+      <section>
+        <Skills />
+      </section>
+      <section className="projects">
         <RecentProjects />
       </section>
       <section className="posts">
         <RecentPosts />
       </section>
-
       <section>
         <Footer />
       </section>

@@ -7,10 +7,8 @@ function Projects() {
       <Head>
         <title>Projects | Ivan Guzman</title>
       </Head>
-
       <Navbar />
       <MyProjects />
-      <Skills />
       <Footer />
     </>
   );
