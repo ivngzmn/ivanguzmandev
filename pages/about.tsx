@@ -1,4 +1,11 @@
-import { HeadContainer, Navbar, AboutMe, Bio, Footer } from '../components';
+import {
+  HeadContainer,
+  Navbar,
+  AboutMe,
+  Bio,
+  Footer,
+  BackToTopBtn
+} from '../components';
 import Head from 'next/head';
 
 function About() {
@@ -20,6 +27,7 @@ function About() {
       <section>
         <Footer />
       </section>
+      <BackToTopBtn />
     </>
   );
 }

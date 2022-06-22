@@ -1,4 +1,4 @@
-import { Navbar, MyProjects, Skills, Footer } from '../components';
+import { Navbar, MyProjects, Footer, BackToTopBtn } from '../components';
 import Head from 'next/head';
 
 function Projects() {
@@ -10,6 +10,7 @@ function Projects() {
       <Navbar />
       <MyProjects />
       <Footer />
+      <BackToTopBtn />
     </>
   );
 }

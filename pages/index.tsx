@@ -4,7 +4,8 @@ import {
   Hero,
   Footer,
   RecentProjects,
-  Skills
+  Skills,
+  BackToTopBtn
 } from '../components';
 import RecentPosts from '../sections/RecentPosts';
 
@@ -30,6 +31,7 @@ function Home() {
       <section>
         <Footer />
       </section>
+      <BackToTopBtn />
     </>
   );
 }

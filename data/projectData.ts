@@ -199,10 +199,10 @@ export const allProjects = [
     icons: [
       {
         id: '1',
-        name: 'React.js',
-        logo: SiReact,
+        name: 'HTML',
+        logo: SiHtml5,
         iconForeground: 'text-white',
-        iconBackground: 'bg-cyan-400'
+        iconBackground: 'bg-orange-500'
       },
       {
         id: '2',
@@ -227,6 +227,20 @@ export const allProjects = [
       },
       {
         id: '5',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '6',
+        name: 'Express',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
+      },
+      {
+        id: '7',
         name: 'Azure Active Directory',
         logo: SiMicrosoftazure,
         iconForeground: 'text-white',
@@ -438,6 +452,20 @@ export const allProjects = [
         logo: SiCss3,
         iconForeground: 'text-white',
         iconBackground: 'bg-blue-500'
+      },
+      {
+        id: '3',
+        name: 'Node.js',
+        logo: SiNodedotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-green-500'
+      },
+      {
+        id: '4',
+        name: 'Express.js',
+        logo: SiExpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-600'
       }
     ],
     description: `This project is the front end that consumes the Star Trek Guid to Aliens api that I built. Please take a look at the repo details for the Star Trek Guid to Aliens API Repo to experience the API to its fullest. Live long and prosper.`

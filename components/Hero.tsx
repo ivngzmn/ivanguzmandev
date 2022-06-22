@@ -1,4 +1,6 @@
-import Link from 'next/link';
+
+import { Link } from 'react-scroll'
+import NextLink from 'next/link'
 import Image from 'next/image';
 import { CameraIcon } from '@heroicons/react/solid';
 import { IoIosRocket, IoIosEye } from 'react-icons/io';
@@ -56,7 +58,7 @@ export default function Hero() {
               </div>
               <div className="sm:justify-left mt-5 sm:mt-8 sm:flex lg:justify-start lg:space-x-5">
                 <div className="rounded-md shadow">
-                  <Link href="/#my-work" replace>
+                  <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
                     <a className="font-regular flex w-full transform items-center justify-center space-x-3 rounded-md border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 px-8  py-3 text-base text-white transition duration-500 ease-in-out hover:-translate-y-1 hover:from-purple-700 hover:to-indigo-700 md:py-4 md:px-10 md:text-xl lg:font-semibold">
                       <IoIosEye className="h-6 w-6" />
                       <span>View my work</span>
@@ -64,12 +66,12 @@ export default function Hero() {
                   </Link>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <Link href="/contact">
+                  <NextLink href="/contact">
                     <a className="font-regular flex w-full transform items-center justify-center space-x-3 rounded-md border border-transparent bg-white px-8 py-3 text-base  text-indigo-700 transition duration-500 ease-in-out hover:-translate-y-1 hover:bg-indigo-100 md:py-4 md:px-10 md:text-xl lg:font-semibold">
                       <IoIosRocket className="h-6 w-6" />
                       <span>Hire me</span>
                     </a>
-                  </Link>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -81,9 +83,9 @@ export default function Hero() {
           <CameraIcon className="h-5 w-5" />
           <span>
             Photo by{' '}
-            <Link href={photographer.website}>
+            <NextLink href={photographer.website}>
               <a className="cursor-pointer underline">{photographer.name}</a>
-            </Link>
+            </NextLink>
           </span>
         </div>
       </div>
