@@ -21,7 +21,7 @@ const BackToTopBtn = () => {
     show && (
       <button
         onClick={() => scrollToTop()}
-        className="fixed right-24 bottom-24 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-violet-600 text-white transition-all hover:bg-violet-800"
+        className="fixed right-4 bottom-4 lg:right-14 lg:bottom-14 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-violet-600 text-white transition-all hover:bg-violet-800"
       >
         <ChevronUpIcon className="h-6 w-6" />
       </button>
