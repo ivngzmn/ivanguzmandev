@@ -9,7 +9,7 @@ function classNames(...classes) {
 function Skills() {
   return (
     <div className="bg-zinc-900 py-40">
-      <div className="relative mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[90rem] px-4 pb-10 sm:px-6 lg:px-8">
         <div className="mb-2 lg:mb-8">
           <div className="inline-block w-full py-10 lg:py-20">
             <div className="block md:float-left">
@@ -26,9 +26,9 @@ function Skills() {
           </div>
         </div>
       </div>
-      <section className="mx-auto grid max-w-[90rem] grid-cols-2 gap-2 divide-y-0 overflow-hidden rounded-lg lg:grid-cols-8">
+      <section className="mx-auto grid max-w-[90rem] grid-cols-2 gap-2 divide-y-0 overflow-hidden rounded-lg lg:grid-cols-5">
         {skills.map((skill) => (
-          <div key={skill.title} className={classNames()}>
+          <div key={skill.id} className={classNames()}>
             <section>
               <div className="flex flex-col items-center justify-center">
                 <div className="">
@@ -38,7 +38,7 @@ function Skills() {
                       'inline-flex rounded-lg p-3'
                     )}
                   >
-                    <skill.icon className="h-16 w-16" aria-hidden="true" />
+                    <skill.icon className="h-20 w-20" aria-hidden="true" />
                   </span>
                 </div>
                 <div className="mt-5">

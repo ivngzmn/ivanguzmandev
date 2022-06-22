@@ -7,7 +7,8 @@ import {
   Categories,
   PostWidget,
   Footer,
-  HeadContainer
+  HeadContainer,
+  BackToTopBtn
 } from '../components';
 
 import { getPosts } from '../services';
@@ -40,6 +41,7 @@ export default function BlogPosts({ posts }) {
         </div>
       </div>
       <Footer />
+      <BackToTopBtn />
     </>
   );
 }

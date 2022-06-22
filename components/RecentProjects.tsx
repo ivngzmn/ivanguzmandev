@@ -15,7 +15,6 @@ function classNames(...classes) {
 function RecentProjects() {
   return (
     <div
-      id="my-work"
       className="relative overflow-hidden bg-zinc-900 pt-16 pb-32"
     >
       {/* title */}
