@@ -29,9 +29,9 @@ function Skills() {
       <section className="mx-auto grid max-w-[90rem] grid-cols-2 gap-2 divide-y-0 overflow-hidden rounded-lg lg:grid-cols-5">
         {skills.map((skill) => (
           <div key={skill.id} className={classNames()}>
-            <section>
+            <section className="pb-5 lg:pb-7">
               <div className="flex flex-col items-center justify-center">
-                <div className="">
+                <div>
                   <span
                     className={classNames(
                       skill.iconForeground,
@@ -41,7 +41,7 @@ function Skills() {
                     <skill.icon className="h-20 w-20" aria-hidden="true" />
                   </span>
                 </div>
-                <div className="mt-5">
+                <div className="pt-0 lg:pt-2">
                   <h3 className="text-2xl text-white">{skill.title}</h3>
                 </div>
               </div>
