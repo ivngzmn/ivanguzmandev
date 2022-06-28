@@ -7,6 +7,8 @@ import starTrekApi from '../public/static/images/projects/starTrekApi.webp';
 import travelLandingPage from '../public/static/images/projects/travelLandingPage.webp';
 import pureNotes from '../public/static/images/projects/pureNotes.webp';
 import portfolio from '../public/static/images/projects/portfolio.webp';
+import tillysPromo from '../public/static/images/projects/tillys-promo.webp';
+import onyxPromo from '../public/static/images/projects/onyx-promo.webp';
 
 // icons
 import {
@@ -26,7 +28,9 @@ import {
   SiFirebase,
   SiGoogle,
   SiCss3,
-  SiWordpress
+  SiWordpress,
+  SiHandlebarsdotjs,
+  SiTwilio
 } from 'react-icons/si';
 
 // projects catagories
@@ -42,6 +46,9 @@ export const projectsNav = [
   },
   {
     name: 'full-stack'
+  },
+  {
+    name: 'email'
   }
 ];
 
@@ -469,5 +476,85 @@ export const allProjects = [
       }
     ],
     description: `This project is the front end that consumes the Star Trek Guid to Aliens api that I built. Please take a look at the repo details for the Star Trek Guid to Aliens API Repo to experience the API to its fullest. Live long and prosper.`
+  },
+  {
+    id: '9',
+    name: 'Onyx Coffee Promo',
+    category: 'email',
+    liveLink: 'https://onyxcoffee.netlify.app/',
+    githubLink: '',
+    imageSrc: onyxPromo,
+    imageAlt: 'Thuyen Vien Restaurant Website',
+    icons: [
+      {
+        id: '1',
+        name: 'HTML5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'CSS3',
+        logo: SiCss3,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
+      },
+      {
+        id: '3',
+        name: 'Handlebars.js',
+        logo: SiHandlebarsdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-[#F0772B]'
+      },
+      {
+        id: '4',
+        name: 'Twilio SendGrid',
+        logo: SiTwilio,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-[#F22F46]'
+      }
+    ],
+    description: `Promotional email for Onyx Coffee Lab made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`
+  },
+  {
+    id: '10',
+    name: 'Tillys Promo',
+    category: 'email',
+    liveLink: 'https://tillyssummersale.netlify.app/',
+    githubLink: '',
+    imageSrc: tillysPromo,
+    imageAlt: 'Thuyen Vien Restaurant Website',
+    icons: [
+      {
+        id: '1',
+        name: 'HTML5',
+        logo: SiHtml5,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-orange-500'
+      },
+      {
+        id: '2',
+        name: 'CSS3',
+        logo: SiCss3,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-500'
+      },
+      {
+        id: '3',
+        name: 'Handlebars.js',
+        logo: SiHandlebarsdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-[#F0772B]'
+      },
+      {
+        id: '4',
+        name: 'Twilio SendGrid',
+        logo: SiTwilio,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-[#F22F46]'
+      }
+    ],
+    description: `Promotional email for Onyx Tilly's made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`
   }
 ];
