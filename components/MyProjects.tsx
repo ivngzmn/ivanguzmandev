@@ -52,7 +52,7 @@ export default function MyProjects() {
       </div>
       {/* project nav */}
       <nav className="mx-auto mb-12 max-w-xl">
-        <ul className="flex flex-row items-center justify-evenly text-xl text-white">
+        <ul className="grid grid-cols-2 items-center justify-items-center text-xl text-white lg:grid-flow-col">
           {projectsNav.map((item, index) => {
             return (
               <li
