@@ -376,7 +376,7 @@ export const allProjects = [
     name: 'Belen Law',
     category: 'Front-End',
     liveLink: 'https://belengomezlaw.vercel.app/',
-    githubLink: 'https://github.com/ivngzmn/belen-law',
+    githubLink: '',
     imageSrc: belenLaw,
     imageAlt: 'Belen Gomez Attorney Website',
     icons: [
