@@ -157,7 +157,7 @@ export default function Navbar() {
                               </div>
                             </div>
                           </Menu.Item>
-                          <Menu.Item>
+                          {/* <Menu.Item>
                             {({ active }) => (
                               <a
                                 href="/resume"
@@ -171,7 +171,7 @@ export default function Navbar() {
                                 <RiExternalLinkLine className="absolute right-2 flex h-4 w-4" />
                               </a>
                             )}
-                          </Menu.Item>
+                          </Menu.Item> */}
                           <Menu.Item>
                             {({ active }) => (
                               <a
@@ -287,14 +287,14 @@ export default function Navbar() {
                     </div>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
-                    <a
+                    {/* <a
                       href="/resume"
                       className="flex items-center rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                     >
                       <FaRegFilePdf className="mr-2 inline-block h-4 w-4" />
                       <span className="">Resume</span>
                       <RiExternalLinkLine className="absolute right-4 h-4 w-4" />
-                    </a>
+                    </a> */}
                     <a
                       href="https://github.com/ivngzmn"
                       target="_blank"
