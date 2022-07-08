@@ -555,6 +555,6 @@ export const allProjects = [
         iconBackground: 'bg-[#F22F46]'
       }
     ],
-    description: `Promotional email for Onyx Tilly's made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`
+    description: `Promotional email for Tilly's made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`
   }
 ];
