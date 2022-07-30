@@ -11,13 +11,13 @@ function classNames(...classes) {
 }
 
 export default function MyProjects() {
-  const [item, setItem] = useState({ name: 'all' });
+  const [item, setItem] = useState({ name: 'all projects' });
   const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
     // get projects based on category
-    if (item.name === 'all') {
+    if (item.name === 'all projects') {
       setProjects(allProjects);
     } else {
       const newProjects = allProjects.filter((project) => {
@@ -51,8 +51,8 @@ export default function MyProjects() {
         </div>
       </div>
       {/* project nav */}
-      <nav className="mx-auto mb-12 max-w-xl">
-        <ul className="grid grid-cols-2 items-center justify-items-center text-xl text-white lg:grid-flow-col">
+      <nav className="mx-auto pb-12 max-w-2xl">
+        <ul className="grid grid-cols-2 gap-4 items-center text-xl lg:grid-flow-col">
           {projectsNav.map((item, index) => {
             return (
               <li
@@ -63,7 +63,7 @@ export default function MyProjects() {
                   active === index
                     ? 'font-semibold text-slate-50 underline decoration-violet-600 decoration-4 underline-offset-8'
                     : 'font-normal text-slate-400'
-                } m-4 cursor-pointer capitalize`}
+                } m-4 cursor-pointer capitalize col-span-1 text-center`}
                 key={index}
               >
                 {item.name}

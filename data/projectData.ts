@@ -36,7 +36,7 @@ import {
 // projects catagories
 export const projectsNav = [
   {
-    name: 'all'
+    name: 'all projects'
   },
   {
     name: 'front-end'
