@@ -9,7 +9,6 @@ import logoMarineDepot from '@/images/logos/marineDepot.jpeg'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
-  InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
@@ -170,10 +169,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Ivan Guzman</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="I’m Ivan Guzman. I live in Orange County, CA."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
