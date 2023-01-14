@@ -1,25 +1,42 @@
-![Portfolio](https://raw.githubusercontent.com/ivngzmn/ivanguzmandev/main/public/static/images/projects/MacBook-Pro-Portfolio.webp)
+# Spotlight
 
-# Portfolio Website with Blog
+Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
-My portfolio website made with Next.js, Tailwind CSS, TypeScript, GraphQL and GraphCMS for the blog. My website was inspired by @leerob's website.
+## Getting started
 
-## Lessons Learned
+To get started with this template, first install the npm dependencies:
 
-I had started to use React.js and wanted to give Next.js a try. Seeing @leerob's website gave me the inspiration to build my own website that was similar. As for getting the data I kept hearing about graphQL and since I am quite curious I decided to move forward with it. Coming from fetching data with REST api's was a bit of a challenge. The hardest part was getting the blog comments to work just right with GraphCMS. I kept getting errors that my mutations were not working so after a day of debugging and taking a few walks I figured out the issue. It turns out I needed to refresh my API token and grant it write access on GraphCMS. I do have to say console.log() saved the day on that one. Overall it was a great experience learning a new React library and new query language.
+```bash
+npm install
+```
 
-## Tech Stack
+Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
 
-**Client:** Next.js, TailwindCSS
+```
+NEXT_PUBLIC_SITE_URL=https://example.com
+```
 
-**Server:** Node, GraphQL
+Next, run the development server:
 
-## Deploy your own
+```bash
+npm run dev
+```
 
-Deploy the your own boilerplate using Vercel:
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Customizing
+
+You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+
+## Learn more
+
+To learn more about the technologies used in this site template, see the following resources:
+
+- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
+- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+- [MDX](https://mdxjs.com) - the MDX documentation
