@@ -259,7 +259,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Spencer, a software designer based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
       <Container className="mt-9">
@@ -268,10 +268,7 @@ export default function Home({ articles }) {
             Software engineer, father, and amateur drone pilot.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Ivan, a software engineer and entrepreneur based in Orange
-            County, CA. I’m the Front-End Engineer at Zeek Interactive, where we
-            develop technologies that empower businesses and startups to greater
-            heights.
+            I’m a Software Engineer at Zeek Interactive. I’m focused on building accessible, human-centered products.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -295,13 +292,13 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
+          {/*<div className="flex flex-col gap-16">*/}
+          {/*  {articles.map((article) => (*/}
+          {/*    <Article key={article.slug} article={article} />*/}
+          {/*  ))}*/}
+          {/*</div>*/}
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/*<Newsletter />*/}
             <Resume />
           </div>
         </div>
