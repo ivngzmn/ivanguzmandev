@@ -249,17 +249,17 @@ function Photos() {
     </div>
   )
 }
-
+// TODO:Need to pass articles into home when articles are ready
 export default function Home({ articles }) {
   return (
     <>
       <Head>
         <title>
-          Ivan Guzman - Software Engineer, father, and amateur drone pilot
+          Ivan Guzman - Software Engineer, father, and amateur drone pilot.
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Ivan, a Software Engineer, father, and amateur drone pilot."
         />
       </Head>
       <Container className="mt-9">
