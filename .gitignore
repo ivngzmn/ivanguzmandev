@@ -22,6 +22,8 @@ config.codekit3
 package-lock.json
 .vscode
 public/robots.txt
+.old-theme
+.idea
 
 # debug
 npm-debug.log*
