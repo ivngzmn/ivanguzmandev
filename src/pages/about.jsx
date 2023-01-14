@@ -179,10 +179,10 @@ export default function About() {
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
-            <div className="max-w-xs mx-auto px-2.5 lg:max-w-none">
+            <div className="max-w-fit mx-auto lg:max-w-none">
               <Image
                 src={portraitImage}
-                alt=""
+                alt="Black and White Portrait of Ivan Guzman"
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-auto rounded-md bg-zinc-100 object-cover dark:bg-zinc-800"
               />
