@@ -29,87 +29,81 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>Uses - Spencer Sharp</title>
+        <title>Uses - Ivan Guzman</title>
         <meta
           name="description"
           content="Software I use, gadgets I love, and other things I recommend."
         />
       </Head>
       <SimpleLayout
-        title="Software I use, gadgets I love, and other things I recommend."
+        title="Software I use, gadgets that I love, and other things I use on the daily."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
       >
         <div className="space-y-20">
           <ToolsSection title="Workstation">
-            <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
+            <Tool title="13-inch MacBook Pro, M1, (2020)">
               I was using an Intel-based 16” MacBook Pro prior to this and the
               difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
+              single time, even when launching Docker Desktop.
             </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
+            <Tool title="34-inch Dell Ultrasharp (USB-C) Monitor U3419W">
               The only display on the market if you want something HiDPI and
               bigger than 27”. When you’re working at planetary scale, every
               pixel you can get counts.
             </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
-              They don’t make keyboards the way they used to. I buy these any
-              time I see them go up for sale and keep them in storage in case I
-              need parts or need to retire my main.
+            <Tool title="BenQ ScreenBar Halo Monitor Light">
+              This light comes in great for those long hours in front of the screen.
+              My eyes are thankful for it.
             </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
+            <Tool title="Kinesis Advantage360 Split Ergonomic Keyboard KB360">
+              When it comes to all day comfort while coding away this keyboard is a life
+              saver on my wrists. It only took a few weeks to get used to the split keyboard layout.
+              Never going back to a regular keyboard.
             </Tool>
-            <Tool title="Herman Miller Aeron Chair">
-              If I’m going to slouch in the worst ergonomic position imaginable
-              all day, I might as well do it in an expensive chair.
+            <Tool title="Logitech MX Master 3 Mouse">
+              Something about using the MX moues feels so natural. I love the
+              scroll wheel and the thumb buttons. I use it for everything.
+            </Tool>
+            <Tool title="G-Drive 6TB (USB-C) External Hard Drive">
+              Backing up your data is important. Backup, backup, backup.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+            <Tool title="PhpStorm">
+              I use PhpStorm for all my PHP development. It’s fast, has great
+              support for Laravel, and has a great ecosystem of plugins.
             </Tool>
-            <Tool title="iTerm2">
+            <Tool title="Visual Studio Code">
+              I use VS Code for all other project outside of PHP. It&apos;s a text editor
+              what more can I say.
+            </Tool>
+            <Tool title="Fira Code NerdFont">
+              I love this font. It has great ligatures and is a great font for
+              coding.
+            </Tool>
+            <Tool title="Warp">
               I’m honestly not even sure what features I get with this that
-              aren’t just part of the macOS Terminal but it’s what I use.
+              aren’t just part of the macOS Terminal but It&apos;s fast and it&apos;s
+              simple. What more could you ask for? A great alternative to iTerm2.
             </Tool>
             <Tool title="TablePlus">
-              Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
-              over the years.
+              Great software for working with databases.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Design">
             <Tool title="Figma">
-              We started using Figma as just a design tool but now it’s become
-              our virtual whiteboard for the entire company. Never would have
-              expected the collaboration features to be the real hook.
+              Great for just getting ideas out of your head and into the browser.
             </Tool>
           </ToolsSection>
           <ToolsSection title="Productivity">
             <Tool title="Alfred">
-              It’s not the newest kid on the block but it’s still the fastest.
-              The Sublime Text of the application launcher world.
+              It&apos;s not the newest kid on the block but it’s still the fastest.
             </Tool>
-            <Tool title="Reflect">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it’s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
+            <Tool title="Raycast">
+              It&apos;s the new kid on the block. It has great support for custom plugins from the community.
             </Tool>
-            <Tool title="SavvyCal">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
-            </Tool>
-            <Tool title="Focus">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
+            <Tool title="Notion">
+              I use Notion for everything. It&apos;s my personal wiki, my todo lists, my calendar, and my notes.
             </Tool>
           </ToolsSection>
         </div>
