@@ -275,12 +275,12 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software engineer, father, and mechanical keyboard enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m a Software Engineer at Zeek Interactive. I’m focused on building accessible, human-centered products.
+            As a Software Engineer at Zeek Interactive, I specialize in creating accessible, human-centered products. My approach blends innovative technology with empathetic design, ensuring every project is not only technically sound but also intuitively usable. My commitment to continuous learning and adaptation keeps me at the forefront of software development trends, enabling me to bring cutting-edge solutions to the table.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
