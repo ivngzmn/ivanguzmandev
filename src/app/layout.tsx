@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
 
@@ -27,6 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <GoogleTagManager gtmId="	GTM-NQGNPP7" />
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <Providers>
           <div className="flex w-full">
