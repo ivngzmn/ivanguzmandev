@@ -5,15 +5,10 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
 import logo100Devs from '@/images/logos/100devs.png'
 import logoUber from '@/images/logos/uber.png'
 import logoZeek from '@/images/logos/zeek.png'
-import logoMarineDepot from '@/images/logos/marineDepot.jpeg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -158,7 +153,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-8 w-8 rounded-full" unoptimized />
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-8 w-8 rounded-full"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -208,13 +208,6 @@ function Resume() {
       logo: logoUber,
       start: '2019',
       end: '2020',
-    },
-    {
-      company: 'Marine Depot',
-      title: 'Shift Supervisor',
-      logo: logoMarineDepot,
-      start: '2016',
-      end: '2019',
     },
   ]
 
@@ -280,7 +273,13 @@ export default async function Home() {
             Software engineer, father, and mechanical keyboard enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            As a Software Engineer at Zeek Interactive, I specialize in creating accessible, human-centered products. My approach blends innovative technology with empathetic design, ensuring every project is not only technically sound but also intuitively usable. My commitment to continuous learning and adaptation keeps me at the forefront of software development trends, enabling me to bring cutting-edge solutions to the table.
+            As a Software Engineer at Zeek Interactive, I specialize in creating
+            accessible, human-centered products. My approach blends innovative
+            technology with empathetic design, ensuring every project is not
+            only technically sound but also intuitively usable. My commitment to
+            continuous learning and adaptation keeps me at the forefront of
+            software development trends, enabling me to bring cutting-edge
+            solutions to the table.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -307,15 +306,16 @@ export default async function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          {/* <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+          <div className="flex flex-col gap-16">
+            {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
-            ))}
-          </div> */}
+            ))} */}
+            <Resume />
+          </div>
           <div className="space-y-10">
             {/* TODO: padding to the container will need to be added once the newsletter is added lg:pl-16 xl:pl-24 */}
             {/* <Newsletter /> */}
-            <Resume />
+            {/* <Resume /> */}
           </div>
         </div>
       </Container>

@@ -1,5 +1,13 @@
 pre[class*='language-'] {
   color: theme('colors.zinc.100');
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.zinc.400') theme('colors.zinc.800');
+  border-radius: 5px;
 }
 
 .token.tag,

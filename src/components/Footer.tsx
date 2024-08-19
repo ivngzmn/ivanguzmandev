@@ -1,6 +1,8 @@
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
+import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
+import { SocialLink } from '@/components/SocialLink'
 
 function NavLink({
   href,
@@ -28,11 +30,15 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Ivan Guzman.
-              </p>
+
+              <div>
+                <p className="text-sm text-zinc-400 dark:text-zinc-500">
+                  &copy; {new Date().getFullYear()} Ivan Guzman.
+                </p>
+              </div>
             </div>
           </ContainerInner>
         </div>
