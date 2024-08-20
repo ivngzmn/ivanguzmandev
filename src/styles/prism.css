@@ -7,7 +7,6 @@ pre[class*='language-'] {
   }
   scrollbar-width: thin;
   scrollbar-color: theme('colors.zinc.400') theme('colors.zinc.800');
-  border-radius: 5px;
 }
 
 .token.tag,

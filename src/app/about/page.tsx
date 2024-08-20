@@ -2,20 +2,14 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  XIcon,
+  MailIcon,
+} from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.webp'
 import { SocialLink } from '@/components/SocialLink'
-
-function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'About',
@@ -32,7 +26,7 @@ export default function About() {
               src={portraitImage}
               alt="Image of Ivan Guzman"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square h-36 w-36 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 md:h-full md:w-full"
+              className="object-cover aspect-square h-36 w-36 rounded-xl bg-zinc-100 dark:bg-zinc-800 md:h-full md:w-full"
             />
           </div>
         </div>
@@ -40,7 +34,7 @@ export default function About() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             I’m Ivan Guzman. I live in Orange County, CA.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
             <p>
               I started my software engineering journey through working as a
               customer service supervisor at an e-commerce website. I taught
@@ -103,7 +97,7 @@ export default function About() {
             <SocialLink
               href="mailto:hello@ivanguzman.dev"
               icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
             >
               Send Me an Email
             </SocialLink>
