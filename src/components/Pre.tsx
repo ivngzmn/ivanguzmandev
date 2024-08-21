@@ -1,12 +1,14 @@
 'use client'
-
 import React, { Children, useState } from 'react'
 import { Check, Copy } from 'lucide-react'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-export const Pre = ({ children }: { children: React.ReactNode }) => {
+export const Pre = (
+  props: DetailedHTMLProps<HTMLAttributes<HTMLPreElement>, HTMLPreElement>,
+) => {
   const [isCopied, setIsCopied] = useState(false)
 
-  const code = Children.toArray(children).filter(
+  const code = Children.toArray(props.children).filter(
     (child) =>
       typeof child === 'object' && 'type' in child && child.type === 'code',
   )[0] as React.ReactElement
@@ -43,7 +45,7 @@ export const Pre = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="relative">
-      <pre>{children}</pre>
+      <pre {...props}>{props.children}</pre>
       <button
         onClick={copyToClipboard}
         className="absolute p-2 bg-gray-700 rounded-md right-2 top-2 hover:bg-gray-600"
