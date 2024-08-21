@@ -5,10 +5,11 @@ import preferencPane from './preference-pane.webp'
 import over9000 from './over-9000.gif'
 
 export const article = {
-    author: 'Ivan Guzman',
-    date: '2021-11-27',
-    title: 'Setting up your macOS terminal',
-    description: 'Tired of your boring native macOS terminal? Well, let\'s bring that zest back with iTerm2 and Oh-My-ZSH.'
+  author: 'Ivan Guzman',
+  date: '2021-11-27',
+  title: 'Setting up your macOS terminal',
+  description:
+    "Tired of your boring native macOS terminal? Well, let's bring that zest back with iTerm2 and Oh-My-ZSH.",
 }
 
 export const metadata = {
@@ -19,7 +20,6 @@ export const metadata = {
 export default (props) => <ArticleLayout article={article} {...props} />
 
 <Image src={ohMyZsh} alt="Image of Oh My Zsh settings in iTerm" />
-
 
 # Setting Up Your Terminal for Development
 
@@ -68,6 +68,7 @@ What is a Nerd Font? Well, it is a collection of custom fonts that have glyphs (
 You can also install the recommended font for the theme that we will be installing.
 
 Download these four ttf files:
+
 - [MesloLGS NF Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
 - [MesloLGS NF Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
 - [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
@@ -82,15 +83,15 @@ Go into iTerm2 preferences by pressing `CMD+i`, then going into your profile and
 ## Installing a Custom Terminal Theme
 
 This is the part where it gets really spicy. Let's get our terminal a nice theme. There are quite a few out there, but the theme that stole my heart was power level 9k, now even better at power level 10K. Run the following code to get the greatness:
-<Image src={over9000} alt="It's over 9000 - Vegeta" />
 
+<Image src={over9000} alt="It's over 9000 - Vegeta" />
 
 ```bash
 brew install romkatv/powerlevel10k/powerlevel10k
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
 
-Update the default ZSH theme in the `.zshrc` preferences file. You can do so with your favorite text editors such as Sublime, Vim, or VS Code. 
+Update the default ZSH theme in the `.zshrc` preferences file. You can do so with your favorite text editors such as Sublime, Vim, or VS Code.
 
 ```bash
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -107,7 +108,7 @@ You may be prompted to install the Meslo Nerd Font. If you already have a font t
 
 ## Installing plug-ins
 
-Now your terminal is nice and shiny. Oh My ZSH community has over 200+ plug-ins that can help you supercharge your terminal to your liking. You can also find other plug-ins on Github. Any plugins not in the Oh My ZSH repo can be installed by dropping them in the `~/.oh-my-zsh/plugins` directory. Enable a plugin by adding its name to the plugins array in your `.zshrc` file. 
+Now your terminal is nice and shiny. Oh My ZSH community has over 200+ plug-ins that can help you supercharge your terminal to your liking. You can also find other plug-ins on Github. Any plugins not in the Oh My ZSH repo can be installed by dropping them in the `~/.oh-my-zsh/plugins` directory. Enable a plugin by adding its name to the plugins array in your `.zshrc` file.
 
 ```bash
 plugins=(git zsh-autocomplete macos)
@@ -120,6 +121,7 @@ Just make sure zsh arrays are separated by whitespace (spaces, tabs, newlines...
 You may want to add a color theme as well, and you can do that by going into your iTerm2 preferences.
 
 To install theme:
+
 1. Type `Command` + `i` to open iTerm2 preferences
 2. Navigate to the Colors tab
 3. Click on Load Presets
