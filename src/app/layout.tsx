@@ -31,7 +31,7 @@ export default function RootLayout({
       {process.env.NODE_ENV === 'production' && (
         <GoogleTagManager gtmId="GTM-NQGNPP7" />
       )}
-      <body className="flex h-full bg-zinc-50 dark:bg-black">
+      <body className="flex h-full bg-zinc-50 dark:bg-zinc-900">
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
