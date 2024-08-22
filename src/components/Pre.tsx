@@ -49,7 +49,7 @@ export const Pre = (
       <pre {...props}>{props.children}</pre>
       <button
         onClick={copyToClipboard}
-        className="absolute p-2 rounded-md right-2 top-2 bg-zinc-700 hover:bg-zinc-600"
+        className="absolute z-10 p-2 rounded-md right-2 top-2 bg-zinc-700 hover:bg-zinc-600"
       >
         {isCopied ? (
           <Check className="w-4 h-4 text-green-500" />
