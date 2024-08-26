@@ -6,7 +6,8 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
-import { BriefcaseIcon, ArrowDownIcon } from '@/components/Icons'
+import { BriefcaseIcon, ArrowDownIcon, MailIcon } from '@/components/Icons'
+import { SocialLink } from '@/components/SocialLink'
 import logo100Devs from '@/images/logos/100devs.png'
 import logoUber from '@/images/logos/uber.png'
 import logoZeek from '@/images/logos/zeek.png'
@@ -31,47 +32,34 @@ function Article({ article }: { article: ArticleWithSlug }) {
   )
 }
 
-function SocialLink({
-  icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
-}) {
+function Newsletter() {
   return (
-    <Link className="p-1 -m-1 group" {...props}>
-      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
+    <form
+      action="/thank-you"
+      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
+    >
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <MailIcon className="flex-none w-6 h-6" />
+        <span className="ml-3">Stay up to date</span>
+      </h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        Get notified when I publish something new, and unsubscribe at any time.
+      </p>
+      <div className="flex mt-6">
+        <input
+          type="email"
+          placeholder="Email address"
+          aria-label="Email address"
+          required
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+        />
+        <Button type="submit" className="flex-none ml-4">
+          Join
+        </Button>
+      </div>
+    </form>
   )
 }
-
-// function Newsletter() {
-//   return (
-//     <form
-//       action="/thank-you"
-//       className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
-//     >
-//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-//         <MailIcon className="flex-none w-6 h-6" />
-//         <span className="ml-3">Stay up to date</span>
-//       </h2>
-//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-//         Get notified when I publish something new, and unsubscribe at any time.
-//       </p>
-//       <div className="flex mt-6">
-//         <input
-//           type="email"
-//           placeholder="Email address"
-//           aria-label="Email address"
-//           required
-//           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-//         />
-//         <Button type="submit" className="flex-none ml-4">
-//           Join
-//         </Button>
-//       </div>
-//     </form>
-//   )
-// }
 
 interface Role {
   company: string
@@ -247,15 +235,13 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {/* {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))} */}
             <Resume />
-          </div>
-          <div className="space-y-10">
-            {/* TODO: padding to the container will need to be added once the newsletter is added lg:pl-16 xl:pl-24 */}
-            {/* <Newsletter /> */}
-            {/* <Resume /> */}
+            <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">
+              Latest Posts
+            </h2>
+            {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))}
           </div>
         </div>
       </Container>

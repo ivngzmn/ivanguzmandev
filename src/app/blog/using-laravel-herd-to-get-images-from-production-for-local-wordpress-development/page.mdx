@@ -1,0 +1,174 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+import LaravelHerd from './laravel-herd-post.webp'
+
+export const article = {
+  author: 'Ivan Guzman',
+  date: '2023-01-14',
+  title:
+    'Using Laravel Herd to get images from production for local WordPress development',
+  description:
+    'Learn how to use Laravel Herd to manage your WordPress site and proxy media files from a remote site to your local environment.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={LaravelHerd} alt="" />
+
+When it comes to WordPress development, there are many ways to skin a cat. You can use a local development environment like <a href="https://localwp.com/" target="_blank" rel="noopener noreferrer">Local by Flywheel</a> or <a href="https://laravel.com/docs/11.x/valet" target="_blank" rel="noopener noreferrer">Valet</a> to get your WordPress site up and running. However, if you are like me and have other projects that use Laravel, you can use Laravel Herd to manage your WordPress site as well.
+
+In this article, we'll explore how to use Laravel Herd to manage your WordPress site and proxy media files from a remote site to your local environment. This approach can save you time and bandwidth by not needing to download the entire media library locally which can be a pain if you have a project with a large media library.
+
+## What is Laravel Herd?
+
+Laravel Herd is a wrapper for Laravel Valet that allows you to manage multiple Laravel projects on your local machine. It provides a simple way to switch between projects, start and stop them, and manage their dependencies. As a user-friendly interface for Valet, Herd lets you control the PHP version, database, and more with a simple and sleek interface. This wrapper simplifies the process of using Valet for local development.
+
+## Why use Laravel Herd for WordPress development?
+
+When working with WordPress, you often need to download the entire media library to your local environment. This can be time-consuming and consume a lot of bandwidth, especially if you have a large media library. By using Laravel Herd, you can proxy the media files from a remote site to your local environment, saving you time and bandwidth.
+
+## Creating a Custom Valet Driver
+
+To proxy media files from a remote site to your local environment, you can create a custom Valet driver. Here's an example of a custom Valet driver that proxies media files from a remote site to your local environment:
+
+```php
+<?php
+/**
+ * Class LocalValetDriver
+ *
+ * This class demonstrates how we might go about proxying any missing local images to a remote host. i.e; the production
+ * site. This has been created with WordPress in mind but could be adjusted to work with any other system.
+ */
+
+use Valet\Drivers\Specific\WordPressValetDriver;
+
+class LocalValetDriver extends WordPressValetDriver {
+
+	/** @var string The remote host to proxy requests to */
+	const REMOTE_HOST = 'https://example.com/';
+
+	/** @var string If the request URI starts with this, we want to proxy the request to the remote host */
+	const URI_PREFIX = '/wp-content/uploads/';
+
+	/** @var bool Whether or not to load the current request remotely */
+	private static $tryRemoteFallback = false;
+
+	/**
+	 * This method checks if we have the file on disk. If not, changes the domain of any requests for files within the
+	 * uploads directory to the remote domain. It also sets a flag that this request is now a remote request.
+	 *
+	 * @param string $sitePath
+	 * @param string $siteName
+	 * @param string $uri
+	 *
+	 * @return bool|false|string
+	 */
+	public function isStaticFile( $sitePath, $siteName, $uri ) {
+
+		$localFileFound = parent::isStaticFile( $sitePath, $siteName, $uri );
+
+		if ( $localFileFound ) {
+			return $localFileFound;
+		}
+
+		if ( self::stringStartsWith( $uri, self::URI_PREFIX ) ) {
+			self::$tryRemoteFallback = true;
+
+			return rtrim( self::REMOTE_HOST, '/' ) . $uri;
+		}
+
+		return false;
+	}
+
+	/**
+	 * This method checks if the remote flag is set and, if so, redirects the request by setting the Location header.
+	 *
+	 * @param string $staticFilePath
+	 * @param string $sitePath
+	 * @param string $siteName
+	 * @param string $uri
+	 */
+	public function serveStaticFile( string $staticFilePath, string $sitePath, string $siteName, string $uri ): void {
+		if ( self::$tryRemoteFallback ) {
+			header( "Location: $staticFilePath" );
+		} else {
+			parent::serveStaticFile( $staticFilePath, $sitePath, $siteName, $uri );
+		}
+	}
+
+	/**
+	 * @param string $string
+	 * @param string $startsWith
+	 *
+	 * @return bool
+	 */
+	private static function stringStartsWith( $string, $startsWith ) {
+		return strpos( $string, $startsWith ) === 0;
+	}
+}
+```
+
+## Code Walkthrough
+
+Let's break down the custom Valet driver code into manageable sections:
+
+### Class Overview
+
+The `LocalValetDriver` class extends Valet's base driver to provide custom functionality for serving static files. It's designed to handle local development for WordPress sites, with a fallback mechanism to fetch images from a remote production server when they're not available locally. This approach allows developers to work with a full set of media assets without needing to download all production images to their local environment.
+
+Key features of this class include:
+
+- Checking for static files locally before attempting to fetch them remotely
+- Redirecting requests to a remote server for specific URI patterns
+- Customizing the static file serving process to accommodate both local and remote files
+
+This driver enhances the local development experience by seamlessly integrating remote assets, particularly useful for WordPress sites with large media libraries.
+
+### Remote Host and URI Prefix Constants
+
+- `REMOTE_HOST`: Defines the production site URL where images are hosted.
+- `URI_PREFIX`: Identifies which URIs should be proxied (in this case, files in the WordPress uploads directory).
+
+### `isStaticFile` Method
+
+This method checks if the requested file exists locally. If not, it sets up the remote fallback:
+
+1. First, it checks if the file exists locally using the parent method.
+2. If the local file is not found and the URI starts with the specified prefix, it sets a flag for remote fallback and returns the remote URL.
+
+### `serveStaticFile` Method
+
+This method handles serving the file:
+
+- If the remote fallback flag is set, it redirects to the remote URL.
+- Otherwise, it serves the local file using the parent method.
+
+### `stringStartsWith` Method
+
+A utility method to check if a string starts with a specific substring. It's used to determine if the requested URI matches the prefix for remote proxying.
+
+## Conclusion
+
+Using Laravel Herd for WordPress development, especially with the custom Valet driver we've explored, can significantly streamline your local development process. By proxying media files from your production site, you can save time and bandwidth, particularly when working with large WordPress sites.
+
+This approach allows you to:
+
+1. Quickly set up a local WordPress environment
+2. Work with a full set of media assets without downloading the entire library
+3. Seamlessly switch between different projects and PHP versions
+
+Remember to adjust the `REMOTE_HOST` constant in the custom Valet driver to match your production site's URL. With this setup, you'll be able to focus more on development and less on managing your local environment.
+
+## Get in Touch
+
+Did you find this article helpful? Do you have any questions or want to chat about WordPress development, Laravel Herd, or web development in general? I'd love to hear from you!
+
+Reach out to me on [X/Twitter](https://x.com/inadequate_Dev) - let's continue the conversation.
+
+Happy coding!
