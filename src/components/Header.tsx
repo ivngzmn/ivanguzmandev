@@ -1,7 +1,6 @@
 'use client'
 
 import { Fragment, useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
@@ -158,7 +157,7 @@ function clamp(number: number, a: number, b: number) {
   return Math.min(Math.max(number, min), max)
 }
 
-function AvatarContainer({
+function LogoContainer({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<'div'>) {
@@ -166,7 +165,7 @@ function AvatarContainer({
     <div
       className={clsx(
         className,
-        'h-14 w-14 rounded-sm bg-zinc-900 p-1 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        'h-14 w-14 rounded-sm bg-zinc-900/90 py-1 backdrop-blur-sm dark:bg-zinc-50/10 dark:ring-white/10',
       )}
       {...props}
     />
@@ -274,9 +273,9 @@ export function Header() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
-                <AvatarContainer>
+                <LogoContainer>
                   <Logo />
-                </AvatarContainer>
+                </LogoContainer>
               </div>
               <div className="flex justify-end flex-1 md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />

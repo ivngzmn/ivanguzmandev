@@ -1,7 +1,6 @@
 import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
-import LogoIcon from '@/images/logos/logo.svg'
+import { SiteLogo } from '@/components/Icons'
 
 export function Logo({
   large = false,
@@ -17,17 +16,7 @@ export function Logo({
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
-      <Image
-        src={LogoIcon}
-        alt=""
-        sizes={large ? '4rem' : '2.25rem'}
-        className={clsx(
-          'rounded-sm bg-zinc-900 object-cover p-1 dark:bg-zinc-800',
-          large ? 'h-14 w-14' : 'h-12 w-12',
-        )}
-        priority
-        unoptimized
-      />
+      <SiteLogo className="w-full h-full fill-zinc-100 dark:fill-zinc-50" />
     </Link>
   )
 }
