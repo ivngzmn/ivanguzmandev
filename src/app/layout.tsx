@@ -19,6 +19,14 @@ export const metadata: Metadata = {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
     },
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ivan Guzman',
+    description:
+      'Software engineer, father, and mechanical keyboard enthusiast.',
+    creator: '@inadequate_Dev',
+    images: ['https://www.ivanguzman.dev/opengraph-image.png'],
+  },
 }
 
 export default function RootLayout({
