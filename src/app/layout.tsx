@@ -7,6 +7,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ivanguzman.dev'),
   title: {
     template: '%s - Ivan Guzman',
     default:
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ivan Guzman',
+    title: '%s - Ivan Guzman',
     description:
       'Software engineer, father, and mechanical keyboard enthusiast.',
     creator: '@inadequate_Dev',
