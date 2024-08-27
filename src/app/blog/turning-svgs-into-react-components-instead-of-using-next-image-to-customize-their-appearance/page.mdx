@@ -1,0 +1,94 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import { EyeIcon } from '@/components/Icons'
+import PostImage from './next-image-post.webp'
+import FrustratedGranny from './frustrated-granny.webp'
+
+export const article = {
+  author: 'Ivan Guzman',
+  date: '2024-08-26',
+  title:
+    'Turning SVGs into React components instead of using next/image to customize their appearance',
+  description:
+    'Learn how to turn SVGs into React components and update their appearance using Tailwind CSS for light and dark mode.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={PostImage} className="h-full w-fit" />
+
+Have you ever been frustrated attempting to update your SVG that you imported into your Next.js project using the `next/image` component? You might have tried to update the SVG's color, size, or stroke, but it didn't work as expected. In this article, we'll explore how to turn SVGs into React components and update their appearance using Tailwind CSS for light and dark mode.
+
+<Image src={FrustratedGranny} className="h-full w-fit" unoptimized />
+
+## Why turn SVGs into React components?
+
+When you import an SVG into your Next.js project using the `next/image` component, you might run into issues when trying to customize its appearance. The `next/image` component is designed to optimize images for performance, but it doesn't provide a way to customize SVGs. If you want to update the SVG's color, size, or stroke, you'll need to use a different approach.
+
+By turning SVGs into React components, you can customize their appearance using CSS. You can update the SVG's color, size, or stroke by applying CSS classes or inline styles. This approach gives you more flexibility and control over the SVG's appearance, making it easier to update its style based on your design requirements.
+
+### Benefits of turning SVGs into React components
+
+- **Better performance**: React components are more efficient than embedding SVGs as images, especially for frequently used icons. You also avoid using the `unoptimized` prop on the `next/image` component, which can affect performance optimization.
+
+- **Enhanced security**: No need to use `dangerouslySetInnerHTML` or configure `dangerouslyAllowSVG` in `next.config.js`, reducing potential security risks.
+
+- **Improved type safety**: When SVGs are React components, you get better TypeScript support and type checking for props, as seen in our `EyeIcon` component definition.
+
+- **Consistency**: Treating SVGs as components ensures a consistent approach to using icons throughout your application, making it easier to manage and update them.
+
+- **Dynamic modifications**: You can easily modify SVG content based on props or state, enabling dynamic icons that can change based on user interactions or application state.
+
+- **Improved accessibility**: You can easily add ARIA attributes and other accessibility features to your SVG components, making your application more inclusive.
+
+- **Simplified theming**: As shown in our example below with light and dark mode, you can easily implement theme-based styling for your SVG components using Tailwind CSS or other styling solutions.
+
+These benefits make SVG React components a powerful tool for managing icons and vector graphics in your Next.js projects.
+
+## Turning SVGs into React components
+
+Let's get an SVG from font awesome. I know I know you can use the font awesome library but for this example, we are goieng to use the SVG directly ase you may not always be using an SVG icon that has a library.
+
+```SVG
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+</svg>
+```
+
+Now let's create a React component for the SVG that may be located in your `components` folder. We have gone ahead and cleaned up the SVG and added the necessary React component boilerplate:
+
+```jsx
+export function EyeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 576 512"
+      {...props}
+    >
+      <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
+    </svg>
+  )
+}
+```
+
+Here we have created a React component called `EyeIcon` that accepts props and renders the SVG. You can now import this component into your project and use it like any other React component. You can customize the SVG's appearance by applying CSS classes or inline styles to the component.
+
+```jsx
+<EyeIcon className="h-10 w-10 fill-zinc-900 dark:fill-zinc-50" />
+```
+
+Here is how it would look below (feel free to toggle the light and dark mode on the site to see the changes):
+
+<EyeIcon className="h-10 w-10 fill-zinc-900 dark:fill-zinc-50" />
+
+## Conclusion
+
+Turning SVGs into React components is a powerful technique for managing icons and vector graphics in your Next.js projects. By following the steps outlined in this article, you can easily turn SVGs into React components and update their appearance using Tailwind CSS or other styling methods for light and dark mode. This technique will help you create a more flexible and maintainable codebase, making it easier to manage and update your icons and vector graphics on the fly.
+
+If you have any questions or comments, please feel free to reach out to me on [X/Twitter](https://x.com/inadequate_Dev).
