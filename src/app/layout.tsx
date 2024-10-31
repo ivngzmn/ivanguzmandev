@@ -1,10 +1,12 @@
 import { type Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 import { GoogleTagManager } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ivanguzman.dev'),
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     images: ['https://www.ivanguzman.dev/opengraph-image.png'],
   },
 }
-
+const CrispWithNoSSR = dynamic(() => import('@/components/Crisp'))
 export default function RootLayout({
   children,
 }: {
@@ -40,6 +42,8 @@ export default function RootLayout({
       {process.env.NODE_ENV === 'production' && (
         <GoogleTagManager gtmId="GTM-NQGNPP7" />
       )}
+      <CrispWithNoSSR />
+
       <body className="flex h-full bg-zinc-50 dark:bg-zinc-900">
         <Providers>
           <div className="flex w-full">

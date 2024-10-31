@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.20",
     "cheerio": "^1.0.0",
     "clsx": "^1.2.1",
+    "crisp-sdk-web": "^1.0.25",
     "fast-glob": "^3.3.2",
     "feed": "^4.2.2",
     "lucide-react": "^0.429.0",
