@@ -1,5 +1,4 @@
 import Image, { type ImageProps } from 'next/image'
-import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
@@ -36,16 +35,16 @@ function Newsletter() {
   return (
     <form
       action="/thank-you"
-      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="flex-none w-6 h-6" />
+        <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
-      <div className="flex mt-6">
+      <div className="mt-6 flex">
         <input
           type="email"
           placeholder="Email address"
@@ -53,7 +52,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
-        <Button type="submit" className="flex-none ml-4">
+        <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
       </div>
@@ -80,17 +79,17 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image
           src={role.logo}
           alt=""
-          className="w-8 h-8 rounded-full"
+          className="h-8 w-8 rounded-full"
           unoptimized
         />
       </div>
-      <dl className="flex flex-wrap flex-auto gap-x-2">
+      <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
@@ -140,9 +139,9 @@ function Resume() {
   ]
 
   return (
-    <div className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="flex-none w-6 h-6" />
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
@@ -153,7 +152,7 @@ function Resume() {
       <Button
         href="https://www.linkedin.com/in/ivan-j-guzman/"
         variant="primary"
-        className="w-full mt-6 group"
+        className="group mt-6 w-full"
         target="_blank"
       >
         View my LinkedIn
@@ -168,7 +167,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -181,7 +180,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         ))}
@@ -209,7 +208,7 @@ export default async function Home() {
             software development trends, enabling me to bring cutting-edge
             solutions to the table.
           </p>
-          <div className="flex gap-6 mt-6">
+          <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com/inadequate_dev"
               aria-label="Follow on X/Twitter"
@@ -233,15 +232,17 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-x-14 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            <Resume />
             <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">
               Latest Posts
             </h2>
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
+          </div>
+          <div>
+            <Resume />
           </div>
         </div>
       </Container>
