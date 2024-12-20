@@ -26,7 +26,7 @@ export default function About() {
               src={portraitImage}
               alt="Image of Ivan Guzman"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="object-cover aspect-square h-36 w-36 rounded-xl bg-zinc-100 dark:bg-zinc-800 md:h-full md:w-full"
+              className="aspect-square h-36 w-36 rounded-xl bg-zinc-100 object-cover dark:bg-zinc-800 md:h-full md:w-full"
             />
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function About() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             I’m Ivan Guzman. I live in Orange County, CA.
           </h1>
-          <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I started my software engineering journey through working as a
               customer service supervisor at an e-commerce website. I taught
@@ -61,11 +61,6 @@ export default function About() {
               Networking Security. When I am not deep in code I spend my free
               tending to my coral reef aquarium, being a father, and enjoying
               time with friends and family.
-            </p>
-            <p>
-              Today, I&apos;m a Software Engineer at of Zeek Interactive, where
-              I&apos;m working on developing and maintain applications with PHP,
-              JavaScript, and Tailwind CSS.
             </p>
           </div>
         </div>
@@ -97,7 +92,7 @@ export default function About() {
             <SocialLink
               href="mailto:hello@ivanguzman.dev"
               icon={MailIcon}
-              className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
+              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
               Send Me an Email
             </SocialLink>
