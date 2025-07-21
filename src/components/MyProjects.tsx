@@ -120,7 +120,7 @@ export function MyProjects({ token }: MyProjectsProps) {
                     className={classNames(
                       icon.iconBackground,
                       icon.iconForeground,
-                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full',
+                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
                     )}
                   >
                     <icon.logo className="h-5 w-5" aria-hidden="true" />

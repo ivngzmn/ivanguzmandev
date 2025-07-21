@@ -215,7 +215,7 @@ export const allProjects: Project[] = [
     ],
     description:
       'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.',
-    isPrivate: false,
+    isPrivate: true,
   },
   {
     id: '2',
