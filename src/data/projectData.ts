@@ -5,7 +5,6 @@ import prontoCoffeeCo from '../../public/projects/prontoCoffeeCo.webp'
 import starTrekApi from '../../public/projects/starTrekApi.webp'
 import travelLandingPage from '../../public/projects/travelLandingPage.webp'
 import pureNotes from '../../public/projects/pureNotes.webp'
-import portfolio from '../../public/projects/portfolio.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
 import onyxPromo from '../../public/projects/onyx-promo.webp'
 
@@ -31,6 +30,29 @@ import {
   SiHandlebarsdotjs,
   SiTwilio,
 } from 'react-icons/si'
+import React from 'react'
+import type { StaticImageData } from 'next/image'
+
+// project types
+export type Project = {
+  // id, name, category, liveLink, githubLink, imageSrc, imageAlt, icons array, description
+  id: string
+  name: string
+  category: string
+  imageSrc: string | StaticImageData
+  imageAlt: string
+  liveLink?: string
+  githubLink?: string
+  icons: Array<{
+    id: string
+    name: string
+    logo: React.ComponentType
+    iconForeground: string
+    iconBackground: string
+  }>
+  description: string
+  isPrivate?: boolean
+}
 
 // projects categories
 export const projectsNav = [
@@ -145,7 +167,7 @@ export const recentProjects = [
 
 // all projects for projects page
 
-export const allProjects = [
+export const allProjects: Project[] = [
   {
     id: '1',
     name: 'Pronto Coffee Co.',
@@ -193,6 +215,7 @@ export const allProjects = [
     ],
     description:
       'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.',
+    isPrivate: false,
   },
   {
     id: '2',
@@ -255,42 +278,8 @@ export const allProjects = [
     ],
     description:
       'A Notes app with Azure AD authentication with use of MongoDB Atlas. Users can login to their profile and find their list of Notes. They can add new Notes through an input, which they can then edit or delete all Notes in their profile.',
+    isPrivate: false,
   },
-  // TODO: need to update the portfolio project
-  // {
-  //   id: '3',
-  //   name: 'Portfolio',
-  //   category: 'Full-Stack',
-  //   liveLink: '',
-  //   githubLink: 'https://github.com/ivngzmn/ivanguzmandev',
-  //   imageSrc: portfolio,
-  //   imageAlt: 'Portfolio',
-  //   icons: [
-  //     {
-  //       id: '1',
-  //       name: 'Next.js',
-  //       logo: SiNextdotjs,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-zinc-700'
-  //     },
-  //     {
-  //       id: '2',
-  //       name: 'Tailwind CSS',
-  //       logo: SiTailwindcss,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-sky-500'
-  //     },
-  //     {
-  //       id: '3',
-  //       name: 'TypeScript',
-  //       logo: SiTypescript,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-blue-500'
-  //     }
-  //   ],
-  //   description:
-  //     'Personal website that you are checking out. I wanted to build a fast website and also wanted to dive deeper into Next.js and Tailwind CSS. Once I got further into development I decided to add a blog portion and integrated GraphQL with GraphCMS for the blog post delivery. Deployed on Vercel.'
-  // },
   {
     id: '4',
     name: 'Coin Forge',
@@ -330,6 +319,7 @@ export const allProjects = [
       },
     ],
     description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`,
+    isPrivate: false,
   },
   {
     id: '5',
@@ -363,6 +353,7 @@ export const allProjects = [
       },
     ],
     description: `This is a restaurant website that I built for a local vegan restaurant. I wanted to make a website that was simple and easy to use. I used Bootstrap for the styling and Javascript for the animations.`,
+    isPrivate: false,
   },
   {
     id: '6',
@@ -396,6 +387,7 @@ export const allProjects = [
       },
     ],
     description: `This website is for Attorney Belen Gomez, APC. She had built her own website via WordPress but was having trouble with styling and SEO. We came of with a plan to modernize her website. We are in the works to add WordPress API as a headless CMS so that she and her team can update the website as they desire.`,
+    isPrivate: false,
   },
   {
     id: '7',
@@ -429,6 +421,7 @@ export const allProjects = [
       },
     ],
     description: `An Airbnb inspired landing page with emphasis on learning more about CSS Grid. When working with this project there is a ton that goes into grid as well as flex. One of the great things about grid is that you are able to quickly scaffold your columns and rows.`,
+    isPrivate: false,
   },
   {
     id: '8',
@@ -469,6 +462,7 @@ export const allProjects = [
       },
     ],
     description: `This project is the front end that consumes the Star Trek Guid to Aliens api that I built. Please take a look at the repo details for the Star Trek Guid to Aliens API Repo to experience the API to its fullest. Live long and prosper.`,
+    isPrivate: false,
   },
   {
     id: '9',
@@ -509,6 +503,7 @@ export const allProjects = [
       },
     ],
     description: `Promotional email for Onyx Coffee Lab made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
+    isPrivate: false,
   },
   {
     id: '10',
@@ -549,5 +544,6 @@ export const allProjects = [
       },
     ],
     description: `Promotional email for Tilly's made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
+    isPrivate: false,
   },
 ]

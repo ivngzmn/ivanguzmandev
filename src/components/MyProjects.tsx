@@ -23,24 +23,32 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function MyProjects() {
+// interface
+interface MyProjectsProps {
+  token?: string
+}
+
+export function MyProjects({ token }: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
+  const isAuthorized = token === process.env.NEXT_PUBLIC_FEATURE_TOKEN
 
   useEffect(() => {
-    // get projects based on category
-    if (item.name === 'all projects') {
-      // @ts-ignore
-      setProjects(allProjects)
-    } else {
-      const newProjects = allProjects.filter((project) => {
-        return project.category.toLowerCase() === item.name
-      })
-      // @ts-ignore
-      setProjects(newProjects)
+    // start with all, then:
+    let filtered = allProjects
+      // 1) hide any private entries unless authorized
+      .filter((project) => !project.isPrivate || isAuthorized)
+
+    // 2) then category-filter
+    if (item.name !== 'all projects') {
+      filtered = filtered.filter(
+        (project) => project.category.toLowerCase() === item.name,
+      )
     }
-  }, [item])
+
+    setProjects(filtered)
+  }, [item, token, isAuthorized])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
