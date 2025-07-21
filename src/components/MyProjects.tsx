@@ -37,6 +37,7 @@ export function MyProjects({ token }: MyProjectsProps) {
   const isAuthorized = !!token && !!flag && token === flag
   console.log('isAuthorized:', isAuthorized)
   console.log('token:', token)
+  console.log('flag:', flag)
 
   useEffect(() => {
     let filtered = allProjects.filter(
