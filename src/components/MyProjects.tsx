@@ -35,9 +35,6 @@ export function MyProjects({ token }: MyProjectsProps) {
 
   const flag = process.env.NEXT_PUBLIC_FEATURE_TOKEN
   const isAuthorized = !!token && !!flag && token === flag
-  console.log('isAuthorized:', isAuthorized)
-  console.log('token:', token)
-  console.log('flag:', flag)
 
   useEffect(() => {
     let filtered = allProjects.filter(
