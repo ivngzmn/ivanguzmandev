@@ -7,6 +7,7 @@ import travelLandingPage from '../../public/projects/travelLandingPage.webp'
 import pureNotes from '../../public/projects/pureNotes.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
 import onyxPromo from '../../public/projects/onyx-promo.webp'
+import placeHolder from '../../public/projects/placeholder.webp'
 
 // icons
 import {
@@ -168,6 +169,189 @@ export const recentProjects = [
 // all projects for projects page
 
 export const allProjects: Project[] = [
+  {
+    id: '11',
+    name: 'Zeek.com',
+    category: 'Full-Stack',
+    liveLink: 'https://zeek.com/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'Zeek.com Website',
+    icons: [
+      {
+        id: '1',
+        name: 'Next.js',
+        logo: SiNextdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-black',
+      },
+      {
+        id: '2',
+        name: 'TypeScript',
+        logo: SiTypescript,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-600',
+      },
+      {
+        id: '3',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500',
+      },
+    ],
+    description: `Modernized Zeek's web presence with a performant, accessible, and SEO-friendly Next.js site. Integrated with headless CMS for easy content management.`,
+    isPrivate: true,
+  },
+  {
+    id: '12',
+    name: 'MarcPro.com',
+    category: 'Full-Stack',
+    liveLink: 'https://marcpro.com/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'MarcPro.com Website',
+    icons: [
+      {
+        id: '1',
+        name: 'Next.js',
+        logo: SiNextdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-black',
+      },
+      {
+        id: '2',
+        name: 'TypeScript',
+        logo: SiTypescript,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-600',
+      },
+      {
+        id: '3',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500',
+      },
+    ],
+    description: `Rebuilt MarcPro's e-commerce platform with Next.js, improving performance, SEO, and user experience. Integrated with Shopify and custom APIs.`,
+    isPrivate: true,
+  },
+  {
+    id: '13',
+    name: 'Conversations with Bill Kristol',
+    category: 'Front-End',
+    liveLink: 'https://conversationswithbillkristol.org/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'Conversations with Bill Kristol Website',
+    icons: [
+      {
+        id: '1',
+        name: 'WordPress',
+        logo: SiWordpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-700',
+      },
+      {
+        id: '2',
+        name: 'React',
+        logo: SiReact,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-cyan-400',
+      },
+    ],
+    description: `Developed a custom WordPress theme and React components for a video-rich interview archive, focusing on accessibility and editorial flexibility.`,
+    isPrivate: true,
+  },
+  {
+    id: '14',
+    name: 'Rise Game',
+    category: 'Full-Stack',
+    liveLink: 'https://risegame.com/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'Rise Game Website',
+    icons: [
+      {
+        id: '1',
+        name: 'Next.js',
+        logo: SiNextdotjs,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-black',
+      },
+      {
+        id: '2',
+        name: 'TypeScript',
+        logo: SiTypescript,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-blue-600',
+      },
+      {
+        id: '3',
+        name: 'Tailwind CSS',
+        logo: SiTailwindcss,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-sky-500',
+      },
+    ],
+    description: `Built a scalable web platform for Rise Game, integrating real-time features and gamification elements using Next.js and TypeScript.`,
+    isPrivate: true,
+  },
+  {
+    id: '15',
+    name: 'APFA.org',
+    category: 'Full-Stack',
+    liveLink: 'https://apfa.org/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'APFA.org Website',
+    icons: [
+      {
+        id: '1',
+        name: 'WordPress',
+        logo: SiWordpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-700',
+      },
+      {
+        id: '2',
+        name: 'React',
+        logo: SiReact,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-cyan-400',
+      },
+    ],
+    description: `Led the redesign and development of APFA's member portal, improving usability, accessibility, and content management workflows.`,
+    isPrivate: true,
+  },
+  {
+    id: '16',
+    name: 'CalFund.org',
+    category: 'Full-Stack',
+    liveLink: 'https://calfund.org/',
+    githubLink: '',
+    imageSrc: placeHolder,
+    imageAlt: 'CalFund.org Website',
+    icons: [
+      {
+        id: '1',
+        name: 'WordPress',
+        logo: SiWordpress,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-zinc-700',
+      },
+      {
+        id: '2',
+        name: 'React',
+        logo: SiReact,
+        iconForeground: 'text-white',
+        iconBackground: 'bg-cyan-400',
+      },
+    ],
+    description: `Implemented a modern, accessible, and mobile-friendly site for California Community Foundation, integrating donation workflows and custom content types.`,
+    isPrivate: true,
+  },
   {
     id: '1',
     name: 'Pronto Coffee Co.',
