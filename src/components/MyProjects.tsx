@@ -128,19 +128,31 @@ export function MyProjects({ token }: MyProjectsProps) {
                 ),
               )}
             </div>
-            {/* 
-            // TODO: Update the links and ensure that each project has a github link and deployed link
-            // TODO: add better descriptions for each project
+
             <div className="flex gap-5">
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">github.com</span>
-              </p>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">View Site</span>
-              </p>
-            </div> */}
+              {project.githubLink && project.githubLink.trim() !== '' && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                >
+                  <FaGithub className="h-6 w-6 flex-none" />
+                  <span className="ml-2">GitHub</span>
+                </a>
+              )}
+              {project.liveLink && project.liveLink.trim() !== '' && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                >
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">View Site</span>
+                </a>
+              )}
+            </div>
           </Card>
         ))}
       </ul>
