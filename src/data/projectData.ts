@@ -170,7 +170,7 @@ export const recentProjects = [
 
 export const allProjects: Project[] = [
   {
-    id: '11',
+    id: '1',
     name: 'Zeek.com',
     category: 'Full-Stack',
     liveLink: 'https://zeek.com/',
@@ -180,10 +180,10 @@ export const allProjects: Project[] = [
     icons: [
       {
         id: '1',
-        name: 'Next.js',
-        logo: SiNextdotjs,
+        name: 'WordPress',
+        logo: SiWordpress,
         iconForeground: 'text-white',
-        iconBackground: 'bg-black',
+        iconBackground: 'bg-zinc-700',
       },
       {
         id: '2',
@@ -200,11 +200,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-500',
       },
     ],
-    description: `Modernized Zeek's web presence with a performant, accessible, and SEO-friendly Next.js site. Integrated with headless CMS for easy content management.`,
+    description: `Rebuilt Zeek’s web presence in close collaboration with a team, using WordPress as the CMS. Translated Figma designs into a responsive and accessible UI with Alpine.js, custom components, and the Astra theme. Delivered a high-performance, SEO-optimized site with a streamlined content management experience.`,
     isPrivate: true,
   },
   {
-    id: '12',
+    id: '2',
     name: 'MarcPro.com',
     category: 'Full-Stack',
     liveLink: 'https://marcpro.com/',
@@ -214,10 +214,10 @@ export const allProjects: Project[] = [
     icons: [
       {
         id: '1',
-        name: 'Next.js',
-        logo: SiNextdotjs,
+        name: 'WordPress',
+        logo: SiWordpress,
         iconForeground: 'text-white',
-        iconBackground: 'bg-black',
+        iconBackground: 'bg-zinc-700',
       },
       {
         id: '2',
@@ -234,11 +234,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-500',
       },
     ],
-    description: `Rebuilt MarcPro's e-commerce platform with Next.js, improving performance, SEO, and user experience. Integrated with Shopify and custom APIs.`,
+    description: `Improved performance and SEO for the Marc Pro e-commerce platform while leading a redesign of the shopping cart to support clearer user stories and a more intuitive checkout experience. Integrated custom APIs to ensure a seamless shopping journey from product selection to order completion.`,
     isPrivate: true,
   },
   {
-    id: '13',
+    id: '3',
     name: 'Conversations with Bill Kristol',
     category: 'Front-End',
     liveLink: 'https://conversationswithbillkristol.org/',
@@ -261,11 +261,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-cyan-400',
       },
     ],
-    description: `Developed a custom WordPress theme and React components for a video-rich interview archive, focusing on accessibility and editorial flexibility.`,
+    description: `Took ownership of implementing a custom WordPress theme and reusable components for a video-rich interview archive, with a strong emphasis on accessibility and editorial flexibility. Collaborated with the team to realize the updated design vision and led development of an advanced search experience across 200+ episode transcripts to support scholarly research and content discovery.`,
     isPrivate: true,
   },
   {
-    id: '14',
+    id: '4',
     name: 'Rise Game',
     category: 'Full-Stack',
     liveLink: 'https://risegame.com/',
@@ -275,10 +275,10 @@ export const allProjects: Project[] = [
     icons: [
       {
         id: '1',
-        name: 'Next.js',
-        logo: SiNextdotjs,
+        name: 'WordPress',
+        logo: SiWordpress,
         iconForeground: 'text-white',
-        iconBackground: 'bg-black',
+        iconBackground: 'bg-zinc-700',
       },
       {
         id: '2',
@@ -295,11 +295,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-500',
       },
     ],
-    description: `Built a scalable web platform for Rise Game, integrating real-time features and gamification elements using Next.js and TypeScript.`,
+    description: `Led the development of Rise Game’s marketing site, leveraging WordPress as a CMS and crafting custom components to support scalability and ease of use. Ensured a smooth handoff to the marketing team while delivering a maintainable platform aligned with the brand’s vision and growth strategy.`,
     isPrivate: true,
   },
   {
-    id: '15',
+    id: '5',
     name: 'APFA.org',
     category: 'Full-Stack',
     liveLink: 'https://apfa.org/',
@@ -322,11 +322,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-cyan-400',
       },
     ],
-    description: `Led the redesign and development of APFA's member portal, improving usability, accessibility, and content management workflows.`,
+    description: `Played a key role in redesigning and developing APFA’s member portal using Beaver Builder, PHP, and Alpine.js. Led efforts to improve usability, accessibility, and editorial workflows, while ensuring the site remained performant and reliable under high daily traffic. Collaborated closely with the team to align technical execution with member needs and organizational goals.`,
     isPrivate: true,
   },
   {
-    id: '16',
+    id: '6',
     name: 'CalFund.org',
     category: 'Full-Stack',
     liveLink: 'https://calfund.org/',
@@ -349,11 +349,11 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-cyan-400',
       },
     ],
-    description: `Implemented a modern, accessible, and mobile-friendly site for California Community Foundation, integrating donation workflows and custom content types.`,
+    description: `Worked closely with a team to bring complex design concepts from the design team to life, implementing a modern, accessible, and mobile-friendly site for the California Community Foundation. Integrated custom content types and donation workflows, successfully delivering the project under tight deadlines without compromising quality or performance.`,
     isPrivate: true,
   },
   {
-    id: '1',
+    id: '7',
     name: 'Pronto Coffee Co.',
     category: 'Full-Stack',
     liveLink: '',
@@ -402,7 +402,7 @@ export const allProjects: Project[] = [
     isPrivate: true,
   },
   {
-    id: '2',
+    id: '8',
     name: 'Pure Notes',
     category: 'Full-Stack',
     liveLink: '',
@@ -465,7 +465,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '4',
+    id: '9',
     name: 'Coin Forge',
     category: 'Front-End',
     liveLink: 'https://coinforge.vercel.app/',
@@ -506,7 +506,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '5',
+    id: '10',
     name: 'Thuyen Vien',
     category: 'Front-End',
     liveLink: 'https://thuyenvienrestaurant.vercel.app/',
@@ -540,7 +540,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '6',
+    id: '11',
     name: 'Belen Law',
     category: 'Front-End',
     liveLink: 'https://belengomezlaw.vercel.app/',
@@ -574,7 +574,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '7',
+    id: '12',
     name: 'Travel',
     category: 'Front-End',
     liveLink: 'https://travel-landing-page-omega-vert.vercel.app/',
@@ -608,7 +608,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '8',
+    id: '13',
     name: 'Star Trek Api',
     category: 'Back-End',
     liveLink: 'https://star-trek-beta.vercel.app/',
@@ -649,7 +649,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '9',
+    id: '14',
     name: 'Onyx Coffee Promo',
     category: 'email',
     liveLink: 'https://onyxcoffee.netlify.app/',
@@ -690,7 +690,7 @@ export const allProjects: Project[] = [
     isPrivate: false,
   },
   {
-    id: '10',
+    id: '15',
     name: 'Tillys Promo',
     category: 'email',
     liveLink: 'https://tillyssummersale.netlify.app/',
