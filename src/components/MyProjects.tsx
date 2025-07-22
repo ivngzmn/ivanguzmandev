@@ -63,7 +63,7 @@ export function MyProjects({ token }: MyProjectsProps) {
     <div className=" pb-24">
       {/* project nav */}
       <nav className="mx-auto max-w-2xl pb-12">
-        <ul className="grid grid-cols-5 items-center gap-4">
+        <ul className="grid grid-cols-3 items-center gap-4 md:grid-cols-4 lg:grid-cols-5">
           {projectsNav.map((item, index) => {
             return (
               <li
