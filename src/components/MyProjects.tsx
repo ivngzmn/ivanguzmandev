@@ -94,7 +94,7 @@ export function MyProjects({ token }: MyProjectsProps) {
         {projects.map((project: any) => (
           // adjust the image here
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex aspect-square items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 md:h-[300px] md:w-[300px]">
+            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.imageSrc}
                 alt={project.imageAlt}
