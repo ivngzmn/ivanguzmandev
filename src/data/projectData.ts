@@ -8,6 +8,11 @@ import pureNotes from '../../public/projects/pureNotes.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
 import onyxPromo from '../../public/projects/onyx-promo.webp'
 import placeHolder from '../../public/projects/placeholder.webp'
+import marcpro from '../../public/projects/marcpro.webp'
+import conversations from '../../public/projects/conversations.webp'
+import risegame from '../../public/projects/risegame.webp'
+import apfa from '../../public/projects/apfa.webp'
+import calfund from '../../public/projects/calfund.webp'
 
 // icons
 import {
@@ -174,61 +179,61 @@ export const recentProjects = [
 // all projects for projects page
 
 export const allProjects: Project[] = [
-  {
-    id: '1',
-    name: 'Zeek.com',
-    category: 'Full-Stack',
-    liveLink: 'https://zeek.com/',
-    githubLink: '',
-    imageSrc: placeHolder,
-    imageAlt: 'Zeek.com Website',
-    icons: [
-      {
-        id: '1',
-        name: 'WordPress',
-        logo: SiWordpress,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-700',
-      },
-      {
-        id: '2',
-        name: 'JavaScript',
-        logo: SiJavascript,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-yellow-500',
-      },
-      {
-        id: '3',
-        name: 'Tailwind CSS',
-        logo: SiTailwindcss,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500',
-      },
-      {
-        id: '4',
-        name: 'Astra',
-        logo: SiAstra,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-purple-700',
-      },
-      {
-        id: '5',
-        name: 'MySQL',
-        logo: SiMysql,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-900',
-      },
-    ],
-    description: `Rebuilt Zeek’s web presence in close collaboration with a team, using WordPress as the CMS. Translated Figma designs into a responsive and accessible UI with Alpine.js, custom components, and the Astra theme. Delivered a high-performance, SEO-optimized site with a streamlined content management experience.`,
-    isPrivate: true,
-  },
+  // {
+  //   id: '1',
+  //   name: 'Zeek.com',
+  //   category: 'Full-Stack',
+  //   liveLink: 'https://zeek.com/',
+  //   githubLink: '',
+  //   imageSrc: placeHolder,
+  //   imageAlt: 'Zeek.com Website',
+  //   icons: [
+  //     {
+  //       id: '1',
+  //       name: 'WordPress',
+  //       logo: SiWordpress,
+  //       iconForeground: 'text-white',
+  //       iconBackground: 'bg-zinc-700',
+  //     },
+  //     {
+  //       id: '2',
+  //       name: 'JavaScript',
+  //       logo: SiJavascript,
+  //       iconForeground: 'text-white',
+  //       iconBackground: 'bg-yellow-500',
+  //     },
+  //     {
+  //       id: '3',
+  //       name: 'Tailwind CSS',
+  //       logo: SiTailwindcss,
+  //       iconForeground: 'text-white',
+  //       iconBackground: 'bg-sky-500',
+  //     },
+  //     {
+  //       id: '4',
+  //       name: 'Astra',
+  //       logo: SiAstra,
+  //       iconForeground: 'text-white',
+  //       iconBackground: 'bg-purple-700',
+  //     },
+  //     {
+  //       id: '5',
+  //       name: 'MySQL',
+  //       logo: SiMysql,
+  //       iconForeground: 'text-white',
+  //       iconBackground: 'bg-sky-900',
+  //     },
+  //   ],
+  //   description: `Rebuilt Zeek’s web presence in close collaboration with a team, using WordPress as the CMS. Translated Figma designs into a responsive and accessible UI with Alpine.js, custom components, and the Astra theme. Delivered a high-performance, SEO-optimized site with a streamlined content management experience.`,
+  //   isPrivate: true,
+  // },
   {
     id: '2',
     name: 'MarcPro.com',
     category: 'Full-Stack',
-    liveLink: 'https://marcpro.com/',
+    liveLink: 'https://marcpro.com/store/',
     githubLink: '',
-    imageSrc: placeHolder,
+    imageSrc: marcpro,
     imageAlt: 'MarcPro.com Website',
     icons: [
       {
@@ -276,7 +281,7 @@ export const allProjects: Project[] = [
     category: 'Front-End',
     liveLink: 'https://conversationswithbillkristol.org/',
     githubLink: '',
-    imageSrc: placeHolder,
+    imageSrc: conversations,
     imageAlt: 'Conversations with Bill Kristol Website',
     icons: [
       {
@@ -324,7 +329,7 @@ export const allProjects: Project[] = [
     category: 'Full-Stack',
     liveLink: 'https://risegame.com/',
     githubLink: '',
-    imageSrc: placeHolder,
+    imageSrc: risegame,
     imageAlt: 'Rise Game Website',
     icons: [
       {
@@ -372,7 +377,7 @@ export const allProjects: Project[] = [
     category: 'Full-Stack',
     liveLink: 'https://apfa.org/',
     githubLink: '',
-    imageSrc: placeHolder,
+    imageSrc: apfa,
     imageAlt: 'APFA.org Website',
     icons: [
       {
@@ -413,7 +418,7 @@ export const allProjects: Project[] = [
     category: 'Full-Stack',
     liveLink: 'https://calfund.org/',
     githubLink: '',
-    imageSrc: placeHolder,
+    imageSrc: calfund,
     imageAlt: 'CalFund.org Website',
     icons: [
       {
