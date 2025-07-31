@@ -23,24 +23,32 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function MyProjects() {
+// interface
+interface MyProjectsProps {
+  token?: string
+}
+
+export function MyProjects({ token }: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
 
+  const flag = process.env.NEXT_PUBLIC_FEATURE_TOKEN
+  const isAuthorized = !!token && !!flag && token === flag
+
   useEffect(() => {
-    // get projects based on category
-    if (item.name === 'all projects') {
-      // @ts-ignore
-      setProjects(allProjects)
-    } else {
-      const newProjects = allProjects.filter((project) => {
-        return project.category.toLowerCase() === item.name
-      })
-      // @ts-ignore
-      setProjects(newProjects)
+    let filtered = allProjects.filter(
+      (project) => !project.isPrivate || isAuthorized,
+    )
+
+    if (item.name !== 'all projects') {
+      filtered = filtered.filter(
+        (project) => project.category.toLowerCase() === item.name,
+      )
     }
-  }, [item])
+
+    setProjects(filtered)
+  }, [item, isAuthorized])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -55,7 +63,7 @@ export function MyProjects() {
     <div className=" pb-24">
       {/* project nav */}
       <nav className="mx-auto max-w-2xl pb-12">
-        <ul className="grid grid-cols-5 items-center gap-4">
+        <ul className="grid grid-cols-3 items-center gap-4 md:grid-cols-4 lg:grid-cols-5">
           {projectsNav.map((item, index) => {
             return (
               <li
@@ -86,7 +94,7 @@ export function MyProjects() {
         {projects.map((project: any) => (
           // adjust the image here
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex aspect-square h-[300px] w-[300px] items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.imageSrc}
                 alt={project.imageAlt}
@@ -112,7 +120,7 @@ export function MyProjects() {
                     className={classNames(
                       icon.iconBackground,
                       icon.iconForeground,
-                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full',
+                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
                     )}
                   >
                     <icon.logo className="h-5 w-5" aria-hidden="true" />
@@ -120,19 +128,31 @@ export function MyProjects() {
                 ),
               )}
             </div>
-            {/* 
-            // TODO: Update the links and ensure that each project has a github link and deployed link
-            // TODO: add better descriptions for each project
+
             <div className="flex gap-5">
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">github.com</span>
-              </p>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">View Site</span>
-              </p>
-            </div> */}
+              {project.githubLink && project.githubLink.trim() !== '' && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                >
+                  <FaGithub className="h-6 w-6 flex-none" />
+                  <span className="ml-2">GitHub</span>
+                </a>
+              )}
+              {project.liveLink && project.liveLink.trim() !== '' && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                >
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">View Site</span>
+                </a>
+              )}
+            </div>
           </Card>
         ))}
       </ul>
