@@ -747,7 +747,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-[#F22F46]',
       },
     ],
-    description: `Promotional email for Onyx Coffee Lab made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
+    description: `Promotional email for Viking River Cruises made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
     isPrivate: false,
   },
   {
