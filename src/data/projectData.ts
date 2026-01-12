@@ -6,7 +6,7 @@ import starTrekApi from '../../public/projects/starTrekApi.webp'
 import travelLandingPage from '../../public/projects/travelLandingPage.webp'
 import pureNotes from '../../public/projects/pureNotes.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
-import onyxPromo from '../../public/projects/onyx-promo.webp'
+import vikingPromo from '../../public/projects/viking-promo.webp'
 import placeHolder from '../../public/projects/placeholder.webp'
 import marcpro from '../../public/projects/marcpro.webp'
 import conversations from '../../public/projects/conversations.webp'
@@ -179,54 +179,6 @@ export const recentProjects = [
 // all projects for projects page
 
 export const allProjects: Project[] = [
-  // {
-  //   id: '1',
-  //   name: 'Zeek.com',
-  //   category: 'Full-Stack',
-  //   liveLink: 'https://zeek.com/',
-  //   githubLink: '',
-  //   imageSrc: placeHolder,
-  //   imageAlt: 'Zeek.com Website',
-  //   icons: [
-  //     {
-  //       id: '1',
-  //       name: 'WordPress',
-  //       logo: SiWordpress,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-zinc-700',
-  //     },
-  //     {
-  //       id: '2',
-  //       name: 'JavaScript',
-  //       logo: SiJavascript,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-yellow-500',
-  //     },
-  //     {
-  //       id: '3',
-  //       name: 'Tailwind CSS',
-  //       logo: SiTailwindcss,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-sky-500',
-  //     },
-  //     {
-  //       id: '4',
-  //       name: 'Astra',
-  //       logo: SiAstra,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-purple-700',
-  //     },
-  //     {
-  //       id: '5',
-  //       name: 'MySQL',
-  //       logo: SiMysql,
-  //       iconForeground: 'text-white',
-  //       iconBackground: 'bg-sky-900',
-  //     },
-  //   ],
-  //   description: `Rebuilt Zeek’s web presence in close collaboration with a team, using WordPress as the CMS. Translated Figma designs into a responsive and accessible UI with Alpine.js, custom components, and the Astra theme. Delivered a high-performance, SEO-optimized site with a streamlined content management experience.`,
-  //   isPrivate: true,
-  // },
   {
     id: '2',
     name: 'MarcPro.com',
@@ -689,7 +641,7 @@ export const allProjects: Project[] = [
     liveLink: 'https://travel-landing-page-omega-vert.vercel.app/',
     githubLink: 'https://github.com/ivngzmn/travel-landing-page',
     imageSrc: travelLandingPage,
-    imageAlt: 'Thuyen Vien Restaurant Website',
+    imageAlt: 'Travel Landing Page',
     icons: [
       {
         id: '1',
@@ -723,7 +675,7 @@ export const allProjects: Project[] = [
     liveLink: 'https://star-trek-beta.vercel.app/',
     githubLink: 'https://github.com/ivngzmn/star-trek-client',
     imageSrc: starTrekApi,
-    imageAlt: 'Thuyen Vien Restaurant Website',
+    imageAlt: 'Star Trek Api Website',
     icons: [
       {
         id: '1',
@@ -759,12 +711,12 @@ export const allProjects: Project[] = [
   },
   {
     id: '14',
-    name: 'Onyx Coffee Promo',
+    name: 'Viking River Cruises Promo',
     category: 'email',
-    liveLink: 'https://onyxcoffee.netlify.app/',
-    githubLink: '',
-    imageSrc: onyxPromo,
-    imageAlt: 'Thuyen Vien Restaurant Website',
+    liveLink: 'https://viking-river-cruises-email.netlify.app/',
+    githubLink: 'https://github.com/ivngzmn/viking-river-cruises-email',
+    imageSrc: vikingPromo,
+    imageAlt: 'Viking River Cruises Promo Email',
     icons: [
       {
         id: '1',
@@ -803,9 +755,9 @@ export const allProjects: Project[] = [
     name: 'Tillys Promo',
     category: 'email',
     liveLink: 'https://tillyssummersale.netlify.app/',
-    githubLink: '',
+    githubLink: 'https://github.com/ivngzmn/tillys-marketing-email',
     imageSrc: tillysPromo,
-    imageAlt: 'Thuyen Vien Restaurant Website',
+    imageAlt: 'Tillys Promo Email',
     icons: [
       {
         id: '1',

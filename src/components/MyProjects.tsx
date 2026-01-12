@@ -1,8 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { FaRegPaperPlane, FaGithub } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 // import data
 import { allProjects, projectsNav } from '@/data/projectData'
@@ -34,9 +33,38 @@ export function MyProjects({ token }: MyProjectsProps) {
   const [active, setActive] = useState(0)
 
   const flag = process.env.NEXT_PUBLIC_FEATURE_TOKEN
-  const isAuthorized = !!token && !!flag && token === flag
+
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(false)
+
+  // cookie helpers
+  const COOKIE_NAME = 'private_projects_token'
+
+  function setCookie(name: string, value: string, days: number) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString()
+    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; samesite=lax`
+  }
+
+  function getCookie(name: string) {
+    return document.cookie.split('; ').reduce((r, v) => {
+      const parts = v.split('=')
+      return parts[0] === name ? decodeURIComponent(parts[1]) : r
+    }, '')
+  }
 
   useEffect(() => {
+    // determine authorization from query token or existing cookie
+    if (token && flag && token === flag) {
+      try {
+        setCookie(COOKIE_NAME, token, 30)
+      } catch (e) {
+        // ignore cookie write errors
+      }
+      setIsAuthorized(true)
+    } else {
+      const cookieToken = getCookie(COOKIE_NAME)
+      setIsAuthorized(!!cookieToken && !!flag && cookieToken === flag)
+    }
+
     let filtered = allProjects.filter(
       (project) => !project.isPrivate || isAuthorized,
     )
@@ -48,7 +76,7 @@ export function MyProjects({ token }: MyProjectsProps) {
     }
 
     setProjects(filtered)
-  }, [item, isAuthorized])
+  }, [item, isAuthorized, token, flag])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
