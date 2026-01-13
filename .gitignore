@@ -24,6 +24,7 @@ package-lock.json
 public/robots.txt
 .old-theme
 .idea
+.public/projects/originals
 
 # debug
 npm-debug.log*
