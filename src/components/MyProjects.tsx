@@ -131,9 +131,9 @@ export function MyProjects({ token }: MyProjectsProps) {
                 unoptimized
               />
             </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+            <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Title as="h2">{project.name}</Card.Title>
-            </h2>
+            </div>
             <Card.Description>{project.description}</Card.Description>
             <div className="text-white">
               {project.icons.map(

@@ -27,16 +27,17 @@ export const Pre = (
       return node.map(extractText).join('')
     }
 
-    if (typeof node === 'object' && 'props' in node) {
-      return extractText(node.props.children)
+    if (typeof node === 'object' && node !== null && 'props' in node) {
+      // `node` may be a React element; cast to any to access props safely
+      return extractText((node as any).props?.children)
     }
 
     return ''
   }
 
   const copyToClipboard = () => {
-    if (code && code.props && code.props.children) {
-      const textToCopy = extractText(code.props.children)
+    if (code && (code as any).props && (code as any).props.children) {
+      const textToCopy = extractText((code as any).props.children)
       navigator.clipboard.writeText(textToCopy).then(() => {
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 2000)
@@ -49,12 +50,12 @@ export const Pre = (
       <pre {...props}>{props.children}</pre>
       <button
         onClick={copyToClipboard}
-        className="absolute z-10 p-2 rounded-md right-2 top-2 bg-zinc-700 hover:bg-zinc-600"
+        className="absolute right-2 top-2 z-10 rounded-md bg-zinc-700 p-2 hover:bg-zinc-600"
       >
         {isCopied ? (
-          <Check className="w-4 h-4 text-green-500" />
+          <Check className="h-4 w-4 text-green-500" />
         ) : (
-          <Copy className="w-4 h-4 text-gray-300" />
+          <Copy className="h-4 w-4 text-gray-300" />
         )}
       </button>
     </div>

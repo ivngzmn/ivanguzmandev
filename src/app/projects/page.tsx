@@ -7,14 +7,15 @@ export const metadata: Metadata = {
   description: 'Selected works and projects.',
 }
 
-interface ProjectsPageProps {
-  searchParams: {
+export default async function Projects({
+  searchParams,
+}: {
+  searchParams?: Promise<{
     token?: string
-  }
-}
-
-export default function Projects({ searchParams }: ProjectsPageProps) {
-  const { token } = searchParams
+  }>
+}) {
+  const params = await searchParams
+  const token = params?.token
 
   return (
     <SimpleLayout
