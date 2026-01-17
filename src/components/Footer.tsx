@@ -1,8 +1,6 @@
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
-import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
-import { SocialLink } from '@/components/SocialLink'
 
 function NavLink({
   href,
