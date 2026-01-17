@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 import { GoogleTagManager } from '@next/third-parties/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@/styles/tailwind.css'
 
@@ -49,6 +50,7 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </div>
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   )
