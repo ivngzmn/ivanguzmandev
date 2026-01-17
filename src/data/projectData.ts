@@ -7,7 +7,6 @@ import travelLandingPage from '../../public/projects/travelLandingPage.webp'
 import pureNotes from '../../public/projects/pureNotes.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
 import vikingPromo from '../../public/projects/viking-promo.webp'
-import placeHolder from '../../public/projects/placeholder.webp'
 import marcpro from '../../public/projects/marcpro.webp'
 import conversations from '../../public/projects/conversations.webp'
 import risegame from '../../public/projects/risegame.webp'
@@ -23,12 +22,9 @@ import {
   SiAstra,
   SiTailwindcss,
   SiJavascript,
-  SiTypescript,
   SiReact,
-  SiNextdotjs,
   SiNodedotjs,
   SiExpress,
-  SiGraphql,
   SiMongodb,
   SiMicrosoftazure,
   SiFirebase,

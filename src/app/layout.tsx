@@ -6,7 +6,6 @@ import { Layout } from '@/components/Layout'
 import { GoogleTagManager } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
-import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ivanguzman.dev'),
