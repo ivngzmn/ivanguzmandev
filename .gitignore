@@ -41,3 +41,6 @@ yarn-error.log*
 .vercel
 .vscode/settings.json
 next-env.d.ts
+
+# Ignore Copilot instructions file
+.github/copilot-instructions.md
