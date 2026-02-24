@@ -59,7 +59,7 @@ Let me break down what you'll actually need to change in your project. I'm going
 
 First, update Tailwind CSS to v4:
 
-```json
+```json showLineNumbers
 {
   "dependencies": {
     "tailwindcss": "^4.2.1",
@@ -76,7 +76,7 @@ This was one of my gotchas. I had a `postcss.config.js` file, but I needed to co
 
 **Before (broken in v4 - postcss.config.js):**
 
-```javascript
+```javascript showLineNumbers
 module.exports = {
   plugins: {
     'tailwindcss/nesting': {},
@@ -88,7 +88,7 @@ module.exports = {
 
 **After (v4 compatible - postcss.config.mjs):**
 
-```javascript
+```javascript showLineNumbers
 export default {
   plugins: {
     '@tailwindcss/postcss': {},
@@ -106,7 +106,7 @@ This is where the real magic happens. In v3, you had a JavaScript config file wi
 
 **Before (v3 - tailwind.config.ts):**
 
-```typescript
+```typescript showLineNumbers
 import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
 
@@ -128,7 +128,7 @@ export default {
 
 **After (v4 - src/styles/tailwind.css):**
 
-```css
+```css showLineNumbers
 @import 'tailwindcss';
 
 @theme {
@@ -144,7 +144,7 @@ export default {
 
 **And your minimal config file:**
 
-```typescript
+```typescript showLineNumbers
 export default {
   plugins: [],
 }
@@ -166,7 +166,7 @@ Yes, you read that right. A 284-line JavaScript file just... gone. Its entire re
 
 **Before (v3 - typography.ts - 284 lines!):**
 
-```typescript
+```typescript showLineNumbers
 export default function typographyStyles({ theme }: PluginUtils) {
   return {
     DEFAULT: {
@@ -193,7 +193,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
 **After (v4 - src/styles/tailwind.css - much cleaner!):**
 
-```css
+```css showLineNumbers
 @layer components {
   :root {
     --tw-prose-body: var(--color-zinc-600);
