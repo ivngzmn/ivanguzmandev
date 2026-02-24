@@ -20,7 +20,11 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-<Image src={PostImage} className="h-full w-fit" />
+<Image
+  src={PostImage}
+  alt="Turning SVGs into React components instead of using next/image to customize their appearance"
+  className="h-full w-fit"
+/>
 
 Have you ever been frustrated attempting to update your SVG that you imported into your Next.js project using the `next/image` component? You might have tried to update the SVG's color, size, or stroke, but it didn't work as expected. In this article, we'll explore how to turn SVGs into React components and update their appearance using Tailwind CSS for light and dark mode.
 
