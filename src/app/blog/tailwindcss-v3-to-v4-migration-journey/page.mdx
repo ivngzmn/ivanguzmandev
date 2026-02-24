@@ -1,0 +1,316 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import MigrationGuide from './tailwindcss-v3-v4.webp'
+import Dreaded from './its-over.gif'
+import WellDone from './well-done.webp'
+
+export const article = {
+  author: 'Ivan Guzman',
+  date: '2026-02-23',
+  title: 'Tailwind CSS v3 to v4: A Practical Migration Guide',
+  description: `Migrating your Next.js portfolio from Tailwind CSS v3 to v4 might seem intimidating, but we've got you covered. Learn exactly what changed, how to fix it, and why the new approach is actually better.`,
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={MigrationGuide}
+  alt="Tailwind CSS v3 to v4: A Practical Migration Guide"
+  className="h-full w-fit"
+/>
+
+Alright, let's talk about something that happened to me recently — a major framework upgrade. When I heard Tailwind CSS v4 was released, I was excited but also a little nervous. "What's breaking?" I asked myself. "How much refactoring is this going to require?" Well, after going through the migration myself, I'm here to tell you: it's not as scary as you might think, and honestly, the new approach is pretty elegant.
+
+## Why Migrate to Tailwind CSS v4?
+
+Before we dive into the "how," let's talk about the "why." Tailwind CSS v4 brings some significant improvements:
+
+- **CSS-first configuration**: No more JavaScript config files cluttering your project (though they still work for plugins)
+- **Automatic imports**: You don't need to manage `@tailwind` directives anymore
+- **Better dark mode support**: Native CSS media query handling with fallback support for manual class-based theming
+- **Improved performance**: The engine is faster and generates smaller CSS bundles
+- **Modern CSS features**: Taking advantage of CSS variables, `@layer`, and new at-rules like `@utility` and `@custom-variant`
+
+But here's the real talk: if your v3 site is working fine, there's no urgent need to migrate tomorrow. However, if you're starting fresh or planning major updates anyway, v4 is definitely worth considering.
+
+## The Reality of Migration
+
+When I started my migration, I expected everything to break and dreaded updating to the latest version of Tailwind CSS. Spoiler alert: not everything did. Here's what actually happened in my real-world scenario.
+
+<Image
+  src={Dreaded}
+  alt="Tailwind CSS v3 to v4: A Practical Migration Guide"
+  className="h-full w-fit"
+/>
+### The Quick Wins
+
+The good news? A lot of things just... worked. My Next.js project, existing components, and most styling remained untouched. The TypeScript types, the dark mode functionality, and the responsive utilities all continued working as expected.
+
+## What Actually Changed (The Practical Stuff)
+
+Let me break down what you'll actually need to change in your project. I'm going to use my portfolio migration as the real example here.
+
+### 1. Update Your Package Dependencies
+
+First, update Tailwind CSS to v4:
+
+```json
+{
+  "dependencies": {
+    "tailwindcss": "^4.2.1",
+    "@tailwindcss/postcss": "^4.2.1"
+  }
+}
+```
+
+Notice the new `@tailwindcss/postcss` package? That's the v4 way of handling PostCSS. In v3, the `tailwindcss` package itself was a PostCSS plugin. Now it's separated out.
+
+### 2. Fix Your PostCSS Config
+
+This was one of my gotchas. I had a `postcss.config.js` file, but I needed to convert it to `postcss.config.mjs` for ESM compatibility. My `postcss.config.mjs` was also using CommonJS syntax in an ES module:
+
+**Before (broken in v4 - postcss.config.js):**
+
+```javascript
+module.exports = {
+  plugins: {
+    'tailwindcss/nesting': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+**After (v4 compatible - postcss.config.mjs):**
+
+```javascript
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+}
+```
+
+Notice we removed the nesting and autoprefixer? That's because v4 handles those automatically. Much cleaner!
+
+> **Pro tip**: The `.mjs` extension is important for ESM compatibility. Make sure you're using ES module syntax with `export default` instead of `module.exports`.
+
+### 3. Move Your Theme Config to CSS (and Delete the Config File)
+
+This is where the real magic happens. In v3, you had a JavaScript config file with all your theme customizations. In v4, that lives in your CSS file using the `@theme` directive, and you can actually delete most of your configuration file entirely.
+
+**Before (v3 - tailwind.config.ts):**
+
+```typescript
+import { type Config } from 'tailwindcss'
+import typographyStyles from './typography'
+
+export default {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
+  plugins: [typographyPlugin],
+  theme: {
+    fontSize: {
+      xs: ['0.8125rem', { lineHeight: '1.5rem' }],
+      sm: ['0.875rem', { lineHeight: '1.5rem' }],
+      base: ['1rem', { lineHeight: '1.75rem' }],
+      // ... 12 more sizes
+    },
+    typography: typographyStyles,
+  },
+} satisfies Config
+```
+
+**After (v4 - src/styles/tailwind.css):**
+
+```css
+@import 'tailwindcss';
+
+@theme {
+  /* Custom font sizes with line heights */
+  --font-size-xs: 0.8125rem / 1.5rem;
+  --font-size-sm: 0.875rem / 1.5rem;
+  --font-size-base: 1rem / 1.75rem;
+  --font-size-lg: 1.125rem / 1.75rem;
+  --font-size-xl: 1.25rem / 2rem;
+  /* ... and so on */
+}
+```
+
+**And your minimal config file:**
+
+```typescript
+export default {
+  plugins: [],
+}
+```
+
+Yep, that's it. The `tailwind.config.ts` is now optional and only needed if you're using legacy v3-style plugins. In my case, I kept it minimal just in case, but all my actual configuration lives in CSS now.
+
+One huge win: **I was able to completely delete `typography.ts`**. No more maintaining a 284-line JavaScript file with complex nested objects. All that code moved into clean, manageable CSS.
+
+## The Plugin Situation: Typography (And Deleting an Entire File)
+
+Here's where things got interesting for me. I had a custom typography system in my v3 project using the `@tailwindcss/typography` plugin with a custom `typography.ts` file. In v4, plugins still work, but the recommended approach is to use CSS.
+
+### Moving Typography from JavaScript to CSS
+
+Instead of maintaining a JavaScript plugin, I moved all my prose styling to the CSS component layer using custom CSS variables and the `.prose` class. And then I **deleted `typography.ts` entirely**.
+
+Yes, you read that right. A 284-line JavaScript file just... gone. Its entire responsibility absorbed into CSS.
+
+**Before (v3 - typography.ts - 284 lines!):**
+
+```typescript
+export default function typographyStyles({ theme }: PluginUtils) {
+  return {
+    DEFAULT: {
+      css: {
+        '--tw-prose-body': theme('colors.zinc.600'),
+        '--tw-prose-headings': theme('colors.zinc.900'),
+        '--tw-prose-links': theme('colors.teal.500'),
+        // ... 20+ more variables
+        color: 'var(--tw-prose-body)',
+        lineHeight: theme('lineHeight.7'),
+        p: {
+          marginTop: theme('spacing.7'),
+          marginBottom: theme('spacing.7'),
+        },
+        h2: {
+          fontSize: theme('fontSize.xl')[0],
+          // ... 200+ more lines of complex nested objects
+        },
+      },
+    },
+  }
+}
+```
+
+**After (v4 - src/styles/tailwind.css - much cleaner!):**
+
+```css
+@layer components {
+  :root {
+    --tw-prose-body: var(--color-zinc-600);
+    --tw-prose-headings: var(--color-zinc-900);
+    --tw-prose-links: var(--color-teal-500);
+    /* ... */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tw-prose-body: var(--color-zinc-400);
+      --tw-prose-headings: var(--color-zinc-200);
+      /* ... */
+    }
+  }
+
+  .prose {
+    @apply leading-7;
+    color: var(--tw-prose-body);
+  }
+
+  .prose p {
+    @apply my-7;
+  }
+
+  .prose h2 {
+    @apply mb-4 mt-20 text-xl leading-7;
+  }
+
+  /* ... rest of the styles */
+}
+```
+
+Same functionality, way cleaner. No JavaScript needed. No plugin complexity. Just pure CSS. And `typography.ts`? **Deleted.**
+
+## Dark Mode: The Tricky Part
+
+This one caught me off guard. I'm using `next-themes` for manual dark mode toggling, but Tailwind CSS v4 defaults to using `prefers-color-scheme` (system preference). They weren't talking to each other!
+
+The fix was adding a custom variant override in my CSS file:
+
+```css
+/* Override dark mode to use class-based selector for next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+Now when the user clicks the theme toggle button, Tailwind properly applies the `dark:*` utilities based on the `.dark` class that `next-themes` adds to the html element.
+
+## The Migration Checklist
+
+If you're thinking about upgrading, here's what you actually need to do:
+
+- [ ] Update dependencies: `tailwindcss` and add `@tailwindcss/postcss`
+- [ ] Convert `postcss.config.js` to `postcss.config.mjs` and use ES module syntax
+- [ ] Update `postcss.config.mjs` to use the new `@tailwindcss/postcss` plugin
+- [ ] Move theme customizations from `.ts` config to CSS `@theme` directive
+- [ ] Move typography/custom styles to CSS component layer
+- [ ] Delete `typography.ts` if you're migrating those styles to CSS
+- [ ] Simplify `tailwind.config.ts` (or delete it if you're not using legacy plugins)
+- [ ] Update dark mode handling if you're using `next-themes` or manual class-based theming
+- [ ] Test your build: `pnpm run build`
+- [ ] Test your dev server: `pnpm run dev`
+- [ ] Check dark/light mode switching if applicable
+
+## Common Gotchas
+
+### Gotcha #1: CSS Module Files in Vue/Svelte
+
+If you're using Vue, Svelte, or other frameworks with scoped styles, those no longer have access to theme variables by default. You might need to use `@reference` to import variables into those scopes.
+
+### Gotcha #2: Legacy Plugin Syntax
+
+The old JavaScript plugin syntax still works, but you'll see deprecation warnings. It's better to migrate to the new CSS approach when possible.
+
+### Gotcha #3: Browser Support
+
+Tailwind CSS v4 targets modern browsers (Safari 16.4+, Chrome 111+, Firefox 128+). If you need to support older browsers, stick with v3.4.
+
+## The Results
+
+After my migration, here's what I got:
+
+✅ **Two fewer files in my project** (`typography.ts` and `tailwind.config.ts` simplified)
+✅ Faster build times (perceptibly faster dev server)
+✅ Smaller CSS output
+✅ Cleaner project structure (284 lines of JavaScript moved to manageable CSS)
+✅ Easier dark mode management
+✅ All existing styles continue to work
+✅ More maintainable typography system
+✅ Zero plugin complexity for styling
+
+<Image
+  src={WellDone}
+  alt="Tailwind CSS v3 to v4: A Practical Migration Guide"
+  className="h-full w-fit"
+/>
+
+## Final Thoughts
+
+Look, migrations can be stressful. But this one? It's actually pretty reasonable. Most of the changes are "nice to have" rather than "breaking everything." Your v3 project will keep working if you don't upgrade, but v4's approach is genuinely better designed.
+
+The CSS-first configuration model makes more sense than having JavaScript manage your styling. The dark mode handling is more flexible. And removing the need for plugins in many cases simplifies your codebase.
+
+In my case, I deleted two files, simplified my configuration, and ended up with cleaner, more maintainable code. That's a win in my book.
+
+If you're building something new with Next.js, I'd recommend starting with v4. If you have an existing project that's working fine, you can wait for a natural refactoring moment. Either way, when you do upgrade, you'll find it's not as scary as it might seem.
+
+Happy migrating! 🚀
+
+If you have any questions or comments, please feel free to reach out to me on [X/Twitter](https://x.com/inadequate_Dev).
+
+---
+
+**Resources:**
+
+- [Tailwind CSS v4 Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide)
+- [Adding Custom Styles in v4](https://tailwindcss.com/docs/adding-custom-styles)
+- [Dark Mode Documentation](https://tailwindcss.com/docs/dark-mode)
+- [ESM and Node.js](https://nodejs.org/api/esm.html)
+- [next-themes GitHub](https://github.com/pacocoursey/next-themes)
