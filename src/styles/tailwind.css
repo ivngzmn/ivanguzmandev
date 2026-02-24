@@ -47,7 +47,7 @@
     --tw-prose-quote-borders: var(--color-zinc-200);
     --tw-prose-captions: var(--color-zinc-400);
     --tw-prose-code: var(--color-zinc-700);
-    --tw-prose-code-bg: rgb(212 212 216 / 0.2);
+    --tw-prose-code-bg: #403d52;
     --tw-prose-pre-code: var(--color-zinc-100);
     --tw-prose-pre-bg: var(--color-zinc-900);
     --tw-prose-pre-border: transparent;
@@ -72,7 +72,7 @@
       --tw-prose-code: var(--color-zinc-300);
       --tw-prose-code-bg: rgb(228 228 231 / 0.05);
       --tw-prose-pre-code: var(--color-zinc-100);
-      --tw-prose-pre-bg: rgb(0 0 0 / 0.4);
+      --tw-prose-pre-bg: #403d52;
       --tw-prose-pre-border: rgb(228 228 231 / 0.1);
       --tw-prose-th-borders: var(--color-zinc-700);
       --tw-prose-td-borders: var(--color-zinc-800);
