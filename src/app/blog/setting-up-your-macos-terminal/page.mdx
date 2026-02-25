@@ -10,11 +10,33 @@ export const article = {
   title: 'Setting up your macOS terminal',
   description:
     "Tired of your boring native macOS terminal? Well, let's bring that zest back with iTerm2 and Oh-My-ZSH.",
+  featured_image_url: ohMyZsh.src,
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    images: [
+      {
+        url: article.featured_image_url,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      },
+    ],
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: article.title,
+    description: article.description,
+    images: [article.featured_image_url],
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />

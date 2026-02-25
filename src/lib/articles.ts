@@ -5,6 +5,10 @@ interface Article {
   description: string
   author: string
   date: string
+  featured_image?: string
+  twitter_title?: string
+  twitter_description?: string
+  twitter_image?: string
 }
 
 export interface ArticleWithSlug extends Article {

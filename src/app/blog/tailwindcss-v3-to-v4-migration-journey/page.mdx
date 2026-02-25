@@ -8,12 +8,34 @@ export const article = {
   author: 'Ivan Guzman',
   date: '2026-02-23',
   title: 'Tailwind CSS v3 to v4: A Practical Migration Guide',
-  description: `Migrating your Next.js portfolio from Tailwind CSS v3 to v4 might seem intimidating, but we've got you covered. Learn exactly what changed, how to fix it, and why the new approach is actually better.`,
+  description: `Migrating your Next.js project from Tailwind CSS v3 to v4 might seem intimidating, but we've got you covered. Learn exactly what changed, how to fix it, and why the new approach is actually better.`,
+  featured_image_url: MigrationGuide.src,
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    images: [
+      {
+        url: article.featured_image_url,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      },
+    ],
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: article.title,
+    description: article.description,
+    images: [article.featured_image_url],
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
@@ -220,7 +242,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
   }
 
   .prose h2 {
-    @apply mb-4 mt-20 text-xl leading-7;
+    @apply mt-20 mb-4 text-xl leading-7;
   }
 
   /* ... rest of the styles */

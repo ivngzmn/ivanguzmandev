@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Ivan Guzman',
     default:
-      'Ivan Guzman - Software engineer, father, and mechanical keyboard enthusiast.',
+      'I’m a Software Engineer. I’m focused on building accessible, human-centered products.',
   },
   description:
-    'I’m a Software Engineer at Zeek Interactive. I’m focused on building accessible, human-centered products.',
+    'I’m a Software Engineer. I’m focused on building accessible, human-centered products.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '%s - Ivan Guzman',
     description:
-      'Software engineer, father, and mechanical keyboard enthusiast.',
+      'I’m a Software Engineer. I’m focused on building accessible, human-centered products.',
     creator: '@inadequate_Dev',
     images: ['https://www.ivanguzman.dev/opengraph-image.png'],
   },
