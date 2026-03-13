@@ -1,12 +1,13 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import { FaGithub } from 'react-icons/fa'
 
-import { allProjects, projectsNav } from '@/data/projectData'
+import { allProjects, projectsNav, type Project } from '@/data/projectData'
 import { Card } from '@/components/Card'
 import { useProjectsCache } from '@/hooks/useProjectsCache'
 import { ProjectCardSkeletonGrid } from '@/components/ProjectCardSkeleton'
+import { ImageModal } from '@/components/ImageModal'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -29,6 +30,11 @@ export function MyProjects({}: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
   const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<{
+    src: Project['imageSrc']
+    alt: string
+  } | null>(null)
   const { isLoading, hasLoadedBefore, markLoaded, startLoading } =
     useProjectsCache()
 
@@ -60,6 +66,19 @@ export function MyProjects({}: MyProjectsProps) {
     // @ts-ignore
     setItem({ name: e.target.textContent.toLowerCase() })
     setActive(index)
+  }
+
+  const handleImageClick = (
+    imageSrc: string | StaticImageData,
+    imageAlt: string,
+  ) => {
+    setSelectedImage({ src: imageSrc, alt: imageAlt })
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedImage(null)
   }
   // @ts-ignore
   return (
@@ -99,15 +118,23 @@ export function MyProjects({}: MyProjectsProps) {
           {projects.map((project: any) => (
             // adjust the image here
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <button
+                type="button"
+                className="group relative z-10 flex aspect-square h-[300px] w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-xl bg-white text-left shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition-transform duration-300 hover:scale-[1.02] focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:outline-none dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus:ring-offset-zinc-900"
+                onClick={() =>
+                  handleImageClick(project.imageSrc, project.imageAlt)
+                }
+                aria-label={`Open larger image for ${project.name}`}
+              >
                 <Image
                   src={project.imageSrc}
                   alt={project.imageAlt}
-                  className="h-full w-full rounded-xl object-cover object-center"
+                  className="h-full w-full rounded-xl object-cover object-center transition duration-500 group-hover:scale-105"
                   placeholder="blur"
                   unoptimized
                 />
-              </div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+              </button>
               <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Title as="h2">{project.name}</Card.Title>
               </div>
@@ -162,6 +189,12 @@ export function MyProjects({}: MyProjectsProps) {
           ))}
         </ul>
       )}
+      <ImageModal
+        isOpen={isModalOpen}
+        imageSrc={selectedImage?.src || null}
+        imageAlt={selectedImage?.alt || ''}
+        onClose={handleCloseModal}
+      />
     </div>
   )
 }

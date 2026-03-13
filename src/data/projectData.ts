@@ -324,7 +324,7 @@ export const allProjects: Project[] = [
     liveLink: '',
     // githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
     imageSrc: prontoCoffeeCo,
-    imageAlt: 'Todo App',
+    imageAlt: 'Pronto Coffe Co. Order Management App',
     icons: [
       {
         id: '1',

@@ -41,9 +41,10 @@ function MobileNavigation(
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
-      <Transition.Root>
+      <Transition.Root as="div" className="contents">
         <Transition.Child
-          as={Fragment}
+          as="div"
+          className="contents"
           enter="duration-150 ease-out"
           enterFrom="opacity-0"
           enterTo="opacity-100"
@@ -54,7 +55,8 @@ function MobileNavigation(
           <Popover.Overlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
         </Transition.Child>
         <Transition.Child
-          as={Fragment}
+          as="div"
+          className="contents"
           enter="duration-150 ease-out"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
