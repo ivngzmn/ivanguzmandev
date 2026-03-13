@@ -31,6 +31,8 @@ export function MyProjects({}: MyProjectsProps) {
   const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showLoadedProjects, setShowLoadedProjects] = useState(false)
+  const [showSkeleton, setShowSkeleton] = useState(true)
   const [selectedImage, setSelectedImage] = useState<{
     src: Project['imageSrc']
     alt: string
@@ -58,6 +60,26 @@ export function MyProjects({}: MyProjectsProps) {
 
     return () => clearTimeout(timer)
   }, [item, hasLoadedBefore, markLoaded, startLoading])
+
+  useEffect(() => {
+    if (isLoading) {
+      setShowLoadedProjects(false)
+      setShowSkeleton(true)
+      return
+    }
+
+    const animationFrame = window.requestAnimationFrame(() => {
+      setShowLoadedProjects(true)
+    })
+    const skeletonTimer = window.setTimeout(() => {
+      setShowSkeleton(false)
+    }, 320)
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.clearTimeout(skeletonTimer)
+    }
+  }, [isLoading])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -107,12 +129,28 @@ export function MyProjects({}: MyProjectsProps) {
       </nav>
 
       {/* projects section */}
-      {isLoading ? (
-        <ProjectCardSkeletonGrid />
-      ) : (
+      <div className="relative">
+        {showSkeleton && (
+          <div
+            className={classNames(
+              'transition-all duration-300 ease-out',
+              isLoading
+                ? 'blur-0 opacity-100'
+                : 'pointer-events-none absolute inset-0 z-10 translate-y-1 opacity-0 blur-[2px]',
+            )}
+            aria-hidden={!isLoading}
+          >
+            <ProjectCardSkeletonGrid />
+          </div>
+        )}
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className={classNames(
+            'grid grid-cols-1 gap-x-12 gap-y-16 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-3',
+            showLoadedProjects
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-2 opacity-0',
+          )}
         >
           {/* <ProjectCard /> */}
           {projects.map((project: any) => (
@@ -120,7 +158,7 @@ export function MyProjects({}: MyProjectsProps) {
             <Card as="li" key={project.name}>
               <button
                 type="button"
-                className="group relative z-10 flex aspect-square h-[300px] w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-xl bg-white text-left shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition-transform duration-300 hover:scale-[1.02] focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:outline-none dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus:ring-offset-zinc-900"
+                className="group relative z-10 flex aspect-square h-75 w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-xl bg-white text-left shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition-transform duration-300 hover:scale-[1.02] focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:outline-none dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus:ring-offset-zinc-900"
                 onClick={() =>
                   handleImageClick(project.imageSrc, project.imageAlt)
                 }
@@ -133,7 +171,7 @@ export function MyProjects({}: MyProjectsProps) {
                   placeholder="blur"
                   unoptimized
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
               </button>
               <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Title as="h2">{project.name}</Card.Title>
@@ -188,7 +226,7 @@ export function MyProjects({}: MyProjectsProps) {
             </Card>
           ))}
         </ul>
-      )}
+      </div>
       <ImageModal
         isOpen={isModalOpen}
         imageSrc={selectedImage?.src || null}

@@ -6,7 +6,7 @@ export function ProjectCardSkeleton() {
   return (
     <Card as="li">
       {/* Image skeleton */}
-      <div className="relative z-10 flex aspect-square h-[300px] w-full animate-pulse items-center justify-center rounded-xl bg-zinc-200 shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-600/50 dark:bg-zinc-700 dark:ring-0" />
+      <div className="relative z-10 flex aspect-square h-75 w-full animate-pulse items-center justify-center rounded-xl bg-zinc-200 shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-600/50 dark:bg-zinc-700 dark:ring-0" />
 
       {/* Title skeleton */}
       <div className="mt-6">
