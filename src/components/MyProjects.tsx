@@ -1,11 +1,13 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import { FaGithub } from 'react-icons/fa'
 
-// import data
-import { allProjects, projectsNav } from '@/data/projectData'
+import { allProjects, projectsNav, type Project } from '@/data/projectData'
 import { Card } from '@/components/Card'
+import { useProjectsCache } from '@/hooks/useProjectsCache'
+import { ProjectCardSkeletonGrid } from '@/components/ProjectCardSkeleton'
+import { ImageModal } from '@/components/ImageModal'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -22,61 +24,62 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-// interface
-interface MyProjectsProps {
-  token?: string
-}
+interface MyProjectsProps {}
 
-export function MyProjects({ token }: MyProjectsProps) {
+export function MyProjects({}: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
   const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
-
-  const flag = process.env.NEXT_PUBLIC_FEATURE_TOKEN
-
-  const [isAuthorized, setIsAuthorized] = useState<boolean>(false)
-
-  // cookie helpers
-  const COOKIE_NAME = 'private_projects_token'
-
-  function setCookie(name: string, value: string, days: number) {
-    const expires = new Date(Date.now() + days * 864e5).toUTCString()
-    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; samesite=lax`
-  }
-
-  function getCookie(name: string) {
-    return document.cookie.split('; ').reduce((r, v) => {
-      const parts = v.split('=')
-      return parts[0] === name ? decodeURIComponent(parts[1]) : r
-    }, '')
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showLoadedProjects, setShowLoadedProjects] = useState(false)
+  const [showSkeleton, setShowSkeleton] = useState(true)
+  const [selectedImage, setSelectedImage] = useState<{
+    src: Project['imageSrc']
+    alt: string
+  } | null>(null)
+  const { isLoading, hasLoadedBefore, markLoaded, startLoading } =
+    useProjectsCache()
 
   useEffect(() => {
-    // determine authorization from query token or existing cookie
-    if (token && flag && token === flag) {
-      try {
-        setCookie(COOKIE_NAME, token, 30)
-      } catch (e) {
-        // ignore cookie write errors
+    if (hasLoadedBefore) {
+      startLoading()
+    }
+
+    const timer = setTimeout(() => {
+      let filtered = allProjects
+
+      if (item.name !== 'all projects') {
+        filtered = filtered.filter(
+          (project) => project.category.toLowerCase() === item.name,
+        )
       }
-      setIsAuthorized(true)
-    } else {
-      const cookieToken = getCookie(COOKIE_NAME)
-      setIsAuthorized(!!cookieToken && !!flag && cookieToken === flag)
+
+      setProjects(filtered)
+      markLoaded()
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [item, hasLoadedBefore, markLoaded, startLoading])
+
+  useEffect(() => {
+    if (isLoading) {
+      setShowLoadedProjects(false)
+      setShowSkeleton(true)
+      return
     }
 
-    let filtered = allProjects.filter(
-      (project) => !project.isPrivate || isAuthorized,
-    )
+    const animationFrame = window.requestAnimationFrame(() => {
+      setShowLoadedProjects(true)
+    })
+    const skeletonTimer = window.setTimeout(() => {
+      setShowSkeleton(false)
+    }, 320)
 
-    if (item.name !== 'all projects') {
-      filtered = filtered.filter(
-        (project) => project.category.toLowerCase() === item.name,
-      )
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.clearTimeout(skeletonTimer)
     }
-
-    setProjects(filtered)
-  }, [item, isAuthorized, token, flag])
+  }, [isLoading])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -86,9 +89,22 @@ export function MyProjects({ token }: MyProjectsProps) {
     setItem({ name: e.target.textContent.toLowerCase() })
     setActive(index)
   }
+
+  const handleImageClick = (
+    imageSrc: string | StaticImageData,
+    imageAlt: string,
+  ) => {
+    setSelectedImage({ src: imageSrc, alt: imageAlt })
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedImage(null)
+  }
   // @ts-ignore
   return (
-    <div className=" pb-24">
+    <div className="pb-24">
       {/* project nav */}
       <nav className="mx-auto max-w-2xl pb-12">
         <ul className="grid grid-cols-3 items-center gap-4 md:grid-cols-4 lg:grid-cols-5">
@@ -102,7 +118,7 @@ export function MyProjects({ token }: MyProjectsProps) {
                   active === index
                     ? 'text-base font-semibold text-zinc-800 underline decoration-violet-500 decoration-4 underline-offset-8 dark:text-zinc-100'
                     : 'text-base text-zinc-800 dark:text-zinc-100'
-                } col-span-1 m-4 cursor-pointer text-nowrap text-center capitalize`}
+                } col-span-1 m-4 cursor-pointer text-center text-nowrap capitalize`}
                 key={index}
               >
                 <h3>{item.name}</h3>
@@ -113,79 +129,110 @@ export function MyProjects({ token }: MyProjectsProps) {
       </nav>
 
       {/* projects section */}
+      <div className="relative">
+        {showSkeleton && (
+          <div
+            className={classNames(
+              'transition-all duration-300 ease-out',
+              isLoading
+                ? 'blur-0 opacity-100'
+                : 'pointer-events-none absolute inset-0 z-10 translate-y-1 opacity-0 blur-[2px]',
+            )}
+            aria-hidden={!isLoading}
+          >
+            <ProjectCardSkeletonGrid />
+          </div>
+        )}
+        <ul
+          role="list"
+          className={classNames(
+            'grid grid-cols-1 gap-x-12 gap-y-16 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-3',
+            showLoadedProjects
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-2 opacity-0',
+          )}
+        >
+          {/* <ProjectCard /> */}
+          {projects.map((project: any) => (
+            // adjust the image here
+            <Card as="li" key={project.name}>
+              <button
+                type="button"
+                className="group relative z-10 flex aspect-square h-75 w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-xl bg-white text-left shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition-transform duration-300 hover:scale-[1.02] focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:outline-none dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus:ring-offset-zinc-900"
+                onClick={() =>
+                  handleImageClick(project.imageSrc, project.imageAlt)
+                }
+                aria-label={`Open larger image for ${project.name}`}
+              >
+                <Image
+                  src={project.imageSrc}
+                  alt={project.imageAlt}
+                  className="h-full w-full rounded-xl object-cover object-center transition duration-500 group-hover:scale-105"
+                  placeholder="blur"
+                  unoptimized
+                />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+              </button>
+              <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <Card.Title as="h2">{project.name}</Card.Title>
+              </div>
+              <Card.Description>{project.description}</Card.Description>
+              <div className="text-white">
+                {project.icons.map(
+                  (icon: {
+                    id: React.Key | null | undefined
+                    iconBackground: any
+                    iconForeground: any
+                    logo: any
+                  }) => (
+                    <div
+                      key={icon.id}
+                      className={classNames(
+                        icon.iconBackground,
+                        icon.iconForeground,
+                        'mt-4 mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
+                      )}
+                    >
+                      <icon.logo className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                  ),
+                )}
+              </div>
 
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {/* <ProjectCard /> */}
-        {projects.map((project: any) => (
-          // adjust the image here
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className="h-full w-full rounded-xl object-cover object-center"
-                placeholder="blur"
-                unoptimized
-              />
-            </div>
-            <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Title as="h2">{project.name}</Card.Title>
-            </div>
-            <Card.Description>{project.description}</Card.Description>
-            <div className="text-white">
-              {project.icons.map(
-                (icon: {
-                  id: React.Key | null | undefined
-                  iconBackground: any
-                  iconForeground: any
-                  logo: any
-                }) => (
-                  <div
-                    key={icon.id}
-                    className={classNames(
-                      icon.iconBackground,
-                      icon.iconForeground,
-                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
-                    )}
+              <div className="flex gap-5">
+                {project.githubLink && project.githubLink.trim() !== '' && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
                   >
-                    <icon.logo className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                ),
-              )}
-            </div>
-
-            <div className="flex gap-5">
-              {project.githubLink && project.githubLink.trim() !== '' && (
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
-                >
-                  <FaGithub className="h-6 w-6 flex-none" />
-                  <span className="ml-2">GitHub</span>
-                </a>
-              )}
-              {project.liveLink && project.liveLink.trim() !== '' && (
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
-                >
-                  <LinkIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2">View Site</span>
-                </a>
-              )}
-            </div>
-          </Card>
-        ))}
-      </ul>
-
-      {/* end */}
+                    <FaGithub className="h-6 w-6 flex-none" />
+                    <span className="ml-2">GitHub</span>
+                  </a>
+                )}
+                {project.liveLink && project.liveLink.trim() !== '' && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                  >
+                    <LinkIcon className="h-6 w-6 flex-none" />
+                    <span className="ml-2">View Site</span>
+                  </a>
+                )}
+              </div>
+            </Card>
+          ))}
+        </ul>
+      </div>
+      <ImageModal
+        isOpen={isModalOpen}
+        imageSrc={selectedImage?.src || null}
+        imageAlt={selectedImage?.alt || ''}
+        onClose={handleCloseModal}
+      />
     </div>
   )
 }
