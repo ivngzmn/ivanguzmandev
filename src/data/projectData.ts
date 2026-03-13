@@ -80,98 +80,6 @@ export const projectsNav = [
   },
 ]
 
-// recent projects for homepage
-export const recentProjects = [
-  {
-    id: '1',
-    name: 'Pronto Coffee Co.',
-    liveLink: '',
-    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
-    imageSrc: prontoCoffeeCo,
-
-    imageAlt: 'Todo App',
-    icons: [
-      {
-        id: '1',
-        name: 'Html5',
-        logo: SiHtml5,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-orange-500',
-      },
-      {
-        id: '2',
-        name: 'Tailwind CSS',
-        logo: SiTailwindcss,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-sky-500',
-      },
-      {
-        id: '3',
-        name: 'Node.js',
-        logo: SiNodedotjs,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-500',
-      },
-      {
-        id: '4',
-        name: 'MongoDB',
-        logo: SiMongodb,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-green-700',
-      },
-      {
-        id: '5',
-        name: 'Express',
-        logo: SiExpress,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-zinc-600',
-      },
-    ],
-    description:
-      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.',
-  },
-  {
-    id: '2',
-    name: 'Coin Forge',
-    liveLink: 'https://coinforge.vercel.app/',
-    githubLink: 'https://github.com/ivngzmn/coin-forge',
-    imageSrc: coinForge,
-
-    imageAlt: 'Coin Forge',
-    icons: [
-      {
-        id: '1',
-        name: 'React',
-        logo: SiReact,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-cyan-400',
-      },
-      {
-        id: '2',
-        name: 'Material UI',
-        logo: SiMui,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-blue-500',
-      },
-      {
-        id: '3',
-        name: 'Firebase',
-        logo: SiFirebase,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-yellow-500',
-      },
-      {
-        id: '4',
-        name: 'Google Auth',
-        logo: SiGoogle,
-        iconForeground: 'text-white',
-        iconBackground: 'bg-blue-500',
-      },
-    ],
-    description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`,
-  },
-]
-
 // all projects for projects page
 
 export const allProjects: Project[] = [
@@ -220,7 +128,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-900',
       },
     ],
-    description: `Improved performance and SEO for the Marc Pro e-commerce platform while leading a redesign of the shopping cart to support clearer user stories and a more intuitive checkout experience. Integrated custom APIs to ensure a seamless shopping journey from product selection to order completion.`,
+    description: `Improved performance and SEO for Marc Pro’s e-commerce platform while helping redesign the shopping cart and checkout experience to reduce friction and support clearer user flows. Integrated custom APIs and front-end enhancements that contributed to a 300% increase in conversions compared with the same period the prior year.`,
     isPrivate: true,
   },
   {
@@ -268,7 +176,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-900',
       },
     ],
-    description: `Took ownership of implementing a custom WordPress theme and reusable components for a video-rich interview archive, with a strong emphasis on accessibility and editorial flexibility. Collaborated with the team to realize the updated design vision and led development of an advanced search experience across 200+ episode transcripts to support scholarly research and content discovery.`,
+    description: `Developed a custom WordPress experience for a video-rich interview archive with a strong focus on accessibility, editorial flexibility, and content discovery. Built reusable front-end components and helped deliver an advanced search experience across 200+ episode transcripts to support research and long-form content exploration.`,
     isPrivate: true,
   },
   {
@@ -316,7 +224,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-900',
       },
     ],
-    description: `Led the development of Rise Game’s marketing site, leveraging WordPress as a CMS and crafting custom components to support scalability and ease of use. Ensured a smooth handoff to the marketing team while delivering a maintainable platform aligned with the brand’s vision and growth strategy.`,
+    description: `Led development of Rise Game’s marketing site using WordPress as the CMS, building custom components that supported scalability and an easy handoff to the marketing team. Also contributed to the launch of the Rise Game mobile app using React Native and Expo, expanding the product across web and mobile experiences.`,
     isPrivate: true,
   },
   {
@@ -357,7 +265,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-900',
       },
     ],
-    description: `Played a key role in redesigning and developing APFA’s member portal using Beaver Builder, PHP, and Alpine.js. Led efforts to improve usability, accessibility, and editorial workflows, while ensuring the site remained performant and reliable under high daily traffic. Collaborated closely with the team to align technical execution with member needs and organizational goals.`,
+    description: `Led redesign and development efforts for APFA’s member platform using WordPress, PHP, and Alpine.js, with an emphasis on usability, accessibility, and long-term maintainability. Delivered front-end and CMS improvements for a high-traffic membership site used by a national labor organization, aligning technical execution with member needs.`,
     isPrivate: true,
   },
   {
@@ -406,7 +314,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-sky-900',
       },
     ],
-    description: `Worked closely with a team to bring complex design concepts from the design team to life, implementing a modern, accessible, and mobile-friendly site for the California Community Foundation. Integrated custom content types and donation workflows, successfully delivering the project under tight deadlines without compromising quality or performance.`,
+    description: `Partnered with design and development teams to launch a modern, accessible, and mobile-friendly site for the California Community Foundation. Implemented custom content structures and donation workflows under tight deadlines while maintaining strong performance and a polished editorial experience.`,
     isPrivate: true,
   },
   {
@@ -414,7 +322,7 @@ export const allProjects: Project[] = [
     name: 'Pronto Coffee Co.',
     category: 'Full-Stack',
     liveLink: '',
-    githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
+    // githubLink: 'https://github.com/ivngzmn/pronto-coffee-co',
     imageSrc: prontoCoffeeCo,
     imageAlt: 'Todo App',
     icons: [
@@ -454,8 +362,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-zinc-600',
       },
     ],
-    description:
-      'A full stack web application that allows a barista, login, add to an order, view pending orders, view completed orders and complete orders. Orders that have been completed will note which barista completed the order. Used EJS, Tailwind CSS for the front end and Node, Express, MongoDB for the backend. Deployed on Heroku.',
+    description: `Built a full-stack order management application for a coffee shop workflow, allowing baristas to log in, create orders, track pending tickets, and complete fulfilled orders. Used EJS, Tailwind CSS, Node.js, Express, and MongoDB to build an end-to-end application with authenticated user actions and persistent order data.`,
     isPrivate: true,
   },
   {
@@ -463,7 +370,7 @@ export const allProjects: Project[] = [
     name: 'Pure Notes',
     category: 'Full-Stack',
     liveLink: '',
-    githubLink: 'https://github.com/ivngzmn/pure-notes-azure-auth',
+    // githubLink: 'https://github.com/ivngzmn/pure-notes-azure-auth',
     imageSrc: pureNotes,
     imageAlt: 'Pure Notes App',
     icons: [
@@ -517,8 +424,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-blue-500',
       },
     ],
-    description:
-      'A Notes app with Azure AD authentication with use of MongoDB Atlas. Users can login to their profile and find their list of Notes. They can add new Notes through an input, which they can then edit or delete all Notes in their profile.',
+    description: `Built a notes application with Azure Active Directory authentication, giving users secure access to create, edit, and delete personal notes. Used Node.js, Express, MongoDB Atlas, and Tailwind CSS to deliver a full-stack app with enterprise-style authentication and persistent data management.`,
     isPrivate: false,
   },
   {
@@ -559,7 +465,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-blue-500',
       },
     ],
-    description: `Using React and Material UI, I created a web application that allows users to create and manage their cryptocurrency portfolios. Material UI has great docs and allowed for me to use create a nice UI to display the project. I used Axios for the API calls. For the API I went to Coin Gecko where they list over 12,279 coins. For the individual coins I went and used Chart.js to have each coin show the 24 Hour, 30 Day, 3 Month, 1 Year charts. Currently adding Google auth and Firebase for the backend. Deployed on Vercel.`,
+    description: `Created a React-based cryptocurrency portfolio application that allows users to track coins, monitor performance, and visualize historical pricing data. Integrated CoinGecko APIs, Chart.js, Material UI, and Firebase to build a polished front-end product with authentication and data-driven user flows.`,
     isPrivate: false,
   },
   {
@@ -593,7 +499,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-yellow-500',
       },
     ],
-    description: `This is a restaurant website that I built for a local vegan restaurant. I wanted to make a website that was simple and easy to use. I used Bootstrap for the styling and Javascript for the animations.`,
+    description: `Designed and developed a marketing site for a local vegan restaurant with a focus on clear navigation, lightweight performance, and approachable design. Used HTML, Bootstrap, and JavaScript to create a polished front-end experience tailored to a small business audience.`,
     isPrivate: false,
   },
   {
@@ -627,7 +533,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-zinc-700',
       },
     ],
-    description: `This website is for Attorney Belen Gomez, APC. She had built her own website via WordPress but was having trouble with styling and SEO. We came of with a plan to modernize her website. We are in the works to add WordPress API as a headless CMS so that she and her team can update the website as they desire.`,
+    description: `Modernized a law firm website by improving front-end presentation, styling consistency, and SEO foundations while planning for a headless WordPress integration. Built the front end with React and Tailwind CSS to create a more professional and maintainable digital presence.`,
     isPrivate: false,
   },
   {
@@ -661,7 +567,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-yellow-500',
       },
     ],
-    description: `An Airbnb inspired landing page with emphasis on learning more about CSS Grid. When working with this project there is a ton that goes into grid as well as flex. One of the great things about grid is that you are able to quickly scaffold your columns and rows.`,
+    description: `Built a travel landing page inspired by modern booking experiences, using the project to deepen my understanding of CSS Grid, layout systems, and responsive design. Focused on creating a clean front-end interface with strong visual structure and reusable styling patterns.`,
     isPrivate: false,
   },
   {
@@ -702,7 +608,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-zinc-600',
       },
     ],
-    description: `This project is the front end that consumes the Star Trek Guid to Aliens api that I built. Please take a look at the repo details for the Star Trek Guid to Aliens API Repo to experience the API to its fullest. Live long and prosper.`,
+    description: `Built the front end for a Star Trek-themed API project that consumes custom backend data and presents it through a simple, searchable interface. Used HTML, CSS, Node.js, and Express to strengthen my experience working across both API development and client-side consumption.`,
     isPrivate: false,
   },
   {
@@ -743,7 +649,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-[#F22F46]',
       },
     ],
-    description: `Promotional email for Viking River Cruises made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
+    description: `Developed a promotional marketing email using Foundation and Handlebars.js, then prepared it for delivery through Twilio SendGrid. Built dynamic content fields and responsive email layouts to support real-world campaign workflows.`,
     isPrivate: false,
   },
   {
@@ -784,7 +690,7 @@ export const allProjects: Project[] = [
         iconBackground: 'bg-[#F22F46]',
       },
     ],
-    description: `Promotional email for Tilly's made with foundation and exported to Twilio Sendgrid for image linking. Felids also dynamically filled with Handlebars.js.`,
+    description: `Developed a promotional email for Tilly’s using Foundation, Handlebars.js, and Twilio SendGrid to support responsive layouts and dynamic content insertion. Focused on clean HTML email structure and marketing-ready implementation.`,
     isPrivate: false,
   },
 ]
