@@ -7,22 +7,13 @@ export const metadata: Metadata = {
   description: 'Selected works and projects.',
 }
 
-export default async function Projects({
-  searchParams,
-}: {
-  searchParams?: Promise<{
-    token?: string
-  }>
-}) {
-  const params = await searchParams
-  const token = params?.token
-
+export default async function Projects() {
   return (
     <SimpleLayout
       title="Selected works and projects."
       intro="A collection of projects I've worked on, ranging from open-source contributions to personal experiments."
     >
-      <MyProjects token={token} />
+      <MyProjects />
     </SimpleLayout>
   )
 }

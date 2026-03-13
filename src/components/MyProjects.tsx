@@ -23,51 +23,15 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 // interface
-interface MyProjectsProps {
-  token?: string
-}
+interface MyProjectsProps {}
 
-export function MyProjects({ token }: MyProjectsProps) {
+export function MyProjects({}: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
   const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
 
-  const flag = process.env.NEXT_PUBLIC_FEATURE_TOKEN
-
-  const [isAuthorized, setIsAuthorized] = useState<boolean>(false)
-
-  // cookie helpers
-  const COOKIE_NAME = 'private_projects_token'
-
-  function setCookie(name: string, value: string, days: number) {
-    const expires = new Date(Date.now() + days * 864e5).toUTCString()
-    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; samesite=lax`
-  }
-
-  function getCookie(name: string) {
-    return document.cookie.split('; ').reduce((r, v) => {
-      const parts = v.split('=')
-      return parts[0] === name ? decodeURIComponent(parts[1]) : r
-    }, '')
-  }
-
   useEffect(() => {
-    // determine authorization from query token or existing cookie
-    if (token && flag && token === flag) {
-      try {
-        setCookie(COOKIE_NAME, token, 30)
-      } catch (e) {
-        // ignore cookie write errors
-      }
-      setIsAuthorized(true)
-    } else {
-      const cookieToken = getCookie(COOKIE_NAME)
-      setIsAuthorized(!!cookieToken && !!flag && cookieToken === flag)
-    }
-
-    let filtered = allProjects.filter(
-      (project) => !project.isPrivate || isAuthorized,
-    )
+    let filtered = allProjects
 
     if (item.name !== 'all projects') {
       filtered = filtered.filter(
@@ -76,7 +40,7 @@ export function MyProjects({ token }: MyProjectsProps) {
     }
 
     setProjects(filtered)
-  }, [item, isAuthorized, token, flag])
+  }, [item])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -88,7 +52,7 @@ export function MyProjects({ token }: MyProjectsProps) {
   }
   // @ts-ignore
   return (
-    <div className=" pb-24">
+    <div className="pb-24">
       {/* project nav */}
       <nav className="mx-auto max-w-2xl pb-12">
         <ul className="grid grid-cols-3 items-center gap-4 md:grid-cols-4 lg:grid-cols-5">
@@ -102,7 +66,7 @@ export function MyProjects({ token }: MyProjectsProps) {
                   active === index
                     ? 'text-base font-semibold text-zinc-800 underline decoration-violet-500 decoration-4 underline-offset-8 dark:text-zinc-100'
                     : 'text-base text-zinc-800 dark:text-zinc-100'
-                } col-span-1 m-4 cursor-pointer text-nowrap text-center capitalize`}
+                } col-span-1 m-4 cursor-pointer text-center text-nowrap capitalize`}
                 key={index}
               >
                 <h3>{item.name}</h3>
@@ -122,7 +86,7 @@ export function MyProjects({ token }: MyProjectsProps) {
         {projects.map((project: any) => (
           // adjust the image here
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.imageSrc}
                 alt={project.imageAlt}
@@ -148,7 +112,7 @@ export function MyProjects({ token }: MyProjectsProps) {
                     className={classNames(
                       icon.iconBackground,
                       icon.iconForeground,
-                      'mr-3 mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
+                      'mt-4 mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
                     )}
                   >
                     <icon.logo className="h-5 w-5" aria-hidden="true" />
