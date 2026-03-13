@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
 
-// import data
 import { allProjects, projectsNav } from '@/data/projectData'
 import { Card } from '@/components/Card'
+import { useProjectsCache } from '@/hooks/useProjectsCache'
+import { ProjectCardSkeletonGrid } from '@/components/ProjectCardSkeleton'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -22,25 +23,35 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-// interface
 interface MyProjectsProps {}
 
 export function MyProjects({}: MyProjectsProps) {
   const [item, setItem] = useState({ name: 'all projects' })
   const [projects, setProjects] = useState<typeof allProjects>([])
   const [active, setActive] = useState(0)
+  const { isLoading, hasLoadedBefore, markLoaded, startLoading } =
+    useProjectsCache()
 
   useEffect(() => {
-    let filtered = allProjects
-
-    if (item.name !== 'all projects') {
-      filtered = filtered.filter(
-        (project) => project.category.toLowerCase() === item.name,
-      )
+    if (hasLoadedBefore) {
+      startLoading()
     }
 
-    setProjects(filtered)
-  }, [item])
+    const timer = setTimeout(() => {
+      let filtered = allProjects
+
+      if (item.name !== 'all projects') {
+        filtered = filtered.filter(
+          (project) => project.category.toLowerCase() === item.name,
+        )
+      }
+
+      setProjects(filtered)
+      markLoaded()
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [item, hasLoadedBefore, markLoaded, startLoading])
 
   const handleClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -77,79 +88,80 @@ export function MyProjects({}: MyProjectsProps) {
       </nav>
 
       {/* projects section */}
+      {isLoading ? (
+        <ProjectCardSkeletonGrid />
+      ) : (
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {/* <ProjectCard /> */}
+          {projects.map((project: any) => (
+            // adjust the image here
+            <Card as="li" key={project.name}>
+              <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={project.imageSrc}
+                  alt={project.imageAlt}
+                  className="h-full w-full rounded-xl object-cover object-center"
+                  placeholder="blur"
+                  unoptimized
+                />
+              </div>
+              <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <Card.Title as="h2">{project.name}</Card.Title>
+              </div>
+              <Card.Description>{project.description}</Card.Description>
+              <div className="text-white">
+                {project.icons.map(
+                  (icon: {
+                    id: React.Key | null | undefined
+                    iconBackground: any
+                    iconForeground: any
+                    logo: any
+                  }) => (
+                    <div
+                      key={icon.id}
+                      className={classNames(
+                        icon.iconBackground,
+                        icon.iconForeground,
+                        'mt-4 mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
+                      )}
+                    >
+                      <icon.logo className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                  ),
+                )}
+              </div>
 
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {/* <ProjectCard /> */}
-        {projects.map((project: any) => (
-          // adjust the image here
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex aspect-square h-[300px] w-full items-center justify-center rounded-xl bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className="h-full w-full rounded-xl object-cover object-center"
-                placeholder="blur"
-                unoptimized
-              />
-            </div>
-            <div className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Title as="h2">{project.name}</Card.Title>
-            </div>
-            <Card.Description>{project.description}</Card.Description>
-            <div className="text-white">
-              {project.icons.map(
-                (icon: {
-                  id: React.Key | null | undefined
-                  iconBackground: any
-                  iconForeground: any
-                  logo: any
-                }) => (
-                  <div
-                    key={icon.id}
-                    className={classNames(
-                      icon.iconBackground,
-                      icon.iconForeground,
-                      'mt-4 mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full opacity-80',
-                    )}
+              <div className="flex gap-5">
+                {project.githubLink && project.githubLink.trim() !== '' && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
                   >
-                    <icon.logo className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                ),
-              )}
-            </div>
-
-            <div className="flex gap-5">
-              {project.githubLink && project.githubLink.trim() !== '' && (
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
-                >
-                  <FaGithub className="h-6 w-6 flex-none" />
-                  <span className="ml-2">GitHub</span>
-                </a>
-              )}
-              {project.liveLink && project.liveLink.trim() !== '' && (
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
-                >
-                  <LinkIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2">View Site</span>
-                </a>
-              )}
-            </div>
-          </Card>
-        ))}
-      </ul>
-
-      {/* end */}
+                    <FaGithub className="h-6 w-6 flex-none" />
+                    <span className="ml-2">GitHub</span>
+                  </a>
+                )}
+                {project.liveLink && project.liveLink.trim() !== '' && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition hover:text-violet-500 dark:text-zinc-200"
+                  >
+                    <LinkIcon className="h-6 w-6 flex-none" />
+                    <span className="ml-2">View Site</span>
+                  </a>
+                )}
+              </div>
+            </Card>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }
