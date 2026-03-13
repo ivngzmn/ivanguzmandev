@@ -13,7 +13,7 @@ import { SocialLink } from '@/components/SocialLink'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'I’m Ivan Guzman. I live in Orange County, CA.',
+  description: 'I’m Ivan Guzman. Based in Orange County, CA.',
 }
 
 export default function About() {
@@ -26,41 +26,46 @@ export default function About() {
               src={portraitImage}
               alt="Image of Ivan Guzman"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square h-36 w-36 rounded-xl bg-zinc-100 object-cover dark:bg-zinc-800 md:h-full md:w-full"
+              className="aspect-square h-36 w-36 rounded-xl bg-zinc-100 object-cover md:h-full md:w-full dark:bg-zinc-800"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Ivan Guzman. I live in Orange County, CA.
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            I’m Ivan Guzman. Based in Orange County, CA.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I started my software engineering journey through working as a
-              customer service supervisor at an e-commerce website. I taught
-              myself how to use their bespoke content management system that
-              used Bootstrap for styling to update outdated product descriptions
-              in order to alleviate email load on the customer agent team.
-              Having the power to make changes on the fly got me hooked, and I
-              found myself wanting to learn more and more.
+              My path into software engineering started from the operations side
+              of digital work. Early on, I saw how much better products perform
+              when the people building them understand the customer experience
+              behind them. That curiosity pushed me to keep learning, keep
+              building, and eventually move into software engineering full-time.
             </p>
             <p>
-              Then in I went on to work at Uber Technologies where my passion
-              for programming grew further as I was persuaded by my team manager
-              to pursue my dream of software engineering. Unfortunately, during
-              my time at Uber the pandemic had hit and the Uber in person office
-              closed, so I shifted gears to not ever wanting this to happen
-              again. So, I began to practice my Software Engineering skills
-              until landing a role at the 100devs web development agency. Now
-              with this new knowledge, I am looking to join a new role where I
-              can continue to learn and grow further.
+              Over the last 4+ years, I’ve worked across front-end and
+              full-stack development, building websites, internal tools, and
+              customer-facing applications with React, Next.js, TypeScript, PHP,
+              Node.js, and WordPress. My work has included improving
+              performance, modernizing legacy codebases, shipping new user
+              experiences, and helping teams deliver projects more efficiently.
             </p>
             <p>
-              I grew up in small-town in California and went to school at
-              Fullerton College where I studied art and dabbled a bit with
-              Networking Security. When I am not deep in code I spend my free
-              tending to my coral reef aquarium, being a father, and enjoying
-              time with friends and family.
+              More recently, I’ve also worked on mobile app delivery using React
+              Native and Expo, which expanded my interest in building polished
+              experiences across platforms.
+            </p>
+            <p>
+              Today, I bring together two perspectives that shape how I build
+              software: engineering execution and real-world customer
+              understanding. Through my current role at AAA, I’ve gained a
+              stronger appreciation for member needs, service workflows, and the
+              kinds of digital friction that good software should eliminate.
+            </p>
+            <p>
+              When I’m not working, I’m usually spending time with family,
+              tending to my aquarium, writing about development, or enjoying
+              life with our recently rescued Boston terrier.
             </p>
           </div>
         </div>
