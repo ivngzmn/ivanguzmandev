@@ -156,7 +156,7 @@ function Resume() {
         target="_blank"
       >
         View my LinkedIn
-        <ArrowDownIcon className="h-4 w-4 rotate-[-90deg] stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 -rotate-90 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
