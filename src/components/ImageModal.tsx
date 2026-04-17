@@ -88,7 +88,7 @@ export function ImageModal({
               <button
                 onClick={onClose}
                 className={clsx(
-                  'absolute top-1 right-0 z-10 rounded-full border border-white/15 bg-black/45 p-2 text-zinc-100 shadow-lg shadow-black/30',
+                  'absolute top-1 right-0 z-10 rounded-full border border-white/15 bg-black/45 p-2 text-zinc-100 shadow-lg shadow-black/30 md:right-5 lg:right-7 xl:right-2',
                   'transition hover:scale-105 hover:bg-black/60',
                   'focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-zinc-950 focus:outline-none',
                 )}
