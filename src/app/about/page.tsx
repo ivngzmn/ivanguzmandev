@@ -8,7 +8,7 @@ import {
   XIcon,
   MailIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.webp'
+import portraitImage from '@/images/profile-pic-gh.jpeg'
 import { SocialLink } from '@/components/SocialLink'
 
 export const metadata: Metadata = {
