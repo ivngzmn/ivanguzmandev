@@ -146,7 +146,7 @@ export function MyProjects({}: MyProjectsProps) {
         <ul
           role="list"
           className={classNames(
-            'grid grid-cols-1 gap-x-12 gap-y-16 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-3',
+            'grid grid-cols-1 gap-x-12 gap-y-16 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-2',
             showLoadedProjects
               ? 'translate-y-0 opacity-100'
               : 'translate-y-2 opacity-0',
