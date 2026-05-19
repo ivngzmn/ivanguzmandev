@@ -1,14 +1,11 @@
-'use client'
-
-import React, { Children, useState } from 'react'
-import { Check, Copy } from 'lucide-react'
+import React, { Children } from 'react'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
+
+import { CodeCopyButton } from '@/components/CodeCopyButton'
 
 export const Pre = (
   props: DetailedHTMLProps<HTMLAttributes<HTMLPreElement>, HTMLPreElement>,
 ) => {
-  const [isCopied, setIsCopied] = useState(false)
-
   const code = Children.toArray(props.children).filter(
     (child) =>
       typeof child === 'object' && 'type' in child && child.type === 'code',
@@ -35,29 +32,15 @@ export const Pre = (
     return ''
   }
 
-  const copyToClipboard = () => {
-    if (code && (code as any).props && (code as any).props.children) {
-      const textToCopy = extractText((code as any).props.children)
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        setIsCopied(true)
-        setTimeout(() => setIsCopied(false), 2000)
-      })
-    }
-  }
+  const textToCopy =
+    code && (code as any).props && (code as any).props.children
+      ? extractText((code as any).props.children)
+      : ''
 
   return (
     <div className="relative">
       <pre {...props}>{props.children}</pre>
-      <button
-        onClick={copyToClipboard}
-        className="absolute right-2 top-2 z-10 rounded-md bg-zinc-700 p-2 hover:bg-zinc-600"
-      >
-        {isCopied ? (
-          <Check className="h-4 w-4 text-green-500" />
-        ) : (
-          <Copy className="h-4 w-4 text-gray-300" />
-        )}
-      </button>
+      {textToCopy && <CodeCopyButton code={textToCopy} />}
     </div>
   )
 }

@@ -4,7 +4,6 @@ import coinForge from '../../public/projects/coinForge.webp'
 import prontoCoffeeCo from '../../public/projects/prontoCoffeeCo.webp'
 import starTrekApi from '../../public/projects/starTrekApi.webp'
 import travelLandingPage from '../../public/projects/travelLandingPage.webp'
-import pureNotes from '../../public/projects/pureNotes.webp'
 import tillysPromo from '../../public/projects/tillys-promo.webp'
 import vikingPromo from '../../public/projects/viking-promo.webp'
 import marcpro from '../../public/projects/marcpro.webp'
@@ -29,10 +28,9 @@ import {
   SiMongodb,
   SiPassport,
   SiRender,
-  SiMicrosoftazure,
   SiFirebase,
   SiGoogle,
-  SiCss3,
+  SiCss,
   SiWordpress,
   SiElementor,
   SiWoo,
@@ -606,7 +604,7 @@ export const allProjects: Project[] = [
       {
         id: '2',
         name: 'CSS3',
-        logo: SiCss3,
+        logo: SiCss,
         iconForeground: 'text-white',
         iconBackground: 'bg-blue-500',
       },
@@ -647,7 +645,7 @@ export const allProjects: Project[] = [
       {
         id: '2',
         name: 'CSS3',
-        logo: SiCss3,
+        logo: SiCss,
         iconForeground: 'text-white',
         iconBackground: 'bg-blue-500',
       },
@@ -688,7 +686,7 @@ export const allProjects: Project[] = [
       {
         id: '2',
         name: 'CSS3',
-        logo: SiCss3,
+        logo: SiCss,
         iconForeground: 'text-white',
         iconBackground: 'bg-blue-500',
       },

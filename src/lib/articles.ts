@@ -19,18 +19,17 @@ async function importArticle(
   articleFilename: string,
 ): Promise<ArticleWithSlug> {
   let { article } = (await import(`../app/blog/${articleFilename}`)) as {
-    default: React.ComponentType
     article: Article
   }
 
   return {
-    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
+    slug: articleFilename.replace(/\/article\.ts$/, ''),
     ...article,
   }
 }
 
 export async function getAllArticles() {
-  let articleFilenames = await glob('*/page.mdx', {
+  let articleFilenames = await glob('*/article.ts', {
     cwd: './src/app/blog',
   })
 
