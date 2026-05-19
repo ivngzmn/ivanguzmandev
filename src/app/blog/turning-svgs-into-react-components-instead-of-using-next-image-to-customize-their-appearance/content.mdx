@@ -1,46 +1,7 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
 import { EyeIcon } from '@/components/Icons'
 import PostImage from './next-image-post.webp'
 import FrustratedGranny from './frustrated-granny.webp'
-
-export const article = {
-  author: 'Ivan Guzman',
-  date: '2024-08-26',
-  title:
-    'Turning SVGs into React components instead of using next/image to customize their appearance',
-  description:
-    'Learn how to turn SVGs into React components and update their appearance using Tailwind CSS for light and dark mode.',
-  featured_image_url: PostImage.src,
-}
-
-export const metadata = {
-  title: article.title,
-  description: article.description,
-  openGraph: {
-    title: article.title,
-    description: article.description,
-    images: [
-      {
-        url: article.featured_image_url,
-        width: 1200,
-        height: 630,
-        alt: article.title,
-      },
-    ],
-    type: 'article',
-    publishedTime: article.date,
-    authors: [article.author],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: article.title,
-    description: article.description,
-    images: [article.featured_image_url],
-  },
-}
-
-export default (props) => <ArticleLayout article={article} {...props} />
 
 <Image
   src={PostImage}

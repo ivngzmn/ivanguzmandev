@@ -1,45 +1,7 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
 import ohMyZsh from './oh-my-zsh.webp'
 import preferencPane from './preference-pane.webp'
 import over9000 from './over-9000.gif'
-
-export const article = {
-  author: 'Ivan Guzman',
-  date: '2021-11-27',
-  title: 'Setting up your macOS terminal',
-  description:
-    "Tired of your boring native macOS terminal? Well, let's bring that zest back with iTerm2 and Oh-My-ZSH.",
-  featured_image_url: ohMyZsh.src,
-}
-
-export const metadata = {
-  title: article.title,
-  description: article.description,
-  openGraph: {
-    title: article.title,
-    description: article.description,
-    images: [
-      {
-        url: article.featured_image_url,
-        width: 1200,
-        height: 630,
-        alt: article.title,
-      },
-    ],
-    type: 'article',
-    publishedTime: article.date,
-    authors: [article.author],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: article.title,
-    description: article.description,
-    images: [article.featured_image_url],
-  },
-}
-
-export default (props) => <ArticleLayout article={article} {...props} />
 
 <Image
   src={ohMyZsh}
