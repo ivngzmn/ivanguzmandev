@@ -35,9 +35,9 @@ import {
   SiElementor,
   SiWoo,
   SiHandlebarsdotjs,
-  SiTwilio,
   SiMysql,
 } from 'react-icons/si'
+import { Send } from 'lucide-react'
 import React from 'react'
 import type { StaticImageData } from 'next/image'
 
@@ -54,7 +54,7 @@ export type Project = {
   icons: Array<{
     id: string
     name: string
-    logo: React.ComponentType
+    logo: React.ElementType<{ className?: string }>
     iconForeground: string
     iconBackground: string
   }>
@@ -659,7 +659,7 @@ export const allProjects: Project[] = [
       {
         id: '4',
         name: 'Twilio SendGrid',
-        logo: SiTwilio,
+        logo: Send,
         iconForeground: 'text-white',
         iconBackground: 'bg-[#F22F46]',
       },
@@ -700,7 +700,7 @@ export const allProjects: Project[] = [
       {
         id: '4',
         name: 'Twilio SendGrid',
-        logo: SiTwilio,
+        logo: Send,
         iconForeground: 'text-white',
         iconBackground: 'bg-[#F22F46]',
       },

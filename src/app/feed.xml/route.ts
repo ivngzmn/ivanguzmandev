@@ -2,6 +2,12 @@ import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
+type WebpackRequire = NodeJS.Require & {
+  context(path: string, deep?: boolean, filter?: RegExp): {
+    keys(): string[]
+  }
+}
+
 export async function GET(req: Request) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 
@@ -28,11 +34,11 @@ export async function GET(req: Request) {
     },
   })
 
-  let articleIds = require
+  let articleIds = (require as WebpackRequire)
     .context('../blog', true, /\/page\.mdx$/)
     .keys()
-    .filter((key) => key.startsWith('./'))
-    .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''))
+    .filter((key: string) => key.startsWith('./'))
+    .map((key: string) => key.slice(2).replace(/\/page\.mdx$/, ''))
 
   for (let id of articleIds) {
     let url = String(new URL(`/blog/${id}`, req.url))
